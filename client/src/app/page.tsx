@@ -3,7 +3,7 @@ import { labels } from "./labels";
 import Button from "./components/Button";
 import Wave from "react-wavify";
 import { FaEnvelope, FaGithub, FaLinkedin, FaTelegram } from "react-icons/fa";
-import Arrow from "./arrow.svg";
+import Arrow from "./components/arrow.svg";
 
 import { Dancing_Script } from "next/font/google";
 import HomepageTimeline from "./components/HomepageTimeline";
@@ -14,13 +14,15 @@ import HomepageContact from "./components/HomepageContact";
 import { config } from "./config";
 import HowCanIHelpCard from "./components/HowCanIHelpCard";
 
+import meDrawing from "../../public/img/me_drawing.png";
+
 const dancingScript = Dancing_Script({ subsets: ["latin"] });
 
-export default function Home() {
+function Home() {
     return (
         <main className="bg-[#f7f7f7] min-h-screen">
             <header className="flex justify-around p-4 md:px-0 items-center">
-                <h3 className="text-gray-700 font-bold tracking-tighter text-2xl uppercase">
+                <h3 className="select-none text-gray-700 font-bold tracking-tighter text-2xl uppercase">
                     Alessandro Amella
                 </h3>
                 <div className="hidden text-gray-600 lowercase md:flex items-center gap-4">
@@ -85,12 +87,15 @@ export default function Home() {
                         </div>
                     </div>
                     <Image
-                        src="/img/io.png"
+                        // src="/img/io.png"
+                        src={meDrawing}
+                        placeholder="blur"
+                        // blurDataURL="/img/io_tn.jpg"
                         loading="lazy"
                         alt="Foto mia"
                         width={400}
                         height={400}
-                        className="rounded mt-8 md:mt-4 mx-auto object-cover drop-shadow-xl brightness-125"
+                        className="rounded mt-8 md:mt-4 mx-auto object-cover drop-shadow-xl hover:drop-shadow-2xl transition-all"
                     />
                 </div>
 
@@ -203,7 +208,7 @@ export default function Home() {
             </section>
 
             <footer className="bg-gray-700 border-gray-200 border-t-4 text-white px-8 md:px-24 py-6 z-50 flex flex-col items-center md:flex-row justify-start md:justify-around">
-                <h3 className="tracking-tighter uppercase font-bold text-2xl">
+                <h3 className="select-none tracking-tighter uppercase font-bold text-2xl">
                     Bitrey
                 </h3>
                 <p className="font-light">2023 &copy; Alessandro Amella</p>
@@ -218,3 +223,5 @@ export default function Home() {
         </main>
     );
 }
+
+export default Home;

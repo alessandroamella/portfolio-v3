@@ -6,14 +6,12 @@ export const metadata: Metadata = {
     description: "Sviluppo siti web per privati e aziende"
 };
 
-export default function RootLayout({
-    children
-}: {
-    children: React.ReactNode;
-}) {
+function RootLayout({ children }: { children: React.ReactNode }) {
     return (
         <html lang="it">
             <body>{children}</body>
         </html>
     );
 }
+
+export default RootLayout;

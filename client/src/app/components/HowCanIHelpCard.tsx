@@ -1,5 +1,4 @@
 import React, { FunctionComponent } from "react";
-import labels from "../labels";
 
 interface HowCanIHelpCardProps {
     name: string;
