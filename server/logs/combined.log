@@ -1,0 +1,73 @@
+{"label":"index.ts","level":"info","message":"Server listening on port 5000","metadata":{},"timestamp":"2023-08-04 03:13:50"}
+{"label":"index.ts","level":"info","message":"\u001b[0mGET / \u001b[33m404\u001b[0m 2.223 ms - 139\u001b[0m\n","metadata":{},"timestamp":"2023-08-04 03:13:58"}
+{"label":"index.ts","level":"info","message":"Server listening on port 5000","metadata":{},"timestamp":"2023-08-04 03:14:21"}
+{"label":"index.ts","level":"info","message":"Server listening on port 5000","metadata":{},"timestamp":"2023-08-04 03:15:22"}
+{"label":"index.ts","level":"info","message":"Server listening on port 5000","metadata":{},"timestamp":"2023-08-04 03:15:31"}
+{"label":"index.ts","level":"debug","message":"Validation passed","metadata":{},"timestamp":"2023-08-04 03:16:19"}
+{"label":"index.ts","level":"debug","message":"Captcha check passed","metadata":{},"timestamp":"2023-08-04 03:16:19"}
+{"label":"index.ts","level":"info","message":"Received email from alessandro.amella@live.it (Alessandro Amella) at Fri Aug 04 2023 03:16:19 GMT+0200 (Central European Summer Time):","metadata":{},"timestamp":"2023-08-04 03:16:19"}
+{"label":"index.ts","level":"info","message":"Ciao sono una provoas","metadata":{"email":"alessandro.amella@live.it","name":"Alessandro Amella"},"timestamp":"2023-08-04 03:16:19"}
+{"label":"index.ts","level":"info","message":"Email ready: true","metadata":{},"timestamp":"2023-08-04 03:16:20"}
+{"label":"index.ts","level":"info","message":"New request sent to webmaster from alessandro.amella@live.it, sent message:","metadata":{},"timestamp":"2023-08-04 03:16:21"}
+{"label":"index.ts","level":"info","message":{"from":"\"BITREY.IT TI HANNO SCRITTO\" info@bitrey.it","html":"<p>Contenuto mail: <pre><code>{\"name\":\"Alessandro Amella\",\"email\":\"alessandro.amella@live.it\",\"message\":\"Ciao sono una provoas\",\"captcha\":\"03ADUVZwCPXcBKGFhsdDTb9wsYOMnaihW5rsyX6SBJDqt5JpNwmoAkzyPjMNqSc_hG09cQ18MjQVCzXuHYyuQkr99mnHoAWJOU9YP3HZnboPACu8mQWR2LwFDk3Olk-A1_MwHUe6LiUULOocELsP5UIEgPIUbULlTpOl1BFXXFcpNguRSfvLUEGNx0R5VeDeMi-Uv9P7sb-XwELsufaw8Sv6nBezw6WBreJctCYyhW9ETjoZ3cPblGMieGOYTwhANE1Ue8CzHg_vOmcRQtNDNiHaI6JRSRmzdgL8JhvhpSLMP65H01G6ZX3H2B5xLPvH26Aft1nfNe107VOszlwwUXHPJkDXslo2kWGkkIfnhjX6CAWYIwQCKc0xW_RLK-xrhrYgSbTWyYEOdAXajVDGS-077yc8A85wBkXH7MTb7BMvTetuX_r9A-k5yxIMKYUJ4Ze2-tOT8cMbgZVGZQ6rB2t3qZNF-gfDth0NDhEfRjOeezSV5EHbr-UWu-riqAiVWBiI_YhTMVkAJKMPKW2gYI_1VaLNa3NwoxL54U4T8TUoqNg19k0MBEhSD9g--ihwYNtZG7_fbmPcqsUF3tKJDBcyZFwxT5CE6bdxe_GhOEU486hKXRMqnTuChBjQBET9ihG-M5-xXfPyo97CYI6uZiTm-Ff5P6PclullUuKQGNL0fvz84jHMY97F6_5QMJBGFatgvSKf7pGVKm-prsMaB2BEi0SAJYmIvVr9g-1qJHrSe-Qd0b-AnxaxNFwM6mBgLApMmNtwANZjBvAzFfT9vkuv-zwi0T5NVRf5ml3EkQg9tfmRRjDzxGuOs5Na9REMTNohVPXFwAzi9y7JoSQNHfQgwC-wC_XSmIJiKVV8vqaaYJdsLX6ooEneXux_xC08UaOrZORmfMXbqLsCFRYAwEOYDxzV8URRKwNjh-FtzNIaVjEbWX89Kll3gWEo4FS4CkcCcUVRzqJ8Mk0KTMeSDyXyYlgibk_e14zupe9EOz7cfnQ1_VYzM7i8v9oSi9bmJGj7TB8yrJMaYENeEDCbquZmiubAy1xoTqCc7YlGynPLqvgxnUZUnxdTlu5N1CrgGN11MzmNA4p3mxFWaGPET50nbyTQZ3Cm-7fULQlHQQ0d_QA6tjxG4OdjOnkDY0BdEp1R9uukinVl5df0VQAk032IIKLSRHnldnSc1L4bsIeJAZKG9NwgsuHDC8ynh3xBo1FWF44zk5zHJV-J8F55hEsMwgiEwYYSUUx-TaUGH3Lw2Qug3w2I-7og2P3yF3tx1fexI0VSU6K6b-D5Y_Mtr_F8sXB4tDzbXLH55BaJft_34EDtWWaDhxTLyjD6WSgu_PBNcd1QCnD1NDhHAf-jGgurDK7z_KUPwAgJXLQ8jV7hleds1wxTG0VOGngJYO7BdLb6Qld1CROm9KibetpuXjCCllGsOqOvYlu9zNY4-kJfdHJELPVpy9cSVawAnjCL-gkmQfYdwIE-V3mkRseHV3j46Jg_XNrBInM6GRICHyE4N6dumvXlxCAqU\"}</pre><code>.<br />Inviato il 2023-08-04T01:16:19.499Z.</p>","subject":"Reset password","to":"alessandro.amella@live.it"},"metadata":{},"timestamp":"2023-08-04 03:16:21"}
+{"label":"index.ts","level":"info","message":"Email sent successfully","metadata":{},"timestamp":"2023-08-04 03:16:21"}
+{"label":"index.ts","level":"info","message":"\u001b[0mPOST /api/contact \u001b[32m200\u001b[0m 2020.013 ms - 2\u001b[0m\n","metadata":{},"timestamp":"2023-08-04 03:16:21"}
+{"label":"index.ts","level":"info","message":"Server listening on port 5000","metadata":{},"timestamp":"2023-08-04 03:17:06"}
+{"label":"index.ts","level":"debug","message":"Validation passed","metadata":{},"timestamp":"2023-08-04 03:17:39"}
+{"label":"index.ts","level":"debug","message":"Captcha check passed","metadata":{},"timestamp":"2023-08-04 03:17:39"}
+{"label":"index.ts","level":"info","message":"Received email from alessandro.amella@live.it (Alessandro Amella) at Fri Aug 04 2023 03:17:39 GMT+0200 (Central European Summer Time):","metadata":{},"timestamp":"2023-08-04 03:17:39"}
+{"label":"index.ts","level":"info","message":"Vediamo se funzia! ciao","metadata":{"email":"alessandro.amella@live.it","name":"Alessandro Amella"},"timestamp":"2023-08-04 03:17:39"}
+{"label":"index.ts","level":"info","message":"Email ready: true","metadata":{},"timestamp":"2023-08-04 03:17:40"}
+{"label":"index.ts","level":"info","message":"New request sent to webmaster from alessandro.amella@live.it, sent message:","metadata":{},"timestamp":"2023-08-04 03:17:41"}
+{"label":"index.ts","level":"info","message":{"from":"\"BITREY.IT TI HANNO SCRITTO\" info@bitrey.it","html":"<p>Contenuto mail: <pre><code>{\"email\":\"alessandro.amella@live.it\",\"message\":\"Vediamo se funzia! ciao\",\"name\":\"Alessandro Amella\"}</pre><code>.<br />Inviato il 2023-08-04T01:17:39.752Z.</p>","subject":"Reset password","to":"alessandro.amella@live.it"},"metadata":{},"timestamp":"2023-08-04 03:17:41"}
+{"label":"index.ts","level":"info","message":"Email sent successfully","metadata":{},"timestamp":"2023-08-04 03:17:41"}
+{"label":"index.ts","level":"info","message":"\u001b[0mPOST /api/contact \u001b[32m200\u001b[0m 1749.147 ms - 2\u001b[0m\n","metadata":{},"timestamp":"2023-08-04 03:17:41"}
+{"label":"index.ts","level":"info","message":"Server listening on port 5000","metadata":{},"timestamp":"2023-08-04 03:18:07"}
+{"label":"index.ts","level":"info","message":"Server listening on port 5000","metadata":{},"timestamp":"2023-08-04 03:18:22"}
+{"label":"index.ts","level":"debug","message":"Validation passed","metadata":{},"timestamp":"2023-08-04 03:18:36"}
+{"label":"index.ts","level":"debug","message":"Captcha check passed","metadata":{},"timestamp":"2023-08-04 03:18:36"}
+{"label":"index.ts","level":"info","message":"Received email from alessandro.amella1@gmail.com (Roberto Amella) at Fri Aug 04 2023 03:18:36 GMT+0200 (Central European Summer Time):","metadata":{},"timestamp":"2023-08-04 03:18:36"}
+{"label":"index.ts","level":"info","message":"last try!!!!!","metadata":{"email":"alessandro.amella1@gmail.com","name":"Roberto Amella"},"timestamp":"2023-08-04 03:18:36"}
+{"label":"index.ts","level":"info","message":"Email ready: true","metadata":{},"timestamp":"2023-08-04 03:18:37"}
+{"label":"index.ts","level":"info","message":"New request sent to webmaster from alessandro.amella1@gmail.com, sent message:","metadata":{},"timestamp":"2023-08-04 03:18:38"}
+{"label":"index.ts","level":"info","message":{"from":"\"BITREY.IT TI HANNO SCRITTO\" info@bitrey.it","html":"<p>Contenuto mail: <pre><code>{\"email\":\"alessandro.amella1@gmail.com\",\"message\":\"last try!!!!!\",\"name\":\"Roberto Amella\"}</pre><code>.<br />Inviato il 2023-08-04T01:18:36.709Z.</p>","subject":"BITREY.IT - NUOVA RICHIESTA DI CONTATTO","to":"alessandro.amella@live.it"},"metadata":{},"timestamp":"2023-08-04 03:18:38"}
+{"label":"index.ts","level":"info","message":"Email sent successfully","metadata":{},"timestamp":"2023-08-04 03:18:38"}
+{"label":"index.ts","level":"info","message":"\u001b[0mPOST /api/contact \u001b[32m200\u001b[0m 1764.577 ms - 2\u001b[0m\n","metadata":{},"timestamp":"2023-08-04 03:18:38"}
+{"label":"index.ts","level":"info","message":"Server listening on port 5000","metadata":{},"timestamp":"2023-08-04 03:18:55"}
+{"label":"index.ts","level":"debug","message":"Validation passed","metadata":{},"timestamp":"2023-08-04 03:19:04"}
+{"label":"index.ts","level":"debug","message":"Captcha check passed","metadata":{},"timestamp":"2023-08-04 03:19:04"}
+{"label":"index.ts","level":"info","message":"Received email from alessandro.amella1@gmail.com (Alessandro Amella) at Fri Aug 04 2023 03:19:04 GMT+0200 (Central European Summer Time):","metadata":{},"timestamp":"2023-08-04 03:19:04"}
+{"label":"index.ts","level":"info","message":"last try the return","metadata":{"email":"alessandro.amella1@gmail.com","name":"Alessandro Amella"},"timestamp":"2023-08-04 03:19:04"}
+{"label":"index.ts","level":"info","message":"Email ready: true","metadata":{},"timestamp":"2023-08-04 03:19:05"}
+{"label":"index.ts","level":"info","message":"New request sent to webmaster from alessandro.amella1@gmail.com, sent message:","metadata":{},"timestamp":"2023-08-04 03:19:06"}
+{"label":"index.ts","level":"info","message":{"from":"\"BITREY.IT TI HANNO SCRITTO\" info@bitrey.it","html":"<p>Contenuto mail: <pre><code>{\"name\":\"Alessandro Amella\",\"email\":\"alessandro.amella1@gmail.com\",\"message\":\"last try the return\"}</pre><code>.<br />Inviato il 2023-08-04T01:19:04.942Z.</p>","subject":"BITREY.IT - NUOVA RICHIESTA DI CONTATTO","to":"alessandro.amella@live.it"},"metadata":{},"timestamp":"2023-08-04 03:19:06"}
+{"label":"index.ts","level":"info","message":"Email sent successfully","metadata":{},"timestamp":"2023-08-04 03:19:06"}
+{"label":"index.ts","level":"info","message":"\u001b[0mPOST /api/contact \u001b[32m200\u001b[0m 1862.384 ms - 2\u001b[0m\n","metadata":{},"timestamp":"2023-08-04 03:19:06"}
+{"label":"index.ts","level":"debug","message":"Validation passed","metadata":{},"timestamp":"2023-08-04 03:19:28"}
+{"label":"index.ts","level":"debug","message":"Captcha check passed","metadata":{},"timestamp":"2023-08-04 03:19:28"}
+{"label":"index.ts","level":"info","message":"Received email from alessandro.amella1@gmail.com (Roberto Amella) at Fri Aug 04 2023 03:19:28 GMT+0200 (Central European Summer Time):","metadata":{},"timestamp":"2023-08-04 03:19:28"}
+{"label":"index.ts","level":"info","message":"ma che\nsuccede\nse\nvado\naa\n\n\n\ncapo","metadata":{"email":"alessandro.amella1@gmail.com","name":"Roberto Amella"},"timestamp":"2023-08-04 03:19:28"}
+{"label":"index.ts","level":"info","message":"New request sent to webmaster from alessandro.amella1@gmail.com, sent message:","metadata":{},"timestamp":"2023-08-04 03:19:29"}
+{"label":"index.ts","level":"info","message":{"from":"\"BITREY.IT TI HANNO SCRITTO\" info@bitrey.it","html":"<p>Contenuto mail: <pre><code>{\"name\":\"Roberto Amella\",\"email\":\"alessandro.amella1@gmail.com\",\"message\":\"ma che\\nsuccede\\nse\\nvado\\naa\\n\\n\\n\\ncapo\"}</pre><code>.<br />Inviato il 2023-08-04T01:19:28.974Z.</p>","subject":"BITREY.IT - NUOVA RICHIESTA DI CONTATTO","to":"alessandro.amella@live.it"},"metadata":{},"timestamp":"2023-08-04 03:19:29"}
+{"label":"index.ts","level":"info","message":"Email sent successfully","metadata":{},"timestamp":"2023-08-04 03:19:29"}
+{"label":"index.ts","level":"info","message":"\u001b[0mPOST /api/contact \u001b[32m200\u001b[0m 907.834 ms - 2\u001b[0m\n","metadata":{},"timestamp":"2023-08-04 03:19:29"}
+{"label":"index.ts","level":"info","message":"Server listening on port 5000","metadata":{},"timestamp":"2023-08-04 03:20:01"}
+{"label":"index.ts","level":"debug","message":"Validation passed","metadata":{},"timestamp":"2023-08-04 03:20:11"}
+{"label":"index.ts","level":"debug","message":"Captcha check passed","metadata":{},"timestamp":"2023-08-04 03:20:11"}
+{"label":"index.ts","level":"info","message":"Received email from alessandro.amella@live.it (Alessandro Amella) at Fri Aug 04 2023 03:20:11 GMT+0200 (Central European Summer Time):","metadata":{},"timestamp":"2023-08-04 03:20:11"}
+{"label":"index.ts","level":"info","message":"l'ultimo sono ","metadata":{"email":"alessandro.amella@live.it","name":"Alessandro Amella"},"timestamp":"2023-08-04 03:20:11"}
+{"label":"index.ts","level":"info","message":"Email ready: true","metadata":{},"timestamp":"2023-08-04 03:20:12"}
+{"label":"index.ts","level":"info","message":"New request sent to webmaster from alessandro.amella@live.it, sent message:","metadata":{},"timestamp":"2023-08-04 03:20:13"}
+{"label":"index.ts","level":"info","message":{"from":"\"BITREY.IT TI HANNO SCRITTO\" info@bitrey.it","html":"<p>Contenuto mail: <pre><code>{\"name\":\"Alessandro Amella\",\"email\":\"alessandro.amella@live.it\",\"message\":\"l'ultimo sono \"}</pre><code><br />Inviato il 2023-08-04T01:20:11.637Z.</p>","subject":"BITREY.IT - NUOVA RICHIESTA DI CONTATTO","to":"alessandro.amella@live.it"},"metadata":{},"timestamp":"2023-08-04 03:20:13"}
+{"label":"index.ts","level":"info","message":"Email sent successfully","metadata":{},"timestamp":"2023-08-04 03:20:13"}
+{"label":"index.ts","level":"info","message":"\u001b[0mPOST /api/contact \u001b[32m200\u001b[0m 1611.509 ms - 2\u001b[0m\n","metadata":{},"timestamp":"2023-08-04 03:20:13"}
+{"label":"index.ts","level":"info","message":"Server listening on port 5000","metadata":{},"timestamp":"2023-08-04 04:18:34"}
+{"label":"index.ts","level":"debug","message":"Validation passed","metadata":{},"timestamp":"2023-08-04 04:35:19"}
+{"label":"index.ts","level":"debug","message":"Captcha check passed","metadata":{},"timestamp":"2023-08-04 04:35:19"}
+{"label":"index.ts","level":"info","message":"Received email from alessandro.amella@live.it (Alessandro Amella) at Fri Aug 04 2023 04:35:19 GMT+0200 (Central European Summer Time):","metadata":{},"timestamp":"2023-08-04 04:35:19"}
+{"label":"index.ts","level":"info","message":"adfdsfsdgsf","metadata":{"email":"alessandro.amella@live.it","name":"Alessandro Amella"},"timestamp":"2023-08-04 04:35:19"}
+{"label":"index.ts","level":"info","message":"Email ready: true","metadata":{},"timestamp":"2023-08-04 04:35:19"}
+{"label":"index.ts","level":"info","message":"New request sent to webmaster from alessandro.amella@live.it, sent message:","metadata":{},"timestamp":"2023-08-04 04:35:20"}
+{"label":"index.ts","level":"info","message":{"from":"\"BITREY.IT TI HANNO SCRITTO\" info@bitrey.it","html":"<p>Contenuto mail: <pre><code>{\"name\":\"Alessandro Amella\",\"email\":\"alessandro.amella@live.it\",\"message\":\"adfdsfsdgsf\"}</pre><code><br />Inviato il 2023-08-04T02:35:19.207Z.</p>","subject":"BITREY.IT - NUOVA RICHIESTA DI CONTATTO","to":"alessandro.amella@live.it"},"metadata":{},"timestamp":"2023-08-04 04:35:20"}
+{"label":"index.ts","level":"info","message":"Email sent successfully","metadata":{},"timestamp":"2023-08-04 04:35:20"}
+{"label":"index.ts","level":"info","message":"\u001b[0mPOST /api/contact \u001b[32m200\u001b[0m 1852.889 ms - 2\u001b[0m\n","metadata":{},"timestamp":"2023-08-04 04:35:20"}
