@@ -20,6 +20,8 @@ import {
 import Button from "./Button";
 import labels from "../labels";
 
+import iPhoneImg from "../../../public/img/iphone.png";
+
 const ProjectsViewer = () => {
     const [curProjIndex, setCurProjIndex] = useState(0);
 
@@ -67,7 +69,8 @@ const ProjectsViewer = () => {
                         width={240}
                         height={384}
                         loading="lazy"
-                        src="/img/iphone.png"
+                        placeholder="blur"
+                        src={iPhoneImg}
                         alt="iPhone overlay"
                         className="z-20 absolute top-0 bottom-0 right-0 left-0"
                     />
@@ -90,6 +93,7 @@ const ProjectsViewer = () => {
                                     width={240}
                                     height={384}
                                     loading="lazy"
+                                    placeholder="blur"
                                     src={image}
                                     alt={name}
                                     className="z-10 w-full h-full object-cover object-top rounded-xl"

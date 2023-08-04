@@ -87,10 +87,8 @@ function Home() {
                         </div>
                     </div>
                     <Image
-                        // src="/img/io.png"
                         src={meDrawing}
                         placeholder="blur"
-                        // blurDataURL="/img/io_tn.jpg"
                         loading="lazy"
                         alt="Foto mia"
                         width={400}
