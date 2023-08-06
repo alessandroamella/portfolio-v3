@@ -6,7 +6,7 @@ export const envs = cleanEnv(process.env, {
     NODE_ENV: str({
         choices: ["development", "test", "production", "staging"]
     }),
-    PORT: num(),
+    PORT: num({ default: 3578 }),
     RECAPTCHA_SECRET: str(),
     MAIL_SERVER: str(),
     MAIL_USERNAME: str(),

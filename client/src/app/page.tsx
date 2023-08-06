@@ -15,12 +15,81 @@ import { config } from "./config";
 import HowCanIHelpCard from "./components/HowCanIHelpCard";
 
 import meDrawing from "../../public/img/me_drawing.png";
+import aaLogo from "../../public/img/aa_logo_white_cut.png";
+import Head from "next/head";
 
 const dancingScript = Dancing_Script({ subsets: ["latin"] });
 
 function Home() {
     return (
         <main className="bg-[#f7f7f7] min-h-screen">
+            <Head>
+                <link
+                    rel="apple-touch-icon"
+                    sizes="180x180"
+                    href="/apple-touch-icon.png"
+                />
+                <link
+                    rel="icon"
+                    type="image/png"
+                    sizes="32x32"
+                    href="/favicon-32x32.png"
+                />
+                <link
+                    rel="icon"
+                    type="image/png"
+                    sizes="16x16"
+                    href="/favicon-16x16.png"
+                />
+                <link rel="manifest" href="/site.webmanifest" />
+                <link
+                    rel="mask-icon"
+                    href="/safari-pinned-tab.svg"
+                    color="#3f83f8"
+                />
+                <meta name="msapplication-TileColor" content="#3f83f8" />
+                <meta name="theme-color" content="#3f83f8" />
+
+                <title>Bitrey Portfolio - Sviluppo siti web</title>
+                <meta
+                    name="title"
+                    content="Bitrey Portfolio - Sviluppo siti web"
+                />
+                <meta
+                    name="description"
+                    content="Sviluppo siti web, software, app e altro"
+                />
+
+                <meta property="og:type" content="website" />
+                <meta property="og:url" content="https://www.bitrey.it/" />
+                <meta
+                    property="og:title"
+                    content="Bitrey Portfolio - Sviluppo siti web"
+                />
+                <meta
+                    property="og:description"
+                    content="Sviluppo siti web, software, app e altro"
+                />
+                <meta
+                    property="og:image"
+                    content="https://www.bitrey.it/banner.jpg"
+                />
+
+                <meta property="twitter:card" content="summary_large_image" />
+                <meta property="twitter:url" content="https://www.bitrey.it/" />
+                <meta
+                    property="twitter:title"
+                    content="Bitrey Portfolio - Sviluppo siti web"
+                />
+                <meta
+                    property="twitter:description"
+                    content="Sviluppo siti web, software, app e altro"
+                />
+                <meta
+                    property="twitter:image"
+                    content="https://www.bitrey.it/banner.jpg"
+                />
+            </Head>
             <header className="flex justify-around p-4 md:px-0 items-center">
                 <h3 className="select-none text-gray-700 font-bold tracking-tighter text-2xl uppercase">
                     Alessandro Amella
@@ -206,9 +275,18 @@ function Home() {
             </section>
 
             <footer className="bg-gray-700 border-gray-200 border-t-4 text-white px-8 md:px-24 py-6 z-50 flex flex-col items-center md:flex-row justify-start md:justify-around">
-                <h3 className="select-none tracking-tighter uppercase font-bold text-2xl">
-                    Bitrey
-                </h3>
+                <div className="flex flex-col justify-center items-center">
+                    <Image
+                        className="drop-shadow-lg shadow-white"
+                        src={aaLogo}
+                        width={50}
+                        height={50}
+                        alt="AA logo"
+                    />
+                    <h3 className="select-none tracking-tighter lowercase font-bold text-2xl">
+                        Bitrey
+                    </h3>
+                </div>
                 <p className="font-light">2023 &copy; Alessandro Amella</p>
                 <a
                     href={`mailto:${config.email}`}
