@@ -15,7 +15,8 @@ import { config } from "./config";
 import HowCanIHelpCard from "./components/HowCanIHelpCard";
 
 import meDrawing from "../../public/img/me_drawing.png";
-import aaLogo from "../../public/img/aa_logo_white_cut.png";
+import aaLogo from "../../public/img/aa_logo_cut.png";
+import aaLogoWhite from "../../public/img/aa_logo_white_cut.png";
 import Head from "next/head";
 
 const dancingScript = Dancing_Script({ subsets: ["latin"] });
@@ -90,10 +91,20 @@ function Home() {
                     content="https://www.bitrey.it/banner.jpg"
                 />
             </Head>
-            <header className="flex justify-around p-4 md:px-0 items-center">
-                <h3 className="select-none text-gray-700 font-bold tracking-tighter text-2xl uppercase">
-                    Alessandro Amella
-                </h3>
+            <header className="bg-gray-100 flex justify-around p-4 md:px-0 items-center">
+                <div className="flex items-center gap-4">
+                    <Image
+                        className="drop-shadow-lg shadow-white"
+                        src={aaLogo}
+                        width={34}
+                        height={34}
+                        alt="AA logo"
+                    />
+                    <h3 className="select-none text-gray-700 font-bold tracking-tighter text-2xl uppercase">
+                        Alessandro Amella
+                    </h3>
+                </div>
+
                 <div className="hidden text-gray-600 lowercase md:flex items-center gap-4">
                     <a className="hover:text-gray-700" href="#about">
                         {labels.it.header.about}
@@ -204,7 +215,7 @@ function Home() {
                 </h2>
                 <ProjectsViewer />
 
-                <div className="text-right md:-mt-16 hover:text-gray-600 transition-colors duration-75">
+                <div className="text-right mt-4 md:-mt-16 hover:text-gray-600 transition-colors duration-75">
                     <a
                         href={config.githubUrl}
                         target="_blank"
@@ -275,12 +286,12 @@ function Home() {
             </section>
 
             <footer className="bg-gray-700 border-gray-200 border-t-4 text-white px-8 md:px-24 py-6 z-50 flex flex-col items-center md:flex-row justify-start md:justify-around">
-                <div className="flex flex-col justify-center items-center">
+                <div className="flex justify-center items-center gap-2">
                     <Image
                         className="drop-shadow-lg shadow-white"
-                        src={aaLogo}
-                        width={50}
-                        height={50}
+                        src={aaLogoWhite}
+                        width={32}
+                        height={32}
                         alt="AA logo"
                     />
                     <h3 className="select-none tracking-tighter lowercase font-bold text-2xl">

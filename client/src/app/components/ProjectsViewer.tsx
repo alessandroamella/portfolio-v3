@@ -64,7 +64,7 @@ const ProjectsViewer = () => {
                     <FaBackward />
                 </Button>
 
-                <div className="-mx-6 md:-mx-2 my-6 flex justify-center pt-5 pb-9 px-[2.8rem] w-60 h-96 relative">
+                <div className="-mx-6 md:-mx-2 my-6 flex justify-center pt-[1.15rem] pb-[2.5rem] px-[2.6rem] w-60 h-96 relative">
                     <Image
                         width={240}
                         height={384}
@@ -83,12 +83,12 @@ const ProjectsViewer = () => {
                             delay: 2500,
                             disableOnInteraction: false
                         }}
-                        className="h-full w-full z-40"
+                        className="h-full w-full z-40 rounded-2xl overflow-hidden"
                         ref={sliderRef}
                         onSlideChange={s => setCurProjIndex(s.activeIndex)}
                     >
                         {projects.map(({ name, image, description }, i) => (
-                            <SwiperSlide key={i} className="h-full w-full z-50">
+                            <SwiperSlide key={i} className="h-full w-full z-10">
                                 <Image
                                     width={240}
                                     height={384}
@@ -96,7 +96,7 @@ const ProjectsViewer = () => {
                                     placeholder="blur"
                                     src={image}
                                     alt={name}
-                                    className="z-10 w-full h-full object-cover object-top rounded-xl"
+                                    className="z-10 w-full h-full object-cover object-top"
                                 />
                             </SwiperSlide>
                         ))}
