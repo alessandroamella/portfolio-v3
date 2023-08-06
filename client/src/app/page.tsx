@@ -51,10 +51,9 @@ function Home() {
                 <meta name="msapplication-TileColor" content="#3f83f8" />
                 <meta name="theme-color" content="#3f83f8" />
 
-                <title>Bitrey Portfolio - Sviluppo siti web</title>
                 <meta
                     name="title"
-                    content="Bitrey Portfolio - Sviluppo siti web"
+                    content="Alessandro Amella - Sviluppo siti web"
                 />
                 <meta
                     name="description"
@@ -65,7 +64,7 @@ function Home() {
                 <meta property="og:url" content="https://www.bitrey.it/" />
                 <meta
                     property="og:title"
-                    content="Bitrey Portfolio - Sviluppo siti web"
+                    content="Alessandro Amella - Sviluppo siti web"
                 />
                 <meta
                     property="og:description"
@@ -80,7 +79,7 @@ function Home() {
                 <meta property="twitter:url" content="https://www.bitrey.it/" />
                 <meta
                     property="twitter:title"
-                    content="Bitrey Portfolio - Sviluppo siti web"
+                    content="Alessandro Amella - Sviluppo siti web"
                 />
                 <meta
                     property="twitter:description"
@@ -118,7 +117,7 @@ function Home() {
                 </div>
             </header>
 
-            <section className="flex mt-12 md:mt-20 mb-0 pb-0 flex-col items-center justify-center">
+            <section className="flex mt-12 md:mt-14 mb-0 pb-0 flex-col items-center justify-center">
                 <div className="grid grid-cols-1 md:grid-cols-2 items-center md:gap-8 px-8 md:px-16">
                     <div className="mx-auto">
                         <div className="relative">

@@ -2,7 +2,7 @@ import "./globals.css";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-    title: "Alessandro Amella - Sviluppo Siti Web",
+    title: "Alessandro Amella - Sviluppo Siti Web e Soluzioni Informatiche",
     description: "Sviluppo siti web per privati e aziende"
 };
 
