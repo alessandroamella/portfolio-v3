@@ -33,40 +33,51 @@ export const labels = {
             contact: "Contatti"
         },
         homepage: {
-            splash: "Ciao! Sono Alessandro, posso aiutarti a creare il tuo sito web.",
-            subtitle:
-                "Sono attualmente studente di Informatica all'Università di Bologna e programmo siti web per privati e aziende.",
+            splash: "ALESSANDRO AMELLA",
+            subtitle: "Studente di Informatica all'Università di Bologna e programmatore",
             projects: "Progetti",
-            description:
-                "Mi sono diplomato all'I.T.I.S. E. Fermi di Modena con 98/100 e ho iniziato a programmare siti web nel 2019.",
-            description2:
-                "Negli anni ho acquisito esperienza in diversi linguaggi di programmazione e tecnologie web grazie alla scuola e alla mia passione per l'informatica.",
-            description3:
-                "Ho fatto diversi stage in aziende del settore informatico e ho lavorato come sviluppatore web freelance per aziende e associazioni. Nel 2022 ho conseguito la patente da radioamatore, ed iniziato a studiare Informatica all'Università di Bologna.",
-            description4:
-                "Ora mi occupo di sviluppo web, che bilancio con lo studio universitario.",
-            description5:
-                "Sono disponibile per progetti di sviluppo web, contattami per un preventivo gratuito!",
+            descriptions: [
+                "Ho iniziato a programmare quando avevo 9 anni e da allora non ho più smesso di imparare l'informatica su ogni suo ramo.",
+                "Studiando prevelantemente da autodidatta, ho proseguito gli studi in informatica-telecomunicazioni presso l'ITIS di Modena, diplomandomi con 98/100.",
+                "Attualmente studio Informatica all'Università di Bologna, e punto ad un corso di laurea magistrale in ambito AI (da qualche parte)."
+            ],
+            otherInterests: "Altri miei interessi includono",
+            otherInterstsRadio: {
+                title: "Radio e telecomunicazioni: diploma in telecom. e ",
+                urlTitle: "radioamatore",
+                url: "https://www.qrz.com/db/IU4QSG"
+            },
+            otherInterestsList: [
+                "Elettronica e microcontrollori (Arduino, ESP8266, Raspberry Pi)",
+                "Trasporti pubblici e pianificazione urbanistica",
+                "Fotografia, video editing e mixing musicale (DJing)",
+                "Videogiochi e game development"
+            ],
+            // "Negli anni ho acquisito esperienza in diversi linguaggi di programmazione e tecnologie web grazie alla scuola e alla mia passione per l'informatica.",
+            // "Ho fatto diversi stage in aziende del settore informatico e ho lavorato come sviluppatore web freelance per aziende e associazioni. Nel 2022 ho conseguito la patente da radioamatore, ed iniziato a studiare Informatica all'Università di Bologna.",
+            // "Ora mi occupo di sviluppo web, che bilancio con lo studio universitario.",
+            // "Sono disponibile per progetti di sviluppo web, contattami per un preventivo gratuito!",
             someProjects: "Alcuni miei progetti",
             github: "GitHub",
+            githubUsername: "Bitrey",
             linkedin: "LinkedIn",
+            instagram: "Instagram",
             cv: "Curriculum Vitae",
             open: "Apri",
             andManyOthers: "e molti altri",
-            letsKeepInTouch: "Restiamo in contatto!",
+            letsKeepInTouch: "Contatti",
             contactSubtitle:
-                "Che tu abbia un'idea o un progetto già avviato, contattami per un preventivo gratuito o per qualsiasi altra informazione.",
+                "Per commissioni, collaborazioni o semplicemente per chiacchierare, puoi contattarmi tramite il seguente form.",
             otherChannels: "Mi trovi anche su",
-            howCanIHelpYou: "Come posso aiutarti?",
-            webDevelopment: "Sviluppo web",
+            howCanIHelpYou: "Sono aperto a:",
+            webDevelopment: "Sviluppo web, software e app",
             webDevelopmentDescription:
-                "Sviluppo siti web per privati e aziende, con tecnologie moderne e responsive design.",
-            consulting: "Consulenza",
+                "Sviluppo di siti web, applicazioni web e software su misura.",
+            consulting: "Consulenza informatica",
             consultingDescription:
-                "Consulenza per la realizzazione di siti web e soluzioni informatiche.",
+                "Consulenza su problemi informatici, scelta di tecnologie e soluzioni.",
             other: "Altro",
-            otherDescription:
-                "Contattami per qualsiasi altra informazione o richiesta."
+            otherDescription: "Qualsiasi altra informazione o richiesta."
         },
         contact: {
             yourEmail: "La tua email",
