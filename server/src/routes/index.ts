@@ -1,12 +1,31 @@
 import { Router } from "express";
-import { body, check, validationResult } from "express-validator";
+import { body, check, query, validationResult } from "express-validator";
 import { BAD_REQUEST, INTERNAL_SERVER_ERROR, OK } from "http-status";
 import { logger } from "../shared/logger";
 import { checkCaptcha } from "../helpers/checkCaptcha";
 import EmailService from "../helpers/mail";
 import { UserMail } from "../interfaces/UserMail";
+import { WeatherData, getWeather } from "../weather";
 
 const router = Router();
+
+let weatherCache: WeatherData | null = null;
+
+router.get(
+    "/weather",
+    // query("lang").isString().isLength({ min: 2, max: 2 }),
+    async (req, res) => {
+        try {
+            const weather =
+                weatherCache || (await getWeather({ lat: 44.56204, lon: 11.03422, lang: "it" }));
+            return res.json(weather);
+        } catch (err) {
+            logger.error("Error while getting weather");
+            logger.error(err);
+            return res.status(INTERNAL_SERVER_ERROR).json({ err: "servererror.internal" });
+        }
+    }
+);
 
 router.post(
     "/contact",
@@ -21,9 +40,7 @@ router.post(
             result.array().forEach(error => {
                 logger.debug(error);
             });
-            return res
-                .status(BAD_REQUEST)
-                .json({ err: "servererror.validation" });
+            return res.status(BAD_REQUEST).json({ err: "servererror.validation" });
         }
         logger.debug("Validation passed");
 
@@ -31,16 +48,12 @@ router.post(
             const captcha = checkCaptcha(req.body.captcha);
             if (!captcha) {
                 logger.debug("Captcha check failed");
-                return res
-                    .status(BAD_REQUEST)
-                    .json({ err: "servererror.captcha" });
+                return res.status(BAD_REQUEST).json({ err: "servererror.captcha" });
             }
         } catch (err) {
             logger.error("Error while checking captcha");
             logger.error(err);
-            return res
-                .status(INTERNAL_SERVER_ERROR)
-                .json({ err: "servererror.internal" });
+            return res.status(INTERNAL_SERVER_ERROR).json({ err: "servererror.internal" });
         }
         logger.debug("Captcha check passed");
 
@@ -50,16 +63,11 @@ router.post(
         logger.info({ name, email, message });
 
         try {
-            await EmailService.sendEmailToWebmaster(
-                { name, email, message },
-                new Date()
-            );
+            await EmailService.sendEmailToWebmaster({ name, email, message }, new Date());
         } catch (err) {
             logger.error("Error while sending email");
             logger.error(err);
-            return res
-                .status(INTERNAL_SERVER_ERROR)
-                .json({ err: "servererror.internal" });
+            return res.status(INTERNAL_SERVER_ERROR).json({ err: "servererror.internal" });
         }
 
         logger.info("Email sent successfully");

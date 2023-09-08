@@ -12,5 +12,6 @@ export const envs = cleanEnv(process.env, {
     MAIL_USERNAME: str(),
     MAIL_PASSWORD: str(),
     SEND_EMAIL_FROM: str(),
-    SEND_EMAIL_TO: str()
+    SEND_EMAIL_TO: str(),
+    WEATHER_API_KEY: str()
 });

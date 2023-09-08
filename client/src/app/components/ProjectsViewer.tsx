@@ -11,12 +11,7 @@ import Typewriter, { TypewriterClass } from "typewriter-effect";
 
 import Image from "next/image";
 import { projects } from "@/projects";
-import {
-    FaBackward,
-    FaExternalLinkAlt,
-    FaForward,
-    FaGithub
-} from "react-icons/fa";
+import { FaBackward, FaExternalLinkAlt, FaForward, FaGithub } from "react-icons/fa";
 import Button from "./Button";
 import labels from "../labels";
 
@@ -123,9 +118,19 @@ const ProjectsViewer = () => {
                 </h1>
 
                 <Fade>
-                    <p className="mt-4 text-lg min-h-[5.5rem]">
-                        {curProject.description}
-                    </p>
+                    <p className="mt-4 text-lg min-h-[5.5rem]">{curProject.description}</p>
+
+                    <p className="mt-4 text-gray-500">{labels.it.homepage.builtWith}</p>
+                    <div className="max-w-full flex-wrap overflow-x-hidden flex items-center justify-center md:justify-start gap-2">
+                        {curProject.stack.map((e, i) => (
+                            <div
+                                key={i}
+                                className="bg-gray-100 hover:bg-gray-200 transition-colors rounded-full px-3 py-2 text-sm text-gray-600"
+                            >
+                                {e}
+                            </div>
+                        ))}
+                    </div>
                 </Fade>
 
                 <div className="mt-8 flex items-center justify-center md:justify-start gap-4">
@@ -135,9 +140,7 @@ const ProjectsViewer = () => {
                         className="flex items-center rounded-2xl font-medium tracking-tight px-3"
                     >
                         <FaGithub />
-                        <span className="ml-2">
-                            {labels.it.homepage.github}
-                        </span>
+                        <span className="ml-2">{labels.it.homepage.github}</span>
                     </Button>
                     <Button
                         href={curProject.url}

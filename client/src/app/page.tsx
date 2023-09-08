@@ -13,9 +13,9 @@ import HomepageContact from "./components/HomepageContact";
 import { config } from "./config";
 import HowCanIHelpCard from "./components/HowCanIHelpCard";
 
-import aaLogo from "../../public/img/aa_logo_cut.png";
-import aaLogoWhite from "../../public/img/aa_logo_white_cut.png";
 import Head from "next/head";
+import BgGraph from "./components/BgGraph";
+import WeatherInfo from "./components/Weather";
 
 const dancingScript = Dancing_Script({ subsets: ["latin"] });
 
@@ -52,7 +52,7 @@ function Home() {
                 />
                 <meta property="twitter:image" content="https://www.bitrey.it/banner.jpg" />
             </Head>
-            <header className="bg-gray-100 flex justify-around p-4 md:px-0 items-center">
+            <header className="bg-gray-100 bg-opacity-50 flex justify-around p-4 md:px-0 items-center z-20 h-14 relative">
                 <div className="flex items-center gap-4">
                     {/* <Image
                         className="drop-shadow-lg shadow-white"
@@ -66,7 +66,7 @@ function Home() {
                     </h3> */}
                 </div>
 
-                <div className="hidden text-gray-600 lowercase md:flex items-center gap-4">
+                <div className="flex text-gray-600 lowercase items-center gap-4">
                     <a className="hover:text-gray-700" href="#about">
                         {labels.it.header.about}
                     </a>
@@ -79,9 +79,10 @@ function Home() {
                 </div>
             </header>
 
-            <section className="flex mt-12 md:mt-14 mb-0 pb-0 flex-col items-center justify-center">
+            <section className="flex mt-12 md:mt-14 mb-0 pb-0 flex-col items-center justify-center z-0">
                 <div className="flex items-center md:gap-8 px-8 md:px-16 mb-6">
                     <div className="mx-auto">
+                        <BgGraph />
                         <div className="relative text-center">
                             {/* <h1 className="invisible text-[2.5rem] font-bold leading-tight">
                                 {labels.it.homepage.splash}
@@ -89,13 +90,13 @@ function Home() {
                             {/* <h1 className="absolute top-0 text-[2.5rem] font-bold leading-tight">
                                 <HomepageTypewriter />
                             </h1> */}
-                            <h1 className="text-6xl font-bold leading-tight">
+                            <h1 className="text-6xl font-bold leading-tight z-20">
                                 {labels.it.homepage.splash}
                             </h1>
                         </div>
                         {/* <p className="mt-6 text-lg text-center">{labels.it.homepage.subtitle}</p> */}
 
-                        <div className="mt-12 flex items-center justify-center gap-2">
+                        <div className="mt-12 flex items-center justify-center gap-2 z-20 relative">
                             <Button
                                 href={config.githubUrl}
                                 className="flex items-center gap-2 rounded-lg font-medium tracking-tight text-xl px-4 py-3"
@@ -126,12 +127,12 @@ function Home() {
                             </div>
                             <Button
                                 // color="purple"
-                                href={`mailto:${config.email}`}
+                                href={config.telegramUrl}
                                 className="relative flex items-center gap-2 rounded-lg font-medium tracking-tight text-xl px-4 py-3"
                             >
                                 <span className="invisible">A-</span>
                                 <div className="absolute">
-                                    <FaEnvelope />
+                                    <FaTelegram />
                                 </div>
                             </Button>
                             <Button
@@ -166,17 +167,21 @@ function Home() {
                         speed: 0.15,
                         points: 3
                     }}
+                    className="z-10"
                 />
             </section>
             <section
                 id="about"
-                className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-24 -mt-8 px-8 md:px-16 pt-0 pb-6 z-0 bg-gray-700 text-white"
+                className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-24 -mt-12 px-8 md:px-16 pt-0 pb-6 z-10 relative bg-gray-700 text-white"
             >
                 <div>
-                    <h2 className="text-4xl font-bold text-center tracking-tight mb-8">
+                    <h2 className="text-4xl font-bold text-center tracking-tight mb-8 z-50 relative">
                         {labels.it.header.about}
                     </h2>
 
+                    <p>
+                        {labels.it.homepage.mainDescription} <WeatherInfo />
+                    </p>
                     {labels.it.homepage.descriptions.map((e, i) => (
                         <p key={i} className="mt-4">
                             {e}
@@ -207,7 +212,19 @@ function Home() {
                     </ul>
                 </div>
 
-                <HomepageTimeline />
+                <div>
+                    <HomepageTimeline />
+                    <div className="flex mb-2">
+                        <Button
+                            color="blue"
+                            href={config.linkedinUrl}
+                            className="flex items-center gap-2 rounded-lg font-medium tracking-tight text-xl px-4 py-3"
+                        >
+                            <FaLinkedin />
+                            {labels.it.homepage.linkedin}
+                        </Button>
+                    </div>
+                </div>
             </section>
 
             <section
@@ -217,6 +234,9 @@ function Home() {
                 <h2 className="text-4xl font-bold text-center tracking-tight">
                     {labels.it.homepage.someProjects}
                 </h2>
+                <p className="my-2 text-lg text-center">
+                    {labels.it.homepage.someProjectsDescription}
+                </p>
                 <ProjectsViewer />
 
                 <div className="text-right mt-4 md:-mt-16 hover:text-gray-600 transition-colors duration-75">
@@ -270,6 +290,8 @@ function Home() {
                                 </a>
                                 <a
                                     href={config.telegramUrl}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
                                     className="hover:text-gray-700 transition-colors duration-75 flex items-center rounded-xl px-4 font-medium tracking-tighter"
                                 >
                                     <FaTelegram />
@@ -296,13 +318,24 @@ function Home() {
                     </h3>
                 </div>
                 <p className="font-light">2023 &copy; Alessandro Amella</p>
-                <a
-                    href={`mailto:${config.email}`}
-                    className="flex items-center rounded-xl px-4 tracking-tighter"
-                >
-                    <FaEnvelope />
-                    <span className="ml-2">{config.email}</span>
-                </a>
+                <div className="flex flex-col justify-center">
+                    <a
+                        href={`mailto:${config.email}`}
+                        className="flex items-center rounded-xl px-4 tracking-tighter"
+                    >
+                        <FaEnvelope />
+                        <span className="ml-2">{config.email}</span>
+                    </a>
+                    <a
+                        href={config.instagramUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center rounded-xl px-4 tracking-tighter font-light"
+                    >
+                        <FaInstagram />
+                        <span className="ml-2">{config.instagramUsername}</span>
+                    </a>
+                </div>
             </footer>
         </main>
     );
