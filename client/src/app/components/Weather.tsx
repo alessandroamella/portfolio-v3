@@ -23,7 +23,11 @@ const WeatherInfo = () => {
         getWeather();
     }, []);
 
-    return weather && <span>{`(${weather.temp}°C - ${weather.description}).`}</span>;
+    return (
+        weather && (
+            <span className="text-gray-300">{`(${weather.temp}°C, ${weather.description}).`}</span>
+        )
+    );
 };
 
 export default WeatherInfo;
