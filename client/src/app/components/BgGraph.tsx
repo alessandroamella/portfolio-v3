@@ -35,15 +35,19 @@ function useWindowSize() {
 const BgGraph = () => {
     const { width, height } = useWindowSize();
 
-    const graphNum = width && width < 768 ? 3 : 5;
-    const topPadding = 24;
+    // const graphNum = width && width < 768 ? 3 : 5;
+    const graphNum = 5;
+    // const topPadding = !height || height < 1024 ? 500 : 0;
+    const topPadding = 350;
 
     const animDuration = !width || width < 768 ? 10 : width < 1024 ? 20 : 30;
 
     const [randomAnimDelay, setRandomAnimDelay] = useState<string[]>([]);
-    const [bottomValues, setBottomValues] = useState<number[]>([]);
+    const [topValues, setTopValues] = useState<number[]>([]);
 
     useEffect(() => {
+        if (!width || !height) return;
+
         setRandomAnimDelay(
             Array.from(
                 { length: animDuration },
@@ -51,12 +55,13 @@ const BgGraph = () => {
             ).filter((e, i) => i % (animDuration / graphNum) === 0)
         );
 
-        setBottomValues(
+        setTopValues(
             Array.from({ length: graphNum }).map(
-                (_e, i) => (Math.random() * (height || 800)) / 2 - topPadding
+                (_e, i) => (Math.random() * (height || 800)) / 3 - topPadding
             )
         );
-    }, []);
+    }, [animDuration, graphNum, width, height]);
+    console.log("topValues", topValues);
 
     return (
         <div className="falling-items-container">
@@ -64,7 +69,7 @@ const BgGraph = () => {
                 <div
                     key={i}
                     className="absolute falling-items z-0"
-                    style={{ bottom: bottomValues[i], animationDelay: randomAnimDelay[i] }}
+                    style={{ top: topValues[i], animationDelay: randomAnimDelay[i] }}
                 >
                     <GraphElem />
                 </div>

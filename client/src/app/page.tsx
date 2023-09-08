@@ -79,7 +79,7 @@ function Home() {
                 </div>
             </header>
 
-            <section className="flex mt-12 md:mt-14 mb-0 pb-0 flex-col items-center justify-center z-0">
+            <section className="relative flex mt-12 md:mt-14 mb-0 pb-0 flex-col items-center justify-center z-0">
                 <div className="flex items-center md:gap-8 px-8 md:px-16 mb-6">
                     <div className="mx-auto">
                         <BgGraph />
@@ -214,7 +214,7 @@ function Home() {
 
                 <div>
                     <HomepageTimeline />
-                    <div className="flex mb-2">
+                    <div className="flex mb-2 justify-center md:justify-start">
                         <Button
                             color="blue"
                             href={config.linkedinUrl}

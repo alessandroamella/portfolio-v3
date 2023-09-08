@@ -2,13 +2,19 @@
 @tailwind components;
 @tailwind utilities;
 
+html, body {
+    margin: 0 auto;
+    overflow-x: hidden;
+}
+
 html {
     @apply scroll-smooth;
 }
 
+
 body {
-    max-width: 100vw;
-    overflow-x: hidden;
+    position:relative;
+
 }
 
 * {
@@ -21,6 +27,7 @@ body {
     /* z-index: -1; */
     /* animation: falling-items 5s ease-in infinite; */
     animation: falling-items 10s linear infinite;
+    animation-fill-mode: both;
 }
 
 /* in desktop, set animation duration longer */
