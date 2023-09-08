@@ -1,6 +1,7 @@
 import { Router } from "express";
-import { body, check, query, validationResult } from "express-validator";
+import { body, validationResult } from "express-validator";
 import { BAD_REQUEST, INTERNAL_SERVER_ERROR, OK } from "http-status";
+import moment, { Moment } from "moment";
 import { logger } from "../shared/logger";
 import { checkCaptcha } from "../helpers/checkCaptcha";
 import EmailService from "../helpers/mail";
@@ -10,15 +11,23 @@ import { WeatherData, getWeather } from "../weather";
 const router = Router();
 
 let weatherCache: WeatherData | null = null;
+let weatherCacheDate: Moment | null = null;
 
 router.get(
     "/weather",
     // query("lang").isString().isLength({ min: 2, max: 2 }),
     async (req, res) => {
         try {
-            const weather =
-                weatherCache || (await getWeather({ lat: 44.56204, lon: 11.03422, lang: "it" }));
-            return res.json(weather);
+            if (
+                !weatherCache ||
+                !weatherCacheDate ||
+                moment().diff(weatherCacheDate, "minutes") > 10
+            ) {
+                weatherCache = await getWeather({ lat: 44.56204, lon: 11.03422, lang: "it" });
+                weatherCacheDate = moment();
+            }
+
+            return res.json(weatherCache);
         } catch (err) {
             logger.error("Error while getting weather");
             logger.error(err);
