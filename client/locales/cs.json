@@ -1,0 +1,129 @@
+{
+    "common": {
+        "header": {
+            "about": "O mně",
+            "projects": "Projekty",
+            "contact": "Kontakt"
+        },
+        "homepage": {
+            "splash": "Alessandro Amella",
+            "projects": "Projekty",
+            "mainDescription": "Student informatiky na Univerzitě v Bologni, programátor, {years} let, žijící v Modeně",
+            "weather": "nyní je",
+            "descriptions": {
+                "0": "Začal jsem programovat, když mi bylo 9 let, a od té doby jsem nikdy nepřestal zkoumat všechny obory informatiky.",
+                "1": "Studoval jsem převážně jako samouk a pokračoval jsem ve studiu informatiky a telekomunikací na ITIS v Modeně, kde jsem absolvoval s 98/100.",
+                "2": "Aktuálně studuji na Alma Mater a mířím na magisterský titul v AI (někde)."
+            },
+            "otherInterests": "Moje další zájmy:",
+            "otherInterstsRadio": {
+                "title": "Rádio a telekomunikace: diplom v telekomunikacích a ",
+                "urlTitle": "amatérský radiový operátor",
+                "url": "https://www.qrz.com/db/IU4QSG"
+            },
+            "otherInterestsList": {
+                "0": "Elektronika a mikrokontroléry",
+                "1": "Veřejná doprava a urbanismus",
+                "2": "Fotografie, střih videa a mixování hudby (DJing)",
+                "3": "Videohry a vývoj her"
+            },
+            "someProjects": "Některé z mých projektů",
+            "someProjectsDescription": "Toto je jen několik projektů, na kterých jsem pracoval, mnohem více je na GitHubu.",
+            "github": "GitHub",
+            "githubUsername": "Bitrey",
+            "linkedin": "LinkedIn",
+            "instagram": "Instagram",
+            "cv": "Curriculum Vitae",
+            "open": "Otevřeno",
+            "builtWith": "Vytvořeno s",
+            "andManyOthers": "a mnoha dalšími",
+            "letsKeepInTouch": "Pojďme zůstat v kontaktu",
+            "contactSubtitle": "Pro provize, spolupráci nebo jen pro chat, můžete mě kontaktovat prostřednictvím následujícího formuláře (nebo kanálů vpravo dole).",
+            "otherChannels": "Můžete mě také najít na",
+            "howCanIHelpYou": "Jsem otevřený:",
+            "webDevelopment": "Vývoj webů, softwaru a aplikací",
+            "webDevelopmentDescription": "Vývoj webů, webových aplikací a zakázkového softwaru.",
+            "consulting": "IT konzultace",
+            "consultingDescription": "Konzultace ohledně IT problémů, výběru technologií a řešení.",
+            "other": "Jiné",
+            "otherDescription": "Jakékoli další informace nebo požadavek."
+        },
+        "contact": {
+            "yourEmail": "Váš e-mail",
+            "yourName": "Vaše jméno",
+            "yourMessage": "Vaše zpráva",
+            "messagePlaceholder": "Napište sem svou zprávu...",
+            "send": "Odeslat",
+            "telegram": "Telegram",
+            "email": "E-mail",
+            "captchaError": "Neplatná captcha",
+            "success": "Zpráva úspěšně odeslána, děkujeme",
+            "sendError": "Chyba při odesílání zprávy :("
+        },
+        "months": {
+            "january": "Leden",
+            "february": "Únor",
+            "march": "Březen",
+            "april": "Duben",
+            "may": "Květen",
+            "june": "Červen",
+            "july": "Červenec",
+            "august": "Srpen",
+            "september": "Září",
+            "october": "Říjen",
+            "november": "Listopad",
+            "december": "Prosinec"
+        },
+        "curriculum": {
+            "infolog": {
+                "date": "Červenec 2021",
+                "job": "Správce systému",
+                "description": "Správce systému u Infolog S.r.l. v Modeně, kde jsem spolupracoval s vývojovým týmem na vytvoření webové aplikace pro správu skladů."
+            },
+            "seta": {
+                "date": "Září 2021",
+                "job": "Vývojář softwaru",
+                "description": "Stáž v dopravní společnosti SETA S.p.A. v Modeně, kde jsem vyvíjel software pro generování zvukových souborů pro hlášení v autobusech. Také jsem prováděl analýzu dat pro trénování modelu strojového učení pro počítání cestujících."
+            },
+            "fertec": {
+                "date": "Březen 2023",
+                "job": "Webový vývojář",
+                "description": "Návrh a vývoj pokročilých softwarových řešení, včetně systémů mikroslužeb pro IoT, softwaru pro analýzu nákladů, mobilních a webových aplikací."
+            }
+        },
+        "projects": {
+            "ezaffitto": {
+                "title": "ezaffitto",
+                "description": "Plně automatizovaný sběrač inzerátů k pronájmu z různých webů s analýzou AI (OpenAI) strukturovanou jako mikroslužby."
+            },
+            "vhfesuperiori": {
+                "title": "VHF e superiori",
+                "description": "Manažer akcí a sociální síť pro radioamatéry, kterou spravují dobrovolníci. Místo pro sdílení vašich výtvorů, spojení (QSO) a setkání s novými lidmi."
+            },
+            "occupalostudente": {
+                "title": "Occupa lo Studente",
+                "description": "Webová aplikace pro hledání práce, která propojuje firmy a studenty I.T.I.S. E. Fermi di Modena. Institucionální přihlášení přes Google OAuth 2.0."
+            },
+            "tpldisplay": {
+                "title": "TPL Display",
+                "description": "Elektronická informační tabule odjezdů autobusů v reálném čase, kontejnerizovaná, propojená s daty TPL v Bologni a Modeně, s cacheováním (Redis) a automatickou aktualizací."
+            },
+            "wolfsurvival": {
+                "title": "Wolf Survival",
+                "description": "Webové stránky školy přežití s frontendem a backendem Next.js propojené s API Meta (Facebook) pro zobrazení nejnovějších kurzů, fotografií a videí z probíhajících aktivit."
+            }
+        },
+        "languages": {
+            "full": {
+                "it": "Italiano",
+                "en": "English",
+                "cs": "Čeština"
+            },
+            "flag": {
+                "it": "🇮🇹",
+                "en": "🇬🇧",
+                "cs": "🇨🇿"
+            }
+        }
+    }
+}

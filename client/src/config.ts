@@ -14,5 +14,5 @@ export const config = Object.freeze({
     otherInterestsNum: 4,
     cvAgencies: ["infolog", "seta", "fertec"],
     projects: ["ezaffitto", "vhfesuperiori", "occupalostudente", "tpldisplay", "wolfsurvival"],
-    languages: ["it", "en"]
+    languages: ["it", "en", "cs"]
 });
