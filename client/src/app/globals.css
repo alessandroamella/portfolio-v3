@@ -71,3 +71,27 @@ body {
     background: radial-gradient(ellipse at center, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.7) 100%);
     pointer-events: none;
   } */
+  
+div.react-dropdown {
+    @apply w-fit shadow-none select-text outline-none border transition-colors duration-75 bg-transparent;
+}
+
+div.react-dropdown *:not(:hover,.react-dropdown-item-selected) {
+    @apply text-gray-600 hover:text-gray-700;
+}
+
+div.react-dropdown:hover {
+    @apply border-gray-200;
+}
+
+div.react-dropdown:focus {
+    @apply shadow-none;
+}
+
+div.react-dropdown-handle * {
+    @apply fill-gray-300;
+}
+
+div.react-dropdown *.react-dropdown-item-selected {
+    @apply text-gray-800;
+}

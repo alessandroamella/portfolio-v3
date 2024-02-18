@@ -1,5 +1,5 @@
 import { Router } from "express";
-import { body, validationResult } from "express-validator";
+import { body, query, validationResult } from "express-validator";
 import { BAD_REQUEST, INTERNAL_SERVER_ERROR, OK } from "http-status";
 import moment, { Moment } from "moment";
 import { logger } from "../shared/logger";
@@ -7,27 +7,42 @@ import { checkCaptcha } from "../helpers/checkCaptcha";
 import EmailService from "../helpers/mail";
 import { UserMail } from "../interfaces/UserMail";
 import { WeatherData, getWeather } from "../weather";
+import { config } from "../config";
 
 const router = Router();
 
-let weatherCache: WeatherData | null = null;
+let weatherCache: { [lang: string]: WeatherData } = {};
 let weatherCacheDate: Moment | null = null;
 
 router.get(
     "/weather",
-    // query("lang").isString().isLength({ min: 2, max: 2 }),
+    query("lang").isString().isIn(config.languages).optional(),
     async (req, res) => {
+        const result = validationResult(req);
+        if (!result.isEmpty()) {
+            logger.debug("Validation failed");
+            result.array().forEach(error => {
+                logger.debug(error);
+            });
+            return res.status(BAD_REQUEST).json({ err: "servererror.validation" });
+        }
+        logger.debug("Validation passed");
+
+        const lang = req.query?.lang || "en";
+
+        const { lat, lon } = config.coords;
+
         try {
             if (
-                !weatherCache ||
+                !weatherCache[lang] ||
                 !weatherCacheDate ||
                 moment().diff(weatherCacheDate, "minutes") > 10
             ) {
-                weatherCache = await getWeather({ lat: 44.56204, lon: 11.03422, lang: "it" });
+                weatherCache[lang] = await getWeather({ lat, lon, lang });
                 weatherCacheDate = moment();
             }
 
-            return res.json(weatherCache);
+            return res.json(weatherCache[lang]);
         } catch (err) {
             logger.error("Error while getting weather");
             logger.error(err);

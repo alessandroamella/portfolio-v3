@@ -1,25 +1,49 @@
 import Image from "next/image";
-import { labels } from "./labels";
-import Button from "./components/Button";
+import { useTranslations } from "next-intl";
+import _ from "lodash";
+import { differenceInYears } from "date-fns";
+
+import Button from "@/components/Button";
 import Wave from "react-wavify";
 import { FaEnvelope, FaGithub, FaInstagram, FaLinkedin, FaTelegram } from "react-icons/fa";
-import Arrow from "./components/arrow.svg";
+import Arrow from "@/components/arrow.svg";
 
 import { Dancing_Script } from "next/font/google";
-import HomepageTimeline from "./components/HomepageTimeline";
+import HomepageTimeline from "@/components/HomepageTimeline";
 
-import ProjectsViewer from "./components/ProjectsViewer";
-import HomepageContact from "./components/HomepageContact";
-import { config } from "./config";
-import HowCanIHelpCard from "./components/HowCanIHelpCard";
+import ProjectsViewer from "@/components/ProjectsViewer";
+import HomepageContact from "@/components/HomepageContact";
+import { config } from "@/config";
+import HowCanIHelpCard from "@/components/HowCanIHelpCard";
 
 import Head from "next/head";
-import BgGraph from "./components/BgGraph";
-import WeatherInfo from "./components/Weather";
+import BgGraph from "@/components/BgGraph";
+import WeatherInfo from "@/components/Weather";
+import ChangeLanguageBtn from "@/components/ChangeLanguageBtn";
 
 const dancingScript = Dancing_Script({ subsets: ["latin"] });
 
 function Home() {
+    const t = useTranslations("common");
+
+    const changeLanguageOptions = config.languages.map(e => ({
+        value: e,
+        label: `${t(`languages.flag.${e}`)} ${t(`languages.full.${e}`)}`
+    }));
+
+    const cvAgencies = config.cvAgencies.map(name => ({
+        name,
+        date: t(`curriculum.${name}.date`),
+        job: t(`curriculum.${name}.job`),
+        description: t(`curriculum.${name}.description`)
+    }));
+
+    const projects = config.projects.map(id => ({
+        id,
+        title: t(`projects.${id}.title`),
+        description: t(`projects.${id}.description`)
+    }));
+
     return (
         <main className="bg-[#f7f7f7] min-h-screen">
             <Head>
@@ -68,14 +92,15 @@ function Home() {
 
                 <div className="flex text-gray-600 lowercase items-center gap-4">
                     <a className="hover:text-gray-700" href="#about">
-                        {labels.it.header.about}
+                        {t("header.about")}
                     </a>
                     <a className="hover:text-gray-700" href="#projects">
-                        {labels.it.header.projects}
+                        {t("header.projects")}
                     </a>
                     <a className="hover:text-gray-700" href="#contact">
-                        {labels.it.header.contact}
+                        {t("header.contact")}
                     </a>
+                    <ChangeLanguageBtn options={changeLanguageOptions} />
                 </div>
             </header>
 
@@ -85,16 +110,16 @@ function Home() {
                         <BgGraph />
                         <div className="relative text-center">
                             {/* <h1 className="invisible text-[2.5rem] font-bold leading-tight">
-                                {labels.it.homepage.splash}
+                                {t("homepage.splash")}
                             </h1> */}
                             {/* <h1 className="absolute top-0 text-[2.5rem] font-bold leading-tight">
                                 <HomepageTypewriter />
                             </h1> */}
                             <h1 className="text-6xl font-bold leading-tight z-20">
-                                {labels.it.homepage.splash}
+                                {t("homepage.splash")}
                             </h1>
                         </div>
-                        {/* <p className="mt-6 text-lg text-center">{labels.it.homepage.subtitle}</p> */}
+                        {/* <p className="mt-6 text-lg text-center">{t("homepage.subtitle")}</p> */}
 
                         <div className="mt-12 flex items-center justify-center gap-2 z-20 relative">
                             <Button
@@ -102,7 +127,7 @@ function Home() {
                                 className="flex items-center gap-2 rounded-lg font-medium tracking-tight text-xl px-4 py-3"
                             >
                                 <FaGithub />
-                                {labels.it.homepage.github}
+                                {t("homepage.github")}
                             </Button>
                             <div className="relative">
                                 <Button
@@ -111,7 +136,7 @@ function Home() {
                                     className="flex items-center gap-2 rounded-lg font-medium tracking-tight text-xl px-4 py-3"
                                 >
                                     <FaLinkedin />
-                                    {labels.it.homepage.linkedin}
+                                    {t("homepage.linkedin")}
                                 </Button>
                                 <div className="flex justify-end items-end absolute -bottom-16 -right-16 md:-right-32">
                                     <Image
@@ -121,7 +146,7 @@ function Home() {
                                         alt="Arrow pointing to LinkedIn"
                                     />
                                     <p className={`${dancingScript.className} text-xl`}>
-                                        {labels.it.homepage.cv}
+                                        {t("homepage.cv")}
                                     </p>
                                 </div>
                             </div>
@@ -176,44 +201,50 @@ function Home() {
             >
                 <div>
                     <h2 className="text-4xl font-bold text-center tracking-tight mb-8 z-50 relative">
-                        {labels.it.header.about}
+                        {t("header.about")}
                     </h2>
 
                     <p>
-                        {labels.it.homepage.mainDescription} <WeatherInfo />
+                        {t("homepage.mainDescription", {
+                            years: differenceInYears(new Date(), config.birthday)
+                        })}{" "}
+                        <WeatherInfo prefixStr={t("homepage.weather")} />
                     </p>
-                    {labels.it.homepage.descriptions.map((e, i) => (
-                        <p key={i} className="mt-4">
-                            {e}
-                        </p>
-                    ))}
+                    {_.range(config.descriptionNum)
+                        .map(e => t(`homepage.descriptions.${e}`))
+                        .map((e, i) => (
+                            <p key={i} className="mt-4">
+                                {e}
+                            </p>
+                        ))}
 
                     <h3 className="text-2xl text-gray-100 font-semibold tracking-tighter mt-6">
-                        {labels.it.homepage.otherInterests}
+                        {t("homepage.otherInterests")}
                     </h3>
 
                     <ul className="max-w-md mt-4 text-gray-200 list-disc list-inside dark:text-gray-400 mb-6">
                         <li>
-                            {labels.it.homepage.otherInterstsRadio.title}
+                            {t("homepage.otherInterstsRadio.title")}
                             <a
-                                href={labels.it.homepage.otherInterstsRadio.url}
+                                href={t("homepage.otherInterstsRadio.url")}
                                 className="text-blue-300 hover:text-blue-400 transition-colors duration-75"
-                                target="_blank"
-                                rel="noopener noreferrer"
                             >
-                                {labels.it.homepage.otherInterstsRadio.urlTitle}
+                                {t("homepage.otherInterstsRadio.urlTitle")}
                             </a>
                         </li>
-                        {labels.it.homepage.otherInterestsList.map((e, i) => (
-                            <li key={i} className="mt-4">
-                                {e}
-                            </li>
-                        ))}
+
+                        {_.range(config.otherInterestsNum)
+                            .map(e => t(`homepage.otherInterestsList.${e}`))
+                            .map((e, i) => (
+                                <li key={i} className="mt-4">
+                                    {e}.
+                                </li>
+                            ))}
                     </ul>
                 </div>
 
                 <div>
-                    <HomepageTimeline />
+                    <HomepageTimeline agencies={cvAgencies} />
                     <div className="flex mb-2 justify-center md:justify-start">
                         <Button
                             color="blue"
@@ -221,7 +252,7 @@ function Home() {
                             className="flex items-center gap-2 rounded-lg font-medium tracking-tight text-xl px-4 py-3"
                         >
                             <FaLinkedin />
-                            {labels.it.homepage.linkedin}
+                            {t("homepage.linkedin")}
                         </Button>
                     </div>
                 </div>
@@ -232,21 +263,19 @@ function Home() {
                 className="md:gap-24 bg-white border-t-4 px-8 md:px-16 py-8 md:py-16"
             >
                 <h2 className="text-4xl font-bold text-center tracking-tight">
-                    {labels.it.homepage.someProjects}
+                    {t("homepage.someProjects")}
                 </h2>
-                <p className="my-2 text-lg text-center">
-                    {labels.it.homepage.someProjectsDescription}
-                </p>
-                <ProjectsViewer />
+                <p className="my-2 text-lg text-center">{t("homepage.someProjectsDescription")}</p>
+                <ProjectsViewer
+                    builtWithStr={t("homepage.builtWith")}
+                    githubStr={t("homepage.github")}
+                    openStr={t("homepage.open")}
+                    projects={projects}
+                />
 
                 <div className="text-right mt-4 md:-mt-16 hover:text-gray-600 transition-colors duration-75">
-                    <a
-                        href={config.githubUrl}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className={`${dancingScript.className} text-4xl`}
-                    >
-                        ...{labels.it.homepage.andManyOthers}!
+                    <a href={config.githubUrl} className={`${dancingScript.className} text-4xl`}>
+                        ...{t("homepage.andManyOthers")}!
                     </a>
                 </div>
             </section>
@@ -254,30 +283,39 @@ function Home() {
             <section id="contact" className="px-8 md:px-16 py-12">
                 <div>
                     <h2 className="text-4xl font-bold tracking-tight mb-4">
-                        {labels.it.homepage.letsKeepInTouch}
+                        {t("homepage.letsKeepInTouch")}
                     </h2>
-                    <p className="mb-8">{labels.it.homepage.contactSubtitle}</p>
+                    <p className="mb-8">{t("homepage.contactSubtitle")}</p>
 
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-                        <HomepageContact />
+                        <HomepageContact
+                            captchaErrorStr={t("contact.captchaError")}
+                            messagePlaceholderStr={t("contact.messagePlaceholder")}
+                            sendErrorStr={t("contact.sendError")}
+                            sendStr={t("contact.send")}
+                            successStr={t("contact.success")}
+                            yourEmailStr={t("contact.yourEmail")}
+                            yourMessageStr={t("contact.yourMessage")}
+                            yourNameStr={t("contact.yourName")}
+                        />
                         <div>
                             <h2 className="text-3xl text-gray-800 font-bold tracking-tighter mb-6">
-                                {labels.it.homepage.howCanIHelpYou}
+                                {t("homepage.howCanIHelpYou")}
                             </h2>
 
                             <HowCanIHelpCard
-                                name={labels.it.homepage.webDevelopment}
-                                description={labels.it.homepage.webDevelopmentDescription}
+                                name={t("homepage.webDevelopment")}
+                                description={t("homepage.webDevelopmentDescription")}
                                 hasHr
                             />
                             <HowCanIHelpCard
-                                name={labels.it.homepage.consulting}
-                                description={labels.it.homepage.consultingDescription}
+                                name={t("homepage.consulting")}
+                                description={t("homepage.consultingDescription")}
                                 hasHr
                             />
                             <HowCanIHelpCard
-                                name={labels.it.homepage.other}
-                                description={labels.it.homepage.otherDescription}
+                                name={t("homepage.other")}
+                                description={t("homepage.otherDescription")}
                             />
 
                             <div className="flex flex-col mt-16 gap-4">
@@ -290,8 +328,6 @@ function Home() {
                                 </a>
                                 <a
                                     href={config.telegramUrl}
-                                    target="_blank"
-                                    rel="noopener noreferrer"
                                     className="hover:text-gray-700 transition-colors duration-75 flex items-center rounded-xl px-4 font-medium tracking-tighter"
                                 >
                                     <FaTelegram />
@@ -328,8 +364,6 @@ function Home() {
                     </a>
                     <a
                         href={config.instagramUrl}
-                        target="_blank"
-                        rel="noopener noreferrer"
                         className="flex items-center rounded-xl px-4 tracking-tighter font-light"
                     >
                         <FaInstagram />

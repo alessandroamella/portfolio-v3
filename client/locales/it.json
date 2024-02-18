@@ -1,0 +1,127 @@
+{
+    "common": {
+        "header": {
+            "about": "Chi sono",
+            "projects": "Progetti",
+            "contact": "Contatti"
+        },
+        "homepage": {
+            "splash": "Alessandro Amella",
+            "projects": "Progetti",
+            "mainDescription": "Studente di Informatica all'Università di Bologna, programmatore, {years} anni, vivo a Modena",
+            "weather": "ora fanno",
+            "descriptions": {
+                "0": "Ho iniziato a programmare quando avevo 9 anni e da allora non ho più smesso di esplorare l'informatica in ogni suo ramo.",
+                "1": "Studiando prevelantemente da autodidatta, ho proseguito gli studi in informatica-telecomunicazioni presso l'ITIS di Modena, diplomandomi con 98/100.",
+                "2": "Attualmente studio all'Alma Mater, e punto ad un corso di laurea magistrale in ambito AI (da qualche parte)."
+            },
+            "otherInterests": "Altri miei interessi:",
+            "otherInterstsRadio": {
+                "title": "Radio e telecomunicazioni: diploma in telecom. e ",
+                "urlTitle": "radioamatore",
+                "url": "https://www.qrz.com/db/IU4QSG"
+            },
+            "otherInterestsList": {
+                "0": "Elettronica e microcontrollori",
+                "1": "Trasporti pubblici e pianificazione urbanistica",
+                "2": "Fotografia, video editing e mixing musicale (DJing)",
+                "3": "Videogiochi e game development"
+            },
+            "someProjects": "Alcuni miei progetti",
+            "someProjectsDescription": "Questi sono solo alcuni dei progetti che ho realizzato, molti altri sono su GitHub.",
+            "github": "GitHub",
+            "githubUsername": "Bitrey",
+            "linkedin": "LinkedIn",
+            "instagram": "Instagram",
+            "cv": "Curriculum Vitae",
+            "open": "Apri",
+            "builtWith": "Realizzato con",
+            "andManyOthers": "e molti altri",
+            "letsKeepInTouch": "Contatti",
+            "contactSubtitle": "Per commissioni, collaborazioni o semplicemente per chiacchierare, puoi contattarmi tramite il seguente form (o i canali in fondo a destra).",
+            "otherChannels": "Mi trovi anche su",
+            "howCanIHelpYou": "Sono aperto a:",
+            "webDevelopment": "Sviluppo web, software e app",
+            "webDevelopmentDescription": "Sviluppo di siti web, applicazioni web e software su misura.",
+            "consulting": "Consulenza informatica",
+            "consultingDescription": "Consulenza su problemi informatici, scelta di tecnologie e soluzioni.",
+            "other": "Altro",
+            "otherDescription": "Qualsiasi altra informazione o richiesta."
+        },
+        "contact": {
+            "yourEmail": "La tua email",
+            "yourName": "Il tuo nome",
+            "yourMessage": "Il tuo messaggio",
+            "messagePlaceholder": "Scrivi qui il tuo messaggio...",
+            "send": "Invia",
+            "telegram": "Telegram",
+            "email": "Email",
+            "captchaError": "Captcha non valido",
+            "success": "Messaggio inviato con successo, grazie",
+            "sendError": "Errore durante l'invio del messaggio :("
+        },
+        "months": {
+            "january": "Gennaio",
+            "february": "Febbraio",
+            "march": "Marzo",
+            "april": "Aprile",
+            "may": "Maggio",
+            "june": "Giugno",
+            "july": "Luglio",
+            "august": "Agosto",
+            "september": "Settembre",
+            "october": "Ottobre",
+            "november": "Novembre",
+            "december": "Dicembre"
+        },
+        "curriculum": {
+            "infolog": {
+                "date": "Luglio 2021",
+                "job": "Sistemista",
+                "description": "Sistemista presso l'azienda Infolog S.r.l. di Modena, dove ho lavorato con il team di sviluppo per la realizzazione di un'applicazione web per la gestione di un magazzino."
+            },
+            "seta": {
+                "date": "Settembre 2021",
+                "job": "Programmatore software",
+                "description": "Stage presso l'azienda di trasporto pubblico di Modena SETA S.p.A., dove ho sviluppato il software per la generazione dei file audio per gli annunci a bordo dei bus. Ho inoltre eseguito un analisi dei dati per l'addestramento di un modello di machine learning per il conteggio dei passeggeri."
+            },
+            "fertec": {
+                "date": "Marzo 2023",
+                "job": "Programmatore web",
+                "description": "Progettazione e sviluppo di soluzioni software avanzate, tra cui sistemi a microservizi per IoT, software di analisi dei costi, applicazioni mobili e web."
+            }
+        },
+        "projects": {
+            "ezaffitto": {
+                "title": "ezaffitto",
+                "description": "Raccoglitore completamente automatico di annunci di affitti provenienti da vari siti con parsing tramite AI (OpenAI) strutturato a microservizi."
+            },
+            "vhfesuperiori": {
+                "title": "VHF e superiori",
+                "description": "Un gestore di eventi e social network per radioamatori a cura di volontari. Un posto dove condividere le proprie creazioni, collegamenti (QSO) e conoscere nuove persone."
+            },
+            "occupalostudente": {
+                "title": "Occupa lo Studente",
+                "description": "Un'applicazione web per la ricerca di lavoro che mette in contatto aziende e studenti dell'I.T.I.S. E. Fermi di Modena. Login istituzionale tramite Google OAuth 2.0."
+            },
+            "tpldisplay": {
+                "title": "TPL Display",
+                "description": "Tabellone per le partenze autobus real-time, dockerizzato, interfacciato con i dati del TPL di Bologna e Modena, con caching (Redis) e aggiornamento automatico."
+            },
+            "wolfsurvival": {
+                "title": "Wolf Survival",
+                "description": "Sito di una scuola di sopravvivenza con frontend Next.js e backend connesso all'API di Meta (Facebook) per mostrare gli ultimi corsi, foto e video delle attività svolte."
+            }
+        },
+        "languages": {
+            "full": {
+                "it": "Italiano",
+                "en": "English"
+            },
+            "flag": {
+                "it": "🇮🇹",
+                "en": "🇬🇧"
+            }
+        }
+    }
+}

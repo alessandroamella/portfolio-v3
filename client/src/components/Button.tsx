@@ -23,13 +23,7 @@ const Button: FunctionComponent<ButtonProps> = ({ children, href, className, col
     } border-none outline-none transition-colors duration-75 ${className || ""}`;
 
     return href ? (
-        <a
-            href={href}
-            target={href.startsWith("#") ? "_self" : "_blank"}
-            rel="noopener noreferrer"
-            className={_className}
-            {...rest}
-        >
+        <a href={href} className={_className} {...rest}>
             {children}
         </a>
     ) : (

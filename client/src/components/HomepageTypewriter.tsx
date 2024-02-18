@@ -1,14 +1,16 @@
 "use client";
 
+import { useTranslations } from "next-intl";
 import React from "react";
 import Typewriter from "typewriter-effect";
-import labels from "../labels";
 
 const HomepageTypewriter = () => {
+    const t = useTranslations("common");
+
     return (
         <Typewriter
             onInit={typewriter => {
-                typewriter.typeString(labels.it.homepage.splash).start();
+                typewriter.typeString(t("homepage.splash")).start();
             }}
             options={{ delay: 50 }}
         />

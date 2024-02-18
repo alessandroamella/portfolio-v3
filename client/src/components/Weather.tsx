@@ -1,20 +1,31 @@
 "use client";
 
-import React, { useEffect, useState } from "react";
+import React, { FC, useEffect, useState } from "react";
 import axios, { AxiosError } from "axios";
+import { useLocale, useTranslations } from "next-intl";
 
 export interface WeatherData {
     temp: number;
     description: string;
 }
 
-const WeatherInfo = () => {
+interface WeatherInfoProps {
+    prefixStr: string;
+}
+
+const WeatherInfo: FC<WeatherInfoProps> = ({ prefixStr }) => {
+    const lang = useLocale();
+
     const [weather, setWeather] = useState<WeatherData | null>(null);
 
     useEffect(() => {
         async function getWeather() {
             try {
-                const { data } = await axios.get("/api/weather");
+                const { data } = await axios.get("/api/weather", {
+                    params: {
+                        lang
+                    }
+                });
                 setWeather(data);
             } catch (err) {
                 console.error((err instanceof AxiosError && err?.response?.data) || err);
@@ -25,7 +36,7 @@ const WeatherInfo = () => {
 
     return (
         weather && (
-            <span className="text-gray-300">{`(${weather.temp}°C, ${weather.description}).`}</span>
+            <span className="text-gray-300">{`(${prefixStr} ${weather.temp}°C, ${weather.description}).`}</span>
         )
     );
 };

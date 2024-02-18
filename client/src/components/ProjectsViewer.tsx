@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useCallback, useEffect, useRef, useState } from "react";
+import React, { FC, useCallback, useEffect, useRef, useState } from "react";
 
 import { Swiper, SwiperRef, SwiperSlide } from "swiper/react";
 import "swiper/css";
@@ -10,19 +10,35 @@ import { Fade } from "react-awesome-reveal";
 import Typewriter, { TypewriterClass } from "typewriter-effect";
 
 import Image from "next/image";
-import { projects } from "@/projects";
+import { projectsInfo } from "@/projects";
 import { FaBackward, FaExternalLinkAlt, FaForward, FaGithub } from "react-icons/fa";
 import Button from "./Button";
-import labels from "../labels";
 
-import iPhoneImg from "../../../public/img/iphone.png";
+import iPhoneImg from "../../public/img/iphone.png";
 
-const ProjectsViewer = () => {
+interface ProjectsViewerProps {
+    projects: {
+        id: string;
+        title: string;
+        description: string;
+    }[];
+    builtWithStr: string;
+    githubStr: string;
+    openStr: string;
+}
+
+const ProjectsViewer: FC<ProjectsViewerProps> = ({
+    projects,
+    builtWithStr,
+    githubStr,
+    openStr
+}) => {
     const [curProjIndex, setCurProjIndex] = useState(0);
 
     const [typewriter, setTypewriter] = useState<TypewriterClass | null>(null);
 
-    const curProject = projects[curProjIndex];
+    const curProjectName = Object.keys(projectsInfo)[curProjIndex];
+    const curProject = projectsInfo[curProjectName];
 
     useEffect(() => {
         if (!typewriter) return;
@@ -31,7 +47,7 @@ const ProjectsViewer = () => {
         typewriter
             // .pauseFor(1000)
             .deleteAll()
-            .typeString(curProject.name)
+            .typeString(projects[curProjIndex].title)
             .start();
     }, [typewriter, curProject]);
 
@@ -82,7 +98,7 @@ const ProjectsViewer = () => {
                         ref={sliderRef}
                         onSlideChange={s => setCurProjIndex(s.activeIndex)}
                     >
-                        {projects.map(({ name, image, description }, i) => (
+                        {Object.entries(projectsInfo).map(([name, { image }], i) => (
                             <SwiperSlide key={i} className="h-full w-full z-10">
                                 <Image
                                     width={240}
@@ -101,7 +117,7 @@ const ProjectsViewer = () => {
                     color="blue"
                     className="rounded-full p-4 mr-auto"
                     onClick={handleNext}
-                    disabled={curProjIndex === projects.length - 1}
+                    disabled={curProjIndex === Object.keys(projectsInfo).length - 1}
                 >
                     <FaForward />
                 </Button>
@@ -118,9 +134,11 @@ const ProjectsViewer = () => {
                 </h1>
 
                 <Fade>
-                    <p className="mt-4 text-lg min-h-[5.5rem]">{curProject.description}</p>
+                    <p className="mt-4 text-lg min-h-[5.5rem]">
+                        {projects[curProjIndex].description}
+                    </p>
 
-                    <p className="mt-4 text-gray-500">{labels.it.homepage.builtWith}</p>
+                    <p className="mt-4 text-gray-500">{builtWithStr}</p>
                     <div className="max-w-full flex-wrap overflow-x-hidden flex items-center justify-center md:justify-start gap-2">
                         {curProject.stack.map((e, i) => (
                             <div
@@ -140,7 +158,7 @@ const ProjectsViewer = () => {
                         className="flex items-center rounded-2xl font-medium tracking-tight px-3"
                     >
                         <FaGithub />
-                        <span className="ml-2">{labels.it.homepage.github}</span>
+                        <span className="ml-2">{githubStr}</span>
                     </Button>
                     <Button
                         href={curProject.url}
@@ -149,7 +167,7 @@ const ProjectsViewer = () => {
                         className="flex items-center rounded-2xl font-medium tracking-tight px-3"
                     >
                         <FaExternalLinkAlt />
-                        <span className="ml-2">{labels.it.homepage.open}</span>
+                        <span className="ml-2">{openStr}</span>
                     </Button>
                 </div>
             </div>

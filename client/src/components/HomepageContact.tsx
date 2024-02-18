@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { FC, useState } from "react";
 import { Alert, Label, TextInput, Textarea } from "flowbite-react";
 import ReCAPTCHA from "react-google-recaptcha";
 import axios from "axios";
@@ -8,12 +8,31 @@ import { useForm } from "react-hook-form";
 import BeatLoader from "react-spinners/BeatLoader";
 import { Fade } from "react-awesome-reveal";
 
-import labels from "../labels";
 import Button from "./Button";
-import { config } from "../config";
+import { config } from "@/config";
 import { FaPaperPlane } from "react-icons/fa";
 
-const HomepageContact = () => {
+interface HomepageContactProps {
+    captchaErrorStr: string;
+    sendErrorStr: string;
+    successStr: string;
+    yourEmailStr: string;
+    yourNameStr: string;
+    yourMessageStr: string;
+    messagePlaceholderStr: string;
+    sendStr: string;
+}
+
+const HomepageContact: FC<HomepageContactProps> = ({
+    captchaErrorStr,
+    messagePlaceholderStr,
+    sendErrorStr,
+    sendStr,
+    successStr,
+    yourEmailStr,
+    yourMessageStr,
+    yourNameStr
+}) => {
     const {
         register,
         handleSubmit,
@@ -34,7 +53,7 @@ const HomepageContact = () => {
         if (!captchaVal) {
             setAlert({
                 type: "failure",
-                message: labels.it.contact.captchaError
+                message: captchaErrorStr
             });
             return;
         }
@@ -68,7 +87,7 @@ const HomepageContact = () => {
             } else {
                 setAlert({
                     type: "failure",
-                    message: labels.it.contact.sendError
+                    message: sendErrorStr
                 });
                 return;
             }
@@ -78,7 +97,7 @@ const HomepageContact = () => {
 
         setAlert({
             type: "success",
-            message: labels.it.contact.success
+            message: successStr
         });
     };
 
@@ -96,10 +115,7 @@ const HomepageContact = () => {
 
                 <div>
                     <div className="mb-2 block">
-                        <Label
-                            htmlFor="email"
-                            value={labels.it.contact.yourEmail}
-                        />
+                        <Label htmlFor="email" value={yourEmailStr} />
                     </div>
                     <TextInput
                         id="email"
@@ -116,10 +132,7 @@ const HomepageContact = () => {
                 </div>
                 <div>
                     <div className="mb-2 block">
-                        <Label
-                            htmlFor="name"
-                            value={labels.it.contact.yourName}
-                        />
+                        <Label htmlFor="name" value={yourNameStr} />
                     </div>
                     <TextInput
                         id="name"
@@ -135,14 +148,11 @@ const HomepageContact = () => {
                 </div>
                 <div>
                     <div className="mb-2 block">
-                        <Label
-                            htmlFor="message"
-                            value={labels.it.contact.yourMessage}
-                        />
+                        <Label htmlFor="message" value={yourMessageStr} />
                     </div>
                     <Textarea
                         id="message"
-                        placeholder={labels.it.contact.messagePlaceholder}
+                        placeholder={messagePlaceholderStr}
                         required
                         rows={4}
                         autoComplete="off"
@@ -168,7 +178,7 @@ const HomepageContact = () => {
                 >
                     <FaPaperPlane />
                     <BeatLoader color="#ffffff" loading={loading} />
-                    {!loading && labels.it.contact.send}
+                    {!loading && sendStr}
                 </Button>
             </form>
         </Fade>
