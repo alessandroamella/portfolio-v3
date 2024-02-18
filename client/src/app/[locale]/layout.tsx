@@ -1,5 +1,6 @@
 import "../globals.css";
 import type { Metadata } from "next";
+import { unstable_setRequestLocale } from "next-intl/server";
 
 export const metadata: Metadata = {
     title: "Alessandro Amella - Sviluppo Siti Web e Soluzioni Informatiche",
@@ -19,6 +20,8 @@ function RootLayout({
     children: React.ReactNode;
     params: { locale: string };
 }) {
+    unstable_setRequestLocale(locale);
+
     return (
         <html lang={locale}>
             <body>{children}</body>

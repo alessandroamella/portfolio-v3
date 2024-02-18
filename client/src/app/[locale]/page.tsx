@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { useTranslations } from "next-intl";
+import { unstable_setRequestLocale } from "next-intl/server";
 import _ from "lodash";
 import { differenceInYears } from "date-fns";
 
@@ -23,7 +24,9 @@ import ChangeLanguageBtn from "@/components/ChangeLanguageBtn";
 
 const dancingScript = Dancing_Script({ subsets: ["latin"] });
 
-function Home() {
+function Home({ params: { locale } }: { params: { locale: string } }) {
+    unstable_setRequestLocale(locale);
+
     const t = useTranslations("common");
 
     const changeLanguageOptions = config.languages.map(e => ({
