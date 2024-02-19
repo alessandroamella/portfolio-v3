@@ -1,5 +1,9 @@
 {
     "common": {
+        "metadata": {
+            "title": "Alessandro Amella - Sviluppo Siti Web e Soluzioni Informatiche",
+            "description": "Sviluppo siti web per privati e aziende, applicazioni web e software su misura."
+        },
         "header": {
             "about": "Chi sono",
             "projects": "Progetti",

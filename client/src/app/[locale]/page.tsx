@@ -357,7 +357,7 @@ function Home({ params: { locale } }: { params: { locale: string } }) {
                     </h3>
                 </div>
                 <p className="font-light">2023 &copy; Alessandro Amella</p>
-                <div className="flex flex-col justify-center">
+                <div className="flex flex-col justify-center items-center">
                     <a
                         href={`mailto:${config.email}`}
                         className="flex items-center rounded-xl px-4 tracking-tighter"

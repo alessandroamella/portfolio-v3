@@ -1,13 +1,19 @@
+import { config } from "@/config";
 import "../globals.css";
-import type { Metadata } from "next";
 import { unstable_setRequestLocale } from "next-intl/server";
 
-export const metadata: Metadata = {
-    title: "Alessandro Amella - Sviluppo Siti Web e Soluzioni Informatiche",
-    description: "Sviluppo siti web per privati e aziende"
-};
+import { getTranslations } from "next-intl/server";
 
-const locales = ["en", "it"];
+export async function generateMetadata({ params: { locale } }: { params: { locale: string } }) {
+    const t = await getTranslations({ locale, namespace: "common" });
+
+    return {
+        title: t("metadata.title"),
+        description: t("metadata.description")
+    };
+}
+
+const locales = config.languages;
 
 export function generateStaticParams() {
     return locales.map(locale => ({ locale }));

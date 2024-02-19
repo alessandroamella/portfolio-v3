@@ -3,5 +3,5 @@ export const config = Object.freeze({
         lat: 44.56204,
         lon: 11.03422
     },
-    languages: ["en", "it"]
+    languages: ["en", "it", "cs"]
 });

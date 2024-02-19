@@ -1,5 +1,9 @@
 {
     "common": {
+        "metadata": {
+            "title": "Alessandro Amella - Vývoj webových stránek a IT řešení",
+            "description": "Vývoj webových stránek pro jednotlivce a firmy, webové aplikace a software na míru."
+        },
         "header": {
             "about": "O mně",
             "projects": "Projekty",

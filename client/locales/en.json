@@ -1,5 +1,9 @@
 {
     "common": {
+        "metadata": {
+            "title": "Alessandro Amella - Website Development and IT Solutions",
+            "description": "Website development for individuals and businesses, web applications and custom software."
+        },
         "header": {
             "about": "About Me",
             "projects": "Projects",
