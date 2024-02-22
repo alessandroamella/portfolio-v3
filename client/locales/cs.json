@@ -1,4 +1,4 @@
-{
+﻿{
     "common": {
         "metadata": {
             "title": "Alessandro Amella - Vývoj webových stránek a IT řešení",
@@ -13,27 +13,27 @@
             "splash": "Alessandro Amella",
             "about": "O mně",
             "projects": "Projekty",
-            "mainDescription": "Student informatiky na Univerzitě v Bologni, momentálně na Erasmu na Vysoké učení technické v Brně, programátor, {years} let, žijící v Modeně",
+            "mainDescription": "Student informatiky na Univerzitě v Bologni, momentálně na Erasmu na Vysokém učení technické v Brně, programátor, {years} let, žijící v Modeně",
             "weather": "nyní je",
             "descriptions": {
                 "0": "Začal jsem programovat, když mi bylo 9 let, a od té doby jsem nikdy nepřestal zkoumat všechny obory informatiky.",
-                "1": "Studoval jsem převážně jako samouk a pokračoval jsem ve studiu informatiky a telekomunikací na ITIS Fermi v Modeně, kde jsem absolvoval s 98/100.",
-                "2": "Aktuálně studuji na Alma Mater a mířím na magisterský titul v AI (někde)."
+                "1": "Studoval jsem převážně jako samouk a pokračoval jsem ve studiu informatiky a telekomunikací na ITIS Fermi v Modeně, kde jsem studium absolvoval s 98/100.",
+                "2": "Aktuálně studuji na Alma Mater a můj cíl je magisterský titul v AI."
             },
             "otherInterests": "Moje další zájmy:",
             "otherInterstsRadio": {
                 "title": "Rádio a telekomunikace: diplom v telekomunikacích a ",
-                "urlTitle": "amatérský radiový operátor",
+                "urlTitle": "amatérský rádiový operátor",
                 "url": "https://www.qrz.com/db/IU4QSG"
             },
             "otherInterestsList": {
-                "0": "Elektronika a mikrokontroléry",
+                "0": "Elektronika a mikrokontrolery",
                 "1": "Veřejná doprava a urbanismus",
-                "2": "Fotografie, střih videa a mixování hudby (DJing)",
+                "2": "Fotografie, střih videa a mixování hudby (DJ)",
                 "3": "Videohry a vývoj her"
             },
             "someProjects": "Některé z mých projektů",
-            "someProjectsDescription": "Toto je jen několik projektů, na kterých jsem pracoval, mnohem více je na GitHubu.",
+            "someProjectsDescription": "Toto je výběr projektů, na kterých jsem pracoval. Mnohem více je na GitHubu.",
             "github": "GitHub",
             "githubUsername": "Bitrey",
             "linkedin": "LinkedIn",
@@ -42,22 +42,22 @@
             "open": "Otevřeno",
             "builtWith": "Vytvořeno s",
             "andManyOthers": "a mnoha dalšími",
-            "letsKeepInTouch": "Pojďme zůstat v kontaktu",
-            "contactSubtitle": "Pro provize, spolupráci nebo jen pro chat, můžete mě kontaktovat prostřednictvím následujícího formuláře (nebo kanálů vpravo dole).",
+            "letsKeepInTouch": "Zůstaňme v kontaktu",
+            "contactSubtitle": "Pro spolupráci nebo jen pro chat mě můžete kontaktovat prostřednictvím následujícího formuláře (nebo kanálů vpravo dole).",
             "otherChannels": "Můžete mě také najít na",
-            "howCanIHelpYou": "Jsem otevřený:",
+            "howCanIHelpYou": "Jsem otevřený následujícím:",
             "webDevelopment": "Vývoj webů, softwaru a aplikací",
             "webDevelopmentDescription": "Vývoj webů, webových aplikací a zakázkového softwaru.",
             "consulting": "IT konzultace",
             "consultingDescription": "Konzultace ohledně IT problémů, výběru technologií a řešení.",
             "other": "Jiné",
-            "otherDescription": "Jakékoli další informace nebo požadavek."
+            "otherDescription": "Jakékoli další informace nebo požadavky."
         },
         "contact": {
             "yourEmail": "Váš e-mail",
             "yourName": "Vaše jméno",
             "yourMessage": "Vaše zpráva",
-            "messagePlaceholder": "Napište sem svou zprávu...",
+            "messagePlaceholder": "Sem napište svou zprávu...",
             "send": "Odeslat",
             "telegram": "Telegram",
             "email": "E-mail",
@@ -93,7 +93,7 @@
             "fertec": {
                 "date": "Březen 2023",
                 "job": "Webový vývojář",
-                "description": "Návrh a vývoj pokročilých softwarových řešení, včetně systémů mikroslužeb pro IoT, softwaru pro analýzu nákladů, mobilních a webových aplikací."
+                "description": "Návrh a vývoj pokročilých softwarových řešení, včetně systémů mikroslužeb pro IoT, softwaru pro analýzu nákladů a mobilních a webových aplikací."
             }
         },
         "projects": {
