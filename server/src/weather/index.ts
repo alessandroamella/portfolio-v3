@@ -1,15 +1,8 @@
 import axios, { AxiosError } from "axios";
 import { envs } from "../config/envs";
 import { logger } from "../shared/logger";
-
-export interface WeatherData {
-    temp: number;
-    description: string;
-}
-
-const isWeatherData = (data: any): data is WeatherData => {
-    return typeof data?.temp === "number" && typeof data?.description === "string";
-};
+import { WeatherData, isWeatherData } from "../interfaces/Weather";
+import { mapLngToOWALng } from "../shared/mapLngToOWALng";
 
 interface IProps {
     lat: number;
@@ -18,7 +11,9 @@ interface IProps {
 }
 export const getWeather = async ({ lat, lon, lang }: IProps): Promise<WeatherData> => {
     try {
-        const url = `https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&exclude=minutely,hourly,daily,alerts&units=metric&lang=${lang}&appid=${envs.WEATHER_API_KEY}`;
+        const url = `https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&exclude=minutely,hourly,daily,alerts&units=metric&lang=${mapLngToOWALng(
+            lang
+        )}&appid=${envs.WEATHER_API_KEY}`;
         const { data } = await axios.get(url);
         const weatherData: WeatherData = {
             temp: data?.current?.temp,

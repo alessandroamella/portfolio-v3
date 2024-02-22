@@ -204,7 +204,7 @@ function Home({ params: { locale } }: { params: { locale: string } }) {
             >
                 <div>
                     <h2 className="text-4xl font-bold text-center tracking-tight mb-8 z-50 relative">
-                        {t("header.about")}
+                        {t("homepage.about")}
                     </h2>
 
                     <p>

@@ -11,6 +11,7 @@
         },
         "homepage": {
             "splash": "Alessandro Amella",
+            "about": "About Me",
             "projects": "Projects",
             "mainDescription": "Computer Science student at the University of Bologna, currently in Erasmus at Brno University of Technology, developer, {years} years old, living in Modena",
             "weather": "now it is",

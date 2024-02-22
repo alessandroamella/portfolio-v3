@@ -6,13 +6,13 @@ import { logger } from "../shared/logger";
 import { checkCaptcha } from "../helpers/checkCaptcha";
 import EmailService from "../helpers/mail";
 import { UserMail } from "../interfaces/UserMail";
-import { WeatherData, getWeather } from "../weather";
+import { getWeather } from "../weather";
 import { config } from "../config";
+import { WeatherCache } from "../interfaces/Weather";
 
 const router = Router();
 
-let weatherCache: { [lang: string]: WeatherData } = {};
-let weatherCacheDate: Moment | null = null;
+let weatherCache: WeatherCache = {};
 
 router.get(
     "/weather",
@@ -33,16 +33,14 @@ router.get(
         const { lat, lon } = config.coords;
 
         try {
-            if (
-                !weatherCache[lang] ||
-                !weatherCacheDate ||
-                moment().diff(weatherCacheDate, "minutes") > 10
-            ) {
-                weatherCache[lang] = await getWeather({ lat, lon, lang });
-                weatherCacheDate = moment();
+            if (!weatherCache[lang] || moment().diff(weatherCache[lang].date, "minutes") > 10) {
+                weatherCache[lang] = {
+                    weather: await getWeather({ lat, lon, lang }),
+                    date: moment()
+                };
             }
 
-            return res.json(weatherCache[lang]);
+            return res.json(weatherCache[lang].weather);
         } catch (err) {
             logger.error("Error while getting weather");
             logger.error(err);

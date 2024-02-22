@@ -5,12 +5,13 @@
             "description": "Sviluppo siti web per privati e aziende, applicazioni web e software su misura."
         },
         "header": {
-            "about": "Chi sono",
+            "about": "Info",
             "projects": "Progetti",
             "contact": "Contatti"
         },
         "homepage": {
             "splash": "Alessandro Amella",
+            "about": "Chi sono",
             "projects": "Progetti",
             "mainDescription": "Studente di Informatica all'Università di Bologna, attualmente in Erasmus presso la Brno University of Technology, programmatore, {years} anni, vivo a Modena",
             "weather": "ora fanno",
