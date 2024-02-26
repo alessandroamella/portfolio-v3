@@ -22,7 +22,7 @@ export const projectsInfo: ProjectProp = {
         github: "https://github.com/Bitrey/ezaffitto"
     },
     vhfesuperiori: {
-        stack: ["Node.js", "TypeScript", "MongoDB", "Express", "OpenAPI", "React"],
+        stack: ["AWS", "Node.js", "MongoDB", "Express", "OpenAPI", "React"],
         image: vhfesuperioriImg,
         url: "https://www.vhfesuperiori.eu/",
         github: "https://github.com/Bitrey/vhf-e-superiori"
