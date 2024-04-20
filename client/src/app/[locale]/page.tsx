@@ -356,7 +356,7 @@ function Home({ params: { locale } }: { params: { locale: string } }) {
                         <span className="text-gray-400">.it</span>
                     </h3>
                 </div>
-                <p className="font-light">2023 &copy; Alessandro Amella</p>
+                <p className="font-light">2024 &copy; Alessandro Amella</p>
                 <div className="flex flex-col justify-center items-center">
                     <a
                         href={`mailto:${config.email}`}
