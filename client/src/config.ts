@@ -1,7 +1,7 @@
 export const config = Object.freeze({
-    githubUrl: "https://github.com/Bitrey",
-    githubDisplayUrl: "github.com/Bitrey",
-    githubUsername: "Bitrey",
+    githubUrl: "https://github.com/alessandroamella",
+    githubDisplayUrl: "github.com/alessandroamella",
+    githubUsername: "Alessandro Amella",
     instagramUrl: "https://www.instagram.com/alessandro_amella",
     instagramUsername: "alessandro_amella",
     linkedinUrl: "https://www.linkedin.com/in/alessandro-amella",
