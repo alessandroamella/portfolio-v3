@@ -13,7 +13,7 @@
             "splash": "Alessandro Amella",
             "about": "About Me",
             "projects": "Projects",
-            "mainDescription": "Computer Science student at the University of Bologna, currently in Erasmus at Brno University of Technology, developer, {years} years old, living in Modena",
+            "mainDescription": "Computer Science student at the University of Bologna, ex-Erasmus at Brno University of Technology, developer, {years} years old, living in Modena",
             "weather": "now it is",
             "descriptions": {
                 "0": "I started programming when I was 9 years old and since then I have never stopped exploring computer science in all its branches.",
