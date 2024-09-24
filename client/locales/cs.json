@@ -116,6 +116,10 @@
             "wolfsurvival": {
                 "title": "Wolf Survival",
                 "description": "Webové stránky školy přežití s frontendem a backendem Next.js propojené s API Meta (Facebook) pro zobrazení nejnovějších kurzů, fotografií a videí z probíhajících aktivit."
+            },
+            "om": {
+                "title": "Quiz O.M.",
+                "description": "Radioamatérský kvíz pro přípravu na zkoušku pro získání italské licence operátora radiostanice."
             }
         },
         "languages": {

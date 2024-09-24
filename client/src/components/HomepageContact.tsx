@@ -108,7 +108,7 @@ const HomepageContact: FC<HomepageContactProps> = ({
                 className="w-full p-6 shadow-xl rounded-xl bg-white flex mx-auto max-w-md flex-col gap-4"
             >
                 {alert && (
-                    <Alert color={alert?.type} className="mb-4">
+                    <Alert color={alert.type} className="mb-4">
                         {alert.message}
                     </Alert>
                 )}

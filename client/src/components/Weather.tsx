@@ -1,6 +1,6 @@
 "use client";
 
-import React, { FC, useEffect, useState } from "react";
+import React, { FC, useEffect, useRef, useState } from "react";
 import axios, { AxiosError } from "axios";
 import { useLocale, useTranslations } from "next-intl";
 
@@ -18,8 +18,12 @@ const WeatherInfo: FC<WeatherInfoProps> = ({ prefixStr }) => {
 
     const [weather, setWeather] = useState<WeatherData | null>(null);
 
+    const isFetchingWeather = useRef(false);
+
     useEffect(() => {
         async function getWeather() {
+            if (isFetchingWeather.current) return;
+            isFetchingWeather.current = true;
             try {
                 const { data } = await axios.get("/api/weather", {
                     params: {

@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useEffect, useLayoutEffect, useMemo, useState } from "react";
+import React, { useEffect, useState } from "react";
 import GraphElem from "./GraphElem";
 
 function useWindowSize() {
@@ -61,7 +61,7 @@ const BgGraph = () => {
             )
         );
     }, [animDuration, graphNum, width, height]);
-    console.log("topValues", topValues);
+    // console.log("topValues", topValues);
 
     return (
         <div className="falling-items-container">

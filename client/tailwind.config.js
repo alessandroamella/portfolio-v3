@@ -15,5 +15,6 @@ module.exports = {
         }
     },
     plugins: [require("flowbite/plugin")],
-    important: true
+    important: true,
+    safelist: ["bg-green-100", "bg-green-200", "bg-red-100", "bg-red-200"]
 };

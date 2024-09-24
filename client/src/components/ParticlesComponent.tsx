@@ -1,26 +1,43 @@
 "use client";
 
-import React from "react";
-import Particles from "react-tsparticles";
-import type { Engine } from "tsparticles-engine";
-import { loadLinksPreset } from "tsparticles-preset-links";
+import React, { useEffect, useState } from "react";
+import Particles, { initParticlesEngine } from "@tsparticles/react";
+import type { Container, Engine } from "@tsparticles/engine";
+import { loadLinksPreset } from "@tsparticles/preset-links";
 
-interface IProps extends React.ComponentProps<typeof Particles> {}
+interface ParticlesComponentProps extends React.ComponentProps<typeof Particles> {}
 
-export class ParticlesComponent extends React.PureComponent<IProps> {
-    // this customizes the component tsParticles installation
-    async customInit(engine: Engine): Promise<void> {
-        // this adds the preset to tsParticles, you can safely use the
-        await loadLinksPreset(engine);
+const ParticlesComponent: React.FC<ParticlesComponentProps> = props => {
+    const [init, setInit] = useState(false);
+
+    useEffect(() => {
+        initParticlesEngine(async (engine: Engine) => {
+            await loadLinksPreset(engine);
+        }).then(() => {
+            setInit(true);
+        });
+    }, []);
+
+    const particlesLoaded = async (container?: Container) => {
+        console.log("particlesLoaded", container);
+    };
+
+    const options = {
+        preset: "links"
+    };
+
+    if (init) {
+        return (
+            <Particles
+                id="tsparticles"
+                particlesLoaded={particlesLoaded}
+                options={options}
+                {...props}
+            />
+        );
     }
 
-    render() {
-        const options = {
-            preset: "links"
-        };
-
-        return <Particles options={options} init={this.customInit} />;
-    }
-}
+    return null;
+};
 
 export default ParticlesComponent;

@@ -3,6 +3,7 @@ import vhfesuperioriImg from "../public/img/vhfesuperiori.png";
 import tpldisplayImg from "../public/img/tpldisplay.png";
 import wolfImg from "../public/img/wolf.png";
 import occupaImg from "../public/img/occupa.png";
+import omImg from "../public/img/om.png";
 import { StaticImageData } from "next/image";
 import { config } from "./config";
 
@@ -41,5 +42,11 @@ export const projectsInfo: ProjectProp = {
         stack: ["Next.js", "TypeScript", "Express"],
         image: wolfImg,
         url: "https://www.wolfsurvival.it/"
+    },
+    om: {
+        stack: ["JavaScript DOM", "Bulma", "Express"],
+        image: omImg,
+        url: "http://om.bitrey.it",
+        github: "https://github.com/alessandroamella/codice-q"
     }
 };

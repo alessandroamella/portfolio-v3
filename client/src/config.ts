@@ -13,6 +13,13 @@ export const config = Object.freeze({
     descriptionNum: 3,
     otherInterestsNum: 4,
     cvAgencies: ["infolog", "seta", "fertec"],
-    projects: ["ezaffitto", "vhfesuperiori", "occupalostudente", "tpldisplay", "wolfsurvival"],
+    projects: [
+        "ezaffitto",
+        "vhfesuperiori",
+        "occupalostudente",
+        "tpldisplay",
+        "wolfsurvival",
+        "om"
+    ],
     languages: ["it", "en", "cs"]
 });

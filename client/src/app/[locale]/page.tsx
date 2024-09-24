@@ -3,6 +3,7 @@ import { useTranslations } from "next-intl";
 import { unstable_setRequestLocale } from "next-intl/server";
 import _ from "lodash";
 import { differenceInYears } from "date-fns";
+import type { Metadata } from "next";
 
 import Button from "@/components/Button";
 import Wave from "react-wavify";
@@ -17,12 +18,16 @@ import HomepageContact from "@/components/HomepageContact";
 import { config } from "@/config";
 import HowCanIHelpCard from "@/components/HowCanIHelpCard";
 
-import Head from "next/head";
 import BgGraph from "@/components/BgGraph";
 import WeatherInfo from "@/components/Weather";
 import ChangeLanguageBtn from "@/components/ChangeLanguageBtn";
 
 const dancingScript = Dancing_Script({ subsets: ["latin"] });
+
+export const metadata: Metadata = {
+    title: "Alessandro Amella - Sviluppo siti web",
+    description: "Sviluppo siti web, software, app e altro"
+};
 
 function Home({ params: { locale } }: { params: { locale: string } }) {
     unstable_setRequestLocale(locale);
@@ -49,36 +54,31 @@ function Home({ params: { locale } }: { params: { locale: string } }) {
 
     return (
         <main className="bg-[#f7f7f7] min-h-screen">
-            <Head>
-                <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-                <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-                <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
-                <link rel="manifest" href="/site.webmanifest" />
-                <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#3f83f8" />
-                <meta name="msapplication-TileColor" content="#3f83f8" />
-                <meta name="theme-color" content="#3f83f8" />
+            <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+            <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+            <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+            <link rel="manifest" href="/site.webmanifest" />
+            <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#3f83f8" />
+            <meta name="msapplication-TileColor" content="#3f83f8" />
+            <meta name="theme-color" content="#3f83f8" />
 
-                <meta name="title" content="Alessandro Amella - Sviluppo siti web" />
-                <meta name="description" content="Sviluppo siti web, software, app e altro" />
+            <meta name="title" content="Alessandro Amella - Sviluppo siti web" />
+            <meta name="description" content="Sviluppo siti web, software, app e altro" />
 
-                <meta property="og:type" content="website" />
-                <meta property="og:url" content="https://www.bitrey.it/" />
-                <meta property="og:title" content="Alessandro Amella - Sviluppo siti web" />
-                <meta
-                    property="og:description"
-                    content="Sviluppo siti web, software, app e altro"
-                />
-                <meta property="og:image" content="https://www.bitrey.it/banner.jpg" />
+            <meta property="og:type" content="website" />
+            <meta property="og:url" content="https://www.bitrey.it/" />
+            <meta property="og:title" content="Alessandro Amella - Sviluppo siti web" />
+            <meta property="og:description" content="Sviluppo siti web, software, app e altro" />
+            <meta property="og:image" content="https://www.bitrey.it/banner.jpg" />
 
-                <meta property="twitter:card" content="summary_large_image" />
-                <meta property="twitter:url" content="https://www.bitrey.it/" />
-                <meta property="twitter:title" content="Alessandro Amella - Sviluppo siti web" />
-                <meta
-                    property="twitter:description"
-                    content="Sviluppo siti web, software, app e altro"
-                />
-                <meta property="twitter:image" content="https://www.bitrey.it/banner.jpg" />
-            </Head>
+            <meta property="twitter:card" content="summary_large_image" />
+            <meta property="twitter:url" content="https://www.bitrey.it/" />
+            <meta property="twitter:title" content="Alessandro Amella - Sviluppo siti web" />
+            <meta
+                property="twitter:description"
+                content="Sviluppo siti web, software, app e altro"
+            />
+            <meta property="twitter:image" content="https://www.bitrey.it/banner.jpg" />
             <header className="bg-gray-100 bg-opacity-50 flex justify-around p-4 md:px-0 items-center z-20 h-14 relative">
                 <div className="flex items-center gap-4">
                     {/* <Image
@@ -144,8 +144,12 @@ function Home({ params: { locale } }: { params: { locale: string } }) {
                                 <div className="flex justify-end items-end absolute -bottom-16 -right-16 md:-right-32">
                                     <Image
                                         src={Arrow}
-                                        width={64}
-                                        height={64}
+                                        width="0"
+                                        height="0"
+                                        style={{
+                                            width: "4rem",
+                                            height: "4rem"
+                                        }}
                                         alt="Arrow pointing to LinkedIn"
                                     />
                                     <p className={`${dancingScript.className} text-xl`}>
@@ -175,15 +179,6 @@ function Home({ params: { locale } }: { params: { locale: string } }) {
                             </Button>
                         </div>
                     </div>
-                    {/* <Image
-                        src={meDrawing}
-                        placeholder="blur"
-                        loading="lazy"
-                        alt="Foto mia"
-                        width={400}
-                        height={400}
-                        className="rounded mt-8 md:mt-4 mx-auto object-cover drop-shadow-xl hover:drop-shadow-2xl transition-all"
-                    /> */}
                 </div>
 
                 <Wave

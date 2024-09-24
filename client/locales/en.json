@@ -116,6 +116,10 @@
             "wolfsurvival": {
                 "title": "Wolf Survival",
                 "description": "Website of a survival school with Next.js frontend and backend connected to the Meta (Facebook) API to show the latest courses, photos and videos of the activities carried out."
+            },
+            "om": {
+                "title": "Quiz O.M.",
+                "description": "A radio amateur quiz to prepare for the exam to obtain the Italian ham radio operator's license."
             }
         },
         "languages": {

@@ -116,6 +116,10 @@
             "wolfsurvival": {
                 "title": "Wolf Survival",
                 "description": "Sito di una scuola di sopravvivenza con frontend Next.js e backend connesso all'API di Meta (Facebook) per mostrare gli ultimi corsi, foto e video delle attività svolte."
+            },
+            "om": {
+                "title": "Quiz O.M.",
+                "description": "Quiz radioamatoriale per la preparazione all'esame per il conseguimento della patente di operatore di stazione radioamatoriale."
             }
         },
         "languages": {
