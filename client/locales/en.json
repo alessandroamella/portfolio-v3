@@ -2,7 +2,9 @@
     "common": {
         "metadata": {
             "title": "Alessandro Amella - Website Development and IT Solutions",
-            "description": "Website development for individuals and businesses, web applications and custom software."
+            "description": "Website development for individuals and businesses, web applications and custom software.",
+            "siteName": "Alessandro Amella",
+            "keywords": "website development, software development, programming, computer science, web development, web design, modena, bologna, itis fermi, university of bologna, brno university of technology, erasmus, ham radio operator, radio amateurs, radio, telecommunications, electronics, microcontrollers, public transport, urban planning, photography, video editing, djing, video games, game development, github, linkedin, instagram, curriculum vitae, cv, telegram, email, web development, software development, it consulting, it consulting, web, software, app, consulting, telegram, email, ham radio operator, radio amateurs, radio, telecommunications, electronics, microcontrollers, public transport, urban planning, photography, video editing, djing, video games, game development, github, linkedin, instagram, curriculum vitae, cv, telegram, email, web development, software development, it consulting, it consulting, web, software, app, consulting"
         },
         "header": {
             "about": "About",
