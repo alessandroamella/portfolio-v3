@@ -3,15 +3,12 @@ import "../globals.css";
 import { getTranslations, unstable_setRequestLocale } from "next-intl/server";
 import type { Metadata } from "next";
 
-type GenerateMetadataProps = {
-    params: { locale: string };
-    searchParams: { [key: string]: string | string[] | undefined };
-};
-
 export async function generateMetadata({
-    params: { locale }
-}: GenerateMetadataProps): Promise<Metadata> {
-    const t = await getTranslations({ locale, namespace: "common" });
+    params
+}: {
+    params: { locale: string };
+}): Promise<Metadata> {
+    const t = await getTranslations({ locale: params.locale, namespace: "common" });
 
     return {
         title: t("metadata.title"),
@@ -36,7 +33,7 @@ export async function generateMetadata({
             title: t("metadata.title"),
             description: t("metadata.description"),
             type: "website",
-            locale: locale,
+            locale: params.locale,
             siteName: t("metadata.siteName"),
             images: [
                 {
@@ -54,7 +51,7 @@ export async function generateMetadata({
             images: ["banner.jpg"]
         },
         alternates: {
-            canonical: `https://www.bitrey.it/${locale}`,
+            canonical: `https://www.bitrey.it/${params.locale}`,
             languages: {
                 en: "/en",
                 it: "/it",
