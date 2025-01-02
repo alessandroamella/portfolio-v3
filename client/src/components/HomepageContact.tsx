@@ -31,12 +31,12 @@ const HomepageContact: FC<HomepageContactProps> = ({
     successStr,
     yourEmailStr,
     yourMessageStr,
-    yourNameStr
+    yourNameStr,
 }) => {
     const {
         register,
         handleSubmit,
-        formState: { errors }
+        formState: { errors },
     } = useForm();
 
     const [captchaVal, setCaptchaVal] = useState<string | null>(null);
@@ -53,7 +53,7 @@ const HomepageContact: FC<HomepageContactProps> = ({
         if (!captchaVal) {
             setAlert({
                 type: "failure",
-                message: captchaErrorStr
+                message: captchaErrorStr,
             });
             return;
         }
@@ -71,7 +71,7 @@ const HomepageContact: FC<HomepageContactProps> = ({
                 name,
                 email,
                 message,
-                captcha: captchaVal
+                captcha: captchaVal,
             });
         } catch (err) {
             console.log(err);
@@ -82,12 +82,12 @@ const HomepageContact: FC<HomepageContactProps> = ({
             if (error && typeof error === "string") {
                 setAlert({
                     type: "failure",
-                    message: error
+                    message: error,
                 });
             } else {
                 setAlert({
                     type: "failure",
-                    message: sendErrorStr
+                    message: sendErrorStr,
                 });
                 return;
             }
@@ -97,7 +97,7 @@ const HomepageContact: FC<HomepageContactProps> = ({
 
         setAlert({
             type: "success",
-            message: successStr
+            message: successStr,
         });
     };
 
@@ -105,7 +105,7 @@ const HomepageContact: FC<HomepageContactProps> = ({
         <Fade>
             <form
                 onSubmit={handleSubmit(onSubmit)}
-                className="w-full p-6 shadow-xl rounded-xl bg-white flex mx-auto max-w-md flex-col gap-4"
+                className="w-full p-6 shadow-xl rounded-xl bg-white dark:bg-gray-900 flex mx-auto max-w-md flex-col gap-4"
             >
                 {alert && (
                     <Alert color={alert.type} className="mb-4">

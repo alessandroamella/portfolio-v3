@@ -15,14 +15,20 @@ interface HomepageTimelineProps {
 const HomepageTimeline: FC<HomepageTimelineProps> = ({ agencies }) => {
     return (
         <Timeline>
-            {agencies.map(agency => {
+            {agencies.map((agency) => {
                 const { name, date, job, description } = agency;
                 return (
                     <Timeline.Item key={name}>
                         <Timeline.Point />
                         <Timeline.Content>
-                            <Timeline.Time className="text-gray-400">{date}</Timeline.Time>
-                            <Timeline.Title className="text-white">{job}</Timeline.Title>
+                            <Timeline.Time>
+                                <span className="text-gray-400 dark:!text-gray-400">
+                                    {date}
+                                </span>
+                            </Timeline.Time>
+                            <Timeline.Title className="text-white">
+                                {job}
+                            </Timeline.Title>
                             <Timeline.Body className="text-gray-400">
                                 <p>{description}</p>
                             </Timeline.Body>

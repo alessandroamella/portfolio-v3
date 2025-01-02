@@ -5,9 +5,10 @@ import Particles, { initParticlesEngine } from "@tsparticles/react";
 import type { Container, Engine } from "@tsparticles/engine";
 import { loadLinksPreset } from "@tsparticles/preset-links";
 
-interface ParticlesComponentProps extends React.ComponentProps<typeof Particles> {}
+interface ParticlesComponentProps
+    extends React.ComponentProps<typeof Particles> {}
 
-const ParticlesComponent: React.FC<ParticlesComponentProps> = props => {
+const ParticlesComponent: React.FC<ParticlesComponentProps> = (props) => {
     const [init, setInit] = useState(false);
 
     useEffect(() => {
@@ -23,7 +24,7 @@ const ParticlesComponent: React.FC<ParticlesComponentProps> = props => {
     };
 
     const options = {
-        preset: "links"
+        preset: "links",
     };
 
     if (init) {

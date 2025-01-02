@@ -96,6 +96,11 @@
                 "date": "Březen 2023",
                 "job": "Webový vývojář",
                 "description": "Návrh a vývoj pokročilých softwarových řešení, včetně systémů mikroslužeb pro IoT, softwaru pro analýzu nákladů a mobilních a webových aplikací."
+            },
+            "freelance": {
+                "date": "Současnost",
+                "job": "Freelance vývojář",
+                "description": "Vývoj webových stránek, webových aplikací a zakázkového softwaru pro jednotlivce a firmy."
             }
         },
         "projects": {

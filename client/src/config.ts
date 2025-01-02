@@ -12,14 +12,14 @@ export const config = Object.freeze({
     birthday: new Date(2003, 6, 13),
     descriptionNum: 3,
     otherInterestsNum: 4,
-    cvAgencies: ["infolog", "seta", "fertec"],
+    cvAgencies: ["infolog", "seta", "fertec", "freelance"],
     projects: [
         "ezaffitto",
         "vhfesuperiori",
         "occupalostudente",
         "tpldisplay",
         "wolfsurvival",
-        "om"
+        "om",
     ],
-    languages: ["it", "en", "cs"]
+    languages: ["it", "en", "cs"],
 });

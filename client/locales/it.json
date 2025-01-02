@@ -96,6 +96,11 @@
                 "date": "Marzo 2023",
                 "job": "Programmatore web",
                 "description": "Progettazione e sviluppo di soluzioni software avanzate, tra cui sistemi a microservizi per IoT, software di analisi dei costi, applicazioni mobili e web."
+            },
+            "freelance": {
+                "date": "Presente",
+                "job": "Sviluppatore Freelance",
+                "description": "Sviluppo di siti web, applicazioni web e software su misura per privati e aziende."
             }
         },
         "projects": {

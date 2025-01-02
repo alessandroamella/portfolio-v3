@@ -29,7 +29,7 @@ function GraphElem() {
                 </button>
 
                 {/* Arco tra nodo 1 e nodo 2 */}
-                <div className="absolute bottom-[3.9rem] left-10 w-8 h-0.5 bg-white border border-gray-200 transform -rotate-45 origin-top-left"></div>
+                <div className="absolute bottom-[3.9rem] left-10 w-8 h-0.5 bg-white dark:bg-gray-900 border border-gray-200 transform -rotate-45 origin-top-left"></div>
 
                 <div className="flex gap-8 mt-4">
                     {/* Nodo 2 */}

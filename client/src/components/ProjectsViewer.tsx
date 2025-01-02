@@ -15,7 +15,7 @@ import {
     FaBackward,
     FaExternalLinkAlt,
     FaForward,
-    FaGithub
+    FaGithub,
 } from "react-icons/fa";
 import Button from "./Button";
 
@@ -36,7 +36,7 @@ const ProjectsViewer: FC<ProjectsViewerProps> = ({
     projects,
     builtWithStr,
     githubStr,
-    openStr
+    openStr,
 }) => {
     const [curProjIndex, setCurProjIndex] = useState(0);
 
@@ -97,11 +97,11 @@ const ProjectsViewer: FC<ProjectsViewerProps> = ({
                         pagination={{ clickable: true }}
                         autoplay={{
                             delay: 2500,
-                            disableOnInteraction: false
+                            disableOnInteraction: false,
                         }}
                         className="h-full w-full z-40 rounded-2xl overflow-hidden"
                         ref={sliderRef}
-                        onSlideChange={s => setCurProjIndex(s.activeIndex)}
+                        onSlideChange={(s) => setCurProjIndex(s.activeIndex)}
                     >
                         {Object.entries(projectsInfo).map(
                             ([name, { image }], i) => (
@@ -119,7 +119,7 @@ const ProjectsViewer: FC<ProjectsViewerProps> = ({
                                         className="z-10 w-full h-full object-cover object-top"
                                     />
                                 </SwiperSlide>
-                            )
+                            ),
                         )}
                     </Swiper>
                 </div>
@@ -136,9 +136,9 @@ const ProjectsViewer: FC<ProjectsViewerProps> = ({
             </div>
 
             <div className="flex flex-col justify-center">
-                <h1 className="text-4xl tracking-tight font-bold text-gray-600 leading-tight">
+                <h1 className="text-4xl tracking-tight font-bold text-gray-600 dark:text-gray-50 leading-tight">
                     <Typewriter
-                        onInit={typewriter => {
+                        onInit={(typewriter) => {
                             setTypewriter(typewriter);
                         }}
                         options={{ delay: 30, deleteSpeed: 5 }}
@@ -146,16 +146,18 @@ const ProjectsViewer: FC<ProjectsViewerProps> = ({
                 </h1>
 
                 <Fade>
-                    <p className="mt-4 text-lg min-h-[5.5rem]">
+                    <p className="dark:text-gray-400 mt-4 text-lg min-h-[5.5rem]">
                         {projects[curProjIndex].description}
                     </p>
 
-                    <p className="mt-4 text-gray-500">{builtWithStr}</p>
+                    <p className="mt-4 text-gray-500 dark:text-gray-200">
+                        {builtWithStr}
+                    </p>
                     <div className="max-w-full flex-wrap overflow-x-hidden flex items-center justify-center md:justify-start gap-2">
                         {curProject.stack.map((e, i) => (
                             <div
                                 key={i}
-                                className="bg-gray-100 hover:bg-gray-200 transition-colors rounded-full px-3 py-2 text-sm text-gray-600"
+                                className="bg-gray-100 dark:bg-gray-600 hover:dark:bg-gray-500 hover:bg-gray-200 transition-colors rounded-full px-3 py-2 text-sm text-gray-600 dark:text-gray-200"
                             >
                                 {e}
                             </div>

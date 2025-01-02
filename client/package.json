@@ -16,7 +16,6 @@
         "@types/node": "22.6.1",
         "@types/react": "18.3.8",
         "@types/react-dom": "18.3.0",
-        "autoprefixer": "10.4.20",
         "axios": "^1.7.9",
         "date-fns": "^4.1.0",
         "eslint": "^8.57.1",
@@ -26,7 +25,6 @@
         "lodash": "^4.17.21",
         "next": "^14.2.22",
         "next-intl": "^3.26.3",
-        "postcss": "^8.4.49",
         "react": "18.3.1",
         "react-awesome-reveal": "^4.3.1",
         "react-dom": "18.3.1",
@@ -37,12 +35,18 @@
         "react-wavify": "^1.11.1",
         "sharp": "^0.33.5",
         "swiper": "^11.1.15",
-        "tailwindcss": "3.4.13",
         "typescript": "5.6.2",
         "typewriter-effect": "^2.21.0"
     },
     "devDependencies": {
+        "@svgr/webpack": "^8.1.0",
         "@types/lodash": "^4.17.13",
-        "@types/react-google-recaptcha": "^2.1.9"
+        "@types/react-google-recaptcha": "^2.1.9",
+        "autoprefixer": "10.4.20",
+        "eslint-config-prettier": "^9.1.0",
+        "eslint-plugin-prettier": "^5.2.1",
+        "postcss": "^8.4.49",
+        "prettier": "^3.4.2",
+        "tailwindcss": "3.4.13"
     }
 }

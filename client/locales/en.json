@@ -96,6 +96,11 @@
                 "date": "March 2023",
                 "job": "Web Developer",
                 "description": "Design and development of advanced software solutions, including microservice systems for IoT, cost analysis software, mobile and web applications."
+            },
+            "freelance": {
+                "date": "Present",
+                "job": "Freelance Developer",
+                "description": "Development of websites, web applications and custom software for individuals and businesses."
             }
         },
         "projects": {

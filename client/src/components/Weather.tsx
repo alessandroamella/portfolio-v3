@@ -27,13 +27,13 @@ const WeatherInfo: FC<WeatherInfoProps> = ({ prefixStr }) => {
             try {
                 const { data } = await axios.get("/api/weather", {
                     params: {
-                        lang
-                    }
+                        lang,
+                    },
                 });
                 setWeather(data);
             } catch (err) {
                 console.error(
-                    (err instanceof AxiosError && err?.response?.data) || err
+                    (err instanceof AxiosError && err?.response?.data) || err,
                 );
             }
         }
@@ -42,7 +42,7 @@ const WeatherInfo: FC<WeatherInfoProps> = ({ prefixStr }) => {
 
     return (
         weather && (
-            <span className="text-gray-300">{`(${prefixStr} ${weather.temp}°C, ${weather.description}).`}</span>
+            <span className="text-gray-300">{`(${prefixStr} ${new Intl.NumberFormat(lang).format(weather.temp)}°C, ${weather.description}).`}</span>
         )
     );
 };

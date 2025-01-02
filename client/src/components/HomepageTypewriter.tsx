@@ -9,7 +9,7 @@ const HomepageTypewriter = () => {
 
     return (
         <Typewriter
-            onInit={typewriter => {
+            onInit={(typewriter) => {
                 typewriter.typeString(t("homepage.splash")).start();
             }}
             options={{ delay: 50 }}

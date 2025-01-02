@@ -1,7 +1,7 @@
 export const config = Object.freeze({
     coords: {
-        lat: 44.56204,
-        lon: 11.03422
+        lat: 44.64783,
+        lon: 10.92539,
     },
-    languages: ["en", "it", "cs"]
+    languages: ["en", "it", "cs"],
 });

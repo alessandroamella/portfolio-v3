@@ -7,8 +7,15 @@ import type { Metadata } from "next";
 
 import Button from "@/components/Button";
 import Wave from "react-wavify";
-import { FaEnvelope, FaGithub, FaInstagram, FaLinkedin, FaTelegram } from "react-icons/fa";
-import Arrow from "@/components/arrow.svg";
+import {
+    FaEnvelope,
+    FaGithub,
+    FaInstagram,
+    FaLinkedin,
+    FaTelegram,
+} from "react-icons/fa";
+import Arrow from "@/components/arrow.svg?url";
+import ArrowWhite from "@/components/arrow-white.svg?url";
 
 import { Dancing_Script } from "next/font/google";
 import HomepageTimeline from "@/components/HomepageTimeline";
@@ -26,7 +33,7 @@ const dancingScript = Dancing_Script({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
     title: "Alessandro Amella - Sviluppo siti web",
-    description: "Sviluppo siti web, software, app e altro"
+    description: "Sviluppo siti web, software, app e altro",
 };
 
 function Home({ params: { locale } }: { params: { locale: string } }) {
@@ -34,66 +41,92 @@ function Home({ params: { locale } }: { params: { locale: string } }) {
 
     const t = useTranslations("common");
 
-    const changeLanguageOptions = config.languages.map(e => ({
+    const changeLanguageOptions = config.languages.map((e) => ({
         value: e,
-        label: `${t(`languages.flag.${e}`)} ${t(`languages.full.${e}`)}`
+        label: `${t(`languages.flag.${e}`)} ${t(`languages.full.${e}`)}`,
     }));
 
-    const cvAgencies = config.cvAgencies.map(name => ({
+    const cvAgencies = config.cvAgencies.map((name) => ({
         name,
         date: t(`curriculum.${name}.date`),
         job: t(`curriculum.${name}.job`),
-        description: t(`curriculum.${name}.description`)
+        description: t(`curriculum.${name}.description`),
     }));
 
-    const projects = config.projects.map(id => ({
+    const projects = config.projects.map((id) => ({
         id,
         title: t(`projects.${id}.title`),
-        description: t(`projects.${id}.description`)
+        description: t(`projects.${id}.description`),
     }));
 
     return (
-        <main className="bg-[#f7f7f7] min-h-screen">
-            <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-            <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-            <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+        <main className="bg-[#f7f7f7] dark:bg-gray-900 min-h-screen">
+            <link
+                rel="apple-touch-icon"
+                sizes="180x180"
+                href="/apple-touch-icon.png"
+            />
+            <link
+                rel="icon"
+                type="image/png"
+                sizes="32x32"
+                href="/favicon-32x32.png"
+            />
+            <link
+                rel="icon"
+                type="image/png"
+                sizes="16x16"
+                href="/favicon-16x16.png"
+            />
             <link rel="manifest" href="/site.webmanifest" />
-            <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#3f83f8" />
+            <link
+                rel="mask-icon"
+                href="/safari-pinned-tab.svg"
+                color="#3f83f8"
+            />
             <meta name="msapplication-TileColor" content="#3f83f8" />
             <meta name="theme-color" content="#3f83f8" />
 
-            <meta name="title" content="Alessandro Amella - Sviluppo siti web" />
-            <meta name="description" content="Sviluppo siti web, software, app e altro" />
+            <meta
+                name="title"
+                content="Alessandro Amella - Sviluppo siti web"
+            />
+            <meta
+                name="description"
+                content="Sviluppo siti web, software, app e altro"
+            />
 
             <meta property="og:type" content="website" />
             <meta property="og:url" content="https://www.bitrey.it/" />
-            <meta property="og:title" content="Alessandro Amella - Sviluppo siti web" />
-            <meta property="og:description" content="Sviluppo siti web, software, app e altro" />
-            <meta property="og:image" content="https://www.bitrey.it/banner.jpg" />
+            <meta
+                property="og:title"
+                content="Alessandro Amella - Sviluppo siti web"
+            />
+            <meta
+                property="og:description"
+                content="Sviluppo siti web, software, app e altro"
+            />
+            <meta
+                property="og:image"
+                content="https://www.bitrey.it/banner.jpg"
+            />
 
             <meta property="twitter:card" content="summary_large_image" />
             <meta property="twitter:url" content="https://www.bitrey.it/" />
-            <meta property="twitter:title" content="Alessandro Amella - Sviluppo siti web" />
+            <meta
+                property="twitter:title"
+                content="Alessandro Amella - Sviluppo siti web"
+            />
             <meta
                 property="twitter:description"
                 content="Sviluppo siti web, software, app e altro"
             />
-            <meta property="twitter:image" content="https://www.bitrey.it/banner.jpg" />
-            <header className="bg-gray-100 bg-opacity-50 flex justify-around p-4 md:px-0 items-center z-20 h-14 relative">
-                <div className="flex items-center gap-4">
-                    {/* <Image
-                        className="drop-shadow-lg shadow-white"
-                        src={aaLogo}
-                        width={34}
-                        height={34}
-                        alt="AA logo"
-                    />
-                    <h3 className="select-none text-gray-700 font-bold tracking-tighter text-2xl uppercase">
-                        Alessandro Amella
-                    </h3> */}
-                </div>
-
-                <div className="flex text-gray-600 lowercase items-center gap-4">
+            <meta
+                property="twitter:image"
+                content="https://www.bitrey.it/banner.jpg"
+            />
+            <header className="bg-gray-100 dark:bg-gray-800/90 bg-opacity-50 flex justify-around p-4 md:px-0 items-center z-20 h-14 relative">
+                <div className="flex text-gray-600 dark:text-gray-200 lowercase items-center gap-4">
                     <a className="hover:text-gray-700" href="#about">
                         {t("header.about")}
                     </a>
@@ -107,22 +140,15 @@ function Home({ params: { locale } }: { params: { locale: string } }) {
                 </div>
             </header>
 
-            <section className="relative flex mt-12 md:mt-14 mb-0 pb-0 flex-col items-center justify-center z-0">
+            <section className="dark:text-white relative flex mt-12 md:mt-14 mb-0 pb-0 flex-col items-center justify-center z-0">
                 <div className="flex items-center md:gap-8 px-8 md:px-16 mb-6">
                     <div className="mx-auto">
                         <BgGraph />
                         <div className="relative text-center">
-                            {/* <h1 className="invisible text-[2.5rem] font-bold leading-tight">
-                                {t("homepage.splash")}
-                            </h1> */}
-                            {/* <h1 className="absolute top-0 text-[2.5rem] font-bold leading-tight">
-                                <HomepageTypewriter />
-                            </h1> */}
                             <h1 className="text-6xl font-bold leading-tight z-20">
                                 {t("homepage.splash")}
                             </h1>
                         </div>
-                        {/* <p className="mt-6 text-lg text-center">{t("homepage.subtitle")}</p> */}
 
                         <div className="mt-12 flex items-center justify-center gap-2 z-20 relative">
                             <Button
@@ -148,11 +174,25 @@ function Home({ params: { locale } }: { params: { locale: string } }) {
                                         height="0"
                                         style={{
                                             width: "4rem",
-                                            height: "4rem"
+                                            height: "4rem",
                                         }}
+                                        className="dark:hidden"
                                         alt="Arrow pointing to LinkedIn"
                                     />
-                                    <p className={`${dancingScript.className} text-xl`}>
+                                    <Image
+                                        src={ArrowWhite}
+                                        width="0"
+                                        height="0"
+                                        style={{
+                                            width: "4rem",
+                                            height: "4rem",
+                                        }}
+                                        className="hidden dark:block"
+                                        alt="Arrow pointing to LinkedIn"
+                                    />
+                                    <p
+                                        className={`${dancingScript.className} text-xl`}
+                                    >
                                         {t("homepage.cv")}
                                     </p>
                                 </div>
@@ -188,7 +228,7 @@ function Home({ params: { locale } }: { params: { locale: string } }) {
                         height: 50,
                         amplitude: 20,
                         speed: 0.15,
-                        points: 3
+                        points: 3,
                     }}
                     className="z-10"
                 />
@@ -204,12 +244,15 @@ function Home({ params: { locale } }: { params: { locale: string } }) {
 
                     <p>
                         {t("homepage.mainDescription", {
-                            years: differenceInYears(new Date(), config.birthday)
+                            years: differenceInYears(
+                                new Date(),
+                                config.birthday,
+                            ),
                         })}{" "}
                         <WeatherInfo prefixStr={t("homepage.weather")} />
                     </p>
                     {_.range(config.descriptionNum)
-                        .map(e => t(`homepage.descriptions.${e}`))
+                        .map((e) => t(`homepage.descriptions.${e}`))
                         .map((e, i) => (
                             <p key={i} className="mt-4">
                                 {e}
@@ -220,7 +263,7 @@ function Home({ params: { locale } }: { params: { locale: string } }) {
                         {t("homepage.otherInterests")}
                     </h3>
 
-                    <ul className="max-w-md mt-4 text-gray-200 list-disc list-inside dark:text-gray-400 mb-6">
+                    <ul className="max-w-md mt-4 list-disc list-inside text-gray-300 mb-6">
                         <li>
                             {t("homepage.otherInterstsRadio.title")}
                             <a
@@ -232,7 +275,7 @@ function Home({ params: { locale } }: { params: { locale: string } }) {
                         </li>
 
                         {_.range(config.otherInterestsNum)
-                            .map(e => t(`homepage.otherInterestsList.${e}`))
+                            .map((e) => t(`homepage.otherInterestsList.${e}`))
                             .map((e, i) => (
                                 <li key={i} className="mt-4">
                                     {e}.
@@ -258,12 +301,14 @@ function Home({ params: { locale } }: { params: { locale: string } }) {
 
             <section
                 id="projects"
-                className="md:gap-24 bg-white border-t-4 px-8 md:px-16 py-8 md:py-16"
+                className="md:gap-24 bg-white dark:bg-gray-900 dark:text-gray-200 border-t-4 px-8 md:px-16 py-8 md:py-16"
             >
-                <h2 className="text-4xl font-bold text-center tracking-tight">
+                <h2 className="text-4xl font-bold text-center dark:text-white tracking-tight">
                     {t("homepage.someProjects")}
                 </h2>
-                <p className="my-2 text-lg text-center">{t("homepage.someProjectsDescription")}</p>
+                <p className="my-2 text-lg dark:text-gray-400 text-center">
+                    {t("homepage.someProjectsDescription")}
+                </p>
                 <ProjectsViewer
                     builtWithStr={t("homepage.builtWith")}
                     githubStr={t("homepage.github")}
@@ -272,23 +317,33 @@ function Home({ params: { locale } }: { params: { locale: string } }) {
                 />
 
                 <div className="text-right mt-4 md:-mt-16 hover:text-gray-600 transition-colors duration-75">
-                    <a href={config.githubUrl} className={`${dancingScript.className} text-4xl`}>
+                    <a
+                        href={config.githubUrl}
+                        className={`${dancingScript.className} text-4xl`}
+                    >
                         ...{t("homepage.andManyOthers")}!
                     </a>
                 </div>
             </section>
 
-            <section id="contact" className="px-8 md:px-16 py-12">
+            <section
+                id="contact"
+                className="dark:text-white dark:bg-gray-800 px-8 md:px-16 py-12"
+            >
                 <div>
                     <h2 className="text-4xl font-bold tracking-tight mb-4">
                         {t("homepage.letsKeepInTouch")}
                     </h2>
-                    <p className="mb-8">{t("homepage.contactSubtitle")}</p>
+                    <p className="mb-8 dark:text-gray-200">
+                        {t("homepage.contactSubtitle")}
+                    </p>
 
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
                         <HomepageContact
                             captchaErrorStr={t("contact.captchaError")}
-                            messagePlaceholderStr={t("contact.messagePlaceholder")}
+                            messagePlaceholderStr={t(
+                                "contact.messagePlaceholder",
+                            )}
                             sendErrorStr={t("contact.sendError")}
                             sendStr={t("contact.send")}
                             successStr={t("contact.success")}
@@ -297,18 +352,22 @@ function Home({ params: { locale } }: { params: { locale: string } }) {
                             yourNameStr={t("contact.yourName")}
                         />
                         <div>
-                            <h2 className="text-3xl text-gray-800 font-bold tracking-tighter mb-6">
+                            <h2 className="text-3xl text-gray-800 dark:text-white font-bold tracking-tighter mb-6">
                                 {t("homepage.howCanIHelpYou")}
                             </h2>
 
                             <HowCanIHelpCard
                                 name={t("homepage.webDevelopment")}
-                                description={t("homepage.webDevelopmentDescription")}
+                                description={t(
+                                    "homepage.webDevelopmentDescription",
+                                )}
                                 hasHr
                             />
                             <HowCanIHelpCard
                                 name={t("homepage.consulting")}
-                                description={t("homepage.consultingDescription")}
+                                description={t(
+                                    "homepage.consultingDescription",
+                                )}
                                 hasHr
                             />
                             <HowCanIHelpCard
@@ -329,7 +388,9 @@ function Home({ params: { locale } }: { params: { locale: string } }) {
                                     className="hover:text-gray-700 transition-colors duration-75 flex items-center rounded-xl px-4 font-medium tracking-tighter"
                                 >
                                     <FaTelegram />
-                                    <span className="ml-2">{config.telegramDisplayUrl}</span>
+                                    <span className="ml-2">
+                                        {config.telegramDisplayUrl}
+                                    </span>
                                 </a>
                             </div>
                         </div>
@@ -338,18 +399,15 @@ function Home({ params: { locale } }: { params: { locale: string } }) {
             </section>
 
             <footer className="bg-gray-700 border-gray-200 border-t-4 text-white px-8 md:px-24 py-6 z-50 flex flex-col items-center md:flex-row justify-start md:justify-around">
-                <div className="flex justify-center items-center gap-2">
-                    {/* <Image
-                        className="drop-shadow-lg shadow-white"
-                        src={aaLogoWhite}
-                        width={32}
-                        height={32}
-                        alt="AA logo"
-                    /> */}
+                <div className="flex flex-col">
                     <h3 className="select-none tracking-tighter lowercase font-bold text-2xl">
                         Bitrey
-                        <span className="text-gray-400">.it</span>
+                        <span className="text-gray-400">.dev</span>
                     </h3>
+                    <h4 className="select-none -mt-[2px] text-gray-400 tracking-tighter lowercase text-sm font-medium">
+                        <span className="font-normal">&</span> Bitrey
+                        <span>.it</span>
+                    </h4>
                 </div>
                 <p className="font-light">2024 &copy; Alessandro Amella</p>
                 <div className="flex flex-col justify-center items-center">

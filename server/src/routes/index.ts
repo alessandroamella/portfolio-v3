@@ -12,7 +12,7 @@ import { WeatherCache } from "../interfaces/Weather";
 
 const router = Router();
 
-const weatherCache: WeatherCache = {};
+let weatherCache: WeatherCache = {};
 
 router.get(
     "/weather",
@@ -28,8 +28,6 @@ router.get(
                 .status(BAD_REQUEST)
                 .json({ err: "servererror.validation" });
         }
-        logger.debug("Validation passed");
-
         const lang = req.query?.lang || "en";
 
         const { lat, lon } = config.coords;
@@ -37,12 +35,25 @@ router.get(
         try {
             if (
                 !weatherCache[lang] ||
-                moment().diff(weatherCache[lang].date, "minutes") > 10
+                moment().diff(weatherCache[lang].date, "minutes") > 5
             ) {
+                const weather = await getWeather({ lat, lon, lang });
                 weatherCache[lang] = {
-                    weather: await getWeather({ lat, lon, lang }),
+                    weather,
                     date: moment(),
                 };
+                weatherCache = Object.fromEntries(
+                    Object.entries(weatherCache).map(([k, v]) => [
+                        k,
+                        {
+                            ...v,
+                            weather: {
+                                ...v.weather,
+                                temp: weather.temp,
+                            },
+                        },
+                    ]),
+                );
             }
 
             return res.json(weatherCache[lang].weather);

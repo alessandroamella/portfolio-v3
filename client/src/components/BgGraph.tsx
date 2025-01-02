@@ -4,9 +4,12 @@ import React, { useEffect, useState } from "react";
 import GraphElem from "./GraphElem";
 
 function useWindowSize() {
-    const [windowSize, setWindowSize] = useState<{ width?: number; height?: number }>({
+    const [windowSize, setWindowSize] = useState<{
+        width?: number;
+        height?: number;
+    }>({
         width: undefined,
-        height: undefined
+        height: undefined,
     });
 
     useEffect(() => {
@@ -16,7 +19,7 @@ function useWindowSize() {
             // Set window width/height to state
             setWindowSize({
                 width: window.innerWidth,
-                height: window.innerHeight
+                height: window.innerHeight,
             });
         }
 
@@ -51,14 +54,14 @@ const BgGraph = () => {
         setRandomAnimDelay(
             Array.from(
                 { length: animDuration },
-                (_, i) => i + Math.random() * (animDuration / 10) + "s"
-            ).filter((e, i) => i % (animDuration / graphNum) === 0)
+                (_, i) => i + Math.random() * (animDuration / 10) + "s",
+            ).filter((e, i) => i % (animDuration / graphNum) === 0),
         );
 
         setTopValues(
             Array.from({ length: graphNum }).map(
-                (_e, i) => (Math.random() * (height || 800)) / 3 - topPadding
-            )
+                (_e, i) => (Math.random() * (height || 800)) / 3 - topPadding,
+            ),
         );
     }, [animDuration, graphNum, width, height]);
     // console.log("topValues", topValues);
@@ -69,7 +72,10 @@ const BgGraph = () => {
                 <div
                     key={i}
                     className="absolute falling-items z-0"
-                    style={{ top: topValues[i], animationDelay: randomAnimDelay[i] }}
+                    style={{
+                        top: topValues[i],
+                        animationDelay: randomAnimDelay[i],
+                    }}
                 >
                     <GraphElem />
                 </div>

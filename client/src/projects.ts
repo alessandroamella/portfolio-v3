@@ -1,3 +1,4 @@
+import bamboosimImg from "../public/img/bamboosim.png";
 import ezaffittoImg from "../public/img/ezaffitto.png";
 import vhfesuperioriImg from "../public/img/vhfesuperiori.png";
 import tpldisplayImg from "../public/img/tpldisplay.png";
@@ -17,36 +18,55 @@ export type ProjectProp = {
 };
 
 export const projectsInfo: ProjectProp = {
+    bamboosim: {
+        stack: ["NestJS", "PostgreSQL", "React", "Tailwind", "TypeScript"],
+        image: bamboosimImg,
+        url: "https://bamboosim.com",
+    },
     ezaffitto: {
-        stack: ["Node.js", "Python", "OpenAI", "Puppeteer", "Docker", "MongoDB"],
+        stack: [
+            "Node.js",
+            "Python",
+            "OpenAI",
+            "Puppeteer",
+            "Docker",
+            "MongoDB",
+        ],
         image: ezaffittoImg,
-        github: "https://github.com/alessandroamella/ezaffitto"
+        github: "https://github.com/alessandroamella/ezaffitto",
     },
     vhfesuperiori: {
         stack: ["AWS", "Node.js", "MongoDB", "Express", "OpenAPI", "React"],
         image: vhfesuperioriImg,
         url: "https://www.vhfesuperiori.eu/",
-        github: "https://github.com/alessandroamella/vhf-e-superiori"
+        github: "https://github.com/alessandroamella/vhf-e-superiori",
     },
     occupalostudente: {
-        stack: ["Docker", "Node.js", "TypeScript", "MongoDB", "Express", "React"],
+        stack: [
+            "Docker",
+            "Node.js",
+            "TypeScript",
+            "MongoDB",
+            "Express",
+            "React",
+        ],
         image: occupaImg,
-        github: "https://github.com/alessandroamella/occupa-lo-studente-fermi"
+        github: "https://github.com/alessandroamella/occupa-lo-studente-fermi",
     },
     tpldisplay: {
         stack: ["Docker", "Redis", "Node.js", "TypeScript", "Express"],
         image: tpldisplayImg,
-        github: "https://github.com/alessandroamella/seta-display"
+        github: "https://github.com/alessandroamella/seta-display",
     },
     wolfsurvival: {
         stack: ["Next.js", "TypeScript", "Express"],
         image: wolfImg,
-        url: "https://www.wolfsurvival.it/"
+        url: "https://www.wolfsurvival.it/",
     },
     om: {
         stack: ["JavaScript DOM", "Bulma", "Express"],
         image: omImg,
         url: "http://om.bitrey.it",
-        github: "https://github.com/alessandroamella/codice-q"
-    }
+        github: "https://github.com/alessandroamella/codice-q",
+    },
 };
