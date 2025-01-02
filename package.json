@@ -1,0 +1,17 @@
+{
+    "name": "portfolio-v3",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "lint:all": "concurrently \"pnpm --prefix client run lint\" \"pnpm --prefix server run lint\"",
+        "prepare": "husky"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "concurrently": "^9.1.2",
+        "husky": "^9.1.7"
+    }
+}

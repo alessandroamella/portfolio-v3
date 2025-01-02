@@ -11,7 +11,12 @@ import Typewriter, { TypewriterClass } from "typewriter-effect";
 
 import Image from "next/image";
 import { projectsInfo } from "@/projects";
-import { FaBackward, FaExternalLinkAlt, FaForward, FaGithub } from "react-icons/fa";
+import {
+    FaBackward,
+    FaExternalLinkAlt,
+    FaForward,
+    FaGithub
+} from "react-icons/fa";
 import Button from "./Button";
 
 import iPhoneImg from "../../public/img/iphone.png";
@@ -49,7 +54,7 @@ const ProjectsViewer: FC<ProjectsViewerProps> = ({
             .deleteAll()
             .typeString(projects[curProjIndex].title)
             .start();
-    }, [typewriter, curProject]);
+    }, [typewriter, curProject, projects, curProjIndex]);
 
     const sliderRef = useRef<SwiperRef>(null);
 
@@ -98,26 +103,33 @@ const ProjectsViewer: FC<ProjectsViewerProps> = ({
                         ref={sliderRef}
                         onSlideChange={s => setCurProjIndex(s.activeIndex)}
                     >
-                        {Object.entries(projectsInfo).map(([name, { image }], i) => (
-                            <SwiperSlide key={i} className="h-full w-full z-10">
-                                <Image
-                                    width={240}
-                                    height={384}
-                                    loading="lazy"
-                                    placeholder="blur"
-                                    src={image}
-                                    alt={name}
-                                    className="z-10 w-full h-full object-cover object-top"
-                                />
-                            </SwiperSlide>
-                        ))}
+                        {Object.entries(projectsInfo).map(
+                            ([name, { image }], i) => (
+                                <SwiperSlide
+                                    key={i}
+                                    className="h-full w-full z-10"
+                                >
+                                    <Image
+                                        width={240}
+                                        height={384}
+                                        loading="lazy"
+                                        placeholder="blur"
+                                        src={image}
+                                        alt={name}
+                                        className="z-10 w-full h-full object-cover object-top"
+                                    />
+                                </SwiperSlide>
+                            )
+                        )}
                     </Swiper>
                 </div>
                 <Button
                     color="blue"
                     className="rounded-full p-4 mr-auto"
                     onClick={handleNext}
-                    disabled={curProjIndex === Object.keys(projectsInfo).length - 1}
+                    disabled={
+                        curProjIndex === Object.keys(projectsInfo).length - 1
+                    }
                 >
                     <FaForward />
                 </Button>

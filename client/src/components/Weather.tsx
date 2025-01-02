@@ -32,11 +32,13 @@ const WeatherInfo: FC<WeatherInfoProps> = ({ prefixStr }) => {
                 });
                 setWeather(data);
             } catch (err) {
-                console.error((err instanceof AxiosError && err?.response?.data) || err);
+                console.error(
+                    (err instanceof AxiosError && err?.response?.data) || err
+                );
             }
         }
         getWeather();
-    }, []);
+    }, [lang]);
 
     return (
         weather && (
