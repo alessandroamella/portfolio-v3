@@ -104,6 +104,10 @@
             }
         },
         "projects": {
+            "bamboosim": {
+                "title": "BambooSIM",
+                "description": "Un negozio online di eSIM con un CMS personalizzato per la gestione di prodotti, ordini e clienti. Integrazione con più gateway di pagamento e servizi cloud."
+            },
             "ezaffitto": {
                 "title": "ezaffitto",
                 "description": "Raccoglitore completamente automatico di annunci di affitti provenienti da vari siti con parsing tramite AI (OpenAI) strutturato a microservizi."

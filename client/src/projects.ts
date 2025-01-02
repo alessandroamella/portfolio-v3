@@ -19,7 +19,14 @@ export type ProjectProp = {
 
 export const projectsInfo: ProjectProp = {
     bamboosim: {
-        stack: ["NestJS", "PostgreSQL", "React", "Tailwind", "TypeScript"],
+        stack: [
+            "NestJS",
+            "PostgreSQL",
+            "Google Cloud",
+            "React",
+            "Tailwind",
+            "TypeScript",
+        ],
         image: bamboosimImg,
         url: "https://bamboosim.com",
     },

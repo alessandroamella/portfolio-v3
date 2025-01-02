@@ -104,6 +104,10 @@
             }
         },
         "projects": {
+            "bamboosim": {
+                "title": "BambooSIM",
+                "description": "An online eSIM card store with a custom CMS for managing products, orders and customers. Integration with multiple payment gateways and cloud services."
+            },
             "ezaffitto": {
                 "title": "ezaffitto",
                 "description": "Fully automated rental ad collector from various websites with AI (OpenAI) parsing structured as microservices."

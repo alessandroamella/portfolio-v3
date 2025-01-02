@@ -14,6 +14,7 @@ export const config = Object.freeze({
     otherInterestsNum: 4,
     cvAgencies: ["infolog", "seta", "fertec", "freelance"],
     projects: [
+        "bamboosim",
         "ezaffitto",
         "vhfesuperiori",
         "occupalostudente",

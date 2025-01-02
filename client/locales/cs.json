@@ -104,6 +104,10 @@
             }
         },
         "projects": {
+            "bamboosim": {
+                "title": "BambooSIM",
+                "description": "Online obchod s eSIM kartami s vlastním CMS pro správu produktů, objednávek a zákazníků. Integrace s více platebními bránami a cloudovými službami."
+            },
             "ezaffitto": {
                 "title": "ezaffitto",
                 "description": "Plně automatizovaný sběrač inzerátů k pronájmu z různých webů s analýzou AI (OpenAI) strukturovanou jako mikroslužby."
