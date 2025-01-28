@@ -9,35 +9,44 @@ const nextConfig = {
         return [
             {
                 source: "/(.*)",
-                headers: createSecureHeaders({
-                    contentSecurityPolicy: {
-                        directives: {
-                            defaultSrc: ["'self'"],
-                            scriptSrc: [
-                                "'self'",
-                                "https://www.google.com",
-                                "https://www.gstatic.com",
-                                "'unsafe-inline'",
-                            ],
-                            styleSrc: ["'self'", "'unsafe-inline'"],
-                            imgSrc: ["'self'", "data:"],
-                            fontSrc: ["'self'", "data:"],
-                            connectSrc: ["'self'"],
-                            frameSrc: ["'self'", "https://www.google.com"],
-                            mediaSrc: ["'self'"],
-                            objectSrc: ["'none'"],
-                            baseUri: ["'self'"],
-                            formAction: ["'self'"],
-                            frameAncestors: ["'none'"],
-                            upgradeInsecureRequests: true,
+                headers: [
+                    ...createSecureHeaders({
+                        contentSecurityPolicy: {
+                            directives: {
+                                defaultSrc: ["'self'"],
+                                scriptSrc: [
+                                    "'self'",
+                                    "https://www.google.com",
+                                    "https://www.gstatic.com",
+                                    "'unsafe-inline'",
+                                ],
+                                styleSrc: ["'self'", "'unsafe-inline'"],
+                                imgSrc: ["'self'", "data:"],
+                                fontSrc: ["'self'", "data:"],
+                                connectSrc: ["'self'"],
+                                frameSrc: ["'self'", "https://www.google.com"],
+                                mediaSrc: ["'self'"],
+                                objectSrc: ["'none'"],
+                                baseUri: ["'self'"],
+                                formAction: ["'self'"],
+                                frameAncestors: ["'none'"],
+                                upgradeInsecureRequests: true,
+                            },
                         },
+                        forceHTTPSRedirect: [
+                            true,
+                            {
+                                maxAge: 30 * 24 * 60 * 60, // 30 days
+                                includeSubDomains: true,
+                            },
+                        ],
+                        referrerPolicy: "same-origin",
+                    }),
+                    {
+                        key: "Permissions-Policy",
+                        value: "accelerometer=(), camera=(), geolocation=(), gyroscope=(), magnetometer=(), microphone=(), payment=(), usb=()", // disable all permissions
                     },
-                    forceHTTPSRedirect: [
-                        true,
-                        { maxAge: 60 * 60 * 24 * 4, includeSubDomains: true },
-                    ],
-                    referrerPolicy: "same-origin",
-                }),
+                ],
             },
         ];
     },
