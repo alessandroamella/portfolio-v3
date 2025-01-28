@@ -12,7 +12,7 @@ const ParticlesComponent: React.FC<ParticlesComponentProps> = (props) => {
     const [init, setInit] = useState(false);
 
     useEffect(() => {
-        initParticlesEngine(async (engine: Engine) => {
+        initParticlesEngine(async (engine: any) => {
             await loadLinksPreset(engine);
         }).then(() => {
             setInit(true);

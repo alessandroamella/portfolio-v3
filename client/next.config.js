@@ -1,9 +1,46 @@
 const createNextIntlPlugin = require("next-intl/plugin");
+const { createSecureHeaders } = require("next-secure-headers");
 
 const withNextIntl = createNextIntlPlugin("./src/i18n.ts");
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+    async headers() {
+        return [
+            {
+                source: "/(.*)",
+                headers: createSecureHeaders({
+                    contentSecurityPolicy: {
+                        directives: {
+                            defaultSrc: ["'self'"],
+                            scriptSrc: [
+                                "'self'",
+                                "https://www.google.com",
+                                "https://www.gstatic.com",
+                                "'unsafe-inline'",
+                            ],
+                            styleSrc: ["'self'", "'unsafe-inline'"],
+                            imgSrc: ["'self'", "data:"],
+                            fontSrc: ["'self'", "data:"],
+                            connectSrc: ["'self'"],
+                            frameSrc: ["'self'", "https://www.google.com"],
+                            mediaSrc: ["'self'"],
+                            objectSrc: ["'none'"],
+                            baseUri: ["'self'"],
+                            formAction: ["'self'"],
+                            frameAncestors: ["'none'"],
+                            upgradeInsecureRequests: true,
+                        },
+                    },
+                    forceHTTPSRedirect: [
+                        true,
+                        { maxAge: 60 * 60 * 24 * 4, includeSubDomains: true },
+                    ],
+                    referrerPolicy: "same-origin",
+                }),
+            },
+        ];
+    },
     webpack(config) {
         // Grab the existing rule that handles SVG imports
         const fileLoaderRule = config.module.rules.find((rule) =>
