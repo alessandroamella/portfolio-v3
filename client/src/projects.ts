@@ -1,4 +1,5 @@
 import bamboosimImg from "../public/img/bamboosim.png";
+import kinoCafeImg from "../public/img/kinocafe.png";
 import ezaffittoImg from "../public/img/ezaffitto.png";
 import vhfesuperioriImg from "../public/img/vhfesuperiori.png";
 import tpldisplayImg from "../public/img/tpldisplay.png";
@@ -30,6 +31,12 @@ export const projectsInfo: ProjectProp = {
         image: bamboosimImg,
         url: "https://bamboosim.com",
     },
+    kinocafe: {
+        stack: ["AWS API", "Supabase", "React", "Python", "Arduino"],
+        image: kinoCafeImg,
+        url: "http://cafe.kinocampus.it/",
+        github: "https://github.com/alessandroamella/kino-manager-fe",
+    },
     ezaffitto: {
         stack: [
             "Node.js",
@@ -43,25 +50,18 @@ export const projectsInfo: ProjectProp = {
         github: "https://github.com/alessandroamella/ezaffitto",
     },
     vhfesuperiori: {
-        stack: ["AWS", "Node.js", "MongoDB", "Express", "OpenAPI", "React"],
+        stack: ["AWS", "MongoDB", "Express", "OpenAPI", "React"],
         image: vhfesuperioriImg,
         url: "https://www.vhfesuperiori.eu/",
         github: "https://github.com/alessandroamella/vhf-e-superiori",
     },
     occupalostudente: {
-        stack: [
-            "Docker",
-            "Node.js",
-            "TypeScript",
-            "MongoDB",
-            "Express",
-            "React",
-        ],
+        stack: ["Docker", "TypeScript", "MongoDB", "Express", "React"],
         image: occupaImg,
         github: "https://github.com/alessandroamella/occupa-lo-studente-fermi",
     },
     tpldisplay: {
-        stack: ["Docker", "Redis", "Node.js", "TypeScript", "Express"],
+        stack: ["Docker", "Redis", "TypeScript", "Express"],
         image: tpldisplayImg,
         github: "https://github.com/alessandroamella/seta-display",
     },

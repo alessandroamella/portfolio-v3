@@ -13,6 +13,7 @@
         },
         "homepage": {
             "splash": "Alessandro Amella",
+            "by": "by",
             "about": "About Me",
             "projects": "Projects",
             "mainDescription": "Computer Science student at the University of Bologna, ex-Erasmus at Brno University of Technology, developer, {years} years old, living in Modena",
@@ -55,6 +56,9 @@
             "other": "Other",
             "otherDescription": "Any other information or request."
         },
+        "footer": {
+            "vatNumber": "VAT Number (IT)"
+        },
         "contact": {
             "yourEmail": "Your email",
             "yourName": "Your name",
@@ -66,20 +70,6 @@
             "captchaError": "Invalid captcha",
             "success": "Message sent successfully, thank you",
             "sendError": "Error sending message :("
-        },
-        "months": {
-            "january": "January",
-            "february": "February",
-            "march": "March",
-            "april": "April",
-            "may": "May",
-            "june": "June",
-            "july": "July",
-            "august": "August",
-            "september": "September",
-            "october": "October",
-            "november": "November",
-            "december": "December"
         },
         "curriculum": {
             "infolog": {
@@ -111,6 +101,10 @@
             "ezaffitto": {
                 "title": "ezaffitto",
                 "description": "Fully automated rental ad collector from various websites with AI (OpenAI) parsing structured as microservices."
+            },
+            "kinocafe": {
+                "title": "Kinó Café",
+                "description": "Website for a café to manage orders, print receipts via WebSockets to a POS printer, send data to an ESP32 display using the Web Serial API, show the menu, serve as a front page, and handle user registration."
             },
             "vhfesuperiori": {
                 "title": "VHF e superiori",

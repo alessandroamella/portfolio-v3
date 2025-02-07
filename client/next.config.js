@@ -19,6 +19,7 @@ const nextConfig = {
                                     "https://www.google.com",
                                     "https://www.gstatic.com",
                                     "'unsafe-inline'",
+                                    "'unsafe-eval'", // needed for Next.js
                                 ],
                                 styleSrc: ["'self'", "'unsafe-inline'"],
                                 imgSrc: ["'self'", "data:"],

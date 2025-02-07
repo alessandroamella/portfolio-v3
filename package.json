@@ -4,6 +4,7 @@
     "description": "",
     "main": "index.js",
     "scripts": {
+        "dev": "concurrently \"cd server && pnpm dev\" \"cd client && pnpm dev\"",
         "lint:all": "concurrently \"pnpm --prefix client run lint\" \"pnpm --prefix server run lint\"",
         "prepare": "husky"
     },
@@ -11,7 +12,9 @@
     "author": "",
     "license": "ISC",
     "dependencies": {
-        "concurrently": "^9.1.2",
         "husky": "^9.1.7"
+    },
+    "devDependencies": {
+        "concurrently": "^9.1.2"
     }
 }

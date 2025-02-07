@@ -13,6 +13,7 @@
         },
         "homepage": {
             "splash": "Alessandro Amella",
+            "by": "od",
             "about": "O mně",
             "projects": "Projekty",
             "mainDescription": "Student informatiky na Univerzitě v Bologni, ex-Erasmus na Vysokém učení technické v Brně, programátor, {years} let, žijící v Modeně",
@@ -55,6 +56,9 @@
             "other": "Jiné",
             "otherDescription": "Jakékoli další informace nebo požadavky."
         },
+        "footer": {
+            "vatNumber": "DIČ (IT)"
+        },
         "contact": {
             "yourEmail": "Váš e-mail",
             "yourName": "Vaše jméno",
@@ -66,20 +70,6 @@
             "captchaError": "Neplatná captcha",
             "success": "Zpráva úspěšně odeslána, děkujeme",
             "sendError": "Chyba při odesílání zprávy :("
-        },
-        "months": {
-            "january": "Leden",
-            "february": "Únor",
-            "march": "Březen",
-            "april": "Duben",
-            "may": "Květen",
-            "june": "Červen",
-            "july": "Červenec",
-            "august": "Srpen",
-            "september": "Září",
-            "october": "Říjen",
-            "november": "Listopad",
-            "december": "Prosinec"
         },
         "curriculum": {
             "infolog": {
@@ -111,6 +101,10 @@
             "ezaffitto": {
                 "title": "ezaffitto",
                 "description": "Plně automatizovaný sběrač inzerátů k pronájmu z různých webů s analýzou AI (OpenAI) strukturovanou jako mikroslužby."
+            },
+            "kinocafe": {
+                "title": "Kinó Café",
+                "description": "Webová stránka pro kavárnu, která slouží ke správě objednávek, tisku účtenek přes WebSockets na POS tiskárně, odesílání dat na ESP32 displej pomocí Web Serial API, zobrazení menu, funguje jako úvodní stránka a umožňuje registraci uživatelů."
             },
             "vhfesuperiori": {
                 "title": "VHF e superiori",

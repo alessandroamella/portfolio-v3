@@ -1,8 +1,8 @@
 import Image from "next/image";
 import { useTranslations } from "next-intl";
 import { unstable_setRequestLocale } from "next-intl/server";
-import _ from "lodash";
-import { differenceInYears } from "date-fns";
+import { range } from "lodash";
+import { differenceInYears, getYear } from "date-fns";
 import type { Metadata } from "next";
 
 import Button from "@/components/Button";
@@ -145,7 +145,13 @@ function Home({ params: { locale } }: { params: { locale: string } }) {
                     <div className="mx-auto">
                         <BgGraph />
                         <div className="relative text-center">
-                            <h1 className="text-6xl font-bold leading-tight z-20">
+                            <div className="font-light text-lg text-gray-500 dark:text-gray-400 text-center md:text-left -mb-3 md:mb-0 w-full">
+                                <span className="text-gray-950/95 dark:text-gray-100/95">
+                                    bitrey.dev
+                                </span>{" "}
+                                {t("homepage.by")}
+                            </div>
+                            <h1 className="text-6xl font-bold leading-none z-20">
                                 {t("homepage.splash")}
                             </h1>
                         </div>
@@ -251,7 +257,7 @@ function Home({ params: { locale } }: { params: { locale: string } }) {
                         })}{" "}
                         <WeatherInfo prefixStr={t("homepage.weather")} />
                     </p>
-                    {_.range(config.descriptionNum)
+                    {range(config.descriptionNum)
                         .map((e) => t(`homepage.descriptions.${e}`))
                         .map((e, i) => (
                             <p key={i} className="mt-4">
@@ -274,7 +280,7 @@ function Home({ params: { locale } }: { params: { locale: string } }) {
                             </a>
                         </li>
 
-                        {_.range(config.otherInterestsNum)
+                        {range(config.otherInterestsNum)
                             .map((e) => t(`homepage.otherInterestsList.${e}`))
                             .map((e, i) => (
                                 <li key={i} className="mt-4">
@@ -398,7 +404,7 @@ function Home({ params: { locale } }: { params: { locale: string } }) {
                 </div>
             </section>
 
-            <footer className="bg-gray-700 border-gray-200 border-t-4 text-white px-8 md:px-24 py-6 z-50 flex flex-col items-center md:flex-row justify-start md:justify-around">
+            <footer className="bg-gray-700 border-gray-200 border-t-4 text-white px-8 md:px-24 py-6 z-50 flex flex-col items-center md:flex-row justify-start gap-4 md:justify-around">
                 <div className="flex flex-col">
                     <h3 className="select-none tracking-tighter lowercase font-bold text-2xl">
                         Bitrey
@@ -409,7 +415,17 @@ function Home({ params: { locale } }: { params: { locale: string } }) {
                         <span>.it</span>
                     </h4>
                 </div>
-                <p className="font-light">2024 &copy; Alessandro Amella</p>
+                <div className="flex flex-col justify-center items-center">
+                    <p className="font-light text-center">
+                        {getYear(new Date())} &copy; Alessandro Amella
+                    </p>
+                    <p className="font-light text-center">
+                        <span className="text-gray-300">
+                            {t("footer.vatNumber")}
+                        </span>
+                        : <span className="font-medium">04183560368</span>
+                    </p>
+                </div>
                 <div className="flex flex-col justify-center items-center">
                     <a
                         href={`mailto:${config.email}`}

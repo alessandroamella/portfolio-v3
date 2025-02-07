@@ -13,6 +13,7 @@
         },
         "homepage": {
             "splash": "Alessandro Amella",
+            "by": "di",
             "about": "Chi sono",
             "projects": "Progetti",
             "mainDescription": "Studente di Informatica all'Università di Bologna, ex-Erasmus presso la Brno University of Technology, programmatore, {years} anni, vivo a Modena",
@@ -55,6 +56,9 @@
             "other": "Altro",
             "otherDescription": "Qualsiasi altra informazione o richiesta."
         },
+        "footer": {
+            "vatNumber": "Partita IVA"
+        },
         "contact": {
             "yourEmail": "La tua email",
             "yourName": "Il tuo nome",
@@ -66,20 +70,6 @@
             "captchaError": "Captcha non valido",
             "success": "Messaggio inviato con successo, grazie",
             "sendError": "Errore durante l'invio del messaggio :("
-        },
-        "months": {
-            "january": "Gennaio",
-            "february": "Febbraio",
-            "march": "Marzo",
-            "april": "Aprile",
-            "may": "Maggio",
-            "june": "Giugno",
-            "july": "Luglio",
-            "august": "Agosto",
-            "september": "Settembre",
-            "october": "Ottobre",
-            "november": "Novembre",
-            "december": "Dicembre"
         },
         "curriculum": {
             "infolog": {
@@ -111,6 +101,10 @@
             "ezaffitto": {
                 "title": "ezaffitto",
                 "description": "Raccoglitore completamente automatico di annunci di affitti provenienti da vari siti con parsing tramite AI (OpenAI) strutturato a microservizi."
+            },
+            "kinocafe": {
+                "title": "Kinó Café",
+                "description": "Sito web di un café per gestire ordini, stampare scontrini su una stampante POS, inviare dati a un ESP32 via Web Serial API, mostrare il menù, fungere come homepage e gestire la registrazione degli utenti."
             },
             "vhfesuperiori": {
                 "title": "VHF e superiori",
