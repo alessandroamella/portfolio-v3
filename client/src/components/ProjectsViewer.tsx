@@ -19,7 +19,7 @@ import {
 } from "react-icons/fa";
 import Button from "./Button";
 
-import iPhoneImg from "../../public/img/iphone.png";
+import iPhoneImg from "../../public/img/iphone.webp";
 
 interface ProjectsViewerProps {
     projects: {

@@ -1,11 +1,11 @@
-import bamboosimImg from "../public/img/bamboosim.png";
-import kinoCafeImg from "../public/img/kinocafe.png";
-import ezaffittoImg from "../public/img/ezaffitto.png";
-import vhfesuperioriImg from "../public/img/vhfesuperiori.png";
-import tpldisplayImg from "../public/img/tpldisplay.png";
-import wolfImg from "../public/img/wolf.png";
-import occupaImg from "../public/img/occupa.png";
-import omImg from "../public/img/om.png";
+import bamboosimImg from "../public/img/bamboosim.webp";
+import kinoCafeImg from "../public/img/kinocafe.webp";
+import ezaffittoImg from "../public/img/ezaffitto.webp";
+import vhfesuperioriImg from "../public/img/vhfesuperiori.webp";
+import tpldisplayImg from "../public/img/tpldisplay.webp";
+import wolfImg from "../public/img/wolf.webp";
+import occupaImg from "../public/img/occupa.webp";
+import omImg from "../public/img/om.webp";
 import { StaticImageData } from "next/image";
 import { config } from "./config";
 

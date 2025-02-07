@@ -47,6 +47,7 @@ export async function generateMetadata({
                 },
             ],
         },
+        applicationName: t("metadata.siteName"),
         twitter: {
             card: "summary_large_image",
             title: t("metadata.title"),
