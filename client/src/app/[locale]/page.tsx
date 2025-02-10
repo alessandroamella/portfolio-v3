@@ -62,24 +62,20 @@ function Home({ params: { locale } }: { params: { locale: string } }) {
     return (
         <main className="bg-[#f7f7f7] dark:bg-gray-900 min-h-screen">
             <link
+                rel="icon"
+                type="image/png"
+                href="/favicon-96x96.png"
+                sizes="96x96"
+            />
+            <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+            <link rel="shortcut icon" href="/favicon.ico" />
+            <link
                 rel="apple-touch-icon"
                 sizes="180x180"
                 href="/apple-touch-icon.png"
             />
-            <link
-                rel="icon"
-                type="image/png"
-                sizes="96x96"
-                href="/favicon-96x96.png"
-            />
+            <meta name="apple-mobile-web-app-title" content="bitrey.dev" />
             <link rel="manifest" href="/site.webmanifest" />
-            <link
-                rel="mask-icon"
-                href="/safari-pinned-tab.svg"
-                color="#3f83f8"
-            />
-            <meta name="msapplication-TileColor" content="#3f83f8" />
-            <meta name="theme-color" content="#3f83f8" />
 
             <meta
                 name="title"
