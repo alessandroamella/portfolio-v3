@@ -32,8 +32,9 @@ import ChangeLanguageBtn from "@/components/ChangeLanguageBtn";
 const dancingScript = Dancing_Script({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-    title: "Alessandro Amella - Sviluppo siti web",
-    description: "Sviluppo siti web, software, app e altro",
+    title: "Alessandro Amella - Sviluppo e Soluzioni Informatiche",
+    description:
+        "bitrey.dev di Alessandro Amella - Sviluppo software, applicazioni web e software su misura per privati e aziende.",
 };
 
 function Home({ params: { locale } }: { params: { locale: string } }) {
