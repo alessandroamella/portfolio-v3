@@ -1,4 +1,5 @@
 export const config = Object.freeze({
+    blogUrl: "https://blog.bitrey.dev",
     githubUrl: "https://github.com/alessandroamella",
     githubDisplayUrl: "github.com/alessandroamella",
     githubUsername: "Alessandro Amella",

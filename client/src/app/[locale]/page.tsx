@@ -1,33 +1,30 @@
-import Image from "next/image";
+import ArrowWhite from "@/components/arrow-white.svg?url";
+import Arrow from "@/components/arrow.svg?url";
+import BgGraph from "@/components/BgGraph";
+import Button from "@/components/Button";
+import ChangeLanguageBtn from "@/components/ChangeLanguageBtn";
+import HomepageContact from "@/components/HomepageContact";
+import HomepageTimeline from "@/components/HomepageTimeline";
+import HowCanIHelpCard from "@/components/HowCanIHelpCard";
+import ProjectsViewer from "@/components/ProjectsViewer";
+import WeatherInfo from "@/components/Weather";
+import { config } from "@/config";
+import { differenceInYears, getYear } from "date-fns";
+import { range } from "lodash";
+import type { Metadata } from "next";
 import { useTranslations } from "next-intl";
 import { unstable_setRequestLocale } from "next-intl/server";
-import { range } from "lodash";
-import { differenceInYears, getYear } from "date-fns";
-import type { Metadata } from "next";
-
-import Button from "@/components/Button";
-import Wave from "react-wavify";
+import { Dancing_Script } from "next/font/google";
+import Image from "next/image";
 import {
+    FaBlog,
     FaEnvelope,
     FaGithub,
     FaInstagram,
     FaLinkedin,
     FaTelegram,
 } from "react-icons/fa";
-import Arrow from "@/components/arrow.svg?url";
-import ArrowWhite from "@/components/arrow-white.svg?url";
-
-import { Dancing_Script } from "next/font/google";
-import HomepageTimeline from "@/components/HomepageTimeline";
-
-import ProjectsViewer from "@/components/ProjectsViewer";
-import HomepageContact from "@/components/HomepageContact";
-import { config } from "@/config";
-import HowCanIHelpCard from "@/components/HowCanIHelpCard";
-
-import BgGraph from "@/components/BgGraph";
-import WeatherInfo from "@/components/Weather";
-import ChangeLanguageBtn from "@/components/ChangeLanguageBtn";
+import Wave from "react-wavify";
 
 const dancingScript = Dancing_Script({ subsets: ["latin"] });
 
@@ -149,11 +146,11 @@ function Home({ params: { locale } }: { params: { locale: string } }) {
 
                         <div className="mt-12 flex items-center justify-center gap-2 z-20 relative">
                             <Button
-                                href={config.githubUrl}
+                                href={config.blogUrl}
                                 className="flex items-center gap-2 rounded-lg font-medium tracking-tight text-xl px-4 py-3"
                             >
-                                <FaGithub />
-                                {t("homepage.github")}
+                                <FaBlog />
+                                {t("homepage.blog")}
                             </Button>
                             <div className="relative">
                                 <Button
@@ -194,16 +191,17 @@ function Home({ params: { locale } }: { params: { locale: string } }) {
                                     </p>
                                 </div>
                             </div>
+
                             <Button
-                                // color="purple"
-                                href={config.telegramUrl}
+                                href={config.githubUrl}
                                 className="relative flex items-center gap-2 rounded-lg font-medium tracking-tight text-xl px-4 py-3"
                             >
                                 <span className="invisible">A-</span>
                                 <div className="absolute">
-                                    <FaTelegram />
+                                    <FaGithub />
                                 </div>
                             </Button>
+
                             <Button
                                 // color="purple"
                                 href={config.instagramUrl}
