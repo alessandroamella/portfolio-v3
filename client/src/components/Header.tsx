@@ -1,6 +1,5 @@
 "use client";
 
-import { config } from "@/config";
 import { Link } from "@/i18n/navigation";
 import { useTranslations } from "next-intl";
 import { FaGlobe } from "react-icons/fa";
@@ -9,11 +8,6 @@ import ThemeToggle from "./ThemeToggle";
 
 export default function Header() {
   const t = useTranslations("header");
-
-  const changeLanguageOptions = config.languages.map(({ value, label }) => ({
-    value,
-    label,
-  }));
 
   return (
     <header className="bg-gray-100 dark:bg-gray-800/90 bg-opacity-50 flex justify-around p-4 md:px-0 items-center z-20 h-14 relative">
@@ -37,7 +31,7 @@ export default function Header() {
           <FaGlobe className="text-sm" />
           {t("countries")}
         </Link>
-        <ChangeLanguageBtn options={changeLanguageOptions} />
+        <ChangeLanguageBtn />
         <ThemeToggle />
       </div>
     </header>
