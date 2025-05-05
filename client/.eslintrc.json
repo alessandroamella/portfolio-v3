@@ -1,14 +1,14 @@
 {
-    "extends": ["next", "plugin:prettier/recommended"],
-    "plugins": ["prettier"],
-    "rules": {
-        "prettier/prettier": "error"
-    },
-    "ignorePatterns": [
-        "node_modules/",
-        "next.config.js",
-        "tailwind.config.js",
-        "postcss.config.js",
-        "build/"
-    ]
+  "extends": ["next", "plugin:prettier/recommended"],
+  "plugins": ["prettier"],
+  "rules": {
+    "prettier/prettier": "error"
+  },
+  "ignorePatterns": [
+    "node_modules/",
+    "next.config.js",
+    "tailwind.config.js",
+    "postcss.config.js",
+    "build/"
+  ]
 }

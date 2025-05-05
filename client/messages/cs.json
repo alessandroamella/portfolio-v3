@@ -1,0 +1,138 @@
+﻿{
+  "metadata": {
+    "title": "bitrey.dev od Alessandro Amelly - Vývoj webových stránek a IT řešení",
+    "description": "Vývoj webových stránek pro jednotlivce a firmy, webové aplikace a software na míru.",
+    "siteName": "Alessandro Amella",
+    "keywords": "vývoj webových stránek, vývoj software, programování, informatika, vývoj webu, web design, modena, bologna, itis fermi, univerzita v bologni, vysoké učení technické v brně, erasmus, radioamatér, radioamatéři, radio, telekomunikace, elektronika, mikrokontrolery, veřejná doprava, urbanismus, fotografie, střih videa, mixování hudby, videohry, vývoj her, github, linkedin, instagram, curriculum vitae, cv, telegram, e-mail, vývoj webu, vývoj software, it konzultace, it konzultace, web, software, aplikace, konzultace, telegram, e-mail, radioamatér, radioamatéři, radio, telekomunikace, elektronika, mikrokontrolery, veřejná doprava, urbanismus, fotografie, střih videa, mixování hudby, videohry, vývoj her, github, linkedin, instagram, curriculum vitae, cv, telegram, e-mail, vývoj webu, vývoj software, it konzultace, it konzultace, web, software, aplikace, konzultace"
+  },
+  "header": {
+    "about": "O mně",
+    "projects": "Projekty",
+    "contact": "Kontakt",
+    "home": "Domů",
+    "countries": "Země"
+  },
+  "homepage": {
+    "splash": "Alessandro Amella",
+    "by": "od",
+    "about": "O mně",
+    "projects": "Projekty",
+    "mainDescription": "Student informatiky na Univerzitě v Bologni, ex-Erasmus na Vysokém učení technické v Brně, programátor, {years} let, žijící v Modeně",
+    "weather": "nyní je",
+    "descriptions": {
+      "0": "Začal jsem programovat, když mi bylo 9 let, a od té doby jsem nikdy nepřestal zkoumat všechny obory informatiky.",
+      "1": "Studoval jsem převážně jako samouk a pokračoval jsem ve studiu informatiky a telekomunikací na ITIS Fermi v Modeně, kde jsem studium absolvoval s 98/100.",
+      "2": "Aktuálně studuji na Alma Mater a můj cíl je magisterský titul v AI."
+    },
+    "otherInterests": "Moje další zájmy:",
+    "otherInterstsRadio": {
+      "title": "Rádio a telekomunikace: diplom v telekomunikacích a ",
+      "urlTitle": "amatérský rádiový operátor",
+      "url": "https://www.qrz.com/db/IU4QSG"
+    },
+    "otherInterestsList": {
+      "0": "Elektronika a mikrokontrolery",
+      "1": "Veřejná doprava a urbanismus",
+      "2": "Fotografie, střih videa a mixování hudby (DJ)",
+      "3": "Videohry a vývoj her"
+    },
+    "someProjects": "Některé z mých projektů",
+    "someProjectsDescription": "Toto je výběr projektů, na kterých jsem pracoval. Mnohem více je na GitHubu.",
+    "github": "GitHub",
+    "githubUsername": "alessandroamella",
+    "blog": "Blog",
+    "linkedin": "LinkedIn",
+    "instagram": "Instagram",
+    "cv": "Curriculum Vitae",
+    "travels": "Cesty",
+    "open": "Otevřeno",
+    "builtWith": "Vytvořeno s",
+    "andManyOthers": "a mnoha dalšími",
+    "letsKeepInTouch": "Zůstaňme v kontaktu",
+    "contactSubtitle": "Pro spolupráci nebo jen pro chat mě můžete kontaktovat prostřednictvím následujícího formuláře (nebo kanálů vpravo dole).",
+    "otherChannels": "Můžete mě také najít na",
+    "howCanIHelpYou": "Jsem otevřený následujícím:",
+    "webDevelopment": "Vývoj webů, softwaru a aplikací",
+    "webDevelopmentDescription": "Vývoj webů, webových aplikací a zakázkového softwaru.",
+    "consulting": "IT konzultace",
+    "consultingDescription": "Konzultace ohledně IT problémů, výběru technologií a řešení.",
+    "other": "Jiné",
+    "otherDescription": "Jakékoli další informace nebo požadavky."
+  },
+  "footer": {
+    "vatNumber": "DIČ (IT)"
+  },
+  "contact": {
+    "yourEmail": "Váš e-mail",
+    "yourName": "Vaše jméno",
+    "yourMessage": "Vaše zpráva",
+    "messagePlaceholder": "Sem napište svou zprávu...",
+    "send": "Odeslat",
+    "telegram": "Telegram",
+    "email": "E-mail",
+    "captchaError": "Neplatná captcha",
+    "success": "Zpráva úspěšně odeslána, děkujeme",
+    "sendError": "Chyba při odesílání zprávy :("
+  },
+  "curriculum": {
+    "infolog": {
+      "date": "Červenec 2021",
+      "job": "Správce systému",
+      "description": "Správce systému u Infolog S.r.l. v Modeně, kde jsem spolupracoval s vývojovým týmem na vytvoření webové aplikace pro správu skladů."
+    },
+    "seta": {
+      "date": "Září 2021",
+      "job": "Vývojář softwaru",
+      "description": "Stáž v dopravní společnosti SETA S.p.A. v Modeně, kde jsem vyvíjel software pro generování zvukových souborů pro hlášení v autobusech. Také jsem prováděl analýzu dat pro trénování modelu strojového učení pro počítání cestujících."
+    },
+    "fertec": {
+      "date": "Březen 2023",
+      "job": "Webový vývojář",
+      "description": "Návrh a vývoj pokročilých softwarových řešení, včetně systémů mikroslužeb pro IoT, softwaru pro analýzu nákladů a mobilních a webových aplikací."
+    },
+    "freelance": {
+      "date": "Současnost",
+      "job": "Freelance vývojář",
+      "description": "Vývoj webových stránek, webových aplikací a zakázkového softwaru pro jednotlivce a firmy."
+    }
+  },
+  "projects": {
+    "bamboosim": {
+      "title": "BambooSIM",
+      "description": "Online obchod s eSIM kartami s vlastním CMS pro správu produktů, objednávek a zákazníků. Integrace s více platebními bránami a cloudovými službami."
+    },
+    "ezaffitto": {
+      "title": "ezaffitto",
+      "description": "Plně automatizovaný sběrač inzerátů k pronájmu z různých webů s analýzou AI (OpenAI) strukturovanou jako mikroslužby."
+    },
+    "kinocafe": {
+      "title": "Kinó Café",
+      "description": "Webová stránka pro kavárnu, která slouží ke správě objednávek, tisku účtenek přes WebSockets na POS tiskárně, odesílání dat na ESP32 displej pomocí Web Serial API, zobrazení menu, funguje jako úvodní stránka a umožňuje registraci uživatelů."
+    },
+    "vhfesuperiori": {
+      "title": "VHF e superiori",
+      "description": "Manažer akcí a sociální síť pro radioamatéry, kterou spravují dobrovolníci. Místo pro sdílení vašich výtvorů, spojení (QSO) a setkání s novými lidmi."
+    },
+    "occupalostudente": {
+      "title": "Occupa lo Studente",
+      "description": "Webová aplikace pro hledání práce, která propojuje firmy a studenty I.T.I.S. E. Fermi di Modena. Institucionální přihlášení přes Google OAuth 2.0."
+    },
+    "tpldisplay": {
+      "title": "TPL Display",
+      "description": "Elektronická informační tabule odjezdů autobusů v reálném čase, kontejnerizovaná, propojená s daty TPL v Bologni a Modeně, s cacheováním (Redis) a automatickou aktualizací."
+    },
+    "wolfsurvival": {
+      "title": "Wolf Survival",
+      "description": "Webové stránky školy přežití s frontendem a backendem Next.js propojené s API Meta (Facebook) pro zobrazení nejnovějších kurzů, fotografií a videí z probíhajících aktivit."
+    },
+    "om": {
+      "title": "Quiz O.M.",
+      "description": "Radioamatérský kvíz pro přípravu na zkoušku pro získání italské licence operátora radiostanice."
+    }
+  },
+  "countries": {
+    "title": "Země, které jsem navštívil",
+    "description": "Tady je mapa zemí, které jsem dosud navštívil. Každá zvýrazněná země představuje místo, které jsem prozkoumával a zažil.",
+    "backToHome": "Zpět na úvodní stránku"
+  }
+}

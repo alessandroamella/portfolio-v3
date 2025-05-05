@@ -4,90 +4,90 @@
 
 html,
 body {
-    margin: 0 auto;
-    overflow-x: hidden;
+  margin: 0 auto;
+  overflow-x: hidden;
 }
 
 html {
-    @apply scroll-smooth;
+  @apply scroll-smooth;
 }
 
 body {
-    position: relative;
+  position: relative;
 }
 
 * {
-    max-width: 100% !important;
+  max-width: 100% !important;
 }
 
 .falling-items {
-    display: inline-block;
-    left: 100%; /* Partenza dalla destra */
-    /* z-index: -1; */
-    /* animation: falling-items 5s ease-in infinite; */
-    animation: falling-items 10s linear infinite;
-    animation-fill-mode: both;
+  display: inline-block;
+  left: 100%; /* Partenza dalla destra */
+  /* z-index: -1; */
+  /* animation: falling-items 5s ease-in infinite; */
+  animation: falling-items 10s linear infinite;
+  animation-fill-mode: both;
 }
 
 /* in desktop, set animation duration longer */
 @media (min-width: 768px) {
-    .falling-items {
-        animation: falling-items 20s linear infinite;
-    }
+  .falling-items {
+    animation: falling-items 20s linear infinite;
+  }
 }
 
 @media (min-width: 1024px) {
-    .falling-items {
-        animation: falling-items 30s linear infinite;
-    }
+  .falling-items {
+    animation: falling-items 30s linear infinite;
+  }
 }
 
 @keyframes falling-items {
-    from {
-        left: 150%;
-        rotate: -180deg;
-    }
+  from {
+    left: 150%;
+    rotate: -180deg;
+  }
 
-    to {
-        left: -50%; /* Arrivo sulla sinistra */
-        rotate: 180deg;
-    }
+  to {
+    left: -50%; /* Arrivo sulla sinistra */
+    rotate: 180deg;
+  }
 }
 
 .falling-items-container {
-    white-space: nowrap;
-    font-size: 0;
+  white-space: nowrap;
+  font-size: 0;
 }
 
 div.react-dropdown {
-    @apply w-fit shadow-none select-text outline-none border transition-colors duration-75 bg-transparent;
+  @apply w-fit shadow-none select-text outline-none border transition-colors duration-75 bg-transparent;
 }
 
 div.react-dropdown *:not(:hover, .react-dropdown-item-selected) {
-    @apply text-gray-600 hover:text-gray-700 dark:text-gray-200 dark:hover:text-gray-100;
+  @apply text-gray-600 hover:text-gray-700 dark:text-gray-200 dark:hover:text-gray-100;
 }
 
 div.react-dropdown:hover {
-    @apply border-gray-200;
+  @apply border-gray-200;
 }
 
 div.react-dropdown:focus {
-    @apply shadow-none;
+  @apply shadow-none;
 }
 
 div.react-dropdown-handle * {
-    @apply fill-gray-300;
+  @apply fill-gray-300;
 }
 
 div.react-dropdown *.react-dropdown-item-selected {
-    @apply text-gray-800 dark:text-white;
+  @apply text-gray-800 dark:text-white;
 }
 
 div.react-dropdown-item {
-    @apply dark:!border-t-0 dark:!text-gray-300;
+  @apply dark:!border-t-0 dark:!text-gray-300;
 }
 
 ol[data-testid="timeline-component"],
 div[data-testid="timeline-point"] div {
-    @apply dark:!border-gray-400;
+  @apply dark:!border-gray-400;
 }

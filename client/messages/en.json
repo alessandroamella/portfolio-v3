@@ -1,0 +1,138 @@
+{
+  "metadata": {
+    "title": "bitrey.dev by Alessandro Amella - Website Development and IT Solutions",
+    "description": "Website development for individuals and businesses, web applications and custom software.",
+    "siteName": "Alessandro Amella",
+    "keywords": "website development, software development, programming, computer science, web development, web design, modena, bologna, itis fermi, university of bologna, brno university of technology, erasmus, ham radio operator, radio amateurs, radio, telecommunications, electronics, microcontrollers, public transport, urban planning, photography, video editing, djing, video games, game development, github, linkedin, instagram, curriculum vitae, cv, telegram, email, web development, software development, it consulting, it consulting, web, software, app, consulting, telegram, email, ham radio operator, radio amateurs, radio, telecommunications, electronics, microcontrollers, public transport, urban planning, photography, video editing, djing, video games, game development, github, linkedin, instagram, curriculum vitae, cv, telegram, email, web development, software development, it consulting, it consulting, web, software, app, consulting"
+  },
+  "header": {
+    "about": "About",
+    "projects": "Projects",
+    "contact": "Contact",
+    "home": "Home",
+    "countries": "Countries"
+  },
+  "homepage": {
+    "splash": "Alessandro Amella",
+    "by": "by",
+    "about": "About Me",
+    "projects": "Projects",
+    "mainDescription": "Computer Science student at the University of Bologna, ex-Erasmus at Brno University of Technology, developer, {years} years old, living in Modena",
+    "weather": "now it is",
+    "descriptions": {
+      "0": "I started programming when I was 9 years old and since then I have never stopped exploring computer science in all its branches.",
+      "1": "Studying mainly as a self-taught student, I continued my studies in computer science and telecommunications at ITIS Fermi in Modena, graduating with 98/100.",
+      "2": "I am currently studying at Alma Mater, and I am aiming for a master's degree in AI (somewhere)."
+    },
+    "otherInterests": "Other interests of mine:",
+    "otherInterstsRadio": {
+      "title": "Radio and telecommunications: diploma in telecom. and ",
+      "urlTitle": "ham radio operator",
+      "url": "https://www.qrz.com/db/IU4QSG"
+    },
+    "otherInterestsList": {
+      "0": "Electronics and microcontrollers",
+      "1": "Public transport and urban planning",
+      "2": "Photography, video editing and music mixing (DJing)",
+      "3": "Video games and game development"
+    },
+    "someProjects": "Some of my projects",
+    "someProjectsDescription": "These are just some of the projects I have worked on, many more are on GitHub.",
+    "github": "GitHub",
+    "githubUsername": "alessandroamella",
+    "blog": "Blog",
+    "linkedin": "LinkedIn",
+    "instagram": "Instagram",
+    "cv": "Curriculum Vitae",
+    "travels": "Travels",
+    "open": "Open",
+    "builtWith": "Built with",
+    "andManyOthers": "and many others",
+    "letsKeepInTouch": "Let's keep in touch",
+    "contactSubtitle": "For commissions, collaborations or just to chat, you can contact me through the following form (or the channels at the bottom right).",
+    "otherChannels": "You can also find me on",
+    "howCanIHelpYou": "I am open to:",
+    "webDevelopment": "Web, software and app development",
+    "webDevelopmentDescription": "Development of websites, web applications and custom software.",
+    "consulting": "IT consulting",
+    "consultingDescription": "Consulting on IT problems, choice of technologies and solutions.",
+    "other": "Other",
+    "otherDescription": "Any other information or request."
+  },
+  "footer": {
+    "vatNumber": "VAT Number (IT)"
+  },
+  "contact": {
+    "yourEmail": "Your email",
+    "yourName": "Your name",
+    "yourMessage": "Your message",
+    "messagePlaceholder": "Write your message here...",
+    "send": "Send",
+    "telegram": "Telegram",
+    "email": "Email",
+    "captchaError": "Invalid captcha",
+    "success": "Message sent successfully, thank you",
+    "sendError": "Error sending message :("
+  },
+  "curriculum": {
+    "infolog": {
+      "date": "July 2021",
+      "job": "System Administrator",
+      "description": "System administrator at Infolog S.r.l. in Modena, where I worked with the development team to create a web application for warehouse management."
+    },
+    "seta": {
+      "date": "September 2021",
+      "job": "Software Developer",
+      "description": "Internship at the public transport company SETA S.p.A. in Modena, where I developed the software for generating audio files for announcements on buses. I also performed data analysis to train a machine learning model for passenger counting."
+    },
+    "fertec": {
+      "date": "March 2023",
+      "job": "Web Developer",
+      "description": "Design and development of advanced software solutions, including microservice systems for IoT, cost analysis software, mobile and web applications."
+    },
+    "freelance": {
+      "date": "Present",
+      "job": "Freelance Developer",
+      "description": "Development of websites, web applications and custom software for individuals and businesses."
+    }
+  },
+  "projects": {
+    "bamboosim": {
+      "title": "BambooSIM",
+      "description": "An online eSIM card store with a custom CMS for managing products, orders and customers. Integration with multiple payment gateways and cloud services."
+    },
+    "ezaffitto": {
+      "title": "ezaffitto",
+      "description": "Fully automated rental ad collector from various websites with AI (OpenAI) parsing structured as microservices."
+    },
+    "kinocafe": {
+      "title": "Kinó Café",
+      "description": "Website for a café to manage orders, print receipts via WebSockets to a POS printer, send data to an ESP32 display using the Web Serial API, show the menu, serve as a front page, and handle user registration."
+    },
+    "vhfesuperiori": {
+      "title": "VHF e superiori",
+      "description": "An event manager and social network for radio amateurs curated by volunteers. A place to share your creations, connections (QSO) and meet new people."
+    },
+    "occupalostudente": {
+      "title": "Occupa lo Studente",
+      "description": "A web application for job searching that connects companies and students of the I.T.I.S. E. Fermi di Modena. Institutional login via Google OAuth 2.0."
+    },
+    "tpldisplay": {
+      "title": "TPL Display",
+      "description": "Real-time bus departure board, dockerized, interfaced with the TPL data of Bologna and Modena, with caching (Redis) and automatic update."
+    },
+    "wolfsurvival": {
+      "title": "Wolf Survival",
+      "description": "Website of a survival school with Next.js frontend and backend connected to the Meta (Facebook) API to show the latest courses, photos and videos of the activities carried out."
+    },
+    "om": {
+      "title": "Quiz O.M.",
+      "description": "A radio amateur quiz to prepare for the exam to obtain the Italian ham radio operator's license."
+    }
+  },
+  "countries": {
+    "title": "Countries I've Visited",
+    "description": "Here's a map of the countries I've been to so far. Each highlighted country represents a place I've explored and experienced.",
+    "backToHome": "Back to Home"
+  }
+}

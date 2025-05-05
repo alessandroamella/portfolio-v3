@@ -1,98 +1,141 @@
-import { config } from "@/config";
-import "../globals.css";
-import { getTranslations, unstable_setRequestLocale } from "next-intl/server";
+import { routing } from "@/i18n/routing";
 import type { Metadata } from "next";
+import { hasLocale, NextIntlClientProvider } from "next-intl";
+import {
+  getMessages,
+  getTranslations,
+  setRequestLocale,
+} from "next-intl/server";
+import { notFound } from "next/navigation";
+import "../globals.css";
 
 export async function generateMetadata({
-    params,
+  params,
 }: {
-    params: { locale: string };
+  params: Promise<{ locale: string }>;
 }): Promise<Metadata> {
-    const t = await getTranslations({
-        locale: params.locale,
-        namespace: "common",
-    });
+  const { locale } = await params;
+  if (!hasLocale(routing.locales, locale)) {
+    notFound();
+  }
 
-    return {
-        title: t("metadata.title"),
-        description: t("metadata.description"),
-        robots: {
-            index: true,
-            follow: true,
-            nocache: false,
-            googleBot: {
-                index: true,
-                follow: true,
-                noarchive: false,
-                nosnippet: false,
-                nocache: false,
-                notranslate: false,
-                "max-video-preview": -1,
-                "max-image-preview": "large",
-                "max-snippet": -1,
-            },
+  setRequestLocale(locale);
+
+  const t = await getTranslations({
+    locale,
+    namespace: "metadata",
+  });
+
+  return {
+    title: t("title"),
+    description: t("description"),
+    robots: {
+      index: true,
+      follow: true,
+      nocache: false,
+      googleBot: {
+        index: true,
+        follow: true,
+        noarchive: false,
+        nosnippet: false,
+        nocache: false,
+        notranslate: false,
+        "max-video-preview": -1,
+        "max-image-preview": "large",
+        "max-snippet": -1,
+      },
+    },
+    openGraph: {
+      title: t("title"),
+      description: t("description"),
+      type: "website",
+      locale,
+      siteName: t("siteName"),
+      images: [
+        {
+          url: "banner.jpg",
+          width: 1200,
+          height: 630,
+          alt: t("siteName"),
         },
-        openGraph: {
-            title: t("metadata.title"),
-            description: t("metadata.description"),
-            type: "website",
-            locale: params.locale,
-            siteName: t("metadata.siteName"),
-            images: [
-                {
-                    url: "banner.jpg",
-                    width: 1200,
-                    height: 630,
-                    alt: t("metadata.siteName"),
-                },
-            ],
-        },
-        applicationName: t("metadata.siteName"),
-        twitter: {
-            card: "summary_large_image",
-            title: t("metadata.title"),
-            description: t("metadata.description"),
-            images: ["banner.jpg"],
-        },
-        alternates: {
-            canonical: `https://www.bitrey.it/${params.locale}`,
-            languages: {
-                en: "/en",
-                it: "/it",
-                cs: "/cs",
-            },
-        },
-        keywords: t("metadata.keywords"),
-        authors: [{ name: t("metadata.siteName") }],
-        creator: t("metadata.siteName"),
-        publisher: t("metadata.siteName"),
-        formatDetection: {
-            email: false,
-            address: false,
-            telephone: false,
-        },
-    };
+      ],
+    },
+    applicationName: t("siteName"),
+    twitter: {
+      card: "summary_large_image",
+      title: t("title"),
+      description: t("description"),
+      images: ["banner.jpg"],
+    },
+    alternates: {
+      canonical: `https://www.bitrey.it/${locale}`,
+      languages: {
+        en: "/en",
+        it: "/it",
+        cs: "/cs",
+      },
+    },
+    keywords: t("keywords"),
+    authors: [{ name: t("siteName") }],
+    creator: t("siteName"),
+    publisher: t("siteName"),
+    formatDetection: {
+      email: false,
+      address: false,
+      telephone: false,
+    },
+  };
 }
 
-const locales = config.languages;
-
 export function generateStaticParams() {
-    return locales.map((locale) => ({ locale }));
+  return routing.locales.map((locale) => ({ locale }));
 }
 
 interface RootLayoutProps {
-    children: React.ReactNode;
-    params: { locale: string };
+  children: React.ReactNode;
+  params: { locale: string };
 }
 
-function RootLayout({ children, params: { locale } }: RootLayoutProps) {
-    unstable_setRequestLocale(locale);
+async function RootLayout({
+  children,
+  params,
+}: RootLayoutProps & { params: Promise<{ locale: string }> }) {
+  const { locale } = await params;
+  if (!hasLocale(routing.locales, locale)) {
+    notFound();
+  }
 
-    return (
-        <html lang={locale}>
-            <body>{children}</body>
-        </html>
-    );
+  // Enable static rendering
+  setRequestLocale(locale);
+
+  // Get messages for the client
+  const messages = await getMessages();
+
+  return (
+    <html lang={locale}>
+      <head>
+        <link
+          rel="icon"
+          type="image/png"
+          href="/favicon-96x96.png"
+          sizes="96x96"
+        />
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+        <link rel="shortcut icon" href="/favicon.ico" />
+        <link
+          rel="apple-touch-icon"
+          sizes="180x180"
+          href="/apple-touch-icon.png"
+        />
+        <meta name="apple-mobile-web-app-title" content="bitrey.dev" />
+        <link rel="manifest" href="/site.webmanifest" />
+      </head>
+      <body>
+        <NextIntlClientProvider locale={locale} messages={messages}>
+          {children}
+        </NextIntlClientProvider>
+      </body>
+    </html>
+  );
 }
-
 export default RootLayout;
