@@ -15,18 +15,10 @@ export async function generateMetadata({
   params: Promise<{ locale: string }>;
 }): Promise<Metadata> {
   const { locale } = await params;
-  if (!hasLocale(routing.locales, locale)) {
-    notFound();
-  }
-
-  setRequestLocale(locale);
-
-  const t = await getTranslations({
-    locale,
-    namespace: "metadata",
-  });
+  const t = await getTranslations({ locale, namespace: "metadata" });
 
   return {
+    metadataBase: new URL("https://www.bitrey.dev"),
     title: t("title"),
     description: t("description"),
     robots: {
@@ -68,7 +60,7 @@ export async function generateMetadata({
       images: ["banner.jpg"],
     },
     alternates: {
-      canonical: `https://www.bitrey.it/${locale}`,
+      canonical: `https://www.bitrey.dev/${locale}`,
       languages: {
         en: "/en",
         it: "/it",
@@ -93,13 +85,10 @@ export function generateStaticParams() {
 
 interface RootLayoutProps {
   children: React.ReactNode;
-  params: { locale: string };
+  params: Promise<{ locale: string }>;
 }
 
-async function RootLayout({
-  children,
-  params,
-}: RootLayoutProps & { params: Promise<{ locale: string }> }) {
+async function RootLayout({ children, params }: RootLayoutProps) {
   const { locale } = await params;
   if (!hasLocale(routing.locales, locale)) {
     notFound();
@@ -130,7 +119,7 @@ async function RootLayout({
         <meta name="apple-mobile-web-app-title" content="bitrey.dev" />
         <link rel="manifest" href="/site.webmanifest" />
       </head>
-      <body>
+      <body suppressHydrationWarning>
         <NextIntlClientProvider locale={locale} messages={messages}>
           {children}
         </NextIntlClientProvider>
