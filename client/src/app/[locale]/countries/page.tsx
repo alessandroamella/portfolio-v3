@@ -11,22 +11,6 @@ interface VisitedCountry {
   experience: string;
 }
 
-// List of countries I've visited with ISO codes
-const visitedCountries: VisitedCountry[] = [
-  { id: "ITA", name: "Italy", experience: "Home country" },
-  { id: "FRA", name: "France", experience: "Visited Paris and Nice" },
-  { id: "ESP", name: "Spain", experience: "Barcelona and Madrid" },
-  {
-    id: "CHE",
-    name: "Switzerland",
-    experience: "Beautiful mountains in the Alps",
-  },
-  { id: "AUT", name: "Austria", experience: "Vienna was amazing" },
-  { id: "DEU", name: "Germany", experience: "Berlin and Munich" },
-  { id: "GBR", name: "United Kingdom", experience: "London and Edinburgh" },
-  { id: "CZE", name: "Czech Republic", experience: "Prague is a gem" },
-];
-
 export default function CountriesPage(props: {
   params: Promise<{ locale: string }>;
 }) {
@@ -48,7 +32,7 @@ export default function CountriesPage(props: {
         </p>
       </div>
       <div className="pb-16">
-        <CountriesClient visitedCountries={visitedCountries} />
+        <CountriesClient />
       </div>
     </MainLayout>
   );

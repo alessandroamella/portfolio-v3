@@ -8,5 +8,5 @@ The server is very basic, it just provides the weather for Modena and the API ro
 
 ### Installation and usage
 
-- Run `pnpm install` both on `client` and `server` directories, start frontend and backend server from root directory with `pnpm dev`.
+- Run `pnpm install` on the root directory.
 - To build the client or server, run `pnpm build` (then run `pnpm start` to start) on the respective directory.

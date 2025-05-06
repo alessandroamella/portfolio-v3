@@ -1,3 +1,4 @@
+import ThemeScript from "@/components/ThemeScript";
 import { routing } from "@/i18n/routing";
 import type { Metadata } from "next";
 import { hasLocale, NextIntlClientProvider } from "next-intl";
@@ -101,8 +102,9 @@ async function RootLayout({ children, params }: RootLayoutProps) {
   const messages = await getMessages();
 
   return (
-    <html lang={locale}>
+    <html suppressHydrationWarning lang={locale}>
       <head>
+        <ThemeScript />
         <link
           rel="icon"
           type="image/png"

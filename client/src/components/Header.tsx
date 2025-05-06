@@ -2,7 +2,6 @@
 
 import { Link } from "@/i18n/navigation";
 import { useTranslations } from "next-intl";
-import { FaGlobe } from "react-icons/fa";
 import ChangeLanguageBtn from "./ChangeLanguageBtn";
 import ThemeToggle from "./ThemeToggle";
 
@@ -24,13 +23,6 @@ export default function Header() {
         <a href="#contact" className="hover:text-gray-700">
           {t("contact")}
         </a>
-        <Link
-          href="/countries"
-          className="hover:text-gray-700 flex items-center gap-1"
-        >
-          <FaGlobe className="text-sm" />
-          {t("countries")}
-        </Link>
         <ChangeLanguageBtn />
         <ThemeToggle />
       </div>

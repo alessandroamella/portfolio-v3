@@ -1,20 +1,21 @@
 {
-    "name": "portfolio-v3",
-    "version": "1.0.0",
-    "description": "",
-    "main": "index.js",
-    "scripts": {
-        "dev": "concurrently \"cd server && pnpm dev\" \"cd client && pnpm dev\"",
-        "lint:all": "concurrently \"pnpm --prefix client run lint\" \"pnpm --prefix server run lint\"",
-        "prepare": "husky"
-    },
-    "keywords": [],
-    "author": "",
-    "license": "ISC",
-    "dependencies": {
-        "husky": "^9.1.7"
-    },
-    "devDependencies": {
-        "concurrently": "^9.1.2"
-    }
+  "name": "portfolio-v3",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "concurrently \"cd server && pnpm dev\" \"cd client && pnpm dev\"",
+    "build": "pnpm --filter client build && pnpm --filter server build",
+    "lint": "concurrently \"pnpm --prefix client run lint\" \"pnpm --prefix server run lint\"",
+    "prepare": "husky"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "husky": "^9.1.7"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2"
+  }
 }

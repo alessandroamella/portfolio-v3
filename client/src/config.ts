@@ -38,4 +38,12 @@ export const config = Object.freeze({
       label: "🇨🇿 Čeština",
     },
   ],
+  visitedCountries: [
+    { name: "Italy" },
+    { name: "Austria" },
+    { name: "Germany" },
+    { name: "Czech Republic" },
+    { name: "Switzerland" },
+    { name: "United Kingdom" },
+  ],
 });

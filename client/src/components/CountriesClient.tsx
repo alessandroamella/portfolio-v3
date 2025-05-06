@@ -19,12 +19,6 @@ const CountriesMap = dynamic(() => import("@/components/CountriesMap"), {
   ),
 });
 
-interface CountriesClientProps {
-  visitedCountries: VisitedCountry[];
-}
-
-export default function CountriesClient({
-  visitedCountries,
-}: CountriesClientProps) {
-  return <CountriesMap visitedCountries={visitedCountries} />;
+export default function CountriesClient() {
+  return <CountriesMap />;
 }

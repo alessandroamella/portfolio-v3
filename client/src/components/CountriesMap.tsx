@@ -1,7 +1,7 @@
 "use client";
 
-import { Tooltip } from "flowbite-react";
-import React from "react";
+import { config } from "@/config";
+import { useMemo } from "react";
 import {
   ComposableMap,
   Geographies,
@@ -9,20 +9,18 @@ import {
   ZoomableGroup,
 } from "react-simple-maps";
 
-// Type for visited countries
-interface VisitedCountry {
-  id: string;
-  name: string;
-  experience: string;
-}
-
-interface CountriesMapProps {
-  visitedCountries: VisitedCountry[];
-}
-
 const geoUrl = "https://cdn.jsdelivr.net/npm/world-atlas@2/countries-110m.json";
 
-const CountriesMap: React.FC<CountriesMapProps> = ({ visitedCountries }) => {
+const CountriesMap = () => {
+  // Create a memoized lookup object for visited countries
+  const visitedCountriesLookup = useMemo(() => {
+    const lookup: Record<string, boolean> = {};
+    config.visitedCountries.forEach((country) => {
+      lookup[country.name] = true;
+    });
+    return lookup;
+  }, []);
+
   return (
     <div className="bg-gray-100 dark:bg-gray-800 p-4 rounded-lg shadow-md">
       <ComposableMap>
@@ -30,33 +28,25 @@ const CountriesMap: React.FC<CountriesMapProps> = ({ visitedCountries }) => {
           <Geographies geography={geoUrl}>
             {({ geographies }) =>
               geographies.map((geo) => {
-                const isVisited = visitedCountries.find(
-                  (country) => country.id === geo.id,
-                );
+                const countryName = geo.properties.name;
+                const isVisited = visitedCountriesLookup[countryName];
 
                 return (
-                  <Tooltip
+                  <Geography
+                    geography={geo}
                     key={geo.rsmKey}
-                    content={
-                      isVisited
-                        ? `${isVisited.name}: ${isVisited.experience}`
-                        : geo.properties.name
-                    }
-                  >
-                    <Geography
-                      geography={geo}
-                      fill={isVisited ? "#3B82F6" : "#D1D5DB"}
-                      stroke="#FFFFFF"
-                      style={{
-                        default: { outline: "none" },
-                        hover: {
-                          fill: isVisited ? "#2563EB" : "#9CA3AF",
-                          outline: "none",
-                        },
-                        pressed: { outline: "none" },
-                      }}
-                    />
-                  </Tooltip>
+                    textAnchor="middle"
+                    fill={isVisited ? "#3B82F6" : "#D1D5DB"}
+                    stroke="#FFFFFF"
+                    style={{
+                      default: { outline: "none" },
+                      hover: {
+                        fill: isVisited ? "#2563EB" : "#9CA3AF",
+                        outline: "none",
+                      },
+                      pressed: { outline: "none" },
+                    }}
+                  />
                 );
               })
             }
