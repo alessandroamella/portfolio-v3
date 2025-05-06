@@ -1,5 +1,6 @@
 "use client";
 
+import { Spinner } from "flowbite-react";
 import dynamic from "next/dynamic";
 
 // Type for visited countries
@@ -14,7 +15,9 @@ const CountriesMap = dynamic(() => import("@/components/CountriesMap"), {
   ssr: false,
   loading: () => (
     <div className="bg-gray-100 dark:bg-gray-800 p-4 rounded-lg shadow-md h-[400px] flex items-center justify-center">
-      <p className="text-gray-500 dark:text-gray-400">Loading map...</p>
+      <p className="text-gray-500 dark:text-gray-400">
+        <Spinner size="lg" />
+      </p>
     </div>
   ),
 });

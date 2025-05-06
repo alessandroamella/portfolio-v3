@@ -132,7 +132,7 @@
   },
   "countries": {
     "title": "Countries I've Visited",
-    "description": "Here's a map of the countries I've been to so far. Each highlighted country represents a place I've explored and experienced.",
+    "description": "Here's a map of the countries I've been to so far.",
     "backToHome": "Back to Home"
   }
 }

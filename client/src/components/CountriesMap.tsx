@@ -9,7 +9,12 @@ import {
   ZoomableGroup,
 } from "react-simple-maps";
 
-const geoUrl = "https://cdn.jsdelivr.net/npm/world-atlas@2/countries-110m.json";
+const geoUrl =
+  "https://cdn.jsdelivr.net/npm/world-atlas@2.0.2/countries-50m.json";
+
+// European coordinates and zoom level
+const EUROPE_COORDINATES: [number, number] = [15, 52] as const; // Longitude, Latitude approximately centered on Europe
+const EUROPE_ZOOM = 4 as const;
 
 const CountriesMap = () => {
   // Create a memoized lookup object for visited countries
@@ -24,7 +29,7 @@ const CountriesMap = () => {
   return (
     <div className="bg-gray-100 dark:bg-gray-800 p-4 rounded-lg shadow-md">
       <ComposableMap>
-        <ZoomableGroup zoom={1.2}>
+        <ZoomableGroup center={EUROPE_COORDINATES} zoom={EUROPE_ZOOM}>
           <Geographies geography={geoUrl}>
             {({ geographies }) =>
               geographies.map((geo) => {
@@ -35,7 +40,6 @@ const CountriesMap = () => {
                   <Geography
                     geography={geo}
                     key={geo.rsmKey}
-                    textAnchor="middle"
                     fill={isVisited ? "#3B82F6" : "#D1D5DB"}
                     stroke="#FFFFFF"
                     style={{

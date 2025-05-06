@@ -132,7 +132,7 @@
   },
   "countries": {
     "title": "Země, které jsem navštívil",
-    "description": "Tady je mapa zemí, které jsem dosud navštívil. Každá zvýrazněná země představuje místo, které jsem prozkoumával a zažil.",
+    "description": "Tady je mapa zemí, které jsem dosud navštívil.",
     "backToHome": "Zpět na úvodní stránku"
   }
 }

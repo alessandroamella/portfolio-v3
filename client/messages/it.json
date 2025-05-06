@@ -132,7 +132,7 @@
   },
   "countries": {
     "title": "Paesi che ho visitato",
-    "description": "Ecco una mappa dei paesi che ho visitato finora. Ogni paese evidenziato rappresenta un luogo che ho esplorato e di cui ho fatto esperienza.",
+    "description": "Ecco una mappa dei paesi che ho visitato finora.",
     "backToHome": "Torna alla Home"
   }
 }
