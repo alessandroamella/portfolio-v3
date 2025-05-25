@@ -14,7 +14,7 @@ interface VisitedCountry {
 const CountriesMap = dynamic(() => import("@/components/CountriesMap"), {
   ssr: false,
   loading: () => (
-    <div className="bg-gray-100 dark:bg-gray-800 p-4 rounded-lg shadow-md h-[400px] flex items-center justify-center">
+    <div className="w-full h-[400px] md:h-[500px] lg:h-[600px] flex items-center justify-center">
       <p className="text-gray-500 dark:text-gray-400">
         <Spinner size="lg" />
       </p>
@@ -23,5 +23,9 @@ const CountriesMap = dynamic(() => import("@/components/CountriesMap"), {
 });
 
 export default function CountriesClient() {
-  return <CountriesMap />;
+  return (
+    <div className="w-full h-[400px] md:h-[500px] lg:h-[600px]">
+      <CountriesMap />
+    </div>
+  );
 }

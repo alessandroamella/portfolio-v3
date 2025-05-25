@@ -60,21 +60,35 @@ function Home(props: { params: Promise<{ locale: string }> }) {
             <div className="mt-12 flex items-center justify-center gap-2 z-20 relative">
               <Button
                 href={config.blogUrl}
-                className="flex items-center gap-2 rounded-lg font-medium tracking-tight text-xl px-4 py-3"
+                className="flex items-center gap-2 rounded-lg font-medium tracking-tight text-xl px-4 py-3 relative"
               >
-                <FaBlog />
-                {t("blog")}
+                <span className="invisible md:hidden">A-</span>
+                <div className="absolute md:hidden">
+                  <FaBlog />
+                </div>
+
+                <div className="hidden md:flex items-center gap-2">
+                  <FaBlog />
+                  {t("blog")}
+                </div>
               </Button>
               <div className="relative">
                 <Button
                   color="blue"
                   href={config.linkedinUrl}
-                  className="flex items-center gap-2 rounded-lg font-medium tracking-tight text-xl px-4 py-3"
+                  className="flex items-center gap-2 rounded-lg font-medium tracking-tight text-xl px-4 py-3 relative"
                 >
-                  <FaLinkedin />
-                  {t("linkedin")}
+                  <span className="invisible md:hidden">A-</span>
+                  <div className="absolute md:hidden">
+                    <FaLinkedin />
+                  </div>
+
+                  <div className="hidden md:flex items-center gap-2">
+                    <FaLinkedin />
+                    {t("linkedin")}
+                  </div>
                 </Button>
-                <div className="flex justify-end items-end absolute -bottom-16 -right-16 md:-right-32">
+                <div className="flex justify-end items-end absolute -bottom-16 md:bottom-[-4.2rem] right-[-4.69rem] md:-right-24 lg:-right-20">
                   <Image
                     src={Arrow}
                     width="0"
@@ -107,8 +121,10 @@ function Home(props: { params: Promise<{ locale: string }> }) {
                 href={`/${locale}/countries`}
                 className="flex items-center gap-2 rounded-lg font-medium tracking-tight text-xl px-4 py-3"
               >
-                <FaGlobe />
-                <span>{t("travels")}</span>
+                <span className="invisible">A-</span>
+                <div className="absolute">
+                  <FaGlobe />
+                </div>
               </Button>
 
               <Button
@@ -149,7 +165,7 @@ function Home(props: { params: Promise<{ locale: string }> }) {
       </section>
       <section
         id="about"
-        className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-24 -mt-12 px-8 md:px-16 pt-0 pb-6 z-10 relative bg-gray-700 text-white"
+        className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-24 -mt-24 px-8 md:px-16 pt-0 pb-6 z-10 relative bg-gray-700 text-white"
       >
         <div>
           <h2 className="text-4xl font-bold text-center tracking-tight mb-8 z-50 relative">

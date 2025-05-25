@@ -24,8 +24,16 @@ const ThemeToggle = () => {
     // Make sure the HTML class matches
     if (initialTheme === "dark") {
       document.documentElement.classList.add("dark");
+      document.documentElement.style.colorScheme = "dark";
     } else {
       document.documentElement.classList.remove("dark");
+      document.documentElement.style.colorScheme = "light";
+    }
+
+    // Update color-scheme meta tag
+    const meta = document.querySelector('meta[name="color-scheme"]');
+    if (meta) {
+      meta.setAttribute("content", initialTheme);
     }
   }, []);
 
@@ -36,8 +44,16 @@ const ThemeToggle = () => {
     // Update DOM
     if (newTheme === "dark") {
       document.documentElement.classList.add("dark");
+      document.documentElement.style.colorScheme = "dark";
     } else {
       document.documentElement.classList.remove("dark");
+      document.documentElement.style.colorScheme = "light";
+    }
+
+    // Update color-scheme meta tag
+    const meta = document.querySelector('meta[name="color-scheme"]');
+    if (meta) {
+      meta.setAttribute("content", newTheme);
     }
 
     // Save preference
