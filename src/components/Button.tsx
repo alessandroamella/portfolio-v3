@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import type {
   AnchorHTMLAttributes,
   ButtonHTMLAttributes,
@@ -32,10 +33,19 @@ const Button: FunctionComponent<ButtonProps> = ({
               : 'bg-gray-700 hover:bg-gray-800 active:bg-gray-900 disabled:bg-gray-500'
   } border-none outline-none transition-colors duration-75 ${className || ''}`;
 
+  // Check if href is internal (starts with / or relative) or external
+  const isInternal = href && (href.startsWith('/') || href.startsWith('.'));
+
   return href ? (
-    <a href={href} className={_className} {...rest}>
-      {children}
-    </a>
+    isInternal ? (
+      <Link href={href} className={_className} {...rest}>
+        {children}
+      </Link>
+    ) : (
+      <a href={href} className={_className} {...rest}>
+        {children}
+      </a>
+    )
   ) : (
     <button className={_className} {...rest}>
       {children}

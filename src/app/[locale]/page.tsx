@@ -34,6 +34,8 @@ function Home(props: { params: Promise<{ locale: string }> }) {
   const { locale } = params;
   const t = useTranslations('homepage');
 
+  // const isMobile = useIsMobile();
+
   return (
     <MainLayout>
       <section className='py-12 dark:text-white relative flex mt-0 flex-col items-center justify-center z-0'>
@@ -53,7 +55,7 @@ function Home(props: { params: Promise<{ locale: string }> }) {
             </div>
 
             <div className='mt-12 flex items-center justify-center gap-2 z-20 relative'>
-              <Tooltip placement='left' content={t('tooltips.github')}>
+              <Tooltip placement='top' content={t('tooltips.github')}>
                 <Button
                   color='dark'
                   href={config.githubUrl}
@@ -148,7 +150,11 @@ function Home(props: { params: Promise<{ locale: string }> }) {
                 </Button>
               </Tooltip> */}
 
-              <Tooltip placement='right' content={t('tooltips.countries')}>
+              <Tooltip
+                // placement={isMobile ? 'top' : 'right'}
+                placement='top'
+                content={t('tooltips.countries')}
+              >
                 <Button
                   color='purple'
                   href={`/${locale}/countries`}

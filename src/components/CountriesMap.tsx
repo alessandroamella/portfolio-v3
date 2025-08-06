@@ -1,5 +1,6 @@
 'use client';
 import { config } from '@/config';
+import { useIsMobile } from '@/hooks/useIsMobile';
 import { sum, zip } from 'lodash';
 import { useTranslations } from 'next-intl';
 import { useEffect, useMemo, useState } from 'react';
@@ -30,23 +31,11 @@ const sumArrays = (...arrays: [number, number][]): [number, number] => {
 const CountriesMap = () => {
   const t = useTranslations('countriesMap');
   const [tooltip, setTooltip] = useState<TooltipData | null>(null);
-  const [isMobile, setIsMobile] = useState(false);
+  const isMobile = useIsMobile(); // Use the custom hook
   const [zoom, setZoom] = useState(1);
   const [coordinates, setCoordinates] = useState<[number, number]>(
     EUROPE_BASE_COORDINATES,
   );
-
-  // Detect mobile device
-  useEffect(() => {
-    const checkMobile = () => {
-      setIsMobile(window.innerWidth < 768); // md breakpoint
-    };
-
-    checkMobile();
-    window.addEventListener('resize', checkMobile);
-
-    return () => window.removeEventListener('resize', checkMobile);
-  }, []);
 
   // Set initial zoom and coordinates based on device
   useEffect(() => {
