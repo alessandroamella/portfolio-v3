@@ -1,5 +1,6 @@
 'use client';
 import { config } from '@/config';
+import { sum, zip } from 'lodash';
 import { useTranslations } from 'next-intl';
 import { useEffect, useMemo, useState } from 'react';
 import {
@@ -20,6 +21,11 @@ interface TooltipData {
   x: number;
   y: number;
 }
+
+const sumArrays = (...arrays: [number, number][]): [number, number] => {
+  const result = zip(...arrays).map((group) => sum(group));
+  return [result[0] || 0, result[1] || 0];
+};
 
 const CountriesMap = () => {
   const t = useTranslations('countriesMap');
@@ -45,11 +51,11 @@ const CountriesMap = () => {
   // Set initial zoom and coordinates based on device
   useEffect(() => {
     if (isMobile) {
-      setZoom(6);
-      setCoordinates(EUROPE_BASE_COORDINATES); // Mobile uses base coordinates
+      setZoom(7);
+      setCoordinates(sumArrays(EUROPE_BASE_COORDINATES, [-2, 0]));
     } else {
       setZoom(5.5);
-      setCoordinates([15, 50]); // Desktop uses higher latitude (more north)
+      setCoordinates(sumArrays(EUROPE_BASE_COORDINATES, [0, 5]));
     }
   }, [isMobile]);
 
@@ -93,7 +99,7 @@ const CountriesMap = () => {
   };
 
   return (
-    <div className='relative h-[60vh] md:h-[500px] overflow-hidden'>
+    <div className='relative h-[60vh] max-h-[500px] md:h-[500px] overflow-hidden'>
       <div className='h-full md:mx-4 md:rounded-2xl md:shadow-lg md:bg-gradient-to-br md:from-blue-50 md:to-indigo-100 md:dark:from-gray-800 md:dark:to-gray-900 transition-all duration-300'>
         <ComposableMap
           projectionConfig={{
@@ -198,7 +204,7 @@ const CountriesMap = () => {
       )}
 
       {/* Legend */}
-      <div className='absolute bottom-4 left-4 bg-white dark:bg-gray-800 rounded-lg shadow-lg p-3 text-sm'>
+      <div className='absolute bottom-4 left-4 md:left-auto md:right-8 bg-white dark:bg-gray-800 rounded-lg shadow-lg p-3 text-sm'>
         <div className='flex items-center space-x-4'>
           <div className='flex items-center space-x-2'>
             <div className='w-4 h-3 rounded bg-gradient-to-r from-blue-500 to-blue-700' />
