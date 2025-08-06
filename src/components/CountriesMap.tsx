@@ -54,7 +54,7 @@ const CountriesMap = () => {
       setZoom(7);
       setCoordinates(sumArrays(EUROPE_BASE_COORDINATES, [-2, 0]));
     } else {
-      setZoom(3.5);
+      setZoom(4);
       setCoordinates(sumArrays(EUROPE_BASE_COORDINATES, [0, 5]));
     }
   }, [isMobile]);
@@ -100,7 +100,7 @@ const CountriesMap = () => {
 
   return (
     <div className='relative mx-auto max-w-6xl h-[60vh] md:h-[500px] xl:h-[550px]'>
-      <div className='h-full md:mx-8 md:rounded-2xl lg:rounded-3xl xl:rounded-full md:shadow-lg border-y shadow-lg dark:shadow-gray-800 overflow-hidden md:border md:bg-gradient-to-br md:from-blue-50 md:to-indigo-100 md:dark:from-gray-800 md:dark:to-gray-900 transition-all duration-300'>
+      <div className='h-full md:mx-8 md:rounded-2xl lg:rounded-3xl xl:rounded-full md:shadow-lg border-y shadow-lg dark:shadow-gray-700 dark:md:dark:shadow-gray-800 overflow-hidden md:border md:bg-gradient-to-br md:from-blue-50 md:to-indigo-100 md:dark:from-gray-800 md:dark:to-gray-900 transition-all duration-300'>
         <ComposableMap
           projectionConfig={{
             scale: 200,
@@ -113,7 +113,7 @@ const CountriesMap = () => {
           <ZoomableGroup
             center={coordinates}
             zoom={zoom}
-            minZoom={1}
+            minZoom={3}
             maxZoom={8}
             translateExtent={[
               [-1000, -500],

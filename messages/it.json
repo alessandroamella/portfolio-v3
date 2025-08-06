@@ -24,6 +24,12 @@
       "1": "Studiando prevelantemente da autodidatta, ho proseguito gli studi in informatica-telecomunicazioni presso l'ITIS Fermi di Modena, diplomandomi con 98/100.",
       "2": "Attualmente studio all'Alma Mater, e punto ad un corso di laurea magistrale in ambito AI (da qualche parte)."
     },
+    "tooltips": {
+      "github": "Visualizza il mio profilo GitHub",
+      "linkedin": "Visualizza il mio profilo LinkedIn",
+      "blog": "Visita il mio blog",
+      "countries": "Paesi visitati"
+    },
     "otherInterests": "Altri miei interessi:",
     "otherInterstsRadio": {
       "title": "Radio e telecomunicazioni: diploma in telecom. e ",
@@ -41,8 +47,6 @@
     "github": "GitHub",
     "githubUsername": "alessandroamella",
     "blog": "Blog",
-    "linkedin": "LinkedIn",
-    "instagram": "Instagram",
     "cv": "Curriculum Vitae",
     "travels": "Viaggi",
     "open": "Apri",

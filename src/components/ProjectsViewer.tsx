@@ -25,15 +25,10 @@ import iPhoneImg from '../../public/img/iphone.webp';
 
 interface ProjectsViewerProps {
   builtWithStr: string;
-  githubStr: string;
   openStr: string;
 }
 
-const ProjectsViewer: FC<ProjectsViewerProps> = ({
-  builtWithStr,
-  githubStr,
-  openStr,
-}) => {
+const ProjectsViewer: FC<ProjectsViewerProps> = ({ builtWithStr, openStr }) => {
   const t = useTranslations('projects');
 
   const projects = config.projects.map((id) => ({
@@ -169,7 +164,7 @@ const ProjectsViewer: FC<ProjectsViewerProps> = ({
             className='flex items-center rounded-2xl font-medium tracking-tight px-3'
           >
             <FaGithub />
-            <span className='ml-2'>{githubStr}</span>
+            <span className='ml-2'>GitHub</span>
           </Button>
           <Button
             href={curProject.url}

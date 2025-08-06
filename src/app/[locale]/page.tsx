@@ -9,19 +9,14 @@ import ArrowWhite from '@/components/arrow-white.svg?url';
 import Arrow from '@/components/arrow.svg?url';
 import { config } from '@/config';
 import { differenceInYears } from 'date-fns';
+import { Tooltip } from 'flowbite-react';
 import { range } from 'lodash';
 import type { Metadata } from 'next';
 import { useTranslations } from 'next-intl';
 import { Dancing_Script } from 'next/font/google';
 import Image from 'next/image';
 import { use } from 'react';
-import {
-  FaBlog,
-  FaGithub,
-  FaGlobe,
-  FaInstagram,
-  FaLinkedin,
-} from 'react-icons/fa';
+import { FaBlog, FaGithub, FaGlobe, FaLinkedin } from 'react-icons/fa';
 import Wave from 'react-wavify';
 import MainLayout from './MainLayout';
 
@@ -58,36 +53,42 @@ function Home(props: { params: Promise<{ locale: string }> }) {
             </div>
 
             <div className='mt-12 flex items-center justify-center gap-2 z-20 relative'>
-              <Button
-                href={config.blogUrl}
-                className='flex items-center gap-2 rounded-lg font-medium tracking-tight text-xl px-4 py-3 relative'
-              >
-                <span className='invisible md:hidden'>A-</span>
-                <div className='absolute md:hidden'>
-                  <FaBlog />
-                </div>
-
-                <div className='hidden md:flex items-center gap-2'>
-                  <FaBlog />
-                  {t('blog')}
-                </div>
-              </Button>
-              <div className='relative'>
+              <Tooltip placement='left' content={t('tooltips.github')}>
                 <Button
-                  color='blue'
-                  href={config.linkedinUrl}
+                  color='dark'
+                  href={config.githubUrl}
                   className='flex items-center gap-2 rounded-lg font-medium tracking-tight text-xl px-4 py-3 relative'
                 >
                   <span className='invisible md:hidden'>A-</span>
                   <div className='absolute md:hidden'>
-                    <FaLinkedin />
+                    <FaGithub />
                   </div>
 
                   <div className='hidden md:flex items-center gap-2'>
-                    <FaLinkedin />
-                    {t('linkedin')}
+                    <FaGithub />
+                    GitHub
                   </div>
                 </Button>
+              </Tooltip>
+
+              <div className='relative'>
+                <Tooltip placement='top' content={t('tooltips.linkedin')}>
+                  <Button
+                    color='blue'
+                    href={config.linkedinUrl}
+                    className='flex items-center gap-2 rounded-lg font-medium tracking-tight text-xl px-4 py-3 relative'
+                  >
+                    <span className='invisible md:hidden'>A-</span>
+                    <div className='absolute md:hidden'>
+                      <FaLinkedin />
+                    </div>
+
+                    <div className='hidden md:flex items-center gap-2'>
+                      <FaLinkedin />
+                      LinkedIn
+                    </div>
+                  </Button>
+                </Tooltip>
                 <div className='flex justify-end items-end absolute -bottom-16 md:bottom-[-4.2rem] right-[-4.69rem] md:-right-24 lg:-right-20'>
                   <Image
                     src={Arrow}
@@ -117,36 +118,48 @@ function Home(props: { params: Promise<{ locale: string }> }) {
                 </div>
               </div>
 
-              <Button
-                href={`/${locale}/countries`}
-                className='flex items-center gap-2 rounded-lg font-medium tracking-tight text-xl px-4 py-3'
-              >
-                <span className='invisible'>A-</span>
-                <div className='absolute'>
-                  <FaGlobe />
-                </div>
-              </Button>
+              <Tooltip placement='top' content={t('tooltips.blog')}>
+                <Button
+                  href={config.blogUrl}
+                  className='flex items-center gap-2 rounded-lg font-medium tracking-tight text-xl px-4 py-3 relative'
+                >
+                  <span className='invisible md:hidden'>A-</span>
+                  <div className='absolute md:hidden'>
+                    <FaBlog />
+                  </div>
 
-              <Button
-                href={config.githubUrl}
-                className='relative flex items-center gap-2 rounded-lg font-medium tracking-tight text-xl px-4 py-3'
-              >
-                <span className='invisible'>A-</span>
-                <div className='absolute'>
-                  <FaGithub />
-                </div>
-              </Button>
+                  <div className='hidden md:flex items-center gap-2'>
+                    <FaBlog />
+                    {t('blog')}
+                  </div>
+                </Button>
+              </Tooltip>
 
-              <Button
-                // color="purple"
-                href={config.instagramUrl}
-                className='relative flex items-center gap-2 rounded-lg font-medium tracking-tight text-xl px-4 py-3'
-              >
-                <span className='invisible'>A-</span>
-                <div className='absolute'>
-                  <FaInstagram />
-                </div>
-              </Button>
+              {/* <Tooltip placement='top' content='Instagram'>
+                <Button
+                  color="purple"
+                  href={config.instagramUrl}
+                  className='relative flex items-center gap-2 rounded-lg font-medium tracking-tight text-xl px-4 py-3'
+                >
+                  <span className='invisible'>A-</span>
+                  <div className='absolute'>
+                    <FaInstagram />
+                  </div>
+                </Button>
+              </Tooltip> */}
+
+              <Tooltip placement='right' content={t('tooltips.countries')}>
+                <Button
+                  color='purple'
+                  href={`/${locale}/countries`}
+                  className='flex items-center gap-2 rounded-lg font-medium tracking-tight text-xl px-4 py-3'
+                >
+                  <span className='invisible'>A-</span>
+                  <div className='absolute'>
+                    <FaGlobe />
+                  </div>
+                </Button>
+              </Tooltip>
             </div>
           </div>
         </div>
@@ -220,7 +233,7 @@ function Home(props: { params: Promise<{ locale: string }> }) {
               className='flex items-center gap-2 rounded-lg font-medium tracking-tight text-xl px-4 py-3'
             >
               <FaLinkedin />
-              {t('linkedin')}
+              LinkedIn
             </Button>
           </div>
         </div>
@@ -236,11 +249,7 @@ function Home(props: { params: Promise<{ locale: string }> }) {
         <p className='my-2 text-lg dark:text-gray-400 text-center'>
           {t('someProjectsDescription')}
         </p>
-        <ProjectsViewer
-          builtWithStr={t('builtWith')}
-          githubStr={t('github')}
-          openStr={t('open')}
-        />
+        <ProjectsViewer builtWithStr={t('builtWith')} openStr={t('open')} />
 
         <div className='text-right mt-4 md:-mt-16 hover:text-gray-600 transition-colors duration-75'>
           <a

@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "title": "bitrey.dev by Alessandro Amella - Website Development and IT Solutions",
-    "description": "Website development for individuals and businesses, web applications and custom software.",
+    "title": "Alessandro Amelly - Website Development and IT Solutions",
+    "description": "bitrey.dev by Alessandro Amella - Website development for individuals and businesses, web applications and custom software.",
     "siteName": "Alessandro Amella",
     "keywords": "website development, software development, programming, computer science, web development, web design, modena, bologna, itis fermi, university of bologna, brno university of technology, erasmus, ham radio operator, radio amateurs, radio, telecommunications, electronics, microcontrollers, public transport, urban planning, photography, video editing, djing, video games, game development, github, linkedin, instagram, curriculum vitae, cv, telegram, email, web development, software development, it consulting, it consulting, web, software, app, consulting, telegram, email, ham radio operator, radio amateurs, radio, telecommunications, electronics, microcontrollers, public transport, urban planning, photography, video editing, djing, video games, game development, github, linkedin, instagram, curriculum vitae, cv, telegram, email, web development, software development, it consulting, it consulting, web, software, app, consulting"
   },
@@ -24,6 +24,12 @@
       "1": "Studying mainly as a self-taught student, I continued my studies in computer science and telecommunications at ITIS Fermi in Modena, graduating with 98/100.",
       "2": "I am currently studying at Alma Mater, and I am aiming for a master's degree in AI (somewhere)."
     },
+    "tooltips": {
+      "github": "View my GitHub profile",
+      "linkedin": "View my LinkedIn profile",
+      "blog": "Visit my blog",
+      "countries": "Visited countries"
+    },
     "otherInterests": "Other interests of mine:",
     "otherInterstsRadio": {
       "title": "Radio and telecommunications: diploma in telecom. and ",
@@ -41,8 +47,6 @@
     "github": "GitHub",
     "githubUsername": "alessandroamella",
     "blog": "Blog",
-    "linkedin": "LinkedIn",
-    "instagram": "Instagram",
     "cv": "Curriculum Vitae",
     "travels": "Travels",
     "open": "Open",
