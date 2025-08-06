@@ -6,7 +6,7 @@ import dynamic from 'next/dynamic';
 const CountriesMap = dynamic(() => import('@/components/CountriesMap'), {
   ssr: false,
   loading: () => (
-    <div className='w-full h-[400px] md:h-[500px] lg:h-[600px] flex items-center justify-center'>
+    <div className='w-full h-[500px] lg:h-[600px] flex items-center justify-center'>
       <p className='text-gray-500 dark:text-gray-400'>
         <Spinner size='lg' />
       </p>
@@ -16,7 +16,7 @@ const CountriesMap = dynamic(() => import('@/components/CountriesMap'), {
 
 export default function CountriesClient() {
   return (
-    <div className='w-full h-[400px] md:h-[500px] lg:h-[600px]'>
+    <div className='w-full h-[500px] lg:h-[600px]'>
       <CountriesMap />
     </div>
   );

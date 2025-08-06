@@ -134,5 +134,11 @@
     "title": "Země, které jsem navštívil",
     "description": "Tady je mapa zemí, které jsem dosud navštívil.",
     "backToHome": "Zpět na úvodní stránku"
+  },
+  "countriesMap": {
+    "legend": {
+      "visited": "Navštívené",
+      "notVisited": "Nenavštívené"
+    }
   }
 }

@@ -134,5 +134,11 @@
     "title": "Paesi che ho visitato",
     "description": "Ecco una mappa dei paesi che ho visitato finora.",
     "backToHome": "Torna alla Home"
+  },
+  "countriesMap": {
+    "legend": {
+      "visited": "Visitati",
+      "notVisited": "Non visitati"
+    }
   }
 }

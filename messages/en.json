@@ -134,5 +134,11 @@
     "title": "Countries I've Visited",
     "description": "Here's a map of the countries I've been to so far.",
     "backToHome": "Back to Home"
+  },
+  "countriesMap": {
+    "legend": {
+      "visited": "Visited",
+      "notVisited": "Not Visited"
+    }
   }
 }

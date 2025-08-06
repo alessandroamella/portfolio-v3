@@ -1,7 +1,7 @@
 'use client';
-
 import { config } from '@/config';
-import { useMemo } from 'react';
+import { useTranslations } from 'next-intl';
+import { useEffect, useMemo, useState } from 'react';
 import {
   ComposableMap,
   Geographies,
@@ -10,13 +10,49 @@ import {
 } from 'react-simple-maps';
 
 const geoUrl =
-  'https://cdn.jsdelivr.net/npm/world-atlas@2.0.2/countries-50m.json';
+  'https://cdn.jsdelivr.net/npm/world-atlas@2.0.2/countries-110m.json'; // Higher quality
 
-// European coordinates and zoom level
-const EUROPE_COORDINATES: [number, number] = [15, 45] as const; // Longitude, Latitude approximately centered on Europe
-const EUROPE_ZOOM = 5 as const;
+// Base European coordinates
+const EUROPE_BASE_COORDINATES: [number, number] = [15, 45] as const;
+
+interface TooltipData {
+  name: string;
+  x: number;
+  y: number;
+}
 
 const CountriesMap = () => {
+  const t = useTranslations('countriesMap');
+  const [tooltip, setTooltip] = useState<TooltipData | null>(null);
+  const [isMobile, setIsMobile] = useState(false);
+  const [zoom, setZoom] = useState(1);
+  const [coordinates, setCoordinates] = useState<[number, number]>(
+    EUROPE_BASE_COORDINATES,
+  );
+
+  // Detect mobile device
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 768); // md breakpoint
+    };
+
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
+
+  // Set initial zoom and coordinates based on device
+  useEffect(() => {
+    if (isMobile) {
+      setZoom(6);
+      setCoordinates(EUROPE_BASE_COORDINATES); // Mobile uses base coordinates
+    } else {
+      setZoom(5.5);
+      setCoordinates([15, 50]); // Desktop uses higher latitude (more north)
+    }
+  }, [isMobile]);
+
   // Create a memoized lookup object for visited countries
   const visitedCountriesLookup = useMemo(() => {
     const lookup: Record<string, boolean> = {};
@@ -26,37 +62,158 @@ const CountriesMap = () => {
     return lookup;
   }, []);
 
-  return (
-    <div className='h-[80vh] md:h-[400px] lg:h-[550px] overflow-hidden md:mx-4 md:p-4 md:rounded-2xl md:shadow-md md:bg-gray-200 md:dark:bg-gray-700'>
-      <ComposableMap>
-        <ZoomableGroup center={EUROPE_COORDINATES} zoom={EUROPE_ZOOM}>
-          <Geographies geography={geoUrl}>
-            {({ geographies }) =>
-              geographies.map((geo) => {
-                const countryName = geo.properties.name;
-                const isVisited = visitedCountriesLookup[countryName];
+  const handleMouseEnter = (
+    geo: { properties: { name: string } },
+    event: React.MouseEvent,
+  ) => {
+    const { clientX, clientY } = event;
+    setTooltip({
+      name: geo.properties.name,
+      x: clientX,
+      y: clientY,
+    });
+  };
 
-                return (
-                  <Geography
-                    geography={geo}
-                    key={geo.rsmKey}
-                    fill={isVisited ? '#3B82F6' : '#D1D5DB'}
-                    stroke='#FFFFFF'
-                    style={{
-                      default: { outline: 'none' },
-                      hover: {
-                        fill: isVisited ? '#2563EB' : '#9CA3AF',
-                        outline: 'none',
-                      },
-                      pressed: { outline: 'none' },
-                    }}
-                  />
-                );
-              })
+  const handleMouseMove = (event: React.MouseEvent) => {
+    if (tooltip) {
+      setTooltip((prev) =>
+        prev
+          ? {
+              ...prev,
+              x: event.clientX,
+              y: event.clientY,
             }
-          </Geographies>
-        </ZoomableGroup>
-      </ComposableMap>
+          : null,
+      );
+    }
+  };
+
+  const handleMouseLeave = () => {
+    setTooltip(null);
+  };
+
+  return (
+    <div className='relative h-[60vh] md:h-[500px] overflow-hidden'>
+      <div className='h-full md:mx-4 md:rounded-2xl md:shadow-lg md:bg-gradient-to-br md:from-blue-50 md:to-indigo-100 md:dark:from-gray-800 md:dark:to-gray-900 transition-all duration-300'>
+        <ComposableMap
+          projectionConfig={{
+            scale: 200,
+          }}
+          style={{
+            width: '100%',
+            height: '100%',
+          }}
+        >
+          <ZoomableGroup
+            center={coordinates}
+            zoom={zoom}
+            minZoom={1}
+            maxZoom={8}
+            translateExtent={[
+              [-1000, -500],
+              [1000, 500],
+            ]}
+          >
+            <Geographies geography={geoUrl}>
+              {({ geographies }) =>
+                geographies.map((geo) => {
+                  const countryName = geo.properties.name;
+                  const isVisited = visitedCountriesLookup[countryName];
+
+                  return (
+                    <Geography
+                      geography={geo}
+                      key={geo.rsmKey}
+                      onMouseEnter={(event) => handleMouseEnter(geo, event)}
+                      onMouseMove={handleMouseMove}
+                      onMouseLeave={handleMouseLeave}
+                      style={{
+                        default: {
+                          fill: isVisited ? 'url(#visitedGradient)' : '#E5E7EB',
+                          stroke: '#FFFFFF',
+                          strokeWidth: 0.5,
+                          outline: 'none',
+                        },
+                        hover: {
+                          fill: isVisited
+                            ? 'url(#visitedHoverGradient)'
+                            : '#D1D5DB',
+                          stroke: isVisited ? '#1E40AF' : '#6B7280',
+                          strokeWidth: 1,
+                          outline: 'none',
+                          cursor: 'pointer',
+                        },
+                        pressed: {
+                          fill: isVisited ? '#1E40AF' : '#9CA3AF',
+                          outline: 'none',
+                        },
+                      }}
+                    />
+                  );
+                })
+              }
+            </Geographies>
+
+            {/* SVG Gradients */}
+            <defs>
+              <linearGradient
+                id='visitedGradient'
+                x1='0%'
+                y1='0%'
+                x2='100%'
+                y2='100%'
+              >
+                <stop offset='0%' stopColor='#3B82F6' />
+                <stop offset='100%' stopColor='#1E40AF' />
+              </linearGradient>
+              <linearGradient
+                id='visitedHoverGradient'
+                x1='0%'
+                y1='0%'
+                x2='100%'
+                y2='100%'
+              >
+                <stop offset='0%' stopColor='#2563EB' />
+                <stop offset='100%' stopColor='#1D4ED8' />
+              </linearGradient>
+            </defs>
+          </ZoomableGroup>
+        </ComposableMap>
+      </div>
+
+      {/* Tooltip */}
+      {tooltip && (
+        <div
+          className='fixed z-50 px-3 py-2 text-sm font-medium text-white bg-gray-900 rounded-lg shadow-lg pointer-events-none transform -translate-x-1/2 -translate-y-full transition-all duration-200 ease-out'
+          style={{
+            left: tooltip.x,
+            top: tooltip.y - 10,
+          }}
+        >
+          {tooltip.name}
+          <div className='absolute top-full left-1/2 transform -translate-x-1/2'>
+            <div className='border-4 border-transparent border-t-gray-900' />
+          </div>
+        </div>
+      )}
+
+      {/* Legend */}
+      <div className='absolute bottom-4 left-4 bg-white dark:bg-gray-800 rounded-lg shadow-lg p-3 text-sm'>
+        <div className='flex items-center space-x-4'>
+          <div className='flex items-center space-x-2'>
+            <div className='w-4 h-3 rounded bg-gradient-to-r from-blue-500 to-blue-700' />
+            <span className='text-gray-700 dark:text-gray-300'>
+              {t('legend.visited')}
+            </span>
+          </div>
+          <div className='flex items-center space-x-2'>
+            <div className='w-4 h-3 rounded bg-gray-300 dark:bg-gray-600' />
+            <span className='text-gray-700 dark:text-gray-300'>
+              {t('legend.notVisited')}
+            </span>
+          </div>
+        </div>
+      </div>
     </div>
   );
 };
