@@ -44,7 +44,8 @@ export const config = Object.freeze({
   visitedCountries: [
     { name: 'Albania' },
     { name: 'Austria' },
-    { name: 'Bosnia and Herzegovina' },
+    { name: 'Bosnia and Herz.' },
+    { name: 'Bulgaria' },
     { name: 'Croatia' },
     { name: 'Czechia' },
     { name: 'Estonia' },

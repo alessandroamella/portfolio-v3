@@ -11,7 +11,7 @@ import {
 } from 'react-simple-maps';
 
 const geoUrl =
-  'https://cdn.jsdelivr.net/npm/world-atlas@2.0.2/countries-110m.json'; // Higher quality
+  'https://cdn.jsdelivr.net/npm/world-atlas@2.0.2/countries-110m.json';
 
 // Base European coordinates
 const EUROPE_BASE_COORDINATES: [number, number] = [15, 45] as const;
@@ -54,7 +54,7 @@ const CountriesMap = () => {
       setZoom(7);
       setCoordinates(sumArrays(EUROPE_BASE_COORDINATES, [-2, 0]));
     } else {
-      setZoom(5.5);
+      setZoom(3.5);
       setCoordinates(sumArrays(EUROPE_BASE_COORDINATES, [0, 5]));
     }
   }, [isMobile]);
@@ -99,8 +99,8 @@ const CountriesMap = () => {
   };
 
   return (
-    <div className='relative h-[60vh] max-h-[500px] md:h-[500px] overflow-hidden'>
-      <div className='h-full md:mx-4 md:rounded-2xl md:shadow-lg md:bg-gradient-to-br md:from-blue-50 md:to-indigo-100 md:dark:from-gray-800 md:dark:to-gray-900 transition-all duration-300'>
+    <div className='relative mx-auto max-w-6xl h-[60vh] md:h-[500px] xl:h-[550px]'>
+      <div className='h-full md:mx-8 md:rounded-2xl lg:rounded-3xl xl:rounded-full md:shadow-lg border-y shadow-lg dark:shadow-gray-800 overflow-hidden md:border md:bg-gradient-to-br md:from-blue-50 md:to-indigo-100 md:dark:from-gray-800 md:dark:to-gray-900 transition-all duration-300'>
         <ComposableMap
           projectionConfig={{
             scale: 200,
@@ -123,6 +123,7 @@ const CountriesMap = () => {
             <Geographies geography={geoUrl}>
               {({ geographies }) =>
                 geographies.map((geo) => {
+                  // console.log('geo', geo.properties);
                   const countryName = geo.properties.name;
                   const isVisited = visitedCountriesLookup[countryName];
 
@@ -204,7 +205,7 @@ const CountriesMap = () => {
       )}
 
       {/* Legend */}
-      <div className='absolute bottom-4 left-4 md:left-auto md:right-8 bg-white dark:bg-gray-800 rounded-lg shadow-lg p-3 text-sm'>
+      <div className='absolute bottom-4 left-4 md:left-1/2 md:translate-x-[-50%] bg-white dark:bg-gray-800 rounded-lg shadow-lg p-3 text-sm'>
         <div className='flex items-center space-x-4'>
           <div className='flex items-center space-x-2'>
             <div className='w-4 h-3 rounded bg-gradient-to-r from-blue-500 to-blue-700' />

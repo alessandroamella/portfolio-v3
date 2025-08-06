@@ -16,7 +16,7 @@ const CountriesMap = dynamic(() => import('@/components/CountriesMap'), {
 
 export default function CountriesClient() {
   return (
-    <div className='w-full h-[500px]'>
+    <div className='w-full'>
       <CountriesMap />
     </div>
   );
