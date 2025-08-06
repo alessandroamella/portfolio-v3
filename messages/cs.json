@@ -76,7 +76,8 @@
     "email": "E-mail",
     "captchaError": "Neplatná captcha",
     "success": "Zpráva úspěšně odeslána, děkujeme",
-    "sendError": "Chyba při odesílání zprávy :("
+    "sendError": "Chyba při odesílání zprávy :(",
+    "emailPlaceholder": "jméno@příklad.com"
   },
   "curriculum": {
     "infolog": {

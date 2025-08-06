@@ -3,7 +3,7 @@
 import { config } from '@/config';
 import { getYear } from 'date-fns';
 import { useTranslations } from 'next-intl';
-import { FaEnvelope, FaInstagram } from 'react-icons/fa';
+import { FaEnvelope, FaGithub } from 'react-icons/fa';
 
 export default function Footer() {
   const t = useTranslations('footer');
@@ -38,11 +38,11 @@ export default function Footer() {
           <span className='ml-2'>{config.email}</span>
         </a>
         <a
-          href={config.instagramUrl}
+          href={config.githubUrl}
           className='flex items-center rounded-xl px-4 tracking-tighter font-light'
         >
-          <FaInstagram />
-          <span className='ml-2'>{config.instagramUsername}</span>
+          <FaGithub />
+          <span className='ml-2'>{config.githubUsername}</span>
         </a>
       </div>
     </footer>

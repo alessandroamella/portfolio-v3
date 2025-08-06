@@ -76,7 +76,8 @@
     "email": "Email",
     "captchaError": "Invalid captcha",
     "success": "Message sent successfully, thank you",
-    "sendError": "Error sending message :( Please try again later."
+    "sendError": "Error sending message :( Please try again later.",
+    "emailPlaceholder": "name@example.com"
   },
   "curriculum": {
     "infolog": {

@@ -76,7 +76,8 @@
     "email": "Email",
     "captchaError": "Captcha non valido",
     "success": "Messaggio inviato con successo, grazie",
-    "sendError": "Errore durante l'invio del messaggio :("
+    "sendError": "Errore durante l'invio del messaggio :(",
+    "emailPlaceholder": "nome@esempio.com"
   },
   "curriculum": {
     "infolog": {

@@ -12,7 +12,7 @@ export const config = Object.freeze({
   linkedinUrl: 'https://www.linkedin.com/in/alessandro-amella',
   telegramUrl: 'https://t.me/alessandroamella',
   telegramDisplayUrl: 't.me/alessandroamella',
-  email: 'info@bitrey.it',
+  email: 'alessandro@bitrey.dev',
   birthday: new Date(2003, 6, 13),
   descriptionNum: 3,
   otherInterestsNum: 4,

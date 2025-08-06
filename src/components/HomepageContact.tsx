@@ -111,7 +111,7 @@ const HomepageContact = () => {
           </div>
           <TextInput
             id='email'
-            placeholder='info@bitrey.it'
+            placeholder={t('emailPlaceholder')}
             required
             type='email'
             autoComplete='email'
