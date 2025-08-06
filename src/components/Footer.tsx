@@ -4,6 +4,7 @@ import { config } from '@/config';
 import { getYear } from 'date-fns';
 import { useTranslations } from 'next-intl';
 import { FaEnvelope, FaGithub } from 'react-icons/fa';
+import { Email } from 'react-obfuscate-email';
 
 export default function Footer() {
   const t = useTranslations('footer');
@@ -30,13 +31,29 @@ export default function Footer() {
         </p>
       </div>
       <div className='flex flex-col justify-center items-center'>
-        <a
-          href={`mailto:${config.email}`}
+        <Email
+          email={config.email}
           className='flex items-center rounded-xl px-4 tracking-tighter'
         >
           <FaEnvelope />
-          <span className='ml-2'>{config.email}</span>
-        </a>
+          <span className='ml-2'>
+            {config.email
+              .replace('@', ' <span class="font-light">[at]</span> ')
+              .replace('.', ' <span class="font-light">[dot]</span> ')
+              .split('<span')
+              .map((part, index) => {
+                if (index === 0) return part;
+                const [classAndContent, ...rest] = part.split('</span>');
+                const content = classAndContent.split('>')[1];
+                return (
+                  <span key={part}>
+                    <span className='font-light'>{content}</span>
+                    {rest.join('</span>')}
+                  </span>
+                );
+              })}
+          </span>
+        </Email>
         <a
           href={config.githubUrl}
           className='flex items-center rounded-xl px-4 tracking-tighter font-light'
