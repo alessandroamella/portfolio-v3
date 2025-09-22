@@ -23,6 +23,12 @@ importers:
       axios:
         specifier: ^1.11.0
         version: 1.11.0
+      classnames:
+        specifier: ^2.5.1
+        version: 2.5.1
+      country-flag-icons:
+        specifier: ^1.5.21
+        version: 1.5.21
       date-fns:
         specifier: ^4.1.0
         version: 4.1.0
@@ -1469,6 +1475,9 @@ packages:
     peerDependenciesMeta:
       typescript:
         optional: true
+
+  country-flag-icons@1.5.21:
+    resolution: {integrity: sha512-0KmU4oeiyAM+F+atzK99ghQDQJKxEY3tiDhnRraVFL4o65rZgrmrx7xKi0b+hxcVpcEpuUbu+KCC6TKTZQTDcA==}
 
   cross-spawn@7.0.6:
     resolution: {integrity: sha512-uV2QOWP2nWzsy2aMp8aRibhi9dlzF5Hgh5SHaB9OiTGEyDTiJJyx0uy51QXdyWbtAHNua4XJzUKca3OzKUd3vA==}
@@ -3909,6 +3918,8 @@ snapshots:
       path-type: 4.0.0
     optionalDependencies:
       typescript: 5.6.2
+
+  country-flag-icons@1.5.21: {}
 
   cross-spawn@7.0.6:
     dependencies:

@@ -2,8 +2,23 @@
 
 import { config } from '@/config';
 import { usePathname, useRouter } from '@/i18n/navigation';
+import classNames from 'classnames';
 import { useLocale } from 'next-intl';
 import { useEffect, useRef, useState } from 'react';
+
+const LanguageLabel = ({
+  lang,
+  hideNameOnMobile,
+}: { lang: (typeof config.languages)[number]; hideNameOnMobile?: boolean }) => {
+  return (
+    <span className='inline-flex items-center space-x-2 flex-nowrap'>
+      <span className='w-5'>{lang.flagComponent}</span>
+      <span className={classNames({ 'hidden md:inline': hideNameOnMobile })}>
+        {lang.label}
+      </span>
+    </span>
+  );
+};
 
 const ChangeLanguageBtn = () => {
   const lang = useLocale();
@@ -43,8 +58,9 @@ const ChangeLanguageBtn = () => {
         onClick={() => setIsOpen(!isOpen)}
         className='flex items-center space-x-1 bg-transparent border border-transparent hover:border-gray-200 dark:hover:border-gray-700 py-1 px-2 rounded text-gray-600 hover:text-gray-700 dark:text-gray-200 dark:hover:text-gray-100 transition-colors duration-75 focus:outline-none'
       >
-        <span className='hidden md:block'>{currentLanguage.label}</span>
-        <span className='md:hidden'>{currentLanguage.label.split(' ')[0]}</span>
+        {/* <span className='hidden md:block'>{currentLanguage.label}</span>
+        <span className='md:hidden'>{currentLanguage.label.split(' ')[0]}</span> */}
+        <LanguageLabel lang={currentLanguage} hideNameOnMobile />
         <svg
           aria-hidden='true'
           className={`w-4 h-4 transition-transform duration-200 ${
@@ -65,7 +81,7 @@ const ChangeLanguageBtn = () => {
       </button>
 
       {isOpen && (
-        <div className='absolute min-w-28 right-0 md:right-auto md:left-0 z-10 mt-1 w-max bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-md shadow-lg py-1'>
+        <div className='absolute min-w-fit right-0 md:right-auto md:left-0 z-10 mt-1 w-max bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-md shadow-lg py-1'>
           {config.languages.map((language) => (
             <button
               type='button'
@@ -77,7 +93,8 @@ const ChangeLanguageBtn = () => {
                   : 'text-gray-700 dark:text-gray-300'
               }`}
             >
-              {language.label}
+              {/* {language.label} */}
+              <LanguageLabel lang={language} />
             </button>
           ))}
         </div>
