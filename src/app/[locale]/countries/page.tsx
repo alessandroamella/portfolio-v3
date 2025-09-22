@@ -1,4 +1,5 @@
 import CountriesClient from '@/components/CountriesClient';
+import { config } from '@/config';
 import { useTranslations } from 'next-intl';
 import { setRequestLocale } from 'next-intl/server';
 import { use } from 'react';
@@ -12,19 +13,25 @@ export default function CountriesPage(props: {
   const { locale } = params;
   setRequestLocale(locale);
 
-  const t = useTranslations('countries');
+  const t = useTranslations('visitedCountries');
 
   return (
     <MainLayout>
-      <div className='max-w-6xl mx-auto pt-16 px-8'>
-        <h1 className='text-4xl font-bold text-gray-800 dark:text-white mb-6'>
+      <div className='max-w-6xl mx-auto pt-8 md:pt-12 px-8'>
+        <h1 className='text-4xl font-bold text-gray-800 dark:text-white mb-2'>
           {t('title')}
         </h1>
-        <p className='text-gray-600 dark:text-gray-300 mb-8'>
-          {t('description')}
+        <p className='text-gray-600 dark:text-gray-300 mb-8 md:mb-12'>
+          {t('description', {
+            x: config.visitedCountries.length,
+            n: 195,
+            percentage: Math.round(
+              (config.visitedCountries.length / 195) * 100,
+            ),
+          })}
         </p>
       </div>
-      <div className='pb-16'>
+      <div className='pb-0 -mb-1 md:pb-16'>
         <CountriesClient />
       </div>
     </MainLayout>

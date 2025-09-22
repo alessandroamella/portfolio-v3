@@ -1,9 +1,10 @@
 'use client';
 import { config } from '@/config';
+import { countriesMapping } from '@/constants/countries-mapping';
 import { useIsMobile } from '@/hooks/useIsMobile';
 import { sum, zip } from 'lodash';
 import { useTranslations } from 'next-intl';
-import { useEffect, useMemo, useState } from 'react';
+import { useCallback, useEffect, useMemo, useState } from 'react';
 import {
   ComposableMap,
   Geographies,
@@ -30,6 +31,7 @@ const sumArrays = (...arrays: [number, number][]): [number, number] => {
 
 const CountriesMap = () => {
   const t = useTranslations('countriesMap');
+  const tCountries = useTranslations('countries');
   const [tooltip, setTooltip] = useState<TooltipData | null>(null);
   const isMobile = useIsMobile(); // Use the custom hook
   const [zoom, setZoom] = useState(1);
@@ -57,13 +59,22 @@ const CountriesMap = () => {
     return lookup;
   }, []);
 
+  const getI18nCountryName = useCallback(
+    (worldAtlasName: string) => {
+      const alpha2 =
+        countriesMapping[worldAtlasName as keyof typeof countriesMapping];
+      return tCountries.has(alpha2) ? tCountries(alpha2) : worldAtlasName;
+    },
+    [tCountries],
+  );
+
   const handleMouseEnter = (
     geo: { properties: { name: string } },
     event: React.MouseEvent,
   ) => {
     const { clientX, clientY } = event;
     setTooltip({
-      name: geo.properties.name,
+      name: getI18nCountryName(geo.properties.name),
       x: clientX,
       y: clientY,
     });
@@ -89,7 +100,7 @@ const CountriesMap = () => {
 
   return (
     <div className='relative mx-auto max-w-6xl h-[60vh] md:h-[500px] xl:h-[550px]'>
-      <div className='h-full md:mx-8 md:rounded-2xl lg:rounded-3xl xl:rounded-full md:shadow-lg border-y shadow-lg dark:shadow-gray-700 dark:md:dark:shadow-gray-800 overflow-hidden md:border md:bg-gradient-to-br md:from-blue-50 md:to-indigo-100 md:dark:from-gray-800 md:dark:to-gray-900 transition-all duration-300'>
+      <div className='h-full md:mx-8 md:rounded-full md:shadow-lg border-y shadow-lg dark:shadow-gray-700 dark:md:dark:shadow-gray-800 overflow-hidden md:border md:bg-gradient-to-br md:from-blue-50 md:to-indigo-100 md:dark:from-gray-800 md:dark:to-gray-900 transition-colors duration-300'>
         <ComposableMap
           projectionConfig={{
             scale: 200,
@@ -113,7 +124,7 @@ const CountriesMap = () => {
               {({ geographies }) =>
                 geographies.map((geo) => {
                   // console.log('geo', geo.properties);
-                  const countryName = geo.properties.name;
+                  const countryName = geo.properties.name as string;
                   const isVisited = visitedCountriesLookup[countryName];
 
                   return (
