@@ -64,7 +64,9 @@
     "otherDescription": "Any other information or request."
   },
   "footer": {
-    "vatNumber": "VAT Number (IT)"
+    "vatNumber": "VAT Number (IT)",
+    "emailSubject": "Request for Information",
+    "emailBody": "Hello! I would like to ask you for some information about..."
   },
   "contact": {
     "yourEmail": "Your email",

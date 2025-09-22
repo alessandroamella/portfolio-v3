@@ -1,6 +1,13 @@
 'use client';
 
-import { type FC, useCallback, useEffect, useRef, useState } from 'react';
+import {
+  type FC,
+  useCallback,
+  useEffect,
+  useMemo,
+  useRef,
+  useState,
+} from 'react';
 
 import 'swiper/css';
 import { Swiper, type SwiperRef, SwiperSlide } from 'swiper/react';
@@ -10,6 +17,7 @@ import { Fade } from 'react-awesome-reveal';
 import Typewriter, { type TypewriterClass } from 'typewriter-effect';
 
 import { projectsInfo } from '@/projects';
+import { useTranslations } from 'next-intl';
 import Image from 'next/image';
 import {
   FaBackward,
@@ -17,11 +25,8 @@ import {
   FaForward,
   FaGithub,
 } from 'react-icons/fa';
-import Button from './Button';
-
-import { config } from '@/config';
-import { useTranslations } from 'next-intl';
 import iPhoneImg from '../../public/img/iphone.webp';
+import Button from './Button';
 
 interface ProjectsViewerProps {
   builtWithStr: string;
@@ -31,18 +36,29 @@ interface ProjectsViewerProps {
 const ProjectsViewer: FC<ProjectsViewerProps> = ({ builtWithStr, openStr }) => {
   const t = useTranslations('projects');
 
-  const projects = config.projects.map((id) => ({
-    id,
-    title: t(`${id}.title`),
-    description: t(`${id}.description`),
-  }));
+  const projects = useMemo(
+    () =>
+      projectsInfo.map(({ id, ...rest }) => ({
+        id,
+        title: t(`${id}.title`),
+        description: t(`${id}.description`),
+        ...rest,
+      })),
+    [t],
+  );
 
-  const [curProjIndex, setCurProjIndex] = useState(0);
+  const [curProject, setCurProject] = useState(projects[0]);
+
+  const isFirst = useMemo(
+    () => curProject.id === projects[0].id,
+    [curProject, projects],
+  );
+  const isLast = useMemo(
+    () => curProject.id === projects[projects.length - 1].id,
+    [curProject, projects],
+  );
 
   const [typewriter, setTypewriter] = useState<TypewriterClass | null>(null);
-
-  const curProjectName = Object.keys(projectsInfo)[curProjIndex];
-  const curProject = projectsInfo[curProjectName];
 
   useEffect(() => {
     if (!typewriter) return;
@@ -51,9 +67,9 @@ const ProjectsViewer: FC<ProjectsViewerProps> = ({ builtWithStr, openStr }) => {
     typewriter
       // .pauseFor(1000)
       .deleteAll()
-      .typeString(projects[curProjIndex].title)
+      .typeString(curProject.title)
       .start();
-  }, [typewriter, projects, curProjIndex]);
+  }, [typewriter, curProject]);
 
   const sliderRef = useRef<SwiperRef>(null);
 
@@ -74,7 +90,7 @@ const ProjectsViewer: FC<ProjectsViewerProps> = ({ builtWithStr, openStr }) => {
           color='blue'
           className='rounded-full p-4 ml-auto'
           onClick={handlePrev}
-          disabled={curProjIndex === 0}
+          disabled={isFirst}
         >
           <FaBackward />
         </Button>
@@ -100,7 +116,7 @@ const ProjectsViewer: FC<ProjectsViewerProps> = ({ builtWithStr, openStr }) => {
             }}
             className='h-full w-full z-40 rounded-2xl overflow-hidden'
             ref={sliderRef}
-            onSlideChange={(s) => setCurProjIndex(s.activeIndex)}
+            onSlideChange={(s) => setCurProject(projects[s.activeIndex])}
           >
             {Object.entries(projectsInfo).map(([name, { image }]) => (
               <SwiperSlide key={name} className='h-full w-full z-10'>
@@ -121,7 +137,7 @@ const ProjectsViewer: FC<ProjectsViewerProps> = ({ builtWithStr, openStr }) => {
           color='blue'
           className='rounded-full p-4 mr-auto'
           onClick={handleNext}
-          disabled={curProjIndex === Object.keys(projectsInfo).length - 1}
+          disabled={isLast}
         >
           <FaForward />
         </Button>
@@ -139,13 +155,14 @@ const ProjectsViewer: FC<ProjectsViewerProps> = ({ builtWithStr, openStr }) => {
 
         <Fade>
           <p className='dark:text-gray-400 mt-4 text-lg min-h-[5.5rem]'>
-            {projects[curProjIndex].description}
+            {curProject.description}
           </p>
 
           <p className='mt-4 text-gray-500 dark:text-gray-200'>
             {builtWithStr}
           </p>
           <div className='max-w-full flex-wrap overflow-x-hidden flex items-center justify-center md:justify-start gap-2'>
+            {/* {curProject.stack.map((e) => ( */}
             {curProject.stack.map((e) => (
               <div
                 key={e}

@@ -64,7 +64,9 @@
     "otherDescription": "Qualsiasi altra informazione o richiesta."
   },
   "footer": {
-    "vatNumber": "Partita IVA"
+    "vatNumber": "Partita IVA",
+    "emailSubject": "Richiesta informazioni",
+    "emailBody": "Ciao! Vorrei chiederti informazioni su..."
   },
   "contact": {
     "yourEmail": "La tua email",

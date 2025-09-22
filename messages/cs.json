@@ -64,7 +64,9 @@
     "otherDescription": "Jakékoli další informace nebo požadavky."
   },
   "footer": {
-    "vatNumber": "DIČ (IT)"
+    "vatNumber": "DIČ (IT)",
+    "emailSubject": "Žádost o informace",
+    "emailBody": "Dobrý den! Rád(a) bych se zeptal(a) na několik informací ohledně..."
   },
   "contact": {
     "yourEmail": "Váš e-mail",

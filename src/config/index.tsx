@@ -21,16 +21,6 @@ export const config = Object.freeze({
   descriptionNum: 3,
   otherInterestsNum: 4,
   cvAgencies: ['infolog', 'seta', 'fertec', 'freelance'],
-  projects: [
-    'bamboosim',
-    'kinocafe',
-    'ezaffitto',
-    'vhfesuperiori',
-    'occupalostudente',
-    'tpldisplay',
-    'wolfsurvival',
-    'om',
-  ],
   languages: [
     {
       value: 'it',

@@ -12,15 +12,15 @@ export default function Header() {
 
   const navigationItems = [
     { key: 'home', href: '/' },
-    { key: 'about', href: '/#about' },
-    { key: 'projects', href: '/#projects' },
-    { key: 'contact', href: '/#contact' },
+    { key: 'about', href: '#about' },
+    { key: 'projects', href: '#projects' },
+    { key: 'contact', href: '#contact' },
   ];
 
   const linkClassName = 'hover:text-gray-700 whitespace-nowrap';
 
   const renderNavLink = (item: { key: string; href: string }) => {
-    const isHashLink = item.href.startsWith('/#');
+    const isHashLink = item.href.startsWith('#');
 
     if (isHomePage && isHashLink) {
       return (
