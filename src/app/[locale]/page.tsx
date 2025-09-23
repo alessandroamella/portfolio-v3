@@ -89,8 +89,8 @@ function Home(props: { params: Promise<{ locale: string }> }) {
                 <div className='flex justify-end items-end absolute -bottom-16 md:bottom-[-4.2rem] right-[-4.69rem] md:-right-24 lg:-right-20'>
                   <Image
                     src={Arrow}
-                    width='0'
-                    height='0'
+                    width='64'
+                    height='64'
                     style={{
                       width: '4rem',
                       height: '4rem',
@@ -100,8 +100,8 @@ function Home(props: { params: Promise<{ locale: string }> }) {
                   />
                   <Image
                     src={ArrowWhite}
-                    width='0'
-                    height='0'
+                    width='64'
+                    height='64'
                     style={{
                       width: '4rem',
                       height: '4rem',

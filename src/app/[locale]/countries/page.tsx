@@ -24,11 +24,9 @@ export async function generateMetadata({
     },
     alternates: {
       canonical: `https://www.bitrey.dev/${locale}/countries`,
-      languages: {
-        en: '/en',
-        it: '/it',
-        cs: '/cs',
-      },
+      languages: Object.fromEntries(
+        config.languages.map((lang) => [lang.value, `/${lang.value}`]),
+      ),
     },
   };
 }

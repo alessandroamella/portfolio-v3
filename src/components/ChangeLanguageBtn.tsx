@@ -6,13 +6,20 @@ import classNames from 'classnames';
 import { useLocale } from 'next-intl';
 import { useEffect, useRef, useState } from 'react';
 
+import CS from 'country-flag-icons/react/3x2/CZ';
+import EN from 'country-flag-icons/react/3x2/GB';
+import IT from 'country-flag-icons/react/3x2/IT';
+
 const LanguageLabel = ({
   lang,
   hideNameOnMobile,
 }: { lang: (typeof config.languages)[number]; hideNameOnMobile?: boolean }) => {
+  const flagComponents = { IT, EN, CS };
+  const Flag = flagComponents[lang.flag as keyof typeof flagComponents];
+
   return (
     <span className='inline-flex items-center space-x-2 flex-nowrap'>
-      <span className='w-5'>{lang.flagComponent}</span>
+      <span className='w-5'>{<Flag />}</span>
       <span className={classNames({ 'hidden md:inline': hideNameOnMobile })}>
         {lang.label}
       </span>

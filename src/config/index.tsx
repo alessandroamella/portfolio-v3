@@ -1,7 +1,3 @@
-import CS from 'country-flag-icons/react/3x2/CZ';
-import EN from 'country-flag-icons/react/3x2/GB';
-import IT from 'country-flag-icons/react/3x2/IT';
-
 export const config = Object.freeze({
   coords: {
     lat: 44.64783,
@@ -25,17 +21,17 @@ export const config = Object.freeze({
     {
       value: 'it',
       label: 'Italiano',
-      flagComponent: <IT />,
+      flag: 'IT',
     },
     {
       value: 'en',
       label: 'English',
-      flagComponent: <EN />,
+      flag: 'EN',
     },
     {
       value: 'cs',
       label: 'Čeština',
-      flagComponent: <CS />,
+      flag: 'CS',
     },
   ],
   visitedCountries: [

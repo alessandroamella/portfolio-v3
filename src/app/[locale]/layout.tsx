@@ -10,6 +10,7 @@ import {
 } from 'next-intl/server';
 import { notFound } from 'next/navigation';
 import '../globals.css';
+import { config } from '@/config';
 
 export async function generateMetadata({
   params,
@@ -63,11 +64,9 @@ export async function generateMetadata({
     },
     alternates: {
       canonical: `https://www.bitrey.dev/${locale}`,
-      languages: {
-        en: '/en',
-        it: '/it',
-        cs: '/cs',
-      },
+      languages: Object.fromEntries(
+        config.languages.map((lang) => [lang.value, `/${lang.value}`]),
+      ),
     },
     keywords: t('keywords'),
     authors: [{ name: t('siteName') }],

@@ -22,7 +22,9 @@ body {
 
 .falling-items {
   display: inline-block;
-  left: 100%; /* Partenza dalla destra */
+  /* Partenza dalla destra */
+  /* left: 100%; */
+  transform: translateX(100vw) rotate(-180deg);
   /* z-index: -1; */
   /* animation: falling-items 5s ease-in infinite; */
   animation: falling-items 10s linear infinite;
@@ -44,13 +46,10 @@ body {
 
 @keyframes falling-items {
   from {
-    left: 150%;
-    rotate: -180deg;
+    transform: translateX(100vw) rotate(-180deg); /* Start off-screen right */
   }
-
   to {
-    left: -50%; /* Arrivo sulla sinistra */
-    rotate: 180deg;
+    transform: translateX(-100vw) rotate(180deg); /* End off-screen left */
   }
 }
 
