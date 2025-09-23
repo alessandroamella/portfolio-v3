@@ -120,6 +120,7 @@ async function RootLayout({ children, params }: RootLayoutProps) {
           href='/apple-touch-icon.png'
         />
         <meta name='apple-mobile-web-app-title' content='bitrey.dev' />
+        <meta name='color-scheme' content='light dark' />
         <link rel='manifest' href='/site.webmanifest' />
       </head>
       <body suppressHydrationWarning>
