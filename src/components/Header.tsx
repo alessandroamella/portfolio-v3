@@ -22,11 +22,20 @@ export default function Header() {
   const renderNavLink = (item: { key: string; href: string }) => {
     const isHashLink = item.href.startsWith('#');
 
-    if (isHomePage && isHashLink) {
+    if (isHashLink && isHomePage) {
       return (
         <a href={item.href} className={linkClassName}>
           {t(item.key)}
         </a>
+      );
+    }
+
+    if (isHashLink && !isHomePage) {
+      // If not on home page, redirect to home page with hash
+      return (
+        <Link href={`/${item.href}`} className={linkClassName}>
+          {t(item.key)}
+        </Link>
       );
     }
 
