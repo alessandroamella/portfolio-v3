@@ -17,7 +17,8 @@ export default function Header() {
     { key: 'contact', href: '#contact' },
   ];
 
-  const linkClassName = 'hover:text-gray-700 whitespace-nowrap';
+  const linkClassName =
+    'hover:text-gray-700 dark:hover:text-gray-400 whitespace-nowrap';
 
   const renderNavLink = (item: { key: string; href: string }) => {
     const isHashLink = item.href.startsWith('#');

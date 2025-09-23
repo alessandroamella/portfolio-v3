@@ -136,36 +136,6 @@ function Home(props: { params: Promise<{ locale: string }> }) {
                   </div>
                 </Button>
               </Tooltip>
-
-              {/* <Tooltip placement='top' content='Instagram'>
-                <Button
-                  color="purple"
-                  href={config.instagramUrl}
-                  className='relative flex items-center gap-2 rounded-lg font-medium tracking-tight text-xl px-4 py-3'
-                >
-                  <span className='invisible'>A-</span>
-                  <div className='absolute'>
-                    <FaInstagram />
-                  </div>
-                </Button>
-              </Tooltip> */}
-
-              <Tooltip
-                // placement={isMobile ? 'top' : 'right'}
-                placement='top'
-                content={t('tooltips.countries')}
-              >
-                <Button
-                  color='purple'
-                  href={`/${locale}/countries`}
-                  className='flex items-center gap-2 rounded-lg font-medium tracking-tight text-xl px-4 py-3'
-                >
-                  <span className='invisible'>A-</span>
-                  <div className='absolute'>
-                    <FaGlobe />
-                  </div>
-                </Button>
-              </Tooltip>
             </div>
           </div>
         </div>
@@ -209,7 +179,7 @@ function Home(props: { params: Promise<{ locale: string }> }) {
             {t('otherInterests')}
           </h3>
 
-          <ul className='max-w-md mt-4 list-disc list-inside text-gray-300 mb-6'>
+          <ul className='max-w-md mt-4 list-disc list-inside text-gray-300 mb-4'>
             <li>
               {t('otherInterstsRadio.title')}
               <a
@@ -228,9 +198,22 @@ function Home(props: { params: Promise<{ locale: string }> }) {
                 </li>
               ))}
           </ul>
+
+          <div className='flex mb-2 md:mb-0 justify-center'>
+            <Tooltip placement='top' content={t('tooltips.countries')}>
+              <Button
+                color='purple'
+                href={`/${locale}/countries`}
+                className='flex scale-90 items-center gap-2 rounded-lg font-medium tracking-tight text-xl px-4 py-3'
+              >
+                <FaGlobe />
+                {t('tooltips.countries')}
+              </Button>
+            </Tooltip>
+          </div>
         </div>
 
-        <div>
+        <div className='flex flex-col items-center'>
           <HomepageTimeline />
           <div className='flex mb-2 justify-center md:justify-start'>
             <Button
