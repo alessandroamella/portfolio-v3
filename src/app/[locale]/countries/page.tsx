@@ -1,9 +1,37 @@
 import CountriesClient from '@/components/CountriesClient';
 import { config } from '@/config';
+import type { Metadata } from 'next';
 import { useTranslations } from 'next-intl';
-import { setRequestLocale } from 'next-intl/server';
+import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { use } from 'react';
 import MainLayout from '../MainLayout';
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: 'visitedCountries' });
+
+  return {
+    title: t('title'),
+    openGraph: {
+      title: t('title'),
+    },
+    twitter: {
+      title: t('title'),
+    },
+    alternates: {
+      canonical: `https://www.bitrey.dev/${locale}/countries`,
+      languages: {
+        en: '/en',
+        it: '/it',
+        cs: '/cs',
+      },
+    },
+  };
+}
 
 export default function CountriesPage(props: {
   params: Promise<{ locale: string }>;
@@ -25,9 +53,6 @@ export default function CountriesPage(props: {
           {t('description', {
             x: config.visitedCountries.length,
             n: 195,
-            percentage: Math.round(
-              (config.visitedCountries.length / 195) * 100,
-            ),
           })}
         </p>
       </div>

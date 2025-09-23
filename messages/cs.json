@@ -1,9 +1,9 @@
 ﻿{
   "metadata": {
-    "title": "Alessandro Amelly - Vývoj webových stránek a IT řešení",
-    "description": "bitrey.dev od Alessandro Amelly - Vývoj webových stránek pro jednotlivce a firmy, webové aplikace a software na míru.",
+    "title": "Alessandro Amella - Vývoj webových stránek a IT řešení",
+    "description": "bitrey.dev od Alessandro Amella - Vývoj webových stránek pro jednotlivce a firmy, webové aplikace a software na míru.",
     "siteName": "Alessandro Amella",
-    "keywords": "vývoj webových stránek, vývoj software, programování, informatika, vývoj webu, web design, modena, bologna, itis fermi, univerzita v bologni, vysoké učení technické v brně, erasmus, radioamatér, radioamatéři, radio, telekomunikace, elektronika, mikrokontrolery, veřejná doprava, urbanismus, fotografie, střih videa, mixování hudby, videohry, vývoj her, github, linkedin, instagram, curriculum vitae, cv, telegram, e-mail, vývoj webu, vývoj software, it konzultace, it konzultace, web, software, aplikace, konzultace, telegram, e-mail, radioamatér, radioamatéři, radio, telekomunikace, elektronika, mikrokontrolery, veřejná doprava, urbanismus, fotografie, střih videa, mixování hudby, videohry, vývoj her, github, linkedin, instagram, curriculum vitae, cv, telegram, e-mail, vývoj webu, vývoj software, it konzultace, it konzultace, web, software, aplikace, konzultace"
+    "keywords": "webový vývojář, softwarový vývojář, full stack developer, programátor Modena, vývojář Bologna, informatika, Univerzita v Bologni, Vysoké učení technické v Brně, programování mikrokontrolérů, IT konzultace"
   },
   "header": {
     "about": "O mně",
@@ -53,7 +53,7 @@
     "builtWith": "Vytvořeno s",
     "andManyOthers": "a mnoha dalšími",
     "letsKeepInTouch": "Zůstaňme v kontaktu",
-    "contactSubtitle": "Pro spolupráci nebo jen pro chat mě můžete kontaktovat prostřednictvím následujícího formuláře (nebo kanálů vpravo dole).",
+    "contactSubtitle": "Pro cenové nabídky, konzultace nebo informace mě můžete kontaktovat prostřednictvím následujícího formuláře (nebo kanálů dole vpravo).",
     "otherChannels": "Můžete mě také najít na",
     "howCanIHelpYou": "Jsem otevřený následujícím:",
     "webDevelopment": "Vývoj webů, softwaru a aplikací",
@@ -139,7 +139,7 @@
   },
   "visitedCountries": {
     "title": "Země, které jsem navštívil",
-    "description": "Navštívil jsem {x}/{n} zemí ({percentage}%)... Prozatím...",
+    "description": "Navštívil jsem {x}/{n} zemí... Prozatím...",
     "backToHome": "Zpět na úvodní stránku"
   },
   "countriesMap": {

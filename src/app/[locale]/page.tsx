@@ -16,7 +16,7 @@ import { useTranslations } from 'next-intl';
 import { Dancing_Script } from 'next/font/google';
 import Image from 'next/image';
 import { use } from 'react';
-import { FaBlog, FaGithub, FaGlobe, FaLinkedin } from 'react-icons/fa';
+import { FaCommentDots, FaGithub, FaGlobe, FaLinkedin } from 'react-icons/fa';
 import Wave from 'react-wavify';
 import MainLayout from './MainLayout';
 
@@ -61,12 +61,7 @@ function Home(props: { params: Promise<{ locale: string }> }) {
                   href={config.githubUrl}
                   className='flex items-center gap-2 rounded-lg font-medium tracking-tight text-xl px-4 py-3 relative'
                 >
-                  <span className='invisible md:hidden'>A-</span>
-                  <div className='absolute md:hidden'>
-                    <FaGithub />
-                  </div>
-
-                  <div className='hidden md:flex items-center gap-2'>
+                  <div className='flex items-center gap-2'>
                     <FaGithub />
                     GitHub
                   </div>
@@ -127,11 +122,11 @@ function Home(props: { params: Promise<{ locale: string }> }) {
                 >
                   <span className='invisible md:hidden'>A-</span>
                   <div className='absolute md:hidden'>
-                    <FaBlog />
+                    <FaCommentDots />
                   </div>
 
                   <div className='hidden md:flex items-center gap-2'>
-                    <FaBlog />
+                    <FaCommentDots />
                     {t('blog')}
                   </div>
                 </Button>

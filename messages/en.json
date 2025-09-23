@@ -3,7 +3,7 @@
     "title": "Alessandro Amelly - Website Development and IT Solutions",
     "description": "bitrey.dev by Alessandro Amella - Website development for individuals and businesses, web applications and custom software.",
     "siteName": "Alessandro Amella",
-    "keywords": "website development, software development, programming, computer science, web development, web design, modena, bologna, itis fermi, university of bologna, brno university of technology, erasmus, ham radio operator, radio amateurs, radio, telecommunications, electronics, microcontrollers, public transport, urban planning, photography, video editing, djing, video games, game development, github, linkedin, instagram, curriculum vitae, cv, telegram, email, web development, software development, it consulting, it consulting, web, software, app, consulting, telegram, email, ham radio operator, radio amateurs, radio, telecommunications, electronics, microcontrollers, public transport, urban planning, photography, video editing, djing, video games, game development, github, linkedin, instagram, curriculum vitae, cv, telegram, email, web development, software development, it consulting, it consulting, web, software, app, consulting"
+    "keywords": "web developer, software developer, full stack developer, Modena developer, Bologna programmer, computer science graduate, University of Bologna, Brno University of Technology, microcontroller programming, IT consulting"
   },
   "header": {
     "about": "About",
@@ -53,7 +53,7 @@
     "builtWith": "Built with",
     "andManyOthers": "and many others",
     "letsKeepInTouch": "Let's keep in touch",
-    "contactSubtitle": "For commissions, collaborations or just to chat, you can contact me through the following form (or the channels at the bottom right).",
+    "contactSubtitle": "For quotes, consultations or information, you can contact me through the following form (or via the channels at the bottom right).",
     "otherChannels": "You can also find me on",
     "howCanIHelpYou": "I am open to:",
     "webDevelopment": "Web, software and app development",
@@ -138,8 +138,8 @@
     }
   },
   "visitedCountries": {
-    "title": "Countries I've Visited",
-    "description": "I am at {x}/{n} countries visited ({percentage}%)... For now...",
+    "title": "Countries I've visited",
+    "description": "I am at {x}/{n} countries visited... For now...",
     "backToHome": "Back to Home"
   },
   "countriesMap": {

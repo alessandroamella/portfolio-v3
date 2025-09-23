@@ -3,7 +3,7 @@
     "title": "Alessandro Amella - Sviluppo e Soluzioni Informatiche",
     "description": "bitrey.dev di Alessandro Amella - Sviluppo software, applicazioni web e software su misura per privati e aziende.",
     "siteName": "Alessandro Amella",
-    "keywords": "sviluppo siti web, sviluppo software, programmazione, informatica, web development, web design, modena, bologna, itis fermi, università di bologna, brno university of technology, erasmus, radioamatore, radioamatori, radio, telecomunicazioni, elettronica, microcontrollori, trasporti pubblici, urbanistica, fotografia, video editing, djing, videogiochi, game development, github, linkedin, instagram, curriculum vitae, cv, telegram, email, web development, software development, it consulting, consulenza informatica, consulenza it, web, software, app, consulenza, telegram, email, radioamatore, radioamatori, radio, telecomunicazioni, elettronica, microcontrollori, trasporti pubblici, urbanistica, fotografia, video editing, djing, videogiochi, game development, github, linkedin, instagram, curriculum vitae, cv, telegram, email, web development, software development, it consulting, consulenza informatica, consulenza it, web, software, app, consulenza"
+    "keywords": "sviluppatore web, sviluppatore software, full stack developer, programmatore Modena, sviluppatore Bologna, informatica, Università di Bologna, Brno University of Technology, programmazione microcontrollori, consulenza informatica"
   },
   "header": {
     "about": "About",
@@ -53,7 +53,7 @@
     "builtWith": "Realizzato con",
     "andManyOthers": "e molti altri",
     "letsKeepInTouch": "Contatti",
-    "contactSubtitle": "Per commissioni, collaborazioni o semplicemente per chiacchierare, puoi contattarmi tramite il seguente form (o i canali in fondo a destra).",
+    "contactSubtitle": "Per preventivi, consulenze o informazioni, puoi contattarmi tramite il seguente form (o i canali in fondo a destra).",
     "otherChannels": "Mi trovi anche su",
     "howCanIHelpYou": "Sono aperto a:",
     "webDevelopment": "Sviluppo web, software e app",
@@ -139,7 +139,7 @@
   },
   "visitedCountries": {
     "title": "Paesi che ho visitato",
-    "description": "Sono a {x}/{n} paesi visitati ({percentage}%)... Per ora...",
+    "description": "Sono a {x}/{n} paesi visitati... Per ora...",
     "backToHome": "Torna alla Home"
   },
   "countriesMap": {
