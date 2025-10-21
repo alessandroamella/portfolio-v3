@@ -138,7 +138,7 @@
   },
   "visitedCountries": {
     "title": "Země, které jsem navštívil",
-    "description": "Navštívil jsem {x}/{n} zemí... Prozatím...",
+    "description": "Navštívil jsem {x} zemí... Prozatím...",
     "backToHome": "Zpět na úvodní stránku"
   },
   "countriesMap": {

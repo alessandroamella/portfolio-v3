@@ -50,7 +50,6 @@ export default function CountriesPage(props: {
         <p className='text-gray-600 dark:text-gray-300 mb-8 md:mb-12'>
           {t('description', {
             x: config.visitedCountries.length,
-            n: 195,
           })}
         </p>
       </div>

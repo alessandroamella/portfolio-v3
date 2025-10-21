@@ -138,7 +138,7 @@
   },
   "visitedCountries": {
     "title": "Paesi che ho visitato",
-    "description": "Sono a {x}/{n} paesi visitati... Per ora...",
+    "description": "Sono a {x} paesi visitati... Per ora...",
     "backToHome": "Torna alla Home"
   },
   "countriesMap": {
