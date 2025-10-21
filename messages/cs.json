@@ -20,9 +20,8 @@
     "mainDescription": "Student informatiky na Univerzitě v Bologni, ex-Erasmus na Vysokém učení technické v Brně, programátor, {years} let, žijící v Modeně",
     "weather": "nyní je",
     "descriptions": {
-      "0": "Začal jsem programovat, když mi bylo 9 let, a od té doby jsem nikdy nepřestal zkoumat všechny obory informatiky.",
-      "1": "Studoval jsem převážně jako samouk a pokračoval jsem ve studiu informatiky a telekomunikací na ITIS Fermi v Modeně, kde jsem studium absolvoval s 98/100.",
-      "2": "Aktuálně studuji na Alma Mater a můj cíl je magisterský titul v AI."
+      "0": "Studoval jsem informatiku a telekomunikace na ITIS Fermi v Modeně, kde jsem absolvoval s 98/100.",
+      "1": "Aktuálně studuji na Alma Mater a můj cíl je magisterský titul v AI."
     },
     "tooltips": {
       "github": "Zobrazit můj profil na GitHubu",

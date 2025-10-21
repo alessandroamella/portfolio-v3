@@ -5,13 +5,26 @@ import {
   type WeatherResponse,
   isWeatherData,
 } from '@/interfaces/Weather';
-import { mapLngToOWALng } from '@/utils/mapLngToOWALng';
 import axios, { isAxiosError } from 'axios';
 import { type NextRequest, NextResponse } from 'next/server';
 
 const { lat, lon } = appConfig.coords;
 
 const languages = appConfig.languages.map((language) => language.value);
+
+/**
+ * For some obscure reason, OpenWeatherAPI uses different language codes than the rest of the world.
+ * @param lng - language code
+ * @returns language code for OpenWeatherAPI
+ */
+function mapLngToOWALng(lng: string) {
+  switch (lng) {
+    case 'cs':
+      return 'cz';
+    default:
+      return lng;
+  }
+}
 
 async function fetchWeatherFromAPI(language: string): Promise<WeatherData> {
   try {

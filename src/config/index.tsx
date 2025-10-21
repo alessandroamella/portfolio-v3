@@ -14,7 +14,7 @@ export const config = Object.freeze({
   telegramDisplayUrl: 't.me/alessandroamella',
   email: 'alessandro@bitrey.dev',
   birthday: new Date(2003, 6, 13),
-  descriptionNum: 3,
+  descriptionNum: 2,
   otherInterestsNum: 4,
   cvAgencies: ['infolog', 'seta', 'fertec', 'freelance'],
   languages: [

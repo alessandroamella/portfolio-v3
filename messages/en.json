@@ -20,9 +20,8 @@
     "mainDescription": "Computer Science student at the University of Bologna, ex-Erasmus at Brno University of Technology, developer, {years} years old, living in Modena",
     "weather": "now it is",
     "descriptions": {
-      "0": "I started programming when I was 9 years old and since then I have never stopped exploring computer science in all its branches.",
-      "1": "Studying mainly as a self-taught student, I continued my studies in computer science and telecommunications at ITIS Fermi in Modena, graduating with 98/100.",
-      "2": "I am currently studying at Alma Mater, and I am aiming for a master's degree in AI (somewhere)."
+      "0": "I studied computer science and telecommunications at ITIS Fermi in Modena, graduating with 98/100.",
+      "1": "I am currently studying at Alma Mater, and I am aiming for a master's degree in AI (somewhere)."
     },
     "tooltips": {
       "github": "View my GitHub profile",
