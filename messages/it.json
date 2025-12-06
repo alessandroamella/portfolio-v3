@@ -18,7 +18,7 @@
     "about": "Chi sono",
     "projects": "Progetti",
     "nowItIs": "dove ora fanno",
-    "description": "Studente di Informatica all''<strong>Università di Bologna</strong>, ex-Erasmus presso la Brno University of Technology, programmatore, {years} anni, vivo a Modena <weather></weather>.<br></br>Parallelamente al percorso di studi, attualmente lavoro come <strong>sviluppatore freelance</strong> in partita IVA.",
+    "description": "<p>Studente di Informatica all''<strong>Università di Bologna</strong>, ex-Erasmus presso la Brno University of Technology, programmatore, {years} anni, vivo a Modena <weather></weather>.</p><p>Parallelamente al percorso di studi, attualmente lavoro come <strong>sviluppatore freelance</strong> in partita IVA.</p>",
     "tooltips": {
       "github": "Visualizza il mio profilo GitHub",
       "linkedin": "Visualizza il mio profilo LinkedIn",
@@ -26,16 +26,12 @@
       "countries": "Paesi visitati"
     },
     "otherInterests": "Altri miei interessi:",
-    "otherInterstsRadio": {
-      "title": "Radio e telecomunicazioni: diploma in telecom. e ",
-      "urlTitle": "radioamatore",
-      "url": "https://www.qrz.com/db/IU4QSG"
-    },
     "otherInterestsList": {
-      "0": "Elettronica e microcontrollori",
-      "1": "Trasporti pubblici e pianificazione urbanistica",
-      "2": "Fotografia, video editing e mixing musicale (DJing)",
-      "3": "Videogiochi e game development"
+      "radio": "Radio: diploma in telecomunicazioni e <ham>radioamatore</ham>",
+      "electronics": "Elettronica e microcontrollori",
+      "transport": "Trasporti pubblici e pianificazione urbanistica",
+      "aviation": "Aviazione e ferrovia",
+      "travel": "Viaggi"
     },
     "someProjects": "Alcuni miei progetti",
     "someProjectsDescription": "Questi sono solo alcuni dei progetti che ho realizzato, molti altri sono su GitHub.",
@@ -80,22 +76,22 @@
     "infolog": {
       "date": "Luglio 2021",
       "job": "Sistemista",
-      "description": "Sistemista presso l'azienda Infolog S.r.l. di Modena, dove ho lavorato con il team di sviluppo per la realizzazione di un'applicazione web per la gestione di un magazzino."
+      "description": "<ul><li>Sistemista presso l'azienda <em>Infolog S.r.l.</em>, dove ho lavorato con il team di sviluppo per la realizzazione di un'applicazione web per la <strong>gestione di magazzini</strong>.</li><li>Refactor del database <strong>Microsoft SQL Server</strong>.</li></ul>"
     },
     "seta": {
       "date": "Settembre 2021",
       "job": "Programmatore software",
-      "description": "Stage presso l'azienda di trasporto pubblico di Modena SETA S.p.A., dove ho sviluppato il software per la generazione dei file audio per gli annunci a bordo dei bus. Ho inoltre eseguito un analisi dei dati per l'addestramento di un modello di machine learning per il conteggio dei passeggeri."
+      "description": "<ul><li>Stage presso l'azienda di trasporto pubblico <em>SETA S.p.A.</em>, dove ho sviluppato il software per la <strong>generazione dei file audio</strong> per gli annunci a bordo dei bus, attualmente utilizzato <strong>su tutta la flotta</strong> a Modena, Reggio Emilia e Piacenza.</li><li>Addestramento di un modello di machine learning per il conteggio passeggeri tramite le telecamere a bordo.</li></ul>"
     },
     "fertec": {
       "date": "Marzo 2023",
       "job": "Programmatore web",
-      "description": "Progettazione e sviluppo di soluzioni software avanzate, tra cui sistemi a microservizi per IoT, software di analisi dei costi, applicazioni mobili e web."
+      "description": "<ul><li>Progettazione e sviluppo di un <strong>sistema a microservizi</strong> per un impianto produttore di ossigenatori, dall'architettura generale ai dispositivi Raspberry su Arch Linux.</li><li>Sviluppo di un software di analisi dei costi e di un'app <strong>Flutter</strong> per interfacciarsi con dispositivi medici.</li></ul>"
     },
     "freelance": {
       "date": "Da Marzo 2024",
       "job": "Sviluppatore Freelance",
-      "description": "Sviluppo di siti web, applicazioni web e software su misura per privati e aziende."
+      "description": "<ul><li>Costruito un <strong>e-commerce di eSIM</strong>, basato su API esterna.<innerul><li>Integrato con <em>Stripe</em>, <em>PayPal</em> ed <em>Airwallex</em>.</li><li>Dashboard per la visualizzazione della soglia dati rimanente, con funzionalità di ricarica e sostituzione delle eSIM.</li><li>Gestione amministratore per inserimento prodotti, logica per sconti percentuali e assoluti.</li><li>Pagina knowledgebase e integrazione assistente virtuale.</li></innerul></li><li>Sviluppo di un prodotto <strong>SaaS</strong> per la visualizzazione di dati e invio di comandi verso dispositivi agricoli. Comunicazione tramite framework <em>Apache Kapua</em>.</li></ul>"
     }
   },
   "projects": {

@@ -18,7 +18,7 @@
     "about": "O mně",
     "projects": "Projekty",
     "nowItIs": "nyní je",
-    "description": "Student informatiky na <strong>Univerzitě v Boloni</strong>, bývalý Erasmus student na Vysokém učení technickém v Brně, programátor, je mi {years} let, žiji v Modeně <weather></weather>.<br></br>Vedle studia aktuálně pracuji jako <strong>vývojář na volné noze</strong> na IČO.",
+    "description": "<p>Student informatiky na <strong>Univerzitě v Boloni</strong>, bývalý Erasmus student na Vysokém učení technickém v Brně, programátor, je mi {years} let, žiji v Modeně <weather></weather>.</p><p>Vedle studia aktuálně pracuji jako <strong>vývojář na volné noze</strong> na IČO.</p>",
     "tooltips": {
       "github": "Zobrazit můj profil na GitHubu",
       "linkedin": "Zobrazit můj profil na LinkedInu",
@@ -26,16 +26,12 @@
       "countries": "Navštívené země"
     },
     "otherInterests": "Moje další zájmy:",
-    "otherInterstsRadio": {
-      "title": "Rádio a telekomunikace: diplom v telekomunikacích a ",
-      "urlTitle": "amatérský rádiový operátor",
-      "url": "https://www.qrz.com/db/IU4QSG"
-    },
     "otherInterestsList": {
-      "0": "Elektronika a mikrokontrolery",
-      "1": "Veřejná doprava a urbanismus",
-      "2": "Fotografie, střih videa a mixování hudby (DJ)",
-      "3": "Videohry a vývoj her"
+      "radio": "Radio: diplom v telekomunikacích a <ham>radioamatér</ham>",
+      "electronics": "Elektronika a mikrokontrolery",
+      "transport": "Veřejná doprava a urbanismus",
+      "aviation": "Letectví a železnice",
+      "travel": "Cestování"
     },
     "someProjects": "Některé z mých projektů",
     "someProjectsDescription": "Toto je výběr projektů, na kterých jsem pracoval. Mnohem více je na GitHubu.",
@@ -80,22 +76,22 @@
     "infolog": {
       "date": "Červenec 2021",
       "job": "Správce systému",
-      "description": "Správce systému u Infolog S.r.l. v Modeně, kde jsem spolupracoval s vývojovým týmem na vytvoření webové aplikace pro správu skladů."
+      "description": "<ul><li>Správce systému u <em>Infolog S.r.l.</em>, kde jsem spolupracoval s vývojovým týmem na vytvoření webové aplikace pro <strong>správu skladu</strong>.</li><li>Refaktoring databáze <strong>Microsoft SQL Server</strong>.</li></ul>"
     },
     "seta": {
       "date": "Září 2021",
       "job": "Vývojář softwaru",
-      "description": "Stáž v dopravní společnosti SETA S.p.A. v Modeně, kde jsem vyvíjel software pro generování zvukových souborů pro hlášení v autobusech. Také jsem prováděl analýzu dat pro trénování modelu strojového učení pro počítání cestujících."
+      "description": "<ul><li>Stáž v dopravní společnosti <em>SETA S.p.A.</em>, kde jsem vyvíjel software pro <strong>generování zvukových souborů</strong> pro hlášení v autobusech, který je nyní používán <strong>v celé flotile</strong> v Modeně, Reggio Emilia a Piacenze.</li><li>Trénink modelu strojového učení pro počítání cestujících pomocí palubních kamer.</li></ul>"
     },
     "fertec": {
       "date": "Březen 2023",
       "job": "Webový vývojář",
-      "description": "Návrh a vývoj pokročilých softwarových řešení, včetně systémů mikroslužeb pro IoT, softwaru pro analýzu nákladů a mobilních a webových aplikací."
+      "description": "<ul><li>Návrh a vývoj <strong>systému mikroslužeb</strong> pro výrobní linku oxygenátorů, od celkové architektury až po zařízení Raspberry Pi na Arch Linux.</li><li>Vývoj softwaru pro analýzu nákladů a aplikace <strong>Flutter</strong> pro propojení s lékařskými přístroji.</li></ul>"
     },
     "freelance": {
       "date": "Od března 2024",
       "job": "Freelance vývojář",
-      "description": "Vývoj webových stránek, webových aplikací a zakázkového softwaru pro jednotlivce a firmy."
+      "description": "<ul><li>Vybudoval <strong>e-shop s eSIM</strong> založený na externím API.<innerul><li>Integrovaný se <em>Stripe</em>, <em>PayPal</em> a <em>Airwallex</em>.</li><li>Dashboard pro zobrazení zbývajícího datového limitu s funkcemi dobíjení a výměny eSIM.</li><li>Správa administrátora pro vkládání produktů, logika pro procentuální a absolutní slevy.</li><li>Stránka s databází znalostí a integrace virtuálního asistenta.</li></innerul></li><li>Vývoj produktu <strong>SaaS</strong> pro vizualizaci dat a odesílání příkazů do zemědělských zařízení. Komunikace prostřednictvím frameworku <em>Apache Kapua</em>.</li></ul>"
     }
   },
   "projects": {

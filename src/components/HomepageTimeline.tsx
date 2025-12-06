@@ -11,7 +11,19 @@ const HomepageTimeline = () => {
     name,
     date: t(`${name}.date`),
     job: t(`${name}.job`),
-    description: t(`${name}.description`),
+    description: t.rich(`${name}.description`, {
+      ul: (children) => (
+        <ul className='list-disc list-inside mb-2'>{children}</ul>
+      ),
+      innerul: (children) => (
+        <ul className='list-[circle] list-inside ml-4 mt-1 text-[15px]'>
+          {children}
+        </ul>
+      ),
+      li: (children) => <li className='mb-2'>{children}</li>,
+      strong: (children) => <strong>{children}</strong>,
+      em: (children) => <em>{children}</em>,
+    }),
   }));
 
   return (
@@ -29,7 +41,7 @@ const HomepageTimeline = () => {
               </Timeline.Time>
               <Timeline.Title className='text-white'>{job}</Timeline.Title>
               <Timeline.Body className='text-gray-400'>
-                <p>{description}</p>
+                {description}
               </Timeline.Body>
             </Timeline.Content>
           </Timeline.Item>

@@ -10,7 +10,6 @@ import Arrow from '@/components/arrow.svg?url';
 import { config } from '@/config';
 import { differenceInYears } from 'date-fns';
 import { Tooltip } from 'flowbite-react';
-import { range } from 'lodash';
 import type { Metadata } from 'next';
 import { useTranslations } from 'next-intl';
 import { Dancing_Script } from 'next/font/google';
@@ -156,42 +155,37 @@ function Home(props: { params: Promise<{ locale: string }> }) {
             {t('about')}
           </h2>
 
-          <p className='mt-4'>
+          <div className='mt-4 space-y-4'>
             {t.rich('description', {
-              br: () => (
-                <>
-                  <br />
-                  <br />
-                </>
-              ),
+              p: (children) => <p>{children}</p>,
               strong: (children) => <strong>{children}</strong>,
               em: (children) => <em>{children}</em>,
               weather: () => <WeatherInfo />,
               years: differenceInYears(new Date(), config.birthday),
-              // weatherTemperature: 12, // CHANGE
-              // weatherEmoji: '☀️', // CHANGE
             })}
-          </p>
+          </div>
 
           <h3 className='text-2xl text-gray-100 font-semibold tracking-tighter mt-6'>
             {t('otherInterests')}
           </h3>
 
           <ul className='max-w-md mt-4 list-disc list-inside text-gray-300 mb-4'>
-            <li>
-              {t('otherInterstsRadio.title')}
-              <a
-                href={t('otherInterstsRadio.url')}
-                className='text-blue-300 hover:text-blue-400 transition-colors duration-75'
-              >
-                {t('otherInterstsRadio.urlTitle')}
-              </a>
-            </li>
-
-            {range(config.otherInterestsNum)
-              .map((e) => t(`otherInterestsList.${e}`))
-              .map((e) => (
-                <li key={e} className='mt-4'>
+            {['radio', 'electronics', 'transport', 'aviation', 'travel']
+              .map((e) =>
+                t.rich(`otherInterestsList.${e}`, {
+                  ham: (children) => (
+                    <a
+                      href={config.qrzUrl}
+                      className='text-blue-300 hover:text-blue-400 transition-colors duration-75'
+                    >
+                      {children}
+                    </a>
+                  ),
+                }),
+              )
+              .map((e, i) => (
+                // biome-ignore lint/suspicious/noArrayIndexKey: static list
+                <li key={i} className='mt-3'>
                   {e}.
                 </li>
               ))}

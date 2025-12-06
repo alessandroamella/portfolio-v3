@@ -18,7 +18,7 @@
     "about": "About Me",
     "projects": "Projects",
     "nowItIs": "now it is",
-    "description": "Computer Science student at the <strong>University of Bologna</strong>, former Erasmus student at Brno University of Technology, programmer, {years} years old, living in Modena <weather></weather>.<br></br>Alongside my studies, I currently work as a <strong>freelance developer</strong> under Italian VAT.",
+    "description": "<p>Computer Science student at the <strong>University of Bologna</strong>, former Erasmus student at Brno University of Technology, programmer, {years} years old, living in Modena <weather></weather>.</p><p>Alongside my studies, I currently work as a <strong>freelance developer</strong> under Italian VAT.</p>",
     "tooltips": {
       "github": "View my GitHub profile",
       "linkedin": "View my LinkedIn profile",
@@ -26,16 +26,12 @@
       "countries": "Visited countries"
     },
     "otherInterests": "Other interests of mine:",
-    "otherInterstsRadio": {
-      "title": "Radio and telecommunications: diploma in telecom. and ",
-      "urlTitle": "ham radio operator",
-      "url": "https://www.qrz.com/db/IU4QSG"
-    },
     "otherInterestsList": {
-      "0": "Electronics and microcontrollers",
-      "1": "Public transport and urban planning",
-      "2": "Photography, video editing and music mixing (DJing)",
-      "3": "Video games and game development"
+      "radio": "Radio: diploma in telecommunications and <ham>radio amateur</ham>",
+      "electronics": "Electronics and microcontrollers",
+      "transport": "Public transport and urban planning",
+      "aviation": "Aviation and railways",
+      "travel": "Traveling"
     },
     "someProjects": "Some of my projects",
     "someProjectsDescription": "These are just some of the projects I have worked on, many more are on GitHub.",
@@ -80,22 +76,22 @@
     "infolog": {
       "date": "July 2021",
       "job": "System Administrator",
-      "description": "System administrator at Infolog S.r.l. in Modena, where I worked with the development team to create a web application for warehouse management."
+      "description": "<ul><li>System administrator at <em>Infolog S.r.l.</em>, where I worked with the development team to create a web application for <strong>warehouse management</strong>.</li><li>Refactored the <strong>Microsoft SQL Server</strong> database.</li></ul>"
     },
     "seta": {
       "date": "September 2021",
       "job": "Software Developer",
-      "description": "Internship at the public transport company SETA S.p.A. in Modena, where I developed the software for generating audio files for announcements on buses. I also performed data analysis to train a machine learning model for passenger counting."
+      "description": "<ul><li>Internship at the public transport company <em>SETA S.p.A.</em>, where I developed the software for <strong>generating audio files</strong> for announcements on buses, currently used <strong>across the entire fleet</strong> in Modena, Reggio Emilia and Piacenza.</li><li>Training of a machine learning model for passenger counting using onboard cameras.</li></ul>"
     },
     "fertec": {
       "date": "March 2023",
       "job": "Web Developer",
-      "description": "Design and development of advanced software solutions, including microservice systems for IoT, cost analysis software, mobile and web applications."
+      "description": "<ul><li>Design and development of a <strong>microservice system</strong> for an oxygenator production plant, from the general architecture to Raspberry Pi devices on Arch Linux.</li><li>Development of cost analysis software and a <strong>Flutter</strong> app to interface with medical devices.</li></ul>"
     },
     "freelance": {
       "date": "Since March 2024",
       "job": "Freelance Developer",
-      "description": "Development of websites, web applications and custom software for individuals and businesses."
+      "description": "<ul><li>Built an <strong>eSIM e-commerce</strong> platform based on external APIs.<innerul><li>Integrated with <em>Stripe</em>, <em>PayPal</em> and <em>Airwallex</em>.</li><li>Dashboard for viewing remaining data threshold, with eSIM top-up and replacement features.</li><li>Admin management for product insertion, logic for percentage and absolute discounts.</li><li>Knowledge base page and virtual assistant integration.</li></innerul></li><li>Development of a <strong>SaaS</strong> product for data visualization and sending commands to agricultural devices. Communication via <em>Apache Kapua</em> framework.</li></ul>"
     }
   },
   "projects": {
