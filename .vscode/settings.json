@@ -8,5 +8,9 @@
     "source.fixAll.biome": "explicit",
     "source.organizeImports": "never", // disable other extensions
     "source.fixAll": "never" // disable other extensions
-  }
+  },
+  "i18n-ally.localesPaths": [
+    "messages",
+    "src/i18n"
+  ]
 }

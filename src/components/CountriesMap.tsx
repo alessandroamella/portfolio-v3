@@ -3,7 +3,7 @@ import { config } from '@/config';
 import { countriesMapping } from '@/constants/countries-mapping';
 import { useIsMobile } from '@/hooks/useIsMobile';
 import { sum, zip } from 'lodash';
-import { useTranslations } from 'next-intl';
+import { useLocale, useTranslations } from 'next-intl';
 import { useCallback, useEffect, useMemo, useState } from 'react';
 import {
   ComposableMap,
@@ -31,7 +31,7 @@ const sumArrays = (...arrays: [number, number][]): [number, number] => {
 
 const CountriesMap = () => {
   const t = useTranslations('countriesMap');
-  const tCountries = useTranslations('countries');
+  const locale = useLocale();
   const [tooltip, setTooltip] = useState<TooltipData | null>(null);
   const isMobile = useIsMobile(); // Use the custom hook
   const [zoom, setZoom] = useState(1);
@@ -63,9 +63,19 @@ const CountriesMap = () => {
     (worldAtlasName: string) => {
       const alpha2 =
         countriesMapping[worldAtlasName as keyof typeof countriesMapping];
-      return tCountries.has(alpha2) ? tCountries(alpha2) : worldAtlasName;
+      if (!alpha2) return worldAtlasName;
+
+      try {
+        const displayNames = new Intl.DisplayNames([locale], {
+          type: 'region',
+        });
+        return displayNames.of(alpha2) || worldAtlasName;
+      } catch (error) {
+        console.debug('Error getting localized country name:', error);
+        return worldAtlasName;
+      }
     },
-    [tCountries],
+    [locale],
   );
 
   const handleMouseEnter = (
