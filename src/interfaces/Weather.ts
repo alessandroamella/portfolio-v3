@@ -1,6 +1,7 @@
 export interface WeatherData {
   temp: number;
-  description: string;
+  description?: string;
+  icon?: string;
 }
 
 export interface WeatherResponse {
@@ -64,12 +65,3 @@ export interface Sys {
   sunrise: number;
   sunset: number;
 }
-
-export const isWeatherData = (data: unknown): data is WeatherData => {
-  return (
-    !!data &&
-    typeof data === 'object' &&
-    typeof (data as { temp?: number })?.temp === 'number' &&
-    typeof (data as { description?: string })?.description === 'string'
-  );
-};

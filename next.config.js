@@ -23,7 +23,7 @@ const nextConfig = {
                   "'unsafe-eval'", // needed for Next.js development
                 ],
                 styleSrc: ["'self'", "'unsafe-inline'"],
-                imgSrc: ["'self'", 'data:'],
+                imgSrc: ["'self'", 'data:', 'https://openweathermap.org'],
                 fontSrc: ["'self'", 'data:'],
                 connectSrc: [
                   "'self'",

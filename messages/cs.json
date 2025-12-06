@@ -17,12 +17,8 @@
     "by": "od",
     "about": "O mně",
     "projects": "Projekty",
-    "mainDescription": "Student informatiky na Univerzitě v Bologni, ex-Erasmus na Vysokém učení technické v Brně, programátor, {years} let, žijící v Modeně",
-    "weather": "nyní je",
-    "descriptions": {
-      "0": "Studoval jsem informatiku a telekomunikace na ITIS Fermi v Modeně, kde jsem absolvoval s 98/100.",
-      "1": "Aktuálně studuji na Alma Mater a můj cíl je magisterský titul v AI."
-    },
+    "nowItIs": "nyní je",
+    "description": "Student informatiky na <strong>Univerzitě v Boloni</strong>, bývalý Erasmus student na Vysokém učení technickém v Brně, programátor, je mi {years} let, žiji v Modeně <weather></weather>.<br></br>Vedle studia aktuálně pracuji jako <strong>vývojář na volné noze</strong> na IČO.",
     "tooltips": {
       "github": "Zobrazit můj profil na GitHubu",
       "linkedin": "Zobrazit můj profil na LinkedInu",
@@ -97,7 +93,7 @@
       "description": "Návrh a vývoj pokročilých softwarových řešení, včetně systémů mikroslužeb pro IoT, softwaru pro analýzu nákladů a mobilních a webových aplikací."
     },
     "freelance": {
-      "date": "Současnost",
+      "date": "Od března 2024",
       "job": "Freelance vývojář",
       "description": "Vývoj webových stránek, webových aplikací a zakázkového softwaru pro jednotlivce a firmy."
     }

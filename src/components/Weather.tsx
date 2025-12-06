@@ -1,20 +1,14 @@
 'use client';
 
+import type { WeatherData } from '@/interfaces/Weather';
 import axios, { AxiosError } from 'axios';
-import { useLocale } from 'next-intl';
-import { type FC, useEffect, useRef, useState } from 'react';
+import { Spinner } from 'flowbite-react';
+import { useLocale, useTranslations } from 'next-intl';
+import { useEffect, useRef, useState } from 'react';
 
-export interface WeatherData {
-  temp: number;
-  description: string;
-}
-
-interface WeatherInfoProps {
-  prefixStr: string;
-}
-
-const WeatherInfo: FC<WeatherInfoProps> = ({ prefixStr }) => {
+const WeatherInfo = () => {
   const lang = useLocale();
+  const t = useTranslations('homepage');
 
   const [weather, setWeather] = useState<WeatherData | null>(null);
 
@@ -41,9 +35,23 @@ const WeatherInfo: FC<WeatherInfoProps> = ({ prefixStr }) => {
   }, [lang]);
 
   return (
-    weather && (
-      <span className='text-gray-300'>{`(${prefixStr} ${new Intl.NumberFormat(lang).format(weather.temp)}°C, ${weather.description}).`}</span>
-    )
+    <span className='text-gray-300'>
+      {weather ? (
+        <>
+          {`(${t('nowItIs')} ${Math.round(weather.temp)}°C `}
+          {weather.icon && (
+            <img
+              src={`https://openweathermap.org/img/wn/${weather.icon}@2x.png`}
+              alt={weather.description || 'weather icon'}
+              className='inline h-8 w-8 -mx-1 mb-[1px] -mt-[1px]'
+            />
+          )}
+          {')'}
+        </>
+      ) : (
+        <Spinner />
+      )}
+    </span>
   );
 };
 

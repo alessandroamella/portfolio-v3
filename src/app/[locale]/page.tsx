@@ -156,19 +156,22 @@ function Home(props: { params: Promise<{ locale: string }> }) {
             {t('about')}
           </h2>
 
-          <p>
-            {t('mainDescription', {
+          <p className='mt-4'>
+            {t.rich('description', {
+              br: () => (
+                <>
+                  <br />
+                  <br />
+                </>
+              ),
+              strong: (children) => <strong>{children}</strong>,
+              em: (children) => <em>{children}</em>,
+              weather: () => <WeatherInfo />,
               years: differenceInYears(new Date(), config.birthday),
-            })}{' '}
-            <WeatherInfo prefixStr={t('weather')} />
+              // weatherTemperature: 12, // CHANGE
+              // weatherEmoji: '☀️', // CHANGE
+            })}
           </p>
-          {range(config.descriptionNum)
-            .map((e) => t(`descriptions.${e}`))
-            .map((e) => (
-              <p key={e} className='mt-4'>
-                {e}
-              </p>
-            ))}
 
           <h3 className='text-2xl text-gray-100 font-semibold tracking-tighter mt-6'>
             {t('otherInterests')}
@@ -194,7 +197,7 @@ function Home(props: { params: Promise<{ locale: string }> }) {
               ))}
           </ul>
 
-          <div className='flex mb-2 md:mb-0 justify-center'>
+          <div className='flex mb-2 my-8 md:mb-0 justify-center'>
             <Tooltip placement='top' content={t('tooltips.countries')}>
               <Button
                 color='purple'
@@ -207,6 +210,7 @@ function Home(props: { params: Promise<{ locale: string }> }) {
             </Tooltip>
           </div>
         </div>
+        <hr className='md:hidden w-full bg-gray-300 dark:bg-gray-700 my-4' />
 
         <div className='flex flex-col items-center'>
           <HomepageTimeline />

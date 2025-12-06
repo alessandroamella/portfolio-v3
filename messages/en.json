@@ -17,12 +17,8 @@
     "by": "by",
     "about": "About Me",
     "projects": "Projects",
-    "mainDescription": "Computer Science student at the University of Bologna, ex-Erasmus at Brno University of Technology, developer, {years} years old, living in Modena",
-    "weather": "now it is",
-    "descriptions": {
-      "0": "I studied computer science and telecommunications at ITIS Fermi in Modena, graduating with 98/100.",
-      "1": "I am currently studying at Alma Mater, and I am aiming for a master's degree in AI (somewhere)."
-    },
+    "nowItIs": "now it is",
+    "description": "Computer Science student at the <strong>University of Bologna</strong>, former Erasmus student at Brno University of Technology, programmer, {years} years old, living in Modena <weather></weather>.<br></br>Alongside my studies, I currently work as a <strong>freelance developer</strong> under Italian VAT.",
     "tooltips": {
       "github": "View my GitHub profile",
       "linkedin": "View my LinkedIn profile",
@@ -97,7 +93,7 @@
       "description": "Design and development of advanced software solutions, including microservice systems for IoT, cost analysis software, mobile and web applications."
     },
     "freelance": {
-      "date": "Present",
+      "date": "Since March 2024",
       "job": "Freelance Developer",
       "description": "Development of websites, web applications and custom software for individuals and businesses."
     }
