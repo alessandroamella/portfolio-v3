@@ -1,4 +1,5 @@
 onlyBuiltDependencies:
   - '@biomejs/biome'
+  - '@swc/core'
   - sharp
   - unrs-resolver
