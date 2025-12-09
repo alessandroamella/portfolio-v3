@@ -3,3 +3,8 @@ onlyBuiltDependencies:
   - '@swc/core'
   - sharp
   - unrs-resolver
+
+overrides:
+  d3-color@<3.1.0: '>=3.1.0'
+  nodemailer@<7.0.7: '>=7.0.7'
+  nodemailer@<=7.0.10: '>=7.0.11'
