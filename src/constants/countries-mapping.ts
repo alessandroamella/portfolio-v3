@@ -1,3 +1,8 @@
+/**
+ * Mapping of country names to their respective ISO 3166-1 alpha-2 codes.
+ * Sadly, this is NEEDED because the world-atlas@2.0.2/countries-110m.json
+ * uses non-standard country names that do not directly map to ISO codes.
+ */
 export const countriesMapping = {
   Afghanistan: 'AF',
   Albania: 'AL',

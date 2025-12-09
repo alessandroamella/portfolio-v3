@@ -10,13 +10,15 @@ import {
 } from 'react';
 
 import 'swiper/css';
+import { Mousewheel } from 'swiper/modules';
 import { Swiper, type SwiperRef, SwiperSlide } from 'swiper/react';
 
 import { Fade } from 'react-awesome-reveal';
 
 import Typewriter, { type TypewriterClass } from 'typewriter-effect';
 
-import { projectsInfo } from '@/projects';
+import iPhoneImg from '@/assets/misc/iphone.webp';
+import { projectsInfo } from '@/config/projects';
 import { useTranslations } from 'next-intl';
 import Image from 'next/image';
 import {
@@ -25,7 +27,6 @@ import {
   FaForward,
   FaGithub,
 } from 'react-icons/fa';
-import iPhoneImg from '../../public/img/iphone.webp';
 import Button from './Button';
 
 interface ProjectsViewerProps {
@@ -107,6 +108,8 @@ const ProjectsViewer: FC<ProjectsViewerProps> = ({ builtWithStr, openStr }) => {
           />
 
           <Swiper
+            modules={[Mousewheel]}
+            mousewheel={{ forceToAxis: true }}
             spaceBetween={0}
             slidesPerView={1}
             pagination={{ clickable: true }}

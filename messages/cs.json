@@ -57,7 +57,8 @@
   "footer": {
     "vatNumber": "DIČ (IT)",
     "emailSubject": "Žádost o informace",
-    "emailBody": "Dobrý den! Rád(a) bych se zeptal(a) na několik informací ohledně..."
+    "emailBody": "Dobrý den! Rád(a) bych se zeptal(a) na několik informací ohledně...",
+    "openSourceProject": "Toto portfolio je <portfolioLink>open source</portfolioLink>!"
   },
   "contact": {
     "yourEmail": "Váš e-mail",

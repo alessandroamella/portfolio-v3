@@ -57,7 +57,8 @@
   "footer": {
     "vatNumber": "Partita IVA",
     "emailSubject": "Richiesta informazioni",
-    "emailBody": "Ciao! Vorrei chiederti informazioni su..."
+    "emailBody": "Ciao! Vorrei chiederti informazioni su...",
+    "openSourceProject": "Questo portfolio è <portfolioLink>open source</portfolioLink>!"
   },
   "contact": {
     "yourEmail": "La tua email",

@@ -57,7 +57,8 @@
   "footer": {
     "vatNumber": "VAT Number (IT)",
     "emailSubject": "Request for Information",
-    "emailBody": "Hello! I would like to ask you for some information about..."
+    "emailBody": "Hello! I would like to ask you for some information about...",
+    "openSourceProject": "This portfolio is <portfolioLink>open source</portfolioLink>!"
   },
   "contact": {
     "yourEmail": "Your email",
