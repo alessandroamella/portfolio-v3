@@ -55,7 +55,7 @@ const WeatherInfo = () => {
           {')'}
         </>
       ) : (
-        <Spinner />
+        <Spinner size='sm' />
       )}
     </div>
   );
