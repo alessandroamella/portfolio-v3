@@ -22,7 +22,6 @@
     "tooltips": {
       "github": "Zobrazit můj profil na GitHubu",
       "linkedin": "Zobrazit můj profil na LinkedInu",
-      "blog": "Navštivte můj blog",
       "countries": "Navštívené země"
     },
     "otherInterests": "Moje další zájmy:",
@@ -37,7 +36,6 @@
     "someProjectsDescription": "Toto je výběr projektů, na kterých jsem pracoval. Mnohem více je na GitHubu.",
     "github": "GitHub",
     "githubUsername": "alessandroamella",
-    "blog": "Blog",
     "cv": "Životopis",
     "travels": "Cesty",
     "open": "Otevřeno",

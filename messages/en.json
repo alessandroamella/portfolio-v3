@@ -22,7 +22,6 @@
     "tooltips": {
       "github": "View my GitHub profile",
       "linkedin": "View my LinkedIn profile",
-      "blog": "Visit my blog",
       "countries": "Visited countries"
     },
     "otherInterests": "Other interests of mine:",
@@ -37,7 +36,6 @@
     "someProjectsDescription": "These are just some of the projects I have worked on, many more are on GitHub.",
     "github": "GitHub",
     "githubUsername": "alessandroamella",
-    "blog": "Blog",
     "cv": "Resume",
     "travels": "Travels",
     "open": "Open",

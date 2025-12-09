@@ -3,7 +3,6 @@ export const config = Object.freeze({
     lat: 44.64783,
     lon: 10.92539,
   },
-  blogUrl: 'https://blog.bitrey.dev',
   githubUrl: 'https://github.com/alessandroamella',
   githubDisplayUrl: 'github.com/alessandroamella',
   githubUsername: 'Alessandro Amella',

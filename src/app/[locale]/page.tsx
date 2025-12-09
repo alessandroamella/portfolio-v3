@@ -15,7 +15,7 @@ import { useTranslations } from 'next-intl';
 import { Dancing_Script } from 'next/font/google';
 import Image from 'next/image';
 import { use } from 'react';
-import { FaCommentDots, FaGithub, FaGlobe, FaLinkedin } from 'react-icons/fa';
+import { FaGithub, FaGlobe, FaLinkedin } from 'react-icons/fa';
 import Wave from 'react-wavify';
 import MainLayout from './MainLayout';
 
@@ -113,23 +113,6 @@ function Home(props: { params: Promise<{ locale: string }> }) {
                   </p>
                 </div>
               </div>
-
-              <Tooltip placement='top' content={t('tooltips.blog')}>
-                <Button
-                  href={config.blogUrl}
-                  className='flex items-center gap-2 rounded-lg font-medium tracking-tight text-xl px-4 py-3 relative'
-                >
-                  <span className='invisible md:hidden'>A-</span>
-                  <div className='absolute md:hidden'>
-                    <FaCommentDots />
-                  </div>
-
-                  <div className='hidden md:flex items-center gap-2'>
-                    <FaCommentDots />
-                    {t('blog')}
-                  </div>
-                </Button>
-              </Tooltip>
             </div>
           </div>
         </div>
