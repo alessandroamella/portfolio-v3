@@ -90,3 +90,9 @@ ol[data-testid="timeline-component"],
 div[data-testid="timeline-point"] div {
   @apply dark:!border-gray-400;
 }
+
+div[data-testid="flowbite-tooltip-target"]:has(
+    + div.weather-tooltip[data-testid="flowbite-tooltip"]
+  ) {
+  @apply inline;
+}

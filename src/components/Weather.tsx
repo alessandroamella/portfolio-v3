@@ -2,7 +2,7 @@
 
 import type { WeatherData } from '@/interfaces/Weather';
 import axios, { AxiosError } from 'axios';
-import { Spinner } from 'flowbite-react';
+import { Spinner, Tooltip } from 'flowbite-react';
 import { useLocale, useTranslations } from 'next-intl';
 import { useEffect, useRef, useState } from 'react';
 
@@ -35,23 +35,29 @@ const WeatherInfo = () => {
   }, [lang]);
 
   return (
-    <span className='text-gray-300'>
+    <div className='text-gray-300 inline'>
       {weather ? (
         <>
           {`(${t('nowItIs')} ${Math.round(weather.temp)}°C `}
           {weather.icon && (
-            <img
-              src={`https://openweathermap.org/img/wn/${weather.icon}@2x.png`}
-              alt={weather.description || 'weather icon'}
-              className='inline h-8 w-8 -mx-1 mb-[1px] -mt-[1px]'
-            />
+            <Tooltip
+              className='weather-tooltip'
+              content={weather.description || ''}
+              placement='top'
+            >
+              <img
+                src={`https://openweathermap.org/img/wn/${weather.icon}@2x.png`}
+                alt={weather.description || 'Weather icon'}
+                className='inline h-8 w-8 -mx-1 mb-[1px] -mt-[1px]'
+              />
+            </Tooltip>
           )}
           {')'}
         </>
       ) : (
         <Spinner />
       )}
-    </span>
+    </div>
   );
 };
 

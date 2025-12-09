@@ -140,7 +140,7 @@ function Home(props: { params: Promise<{ locale: string }> }) {
 
           <div className='mt-4 space-y-4'>
             {t.rich('description', {
-              p: (children) => <p>{children}</p>,
+              p: (children) => <div>{children}</div>, // else Next complains about the tooltip inside WeatherInfo
               strong: (children) => <strong>{children}</strong>,
               em: (children) => <em>{children}</em>,
               weather: () => <WeatherInfo />,

@@ -14,6 +14,7 @@ It uses Next.js with the App Router, TypeScript, Tailwind CSS, form validation w
 - Client-side theme switching (Light/Dark) with system preference detection.
 - A carousel displaying information and tech stacks for some projects I've worked on (defined in [config/projects.ts](https://github.com/alessandroamella/portfolio-v3/blob/master/src/config/projects.ts)).
 - A contact form secured with Cloudflare Turnstile, which routes through Next.js API handler, and uses Nodemailer for sending emails.
+- The UI is built mainly using [Flowbite React](https://flowbite-react.com/) and custom components.
 - Personal touches:
   - Real-time weather information from my city (Modena) using OpenWeatherMap API.
   - Visualization of countries I've visited using `react-simple-maps`.
