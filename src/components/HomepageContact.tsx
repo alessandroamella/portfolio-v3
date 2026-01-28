@@ -1,16 +1,15 @@
 'use client';
 
 import axios from 'axios';
-import { Alert, Label, TextInput, Textarea } from 'flowbite-react';
+import { Alert, Label, Textarea, TextInput } from 'flowbite-react';
+import { useTranslations } from 'next-intl';
+import { Turnstile } from 'next-turnstile';
 import { type KeyboardEvent, useState } from 'react';
 import { Fade } from 'react-awesome-reveal';
 import { type FieldValues, type SubmitHandler, useForm } from 'react-hook-form';
-import BeatLoader from 'react-spinners/BeatLoader';
-
-import { useTheme } from '@/context/ThemeContext';
-import { useTranslations } from 'next-intl';
-import { Turnstile } from 'next-turnstile';
 import { FaPaperPlane } from 'react-icons/fa';
+import BeatLoader from 'react-spinners/BeatLoader';
+import { useTheme } from '@/context/ThemeContext';
 import Button from './Button';
 
 const turnstileSiteKey = process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY;

@@ -1,8 +1,8 @@
+import axios, { isAxiosError } from 'axios';
+import { type NextRequest, NextResponse } from 'next/server';
 import { config as appConfig } from '@/config';
 import { envs } from '@/config/envs';
 import type { WeatherData, WeatherResponse } from '@/interfaces/Weather';
-import axios, { isAxiosError } from 'axios';
-import { type NextRequest, NextResponse } from 'next/server';
 
 const { lat, lon } = appConfig.coords;
 

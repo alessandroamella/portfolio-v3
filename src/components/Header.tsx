@@ -1,7 +1,7 @@
 'use client';
 
-import { Link, usePathname } from '@/i18n/navigation';
 import { useTranslations } from 'next-intl';
+import { Link, usePathname } from '@/i18n/navigation';
 import ChangeLanguageBtn from './ChangeLanguageBtn';
 import ThemeToggle from './ThemeToggle';
 

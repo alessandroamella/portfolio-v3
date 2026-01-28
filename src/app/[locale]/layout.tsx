@@ -1,14 +1,14 @@
-import ThemeScript from '@/components/ThemeScript';
-import { ThemeProvider } from '@/context/ThemeContext';
-import { routing } from '@/i18n/routing';
 import type { Metadata } from 'next';
-import { NextIntlClientProvider, hasLocale } from 'next-intl';
+import { notFound } from 'next/navigation';
+import { hasLocale, NextIntlClientProvider } from 'next-intl';
 import {
   getMessages,
   getTranslations,
   setRequestLocale,
 } from 'next-intl/server';
-import { notFound } from 'next/navigation';
+import ThemeScript from '@/components/ThemeScript';
+import { ThemeProvider } from '@/context/ThemeContext';
+import { routing } from '@/i18n/routing';
 import '../globals.css';
 import { config } from '@/config';
 

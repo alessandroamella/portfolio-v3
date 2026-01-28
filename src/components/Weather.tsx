@@ -1,10 +1,11 @@
 'use client';
 
-import type { WeatherData } from '@/interfaces/Weather';
 import axios, { AxiosError } from 'axios';
 import { Spinner, Tooltip } from 'flowbite-react';
+import Image from 'next/image';
 import { useLocale, useTranslations } from 'next-intl';
 import { useEffect, useRef, useState } from 'react';
+import type { WeatherData } from '@/interfaces/Weather';
 
 const WeatherInfo = () => {
   const lang = useLocale();
@@ -45,7 +46,9 @@ const WeatherInfo = () => {
               content={weather.description || ''}
               placement='top'
             >
-              <img
+              <Image
+                width={32}
+                height={32}
                 src={`https://openweathermap.org/img/wn/${weather.icon}@2x.png`}
                 alt={weather.description || 'Weather icon'}
                 className='inline h-8 w-8 -mx-1 mb-[1px] -mt-[1px]'

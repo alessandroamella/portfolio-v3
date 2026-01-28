@@ -1,10 +1,10 @@
 'use client';
 
-import { config } from '@/config';
 import { getYear } from 'date-fns';
 import { useTranslations } from 'next-intl';
 import { FaEnvelope, FaGithub } from 'react-icons/fa';
 import Obfuscate from 'react-obfuscate';
+import { config } from '@/config';
 
 export default function Footer() {
   const t = useTranslations('footer');

@@ -1,3 +1,4 @@
+import type { StaticImageData } from 'next/image';
 import bamboosimImg from '@/assets/projects/bamboosim.webp';
 import ezaffittoImg from '@/assets/projects/ezaffitto.webp';
 import kinoCafeImg from '@/assets/projects/kinocafe.webp';
@@ -6,7 +7,6 @@ import omImg from '@/assets/projects/om.webp';
 import tpldisplayImg from '@/assets/projects/tpldisplay.webp';
 import vhfesuperioriImg from '@/assets/projects/vhfesuperiori.webp';
 import wolfImg from '@/assets/projects/wolf.webp';
-import type { StaticImageData } from 'next/image';
 
 export type Project = {
   id: string;

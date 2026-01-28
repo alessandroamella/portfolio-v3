@@ -1,8 +1,8 @@
 'use client';
 
-import { config } from '@/config';
 import { Timeline } from 'flowbite-react';
 import { useTranslations } from 'next-intl';
+import { config } from '@/config';
 
 const HomepageTimeline = () => {
   const t = useTranslations('curriculum');

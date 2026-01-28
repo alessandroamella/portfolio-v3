@@ -1,19 +1,21 @@
 'use client';
 
-import { config } from '@/config';
-import { usePathname, useRouter } from '@/i18n/navigation';
 import classNames from 'classnames';
-import { useLocale } from 'next-intl';
-import { useEffect, useRef, useState } from 'react';
-
 import CS from 'country-flag-icons/react/3x2/CZ';
 import EN from 'country-flag-icons/react/3x2/GB';
 import IT from 'country-flag-icons/react/3x2/IT';
+import { useLocale } from 'next-intl';
+import { useEffect, useRef, useState } from 'react';
+import { config } from '@/config';
+import { usePathname, useRouter } from '@/i18n/navigation';
 
 const LanguageLabel = ({
   lang,
   hideNameOnMobile,
-}: { lang: (typeof config.languages)[number]; hideNameOnMobile?: boolean }) => {
+}: {
+  lang: (typeof config.languages)[number];
+  hideNameOnMobile?: boolean;
+}) => {
   const flagComponents = { IT, EN, CS };
   const Flag = flagComponents[lang.flag as keyof typeof flagComponents];
 

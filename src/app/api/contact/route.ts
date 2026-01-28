@@ -1,10 +1,10 @@
-import { envs } from '@/config/envs';
-import { generateContactFormEmail } from '@/lib/emails/contact-form';
-import { validateTurnstileToken } from 'next-turnstile';
 import { type NextRequest, NextResponse } from 'next/server';
+import { validateTurnstileToken } from 'next-turnstile';
 import nodemailer from 'nodemailer';
 import type Mail from 'nodemailer/lib/mailer';
 import { z } from 'zod';
+import { envs } from '@/config/envs';
+import { generateContactFormEmail } from '@/lib/emails/contact-form';
 
 const contactSchema = z.object({
   name: z.string().min(3).max(50),

@@ -10,23 +10,21 @@ import {
 } from 'react';
 
 import 'swiper/css';
-import { Mousewheel } from 'swiper/modules';
-import { Swiper, type SwiperRef, SwiperSlide } from 'swiper/react';
+import Image from 'next/image';
+import { useTranslations } from 'next-intl';
 
 import { Fade } from 'react-awesome-reveal';
-
-import Typewriter, { type TypewriterClass } from 'typewriter-effect';
-
-import iPhoneImg from '@/assets/misc/iphone.webp';
-import { projectsInfo } from '@/config/projects';
-import { useTranslations } from 'next-intl';
-import Image from 'next/image';
 import {
   FaBackward,
   FaExternalLinkAlt,
   FaForward,
   FaGithub,
 } from 'react-icons/fa';
+import { Mousewheel } from 'swiper/modules';
+import { Swiper, type SwiperRef, SwiperSlide } from 'swiper/react';
+import Typewriter, { type TypewriterClass } from 'typewriter-effect';
+import iPhoneImg from '@/assets/misc/iphone.webp';
+import { projectsInfo } from '@/config/projects';
 import Button from './Button';
 
 interface ProjectsViewerProps {

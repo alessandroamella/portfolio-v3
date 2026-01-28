@@ -1,7 +1,4 @@
 'use client';
-import { config } from '@/config';
-import { countriesMapping } from '@/constants/countries-mapping';
-import { useIsMobile } from '@/hooks/useIsMobile';
 import { sum, zip } from 'lodash';
 import { useLocale, useTranslations } from 'next-intl';
 import { useCallback, useEffect, useMemo, useState } from 'react';
@@ -11,6 +8,9 @@ import {
   Geography,
   ZoomableGroup,
 } from 'react-simple-maps';
+import { config } from '@/config';
+import { countriesMapping } from '@/constants/countries-mapping';
+import { useIsMobile } from '@/hooks/useIsMobile';
 
 const geoUrl =
   'https://cdn.jsdelivr.net/npm/world-atlas@2.0.2/countries-110m.json';

@@ -1,7 +1,7 @@
 'use client';
 
-import { useTheme } from '@/context/ThemeContext';
 import { FaMoon, FaSun } from 'react-icons/fa';
+import { useTheme } from '@/context/ThemeContext';
 
 const ThemeToggle = () => {
   const { theme, toggleTheme } = useTheme();

@@ -1,9 +1,9 @@
-import CountriesClient from '@/components/CountriesClient';
-import { config } from '@/config';
 import type { Metadata } from 'next';
 import { useTranslations } from 'next-intl';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { use } from 'react';
+import CountriesClient from '@/components/CountriesClient';
+import { config } from '@/config';
 import MainLayout from '../MainLayout';
 
 export async function generateMetadata({
