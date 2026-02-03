@@ -9,8 +9,6 @@ export const config = Object.freeze({
   instagramUrl: 'https://www.instagram.com/alessandro_amella',
   instagramUsername: 'alessandro_amella',
   linkedinUrl: 'https://www.linkedin.com/in/alessandro-amella',
-  telegramUrl: 'https://t.me/alessandroamella',
-  telegramDisplayUrl: 't.me/alessandroamella',
   qrzUrl: 'https://www.qrz.com/db/IU4QSG',
   email: 'alessandro@bitrey.dev',
   birthday: new Date(2003, 6, 13),

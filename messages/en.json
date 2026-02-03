@@ -64,7 +64,6 @@
     "yourMessage": "Your message",
     "messagePlaceholder": "Write your message here...",
     "send": "Send",
-    "telegram": "Telegram",
     "email": "Email",
     "captchaError": "Invalid captcha",
     "success": "Message sent successfully, thank you",
