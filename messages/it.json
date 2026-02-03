@@ -64,7 +64,6 @@
     "yourMessage": "Il tuo messaggio",
     "messagePlaceholder": "Scrivi qui il tuo messaggio...",
     "send": "Invia",
-    "email": "Email",
     "captchaError": "Captcha non valido",
     "success": "Messaggio inviato con successo, grazie",
     "sendError": "Errore durante l'invio del messaggio :(",

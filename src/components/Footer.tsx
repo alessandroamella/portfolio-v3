@@ -2,8 +2,8 @@
 
 import { getYear } from 'date-fns';
 import { useTranslations } from 'next-intl';
-import { FaEnvelope, FaGithub } from 'react-icons/fa';
-import Obfuscate from 'react-obfuscate';
+import { FaGithub } from 'react-icons/fa';
+
 import { config } from '@/config';
 
 export default function Footer() {
@@ -25,7 +25,9 @@ export default function Footer() {
               portfolioLink: (children) => (
                 <>
                   <FaGithub className='text-xs inline mr-1 mb-[2px]' />
-                  <span className='underline'>{children}</span>
+                  <span className='underline decoration-dashed'>
+                    {children}
+                  </span>
                 </>
               ),
             })}
@@ -41,22 +43,10 @@ export default function Footer() {
           <span className='font-medium'>04183560368</span>
         </p>
       </div>
-      <div className='flex flex-col justify-center space-y-1 items-center md:items-end'>
-        <div className='flex space-x-1 items-center px-4 tracking-tighter font-light'>
-          <FaEnvelope />
-          <Obfuscate
-            style={{ display: 'inline-block' }}
-            email={config.email}
-            headers={{
-              subject: t('emailSubject'),
-              body: t('emailBody'),
-            }}
-          />
-        </div>
-
+      <div className='flex flex-col justify-center space-y-1 items-center md:items-end md:scale-110'>
         <a
           href={config.githubUrl}
-          className='flex space-x-1 items-center px-4 tracking-tighter font-light'
+          className='flex space-x-1 items-center px-4 tracking-tight'
         >
           <FaGithub />
           <span>{config.githubUsername}</span>

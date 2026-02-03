@@ -10,7 +10,6 @@ export const config = Object.freeze({
   instagramUsername: 'alessandro_amella',
   linkedinUrl: 'https://www.linkedin.com/in/alessandro-amella',
   qrzUrl: 'https://www.qrz.com/db/IU4QSG',
-  email: 'alessandro@bitrey.dev',
   birthday: new Date(2003, 6, 13),
   cvAgencies: ['infolog', 'seta', 'fertec', 'freelance'],
   languages: [
