@@ -3,9 +3,10 @@ import { Tooltip } from 'flowbite-react';
 import type { Metadata } from 'next';
 import { Dancing_Script } from 'next/font/google';
 import Image from 'next/image';
+import Link from 'next/link';
 import { useTranslations } from 'next-intl';
 import { use } from 'react';
-import { FaGithub, FaGlobe, FaLinkedin } from 'react-icons/fa';
+import { FaGithub, FaLinkedin } from 'react-icons/fa';
 import Wave from 'react-wavify';
 import Arrow from '@/components/arrow.svg?url';
 import ArrowWhite from '@/components/arrow-white.svg?url';
@@ -138,17 +139,40 @@ function Home(props: { params: Promise<{ locale: string }> }) {
             {t('about')}
           </h2>
 
-          <div className='mt-4 space-y-4'>
+          <div className='mt-4 space-y-4 text-gray-300'>
             {t.rich('description', {
               p: (children) => <div>{children}</div>, // else Next complains about the tooltip inside WeatherInfo
-              strong: (children) => <strong>{children}</strong>,
+              strong: (children) => (
+                <span className='font-semibold text-gray-200'>{children}</span>
+              ),
               em: (children) => <em>{children}</em>,
               weather: () => <WeatherInfo />,
               years: differenceInYears(new Date(), config.birthday),
+              br: () => <br />,
             })}
           </div>
 
-          <h3 className='text-2xl text-gray-100 font-semibold tracking-tighter mt-6'>
+          {/* NUOVA SEZIONE FORMAZIONE */}
+          <h3 className='text-2xl text-gray-100 font-semibold tracking-tighter mt-8 mb-4'>
+            {t('educationTitle')}
+          </h3>
+          <div className='space-y-4'>
+            <div className='border-l-2 border-blue-500 pl-4'>
+              <h4 className='font-bold text-white'>{t('educationUnibo')}</h4>
+              <p className='text-gray-400 text-sm'>{t('educationUniboSub')}</p>
+            </div>
+            <div className='border-l-2 border-blue-500 pl-4'>
+              <h4 className='font-bold text-white'>{t('educationBut')}</h4>
+              <p className='text-gray-400 text-sm'>{t('educationButSub')}</p>
+            </div>
+            <div className='border-l-2 border-gray-500 pl-4'>
+              <h4 className='font-bold text-gray-300'>{t('educationItis')}</h4>
+              <p className='text-gray-500 text-sm'>{t('educationItisSub')}</p>
+            </div>
+          </div>
+          {/* FINE NUOVA SEZIONE */}
+
+          <h3 className='text-2xl text-gray-100 font-semibold tracking-tighter mt-8'>
             {t('otherInterests')}
           </h3>
 
@@ -164,6 +188,15 @@ function Home(props: { params: Promise<{ locale: string }> }) {
                       {children}
                     </a>
                   ),
+                  numCountries: config.visitedCountries.length.toString(),
+                  countries: (children) => (
+                    <Link
+                      href={`/${locale}/countries`}
+                      className='underline decoration-dashed'
+                    >
+                      {children}
+                    </Link>
+                  ),
                 }),
               )
               .map((e, i) => (
@@ -173,19 +206,6 @@ function Home(props: { params: Promise<{ locale: string }> }) {
                 </li>
               ))}
           </ul>
-
-          <div className='flex mb-2 my-8 md:mb-0 justify-center'>
-            <Tooltip placement='top' content={t('tooltips.countries')}>
-              <Button
-                color='purple'
-                href={`/${locale}/countries`}
-                className='flex scale-90 items-center gap-2 rounded-lg font-medium tracking-tight text-xl px-4 py-3'
-              >
-                <FaGlobe />
-                {t('tooltips.countries')}
-              </Button>
-            </Tooltip>
-          </div>
         </div>
         <hr className='md:hidden w-full bg-gray-300 dark:bg-gray-700 my-4' />
 

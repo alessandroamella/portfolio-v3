@@ -1,9 +1,9 @@
 ﻿{
   "metadata": {
-    "title": "Alessandro Amella - Vývoj webových stránek a IT řešení",
-    "description": "bitrey.dev od Alessandro Amella - Vývoj webových stránek pro jednotlivce a firmy, webové aplikace a software na míru.",
+    "title": "Alessandro Amella - Inženýr softwaru & Full Stack Developer",
+    "description": "bitrey.dev od Alessandro Amella - Freelance inženýr softwaru. Škálovatelné architektury, AI, webové aplikace a software na míru.",
     "siteName": "Alessandro Amella",
-    "keywords": "webový vývojář, softwarový vývojář, full stack developer, programátor Modena, vývojář Bologna, informatika, Univerzita v Bologni, Vysoké učení technické v Brně, programování mikrokontrolérů, IT konzultace"
+    "keywords": "inženýr softwaru, full stack developer, webový vývojář, programátor Modena, absolvent informatiky, Univerzita v Boloni, AI vývojář, NestJS, Next.js, IT konzultace"
   },
   "header": {
     "about": "O mně",
@@ -18,7 +18,14 @@
     "about": "O mně",
     "projects": "Projekty",
     "nowItIs": "nyní je",
-    "description": "<p>Student informatiky na <strong>Univerzitě v Boloni</strong>, bývalý Erasmus student na Vysokém učení technickém v Brně, programátor, je mi {years} let, žiji v Modeně <weather></weather>.</p><p>Vedle studia aktuálně pracuji jako <strong>vývojář na volné noze</strong> na IČO.</p>",
+    "description": "<p>Freelance full-stack vývojář, z Modeny <weather></weather>.<br></br>Pomáhám startupům a firmám navrhovat a vyvíjet <strong>webové aplikace, aplikace a software</strong>, od definice architektury až po nasazení do produkce.</p><p>Pracuji hlavně v JavaScriptovém ekosystému (<em>MERN</em> stack), ale zabývám se také integrací <strong>AI a LLM</strong>, <strong>cloudovou</strong> infrastrukturou, automatizací procesů a správou dat. Více o mně a mých projektech níže!</p>",
+    "educationTitle": "Vzdělání",
+    "educationUnibo": "Bakalář v informatice",
+    "educationUniboSub": "Univerzita v Boloni",
+    "educationBut": "Erasmus+",
+    "educationButSub": "Vysoké učení technické v Brně",
+    "educationItis": "Diplom v telekomunikacích",
+    "educationItisSub": "I.T.I.S. E. Fermi (Modena)",
     "tooltips": {
       "github": "Zobrazit můj profil na GitHubu",
       "linkedin": "Zobrazit můj profil na LinkedInu",
@@ -88,41 +95,33 @@
     "freelance": {
       "date": "Od března 2024",
       "job": "Freelance vývojář",
-      "description": "<ul><li>Vybudoval <strong>e-shop s eSIM</strong> založený na externím API.<innerul><li>Integrovaný se <em>Stripe</em>, <em>PayPal</em> a <em>Airwallex</em>.</li><li>Dashboard pro zobrazení zbývajícího datového limitu s funkcemi dobíjení a výměny eSIM.</li><li>Správa administrátora pro vkládání produktů, logika pro procentuální a absolutní slevy.</li><li>Stránka s databází znalostí a integrace virtuálního asistenta.</li></innerul></li><li>Vývoj produktu <strong>SaaS</strong> pro vizualizaci dat a odesílání příkazů do zemědělských zařízení. Komunikace prostřednictvím frameworku <em>Apache Kapua</em>.</li></ul>"
+      "description": "Spolupráce se startupy na různých webových projektech. Většinou <em>MERN</em> stack (nebo často PostgreSQL a NestJS). Pracoval jsem na architekturách mikroslužeb s automatizovanými CI/CD pipeline, nasazení na cloudovou infrastrukturu a hodně integrace AI / LLM služeb."
     }
   },
   "projects": {
+    "iotdashboard": {
+      "title": "IoT dashboard",
+      "description": "Průmyslová IoT platforma pro monitoring zařízení. Integrace s Eclipse Kapua a TimescaleDB (time-series), s redukcí doby historických dotazů o <strong>90 %</strong> pomocí SQL continuous aggregates."
+    },
+    "ianus": {
+      "title": "IA-nus",
+      "description": "Kompletní podvojný účetní engine pro italské OSVČ: fakturace, DPH, platební kalendář, cash flow, odpisy. Ovládaný výhradně přes <strong>LLM chat</strong> s function calling, strukturovaným výstupem a RAG."
+    },
+    "sciopero": {
+      "title": "C'è Sciopero?",
+      "description": "Bakalářská práce a empirická případová studie: scraper a agregátor italských stávkových oznámení s pipeline založenou na <strong>LLM</strong>. 1 400+ benchmarků na různých modelech (GPT, Gemini, Llama, DeepSeek) a strategiích předzpracování (s výsledným <em>F1-Score</em> >0,95). Výstupem je <strong>mobilní aplikace</strong> s real-time upozorněními na stávky v italské veřejné dopravě."
+    },
     "bamboosim": {
       "title": "BambooSIM",
-      "description": "Online obchod s eSIM kartami s vlastním CMS pro správu produktů, objednávek a zákazníků. Integrace s více platebními bránami a cloudovými službami."
+      "description": "Online obchod s eSIM kartami s vlastním CMS pro správu produktů, objednávek a zákazníků. Integrace s více platebními bránami a cloudové nasazení."
     },
     "ezaffitto": {
       "title": "ezaffitto",
       "description": "Plně automatizovaný sběrač inzerátů k pronájmu z různých webů s analýzou AI (OpenAI) strukturovanou jako mikroslužby."
     },
-    "kinocafe": {
-      "title": "Kinó Café",
-      "description": "Webová stránka pro kavárnu, která slouží ke správě objednávek, tisku účtenek přes WebSockets na POS tiskárně, odesílání dat na ESP32 displej pomocí Web Serial API, zobrazení menu, funguje jako úvodní stránka a umožňuje registraci uživatelů."
-    },
     "vhfesuperiori": {
       "title": "VHF e superiori",
       "description": "Manažer akcí a sociální síť pro radioamatéry, kterou spravují dobrovolníci. Místo pro sdílení vašich výtvorů, spojení (QSO) a setkání s novými lidmi."
-    },
-    "occupalostudente": {
-      "title": "Occupa lo Studente",
-      "description": "Webová aplikace pro hledání práce, která propojuje firmy a studenty I.T.I.S. E. Fermi di Modena. Institucionální přihlášení přes Google OAuth 2.0."
-    },
-    "tpldisplay": {
-      "title": "TPL Display",
-      "description": "Elektronická informační tabule odjezdů autobusů v reálném čase, kontejnerizovaná, propojená s daty TPL v Bologni a Modeně, s cacheováním (Redis) a automatickou aktualizací."
-    },
-    "wolfsurvival": {
-      "title": "Wolf Survival",
-      "description": "Webové stránky školy přežití s frontendem a backendem Next.js propojené s API Meta (Facebook) pro zobrazení nejnovějších kurzů, fotografií a videí z probíhajících aktivit."
-    },
-    "om": {
-      "title": "Quiz O.M.",
-      "description": "Radioamatérský kvíz pro přípravu na zkoušku pro získání italské licence operátora radiostanice."
     }
   },
   "visitedCountries": {

@@ -1,9 +1,9 @@
 {
   "metadata": {
-    "title": "Alessandro Amella - Sviluppo e Soluzioni Informatiche",
-    "description": "bitrey.dev di Alessandro Amella - Sviluppo software, applicazioni web e software su misura per privati e aziende.",
+    "title": "Alessandro Amella - Software Engineer & Full Stack Developer",
+    "description": "bitrey.dev di Alessandro Amella - Software Engineer freelance. Architetture scalabili, AI, applicazioni web e software su misura.",
     "siteName": "Alessandro Amella",
-    "keywords": "sviluppatore web, sviluppatore software, full stack developer, programmatore Modena, sviluppatore Bologna, informatica, Università di Bologna, Brno University of Technology, programmazione microcontrollori, consulenza informatica"
+    "keywords": "software engineer, full stack developer, sviluppatore web, programmatore Modena, Dottore in informatica, Università di Bologna, AI developer, NestJS, Next.js, consulenza informatica"
   },
   "header": {
     "about": "About",
@@ -18,7 +18,14 @@
     "about": "Chi sono",
     "projects": "Progetti",
     "nowItIs": "dove ora fanno",
-    "description": "<p>Studente di Informatica all''<strong>Università di Bologna</strong>, ex-Erasmus presso la Brno University of Technology, programmatore, {years} anni, vivo a Modena <weather></weather>.</p><p>Parallelamente al percorso di studi, attualmente lavoro come <strong>sviluppatore freelance</strong> in partita IVA.</p>",
+    "description": "<p>Sviluppatore full-stack freelance, di Modena <weather></weather>.<br></br>Aiuto startup e aziende a progettare e sviluppare <strong>applicazioni web, app e software</strong>, dalla definizione dell'architettura fino al deployment in produzione.</p><p>Lavoro principalmente nell'ecosistema JavaScript (<em>MERN</em> stack), mi occupo anche di integrazioni con <strong>AI e LLM</strong>, infrastruttura <strong>cloud</strong>, automazione di processi e gestione dei dati. Più informazioni su di me e sui miei progetti qui sotto!</p>",
+    "educationTitle": "Formazione",
+    "educationUnibo": "Laurea in Informatica",
+    "educationUniboSub": "Università di Bologna",
+    "educationBut": "Erasmus+",
+    "educationButSub": "Brno University of Technology",
+    "educationItis": "Diploma in Telecomunicazioni",
+    "educationItisSub": "I.T.I.S. E. Fermi (Modena)",
     "tooltips": {
       "github": "Visualizza il mio profilo GitHub",
       "linkedin": "Visualizza il mio profilo LinkedIn",
@@ -30,7 +37,7 @@
       "electronics": "Elettronica e microcontrollori",
       "transport": "Trasporti pubblici e pianificazione urbanistica",
       "aviation": "Aviazione e ferrovia",
-      "travel": "Viaggi"
+      "travel": "Viaggi <countries>({numCountries} paesi visitati finora)</countries>"
     },
     "someProjects": "Alcuni miei progetti",
     "someProjectsDescription": "Questi sono solo alcuni dei progetti che ho realizzato, molti altri sono su GitHub.",
@@ -87,22 +94,30 @@
     },
     "freelance": {
       "date": "Da Marzo 2024",
-      "job": "Sviluppatore Freelance",
-      "description": "<ul><li>Costruito un <strong>e-commerce di eSIM</strong>, basato su API esterna.<innerul><li>Integrato con <em>Stripe</em>, <em>PayPal</em> ed <em>Airwallex</em>.</li><li>Dashboard per la visualizzazione della soglia dati rimanente, con funzionalità di ricarica e sostituzione delle eSIM.</li><li>Gestione amministratore per inserimento prodotti, logica per sconti percentuali e assoluti.</li><li>Pagina knowledgebase e integrazione assistente virtuale.</li></innerul></li><li>Sviluppo di un prodotto <strong>SaaS</strong> per la visualizzazione di dati e invio di comandi verso dispositivi agricoli. Comunicazione tramite framework <em>Apache Kapua</em>.</li></ul>"
+      "job": "Sviluppatore freelance",
+      "description": "Collaborazione con varie startup su svariati progetti web. Principalmente <em>MERN</em> stack (o spesso PostgreSQL e NestJS). Ho lavorato su architetture a microservizi con pipeline CI/CD automatizzate, deployment su infrastrutture cloud, tanta integrazione di servizi AI / LLM."
     }
   },
   "projects": {
+    "iotdashboard": {
+      "title": "IoT dashboard",
+      "description": "Piattaforma IoT industriale per il monitoraggio di dispositivi IoT. Integrazione con Eclipse Kapua e TimescaleDB (time-series), riducendo i tempi di query storiche del <strong>90%</strong> tramite continuous aggregates SQL."
+    },
+    "ianus": {
+      "title": "IA-nus",
+      "description": "Motore contabile completo a partita doppia per partite IVA italiane: fatturazione, IVA, scadenzario, cash flow, ammortamenti. Gestito interamente via <strong>chatbot</strong> (con LLM), con implementazione di function calling, output strutturato e <strong>RAG</strong> per la ricerca di documenti."
+    },
+    "sciopero": {
+      "title": "C'è Sciopero?",
+      "description": "Tesi di laurea e case study empirico: scraper e aggregatore di avvisi di sciopero con pipeline basata su <strong>LLM</strong>. 1.400+ benchmark su vari modelli (GPT, Gemini, Llama e DeepSeek) e strategie di pre-processing (raggiungendo un <em>F1-Score</em> >0.95). Il prodotto finale è un''<strong>app mobile</strong> con notifiche real-time sugli scioperi del trasporto pubblico."
+    },
     "bamboosim": {
       "title": "BambooSIM",
-      "description": "Un negozio online di eSIM con un CMS personalizzato per la gestione di prodotti, ordini e clienti. Integrazione con più gateway di pagamento e servizi cloud."
+      "description": "Un negozio online di eSIM con un CMS personalizzato per la gestione di prodotti, ordini e clienti. Integrazione con più gateway di pagamento e deployment su cloud."
     },
     "ezaffitto": {
       "title": "ezaffitto",
       "description": "Raccoglitore completamente automatico di annunci di affitti provenienti da vari siti con parsing tramite AI (OpenAI) strutturato a microservizi."
-    },
-    "kinocafe": {
-      "title": "Kinó Café",
-      "description": "Sito web di un café per gestire ordini, stampare scontrini su una stampante POS, inviare dati a un ESP32 via Web Serial API, mostrare il menù, fungere come homepage e gestire la registrazione degli utenti."
     },
     "vhfesuperiori": {
       "title": "VHF e superiori",
@@ -111,18 +126,6 @@
     "occupalostudente": {
       "title": "Occupa lo Studente",
       "description": "Un'applicazione web per la ricerca di lavoro che mette in contatto aziende e studenti dell'I.T.I.S. E. Fermi di Modena. Login istituzionale tramite Google OAuth 2.0."
-    },
-    "tpldisplay": {
-      "title": "TPL Display",
-      "description": "Tabellone per le partenze autobus real-time, dockerizzato, interfacciato con i dati del TPL di Bologna e Modena, con caching (Redis) e aggiornamento automatico."
-    },
-    "wolfsurvival": {
-      "title": "Wolf Survival",
-      "description": "Sito di una scuola di sopravvivenza con frontend Next.js e backend connesso all'API di Meta (Facebook) per mostrare gli ultimi corsi, foto e video delle attività svolte."
-    },
-    "om": {
-      "title": "Quiz O.M.",
-      "description": "Quiz radioamatoriale per la preparazione all'esame per il conseguimento della patente di operatore di stazione radioamatoriale."
     }
   },
   "visitedCountries": {

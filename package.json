@@ -6,7 +6,9 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start -p 3578",
-    "lint": "biome check --write ./src"
+    "check": "biome check",
+    "check:write": "biome check --write",
+    "check:staged": "biome check --staged"
   },
   "dependencies": {
     "@gilbarbara/react-dropdown": "^0.2.2",

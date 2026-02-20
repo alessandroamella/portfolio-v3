@@ -40,7 +40,10 @@ const ProjectsViewer: FC<ProjectsViewerProps> = ({ builtWithStr, openStr }) => {
       projectsInfo.map(({ id, ...rest }) => ({
         id,
         title: t(`${id}.title`),
-        description: t(`${id}.description`),
+        description: t.rich(`${id}.description`, {
+          strong: (children) => <strong>{children}</strong>,
+          em: (children) => <em>{children}</em>,
+        }),
         ...rest,
       })),
     [t],

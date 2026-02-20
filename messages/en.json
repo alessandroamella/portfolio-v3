@@ -1,9 +1,9 @@
 {
   "metadata": {
-    "title": "Alessandro Amelly - Website Development and IT Solutions",
-    "description": "bitrey.dev by Alessandro Amella - Website development for individuals and businesses, web applications and custom software.",
+    "title": "Alessandro Amella - Software Engineer & Full Stack Developer",
+    "description": "bitrey.dev by Alessandro Amella - Freelance Software Engineer. Scalable architectures, AI, web applications and custom software.",
     "siteName": "Alessandro Amella",
-    "keywords": "web developer, software developer, full stack developer, Modena developer, Bologna programmer, computer science graduate, University of Bologna, Brno University of Technology, microcontroller programming, IT consulting"
+    "keywords": "software engineer, full stack developer, web developer, Modena programmer, Computer Science graduate, University of Bologna, AI developer, NestJS, Next.js, IT consulting"
   },
   "header": {
     "about": "About",
@@ -18,7 +18,14 @@
     "about": "About Me",
     "projects": "Projects",
     "nowItIs": "now it is",
-    "description": "<p>Computer Science student at the <strong>University of Bologna</strong>, former Erasmus student at Brno University of Technology, programmer, {years} years old, living in Modena <weather></weather>.</p><p>Alongside my studies, I currently work as a <strong>freelance developer</strong> under Italian VAT.</p>",
+    "description": "<p>Freelance full-stack developer, from Modena <weather></weather>.<br></br>I help startups and companies design and develop <strong>web applications, mobile apps and software</strong>, from architecture definition to production deployment.</p><p>I work mainly in the JavaScript ecosystem (<em>MERN</em> stack), but also handle <strong>AI and LLM</strong> integrations, <strong>cloud</strong> infrastructure, process automation and data management. More about me and my projects below!</p>",
+    "educationTitle": "Education",
+    "educationUnibo": "BSc in Computer Science",
+    "educationUniboSub": "University of Bologna",
+    "educationBut": "Erasmus+",
+    "educationButSub": "Brno University of Technology",
+    "educationItis": "Diploma in Telecommunications",
+    "educationItisSub": "I.T.I.S. E. Fermi (Modena)",
     "tooltips": {
       "github": "View my GitHub profile",
       "linkedin": "View my LinkedIn profile",
@@ -88,21 +95,29 @@
     "freelance": {
       "date": "Since March 2024",
       "job": "Freelance Developer",
-      "description": "<ul><li>Built an <strong>eSIM e-commerce</strong> platform based on external APIs.<innerul><li>Integrated with <em>Stripe</em>, <em>PayPal</em> and <em>Airwallex</em>.</li><li>Dashboard for viewing remaining data threshold, with eSIM top-up and replacement features.</li><li>Admin management for product insertion, logic for percentage and absolute discounts.</li><li>Knowledge base page and virtual assistant integration.</li></innerul></li><li>Development of a <strong>SaaS</strong> product for data visualization and sending commands to agricultural devices. Communication via <em>Apache Kapua</em> framework.</li></ul>"
+      "description": "Working with startups on various web projects. Mostly <em>MERN</em> stack (or often PostgreSQL and NestJS). I've worked on microservices architectures with automated CI/CD pipelines, cloud infrastructure deployment, and plenty of AI / LLM service integration."
     }
   },
   "projects": {
+    "iotdashboard": {
+      "title": "IoT Dashboard",
+      "description": "Industrial IoT platform for device monitoring. Integrated with Eclipse Kapua and TimescaleDB (time-series), reducing historical query times by <strong>90%</strong> via SQL continuous aggregates."
+    },
+    "ianus": {
+      "title": "IA-nus",
+      "description": "Complete double-entry accounting engine for Italian VAT holders: invoicing, VAT, payment schedules, cash flow, depreciation. Entirely driven through an <strong>LLM chat</strong> with function calling, structured output, and RAG."
+    },
+    "sciopero": {
+      "title": "C'è Sciopero?",
+      "description": "Bachelor's thesis and empirical case study: scraper and aggregator of Italian strike notices with an <strong>LLM</strong>-based pipeline. 1,400+ benchmarks across multiple models (GPT, Gemini, Llama, DeepSeek) and preprocessing strategies (reaching an <em>F1-Score</em> >0.95). The end product is a <strong>mobile app</strong> with real-time alerts for Italian public transport strikes."
+    },
     "bamboosim": {
       "title": "BambooSIM",
-      "description": "An online eSIM card store with a custom CMS for managing products, orders and customers. Integration with multiple payment gateways and cloud services."
+      "description": "An online eSIM card store with a custom CMS for managing products, orders and customers. Integration with multiple payment gateways and cloud deployment."
     },
     "ezaffitto": {
       "title": "ezaffitto",
       "description": "Fully automated rental ad collector from various websites with AI (OpenAI) parsing structured as microservices."
-    },
-    "kinocafe": {
-      "title": "Kinó Café",
-      "description": "Website for a café to manage orders, print receipts via WebSockets to a POS printer, send data to an ESP32 display using the Web Serial API, show the menu, serve as a front page, and handle user registration."
     },
     "vhfesuperiori": {
       "title": "VHF e superiori",
@@ -111,18 +126,6 @@
     "occupalostudente": {
       "title": "Occupa lo Studente",
       "description": "A web application for job searching that connects companies and students of the I.T.I.S. E. Fermi di Modena. Institutional login via Google OAuth 2.0."
-    },
-    "tpldisplay": {
-      "title": "TPL Display",
-      "description": "Real-time bus departure board, dockerized, interfaced with the TPL data of Bologna and Modena, with caching (Redis) and automatic update."
-    },
-    "wolfsurvival": {
-      "title": "Wolf Survival",
-      "description": "Website of a survival school with Next.js frontend and backend connected to the Meta (Facebook) API to show the latest courses, photos and videos of the activities carried out."
-    },
-    "om": {
-      "title": "Quiz O.M.",
-      "description": "A radio amateur quiz to prepare for the exam to obtain the Italian ham radio operator's license."
     }
   },
   "visitedCountries": {

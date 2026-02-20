@@ -1,12 +1,10 @@
 import type { StaticImageData } from 'next/image';
 import bamboosimImg from '@/assets/projects/bamboosim.webp';
+import ceScioperoImg from '@/assets/projects/cesciopero.webp';
 import ezaffittoImg from '@/assets/projects/ezaffitto.webp';
-import kinoCafeImg from '@/assets/projects/kinocafe.webp';
-import occupaImg from '@/assets/projects/occupa.webp';
-import omImg from '@/assets/projects/om.webp';
-import tpldisplayImg from '@/assets/projects/tpldisplay.webp';
+import ianusImg from '@/assets/projects/ianus.webp';
+import iotImg from '@/assets/projects/iot.webp';
 import vhfesuperioriImg from '@/assets/projects/vhfesuperiori.webp';
-import wolfImg from '@/assets/projects/wolf.webp';
 
 export type Project = {
   id: string;
@@ -17,6 +15,28 @@ export type Project = {
 };
 
 export const projectsInfo: Project[] = [
+  {
+    id: 'sciopero',
+    stack: [
+      'OpenAI SDK',
+      'Puppeteer',
+      'Prisma + PostgreSQL',
+      'RabbitMQ',
+      'React Native',
+    ],
+    image: ceScioperoImg,
+    url: 'https://cesciopero.it',
+  },
+  {
+    id: 'ianus',
+    stack: ['NestJS', 'PostgreSQL', 'LLM / RAG', 'React'],
+    image: ianusImg,
+  },
+  {
+    id: 'iotdashboard',
+    stack: ['NestJS', 'TimescaleDB', 'Eclipse Kapua', 'Docker', 'Redis'],
+    image: iotImg,
+  },
   {
     id: 'bamboosim',
     stack: [
@@ -42,37 +62,5 @@ export const projectsInfo: Project[] = [
     stack: ['Node.js', 'Python', 'OpenAI', 'Puppeteer', 'Docker', 'MongoDB'],
     image: ezaffittoImg,
     github: 'https://github.com/alessandroamella/ezaffitto',
-  },
-  {
-    id: 'kinocafe',
-    stack: ['AWS API', 'Supabase', 'React', 'Python', 'Arduino'],
-    image: kinoCafeImg,
-    url: 'http://cafe.kinocampus.it/',
-    github: 'https://github.com/alessandroamella/kino-manager-fe',
-  },
-  {
-    id: 'occupalostudente',
-    stack: ['Docker', 'TypeScript', 'MongoDB', 'Express', 'React'],
-    image: occupaImg,
-    github: 'https://github.com/alessandroamella/occupa-lo-studente-fermi',
-  },
-  {
-    id: 'tpldisplay',
-    stack: ['Docker', 'Redis', 'TypeScript', 'Express'],
-    image: tpldisplayImg,
-    github: 'https://github.com/alessandroamella/seta-display',
-  },
-  {
-    id: 'wolfsurvival',
-    stack: ['Next.js', 'TypeScript', 'Express'],
-    image: wolfImg,
-    url: 'https://www.wolfsurvival.it/',
-  },
-  {
-    id: 'om',
-    stack: ['JavaScript DOM', 'Bulma', 'Express'],
-    image: omImg,
-    url: 'http://om.bitrey.it',
-    github: 'https://github.com/alessandroamella/codice-q',
   },
 ];
