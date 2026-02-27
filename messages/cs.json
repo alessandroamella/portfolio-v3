@@ -101,7 +101,7 @@
   "projects": {
     "iotdashboard": {
       "title": "IoT dashboard",
-      "description": "Průmyslová IoT platforma pro monitoring zařízení. Integrace s Eclipse Kapua a TimescaleDB (time-series), s redukcí doby historických dotazů o <strong>90 %</strong> pomocí SQL continuous aggregates."
+      "description": "Průmyslový dashboard pro řízení a monitorování IoT senzorů. Zpracování více než 10 milionů datových bodů v reálném čase pomocí <strong>TimescaleDB</strong> a SQL Continuous Aggregates. Integrace s Eclipse Kapua."
     },
     "ianus": {
       "title": "IA-nus",
