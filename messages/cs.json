@@ -37,14 +37,13 @@
       "electronics": "Elektronika a mikrokontrolery",
       "transport": "Veřejná doprava a urbanismus",
       "aviation": "Letectví a železnice",
-      "travel": "Cestování"
+      "travel": "Cestování <countries>({numCountries} zemí navštíveno zatím)</countries>"
     },
     "someProjects": "Některé z mých projektů",
     "someProjectsDescription": "Toto je výběr projektů, na kterých jsem pracoval. Mnohem více je na GitHubu.",
     "github": "GitHub",
     "githubUsername": "alessandroamella",
     "cv": "Životopis",
-    "travels": "Cesty",
     "open": "Otevřeno",
     "builtWith": "Vytvořeno s",
     "andManyOthers": "a mnoha dalšími",

@@ -37,14 +37,13 @@
       "electronics": "Electronics and microcontrollers",
       "transport": "Public transport and urban planning",
       "aviation": "Aviation and railways",
-      "travel": "Traveling"
+      "travel": "Traveling <countries>({numCountries} countries visited so far)</countries>"
     },
     "someProjects": "Some of my projects",
     "someProjectsDescription": "These are just some of the projects I have worked on, many more are on GitHub.",
     "github": "GitHub",
     "githubUsername": "alessandroamella",
     "cv": "Resume",
-    "travels": "Travels",
     "open": "Open",
     "builtWith": "Built with",
     "andManyOthers": "and many others",
