@@ -8,6 +8,7 @@ import { useTranslations } from 'next-intl';
 import { use } from 'react';
 import { FaGithub, FaLinkedin } from 'react-icons/fa';
 import Wave from 'react-wavify';
+import ProfilePic from '@/assets/pp/alessandro_amella_laurea_square.jpg';
 import Arrow from '@/components/arrow.svg?url';
 import ArrowWhite from '@/components/arrow-white.svg?url';
 import BgGraph from '@/components/BgGraph';
@@ -135,9 +136,21 @@ function Home(props: { params: Promise<{ locale: string }> }) {
         className='grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-24 -mt-24 px-8 md:px-16 pt-0 pb-6 z-10 relative bg-gray-700 text-white'
       >
         <div>
-          <h2 className='text-4xl font-bold text-center tracking-tight mb-8 z-50 relative'>
+          <h2 className='text-4xl font-bold text-center tracking-tight mb-4 z-50 relative'>
             {t('about')}
           </h2>
+
+          <Image
+            src={ProfilePic}
+            width='169'
+            height='169'
+            // style={{
+            //   width: '169px',
+            //   height: '169px',
+            // }}
+            className='rounded-full border-4 border-white mx-auto w-40 h-40 object-cover mb-4'
+            alt={t('i18n.profilePictureAlt')}
+          />
 
           <div className='mt-4 space-y-4 text-gray-300'>
             {t.rich('description', {

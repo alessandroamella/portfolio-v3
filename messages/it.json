@@ -56,7 +56,10 @@
     "consulting": "Consulenza informatica",
     "consultingDescription": "Consulenza su problemi informatici, scelta di tecnologie e soluzioni.",
     "other": "Altro",
-    "otherDescription": "Qualsiasi altra informazione o richiesta."
+    "otherDescription": "Qualsiasi altra informazione o richiesta.",
+    "i18n": {
+      "profilePictureAlt": "Foto profilo di Alessandro Amella"
+    }
   },
   "footer": {
     "vatNumber": "Partita IVA",

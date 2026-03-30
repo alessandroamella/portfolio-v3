@@ -56,7 +56,10 @@
     "consulting": "IT consulting",
     "consultingDescription": "Consulting on IT problems, choice of technologies and solutions.",
     "other": "Other",
-    "otherDescription": "Any other information or request."
+    "otherDescription": "Any other information or request.",
+    "i18n": {
+      "profilePictureAlt": "Profile picture of Alessandro Amella"
+    }
   },
   "footer": {
     "vatNumber": "VAT Number (IT)",

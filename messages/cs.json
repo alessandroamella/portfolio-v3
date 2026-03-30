@@ -56,7 +56,10 @@
     "consulting": "IT konzultace",
     "consultingDescription": "Konzultace ohledně IT problémů, výběru technologií a řešení.",
     "other": "Jiné",
-    "otherDescription": "Jakékoli další informace nebo požadavky."
+    "otherDescription": "Jakékoli další informace nebo požadavky.",
+    "i18n": {
+      "profilePictureAlt": "Profilová fotka Alessandra Amelly"
+    }
   },
   "footer": {
     "vatNumber": "DIČ (IT)",
