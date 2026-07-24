@@ -1,5 +1,6 @@
 import { type NextRequest, NextResponse } from 'next/server';
 import { validateTurnstileToken } from 'next-turnstile';
+import TelegramBot from 'node-telegram-bot-api';
 import nodemailer from 'nodemailer';
 import type Mail from 'nodemailer/lib/mailer';
 import { z } from 'zod';
@@ -42,6 +43,7 @@ async function verifyTurnstile(token: string): Promise<boolean> {
 }
 
 let mailTransporter: nodemailer.Transporter | null = null;
+let telegramBot: TelegramBot | null = null;
 
 async function getMailTransporter() {
   if (!mailTransporter) {
@@ -64,6 +66,47 @@ async function getMailTransporter() {
     }
   }
   return mailTransporter;
+}
+
+function getTelegramBot() {
+  if (!telegramBot) {
+    telegramBot = new TelegramBot(envs.TELEGRAM_BOT_TOKEN, { polling: false });
+  }
+  return telegramBot;
+}
+
+function buildTelegramMessage({
+  name,
+  email,
+  message,
+}: {
+  name: string;
+  email: string;
+  message: string;
+}) {
+  return [
+    'Nuova richiesta di contatto da bitrey.dev',
+    `Nome: ${name}`,
+    `Email: ${email}`,
+    '',
+    'Messaggio:',
+    message,
+  ].join('\n');
+}
+
+async function sendTelegramNotification({
+  name,
+  email,
+  message,
+}: {
+  name: string;
+  email: string;
+  message: string;
+}) {
+  const bot = getTelegramBot();
+  const telegramMessage = buildTelegramMessage({ name, email, message });
+
+  await bot.sendMessage(envs.TELEGRAM_CHAT_ID, telegramMessage);
 }
 
 export async function POST(request: NextRequest) {
@@ -104,6 +147,11 @@ export async function POST(request: NextRequest) {
 
     await transporter.sendMail(mailOptions);
     console.info(`Contact form email sent successfully by ${email}`);
+
+    await sendTelegramNotification({ name, email, message });
+    console.info(
+      `Telegram contact notification sent successfully for ${email}`,
+    );
 
     return NextResponse.json(
       { message: 'Email sent successfully' },

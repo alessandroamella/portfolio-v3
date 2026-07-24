@@ -8,6 +8,8 @@ export const envs = cleanEnv(process.env, {
   MAIL_SERVER: str(),
   MAIL_USERNAME: str(),
   MAIL_PASSWORD: str(),
+  TELEGRAM_BOT_TOKEN: str(),
+  TELEGRAM_CHAT_ID: str(),
   SEND_EMAIL_FROM: str(),
   SEND_EMAIL_FROM_NAME: str(),
   SEND_EMAIL_TO: str(),

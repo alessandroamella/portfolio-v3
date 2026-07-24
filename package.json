@@ -26,6 +26,7 @@
     "next": "^15.5.14",
     "next-intl": "^4.8.3",
     "next-turnstile": "^1.0.7",
+    "node-telegram-bot-api": "^0.67.0",
     "nodemailer": "^7.0.13",
     "react": "18.3.1",
     "react-awesome-reveal": "^4.3.1",
@@ -45,11 +46,13 @@
     "@biomejs/biome": "2.3.13",
     "@svgr/webpack": "^8.1.0",
     "@types/lodash": "^4.17.24",
+    "@types/node-telegram-bot-api": "^0.64.14",
     "@types/nodemailer": "^6.4.23",
     "@types/react-simple-maps": "^3.0.6",
     "autoprefixer": "10.4.20",
     "next-secure-headers": "^2.2.0",
     "postcss": "^8.5.8",
+    "supports-color": "^10.2.2",
     "tailwindcss": "3.4.13"
   }
 }
