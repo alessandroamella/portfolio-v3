@@ -101,33 +101,45 @@
     }
   },
   "projects": {
-    "iotdashboard": {
-      "title": "IoT dashboard",
-      "description": "Dashboard industriale per il controllo e il monitoraggio di sensori IoT. Elaborazione di oltre 10 milioni di dati in tempo reale con <strong>TimescaleDB</strong> e Continuous Aggregates SQL. Integrazione con Eclipse Kapua."
-    },
-    "ianus": {
-      "title": "IA-nus",
-      "description": "Motore contabile completo a partita doppia per partite IVA italiane: fatturazione, IVA, scadenzario, cash flow, ammortamenti. Gestito interamente via <strong>chatbot</strong> (con LLM), con implementazione di function calling, output strutturato e <strong>RAG</strong> per la ricerca di documenti."
-    },
     "sciopero": {
       "title": "C'è Sciopero?",
-      "description": "Tesi di laurea e case study empirico: scraper e aggregatore di avvisi di sciopero con pipeline basata su <strong>LLM</strong>. 1.400+ benchmark su vari modelli (GPT, Gemini, Llama e DeepSeek) e strategie di pre-processing (raggiungendo un <em>F1-Score</em> >0.95). Il prodotto finale è un''<strong>app mobile</strong> con notifiche real-time sugli scioperi del trasporto pubblico."
+      "description": "Tesi di laurea e case study empirico sull''estrazione di informazioni tramite <strong>LLM</strong>. Al posto di fragili scraper del DOM, una pipeline LLM legge gli avvisi di sciopero del trasporto pubblico italiano (HTML e PDF) e ne estrae dati strutturati: date, ambito e fasce di garanzia. Ho eseguito oltre 1.400 benchmark su GPT, Gemini, Llama e DeepSeek e diverse strategie di pre-processing, incluso un test di robustezza <em>DOM-chaos</em>, raggiungendo un <em>F1-score</em> superiore a 0,95 sull''estrazione dei campi. Un''<strong>app React Native</strong> associata invia notifiche in tempo reale."
     },
     "bamboosim": {
       "title": "BambooSIM",
-      "description": "Un negozio online di eSIM con un CMS personalizzato per la gestione di prodotti, ordini e clienti. Integrazione con più gateway di pagamento e deployment su cloud."
+      "description": "Negozio online di eSIM da viaggio, commerciale e attivo. Dopo il checkout il backend effettua il provisioning automatico del piano dati sulle <strong>API eSIM</strong> dell''operatore e restituisce profilo e QR code in pochi secondi, gestendo sullo stesso flusso ricariche ed estensioni. Pagamenti multi-gateway (carta, PayPal, Apple Pay, Google Pay) in valuta locale e un CMS su misura per catalogo, ordini e clienti."
     },
-    "ezaffitto": {
-      "title": "ezaffitto",
-      "description": "Raccoglitore completamente automatico di annunci di affitti provenienti da vari siti con parsing tramite AI (OpenAI) strutturato a microservizi."
+    "qrami": {
+      "title": "Piattaforma di telemedicina",
+      "description": "Piattaforma di prenotazione e gestione del flusso clinico per una startup italiana di health-tech, erogata come <strong>SaaS</strong> su <strong>Stripe Connect</strong>. Alla registrazione la piattaforma fornisce a ogni medico una <strong>firma digitale</strong> (tramite OpenAPI eSignature) e fa da tramite per firmare i referti. Matching geolocalizzato con <strong>PostGIS</strong>, escalation multi-stadio con fallback temporizzati su <strong>BullMQ</strong> e lock su Redis contro le accettazioni concorrenti. La capture manuale su Stripe è vincolata alla pubblicazione del referto firmato, così pagamento e documentazione si chiudono insieme."
+    },
+    "iotdashboard": {
+      "title": "IoT dashboard",
+      "description": "Dashboard industriale per il monitoraggio e il controllo di flotte di sensori IoT. Ingest e interrogazione di serie temporali su hypertable <strong>TimescaleDB</strong> con Continuous Aggregates SQL, mantenendo reattive le dashboard su intervalli di tempo estesi. La gestione dei dispositivi e della telemetria è affidata a Eclipse Kapua."
+    },
+    "ianus": {
+      "title": "IA-nus",
+      "description": "Motore contabile a partita doppia per partite IVA italiane: fatturazione, IVA, scadenzario, cash flow e ammortamenti. L''intero sistema si guida da un''<strong>interfaccia chat</strong>: un livello LLM con function calling e output strutturato traduce richieste in linguaggio naturale in operazioni contabili, con <strong>RAG</strong> sui documenti dell''utente."
     },
     "vhfesuperiori": {
       "title": "VHF e superiori",
-      "description": "Un gestore di eventi e social network per radioamatori a cura di volontari. Un posto dove condividere le proprie creazioni, collegamenti (QSO) e conoscere nuove persone."
+      "description": "Piattaforma di eventi e social network per un''associazione di radioamatori, in produzione e open source. Analizza i log di collegamento <strong>ADIF/EDI</strong> caricati dagli utenti, geolocalizza i locator Maidenhead e genera le mappe dei QSO lato server pilotando un''istanza headless di <strong>Chromium</strong>. Produce inoltre eQSL personalizzate a partire dai template e le raggruppa in email giornaliere per rientrare nelle quote del provider. Monorepo TypeScript con Express, MongoDB e front end React/Leaflet."
     },
-    "occupalostudente": {
-      "title": "Occupa lo Studente",
-      "description": "Un'applicazione web per la ricerca di lavoro che mette in contatto aziende e studenti dell'I.T.I.S. E. Fermi di Modena. Login istituzionale tramite Google OAuth 2.0."
+    "ezaffitto": {
+      "title": "ezaffitto",
+      "description": "Pipeline a microservizi che raccoglie annunci di affitto da più fonti e normalizza il testo non strutturato in uno schema interrogabile tramite estrazione con <strong>OpenAI</strong>. Servizi Node.js e Python orchestrati con Docker."
+    }
+  },
+  "projectMeta": {
+    "status": {
+      "live": "Online",
+      "inDevelopment": "In sviluppo",
+      "archived": "Archiviato"
+    },
+    "solo": "Progetto individuale",
+    "paper": "Tesi",
+    "roles": {
+      "backendDataAi": "Backend, database e integrazione AI (team di 3)"
     }
   },
   "visitedCountries": {

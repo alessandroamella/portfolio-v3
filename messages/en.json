@@ -101,33 +101,45 @@
     }
   },
   "projects": {
-    "iotdashboard": {
-      "title": "IoT Dashboard",
-      "description": "Industrial dashboard for IoT sensor control and monitoring. Processing of over 10 million real-time data points with <strong>TimescaleDB</strong> and SQL Continuous Aggregates. Integration with Eclipse Kapua."
-    },
-    "ianus": {
-      "title": "IA-nus",
-      "description": "Complete double-entry accounting engine for Italian VAT holders: invoicing, VAT, payment schedules, cash flow, depreciation. Entirely driven through an <strong>LLM chat</strong> with function calling, structured output, and RAG."
-    },
     "sciopero": {
       "title": "C'è Sciopero?",
-      "description": "Bachelor's thesis and empirical case study: scraper and aggregator of Italian strike notices with an <strong>LLM</strong>-based pipeline. 1,400+ benchmarks across multiple models (GPT, Gemini, Llama, DeepSeek) and preprocessing strategies (reaching an <em>F1-Score</em> >0.95). The end product is a <strong>mobile app</strong> with real-time alerts for Italian public transport strikes."
+      "description": "Bachelor's thesis and empirical case study on <strong>LLM</strong>-based information extraction. Instead of brittle DOM scrapers, an LLM pipeline reads messy Italian public-transport strike notices (HTML and PDF) and pulls out structured data: dates, scope and guaranteed service windows. I ran 1,400+ benchmarks across GPT, Gemini, Llama and DeepSeek and several preprocessing strategies, including a <em>DOM-chaos</em> resilience test, reaching an <em>F1-score</em> above 0.95 on field extraction. A companion <strong>React Native</strong> app sends real-time strike alerts."
     },
     "bamboosim": {
       "title": "BambooSIM",
-      "description": "An online eSIM card store with a custom CMS for managing products, orders and customers. Integration with multiple payment gateways and cloud deployment."
+      "description": "Live commercial travel-eSIM store. After checkout the backend provisions the data plan automatically against the carrier's <strong>eSIM API</strong> and returns a working profile and QR code in seconds, handling top-ups and plan extensions on the same flow. Multi-gateway payments (card, PayPal, Apple Pay, Google Pay) in local currencies, plus a custom CMS for catalogue, orders and customers."
     },
-    "ezaffitto": {
-      "title": "ezaffitto",
-      "description": "Fully automated rental ad collector from various websites with AI (OpenAI) parsing structured as microservices."
+    "qrami": {
+      "title": "Telemedicine Platform",
+      "description": "Booking and clinical-workflow platform for an Italian health-tech startup, run as a <strong>SaaS</strong> on <strong>Stripe Connect</strong>. On sign-up the platform provisions each doctor a <strong>digital signature</strong> (via OpenAPI eSignature) and acts as the intermediary they use to sign clinical reports. <strong>PostGIS</strong> geofenced matching between patients and doctors, multi-stage escalation with timed fallbacks on <strong>BullMQ</strong>, and Redis locks against concurrent accepts. Stripe manual capture is deliberately gated on publication of the signed report, so payment and paperwork settle together."
+    },
+    "iotdashboard": {
+      "title": "IoT Dashboard",
+      "description": "Industrial dashboard for monitoring and controlling fleets of IoT sensors. Time-series ingestion and querying on <strong>TimescaleDB</strong> hypertables with SQL Continuous Aggregates, keeping dashboards responsive over long time ranges. Eclipse Kapua handles device management and telemetry."
+    },
+    "ianus": {
+      "title": "Janus",
+      "description": "Double-entry accounting engine for Italian VAT-registered freelancers: invoicing, VAT, payment schedules, cash flow and depreciation. The whole system is driven from a <strong>chat interface</strong>: an LLM layer with function calling and structured output turns plain-language requests into accounting operations, with <strong>RAG</strong> over the user's own documents."
     },
     "vhfesuperiori": {
       "title": "VHF e superiori",
-      "description": "An event manager and social network for radio amateurs curated by volunteers. A place to share your creations, connections (QSO) and meet new people."
+      "description": "Event platform and social network for an Italian amateur-radio association, in production and open source. It parses uploaded <strong>ADIF/EDI</strong> contact logs, geolocates Maidenhead grid squares and renders QSO maps server-side by driving a headless <strong>Chromium</strong> instance. It also generates personalised eQSL cards from templates and batches them into daily digest emails to stay within provider quotas. TypeScript monorepo with Express, MongoDB and a React/Leaflet front end."
     },
-    "occupalostudente": {
-      "title": "Occupa lo Studente",
-      "description": "A web application for job searching that connects companies and students of the I.T.I.S. E. Fermi di Modena. Institutional login via Google OAuth 2.0."
+    "ezaffitto": {
+      "title": "ezaffitto",
+      "description": "Microservice pipeline that scrapes rental listings from several sources and normalises unstructured ad text into a queryable schema with <strong>OpenAI</strong> extraction. Node.js and Python services orchestrated with Docker."
+    }
+  },
+  "projectMeta": {
+    "status": {
+      "live": "Live",
+      "inDevelopment": "In development",
+      "archived": "Archived"
+    },
+    "solo": "Solo project",
+    "paper": "Thesis",
+    "roles": {
+      "backendDataAi": "Backend, database & AI integration (team of 3)"
     }
   },
   "visitedCountries": {

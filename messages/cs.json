@@ -101,29 +101,45 @@
     }
   },
   "projects": {
-    "iotdashboard": {
-      "title": "IoT dashboard",
-      "description": "Průmyslový dashboard pro řízení a monitorování IoT senzorů. Zpracování více než 10 milionů datových bodů v reálném čase pomocí <strong>TimescaleDB</strong> a SQL Continuous Aggregates. Integrace s Eclipse Kapua."
-    },
-    "ianus": {
-      "title": "IA-nus",
-      "description": "Kompletní podvojný účetní engine pro italské OSVČ: fakturace, DPH, platební kalendář, cash flow, odpisy. Ovládaný výhradně přes <strong>LLM chat</strong> s function calling, strukturovaným výstupem a RAG."
-    },
     "sciopero": {
       "title": "C'è Sciopero?",
-      "description": "Bakalářská práce a empirická případová studie: scraper a agregátor italských stávkových oznámení s pipeline založenou na <strong>LLM</strong>. 1 400+ benchmarků na různých modelech (GPT, Gemini, Llama, DeepSeek) a strategiích předzpracování (s výsledným <em>F1-Score</em> >0,95). Výstupem je <strong>mobilní aplikace</strong> s real-time upozorněními na stávky v italské veřejné dopravě."
+      "description": "Bakalářská práce a empirická případová studie o extrakci informací pomocí <strong>LLM</strong>. Místo křehkých DOM scraperů čte LLM pipeline nepřehledná oznámení o stávkách italské veřejné dopravy (HTML i PDF) a získává strukturovaná data: termíny, rozsah a garantované časy provozu. Provedl jsem přes 1 400 benchmarků na modelech GPT, Gemini, Llama a DeepSeek a různých strategiích předzpracování včetně testu odolnosti <em>DOM-chaos</em>, s výsledným <em>F1-score</em> nad 0,95 při extrakci polí. Doprovodná <strong>aplikace React Native</strong> posílá upozornění v reálném čase."
     },
     "bamboosim": {
       "title": "BambooSIM",
-      "description": "Online obchod s eSIM kartami s vlastním CMS pro správu produktů, objednávek a zákazníků. Integrace s více platebními bránami a cloudové nasazení."
+      "description": "Komerční online obchod s cestovními eSIM. Po objednávce backend automaticky provisionuje datový tarif přes <strong>eSIM API</strong> operátora a během několika sekund vrací funkční profil a QR kód, přičemž na stejném toku řeší dobití a prodloužení. Platby přes více bran (karta, PayPal, Apple Pay, Google Pay) v místních měnách a vlastní CMS pro katalog, objednávky a zákazníky."
     },
-    "ezaffitto": {
-      "title": "ezaffitto",
-      "description": "Plně automatizovaný sběrač inzerátů k pronájmu z různých webů s analýzou AI (OpenAI) strukturovanou jako mikroslužby."
+    "qrami": {
+      "title": "Platforma pro telemedicínu",
+      "description": "Platforma pro rezervace a klinické workflow pro italský health-tech startup, provozovaná jako <strong>SaaS</strong> na <strong>Stripe Connect</strong>. Při registraci platforma každému lékaři zřídí <strong>digitální podpis</strong> (přes OpenAPI eSignature) a funguje jako prostředník pro podepisování lékařských zpráv. Geolokační párování pacientů a lékařů pomocí <strong>PostGIS</strong>, vícefázová eskalace s časovanými zálohami na <strong>BullMQ</strong> a zámky v Redis proti souběžnému přijetí. Manuální capture na Stripe je vázaný na publikaci podepsané zprávy, takže platba a dokumentace se uzavřou společně."
+    },
+    "iotdashboard": {
+      "title": "IoT dashboard",
+      "description": "Průmyslový dashboard pro monitorování a řízení flotil IoT senzorů. Ukládání a dotazování časových řad na hypertabulkách <strong>TimescaleDB</strong> se SQL Continuous Aggregates, díky čemuž zůstávají dashboardy responzivní i na dlouhých časových úsecích. Správu zařízení a telemetrie zajišťuje Eclipse Kapua."
+    },
+    "ianus": {
+      "title": "IA-nus",
+      "description": "Účetní engine s podvojným účetnictvím pro italské OSVČ: fakturace, DPH, platební kalendář, cash flow a odpisy. Celý systém se ovládá přes <strong>chatové rozhraní</strong>: vrstva LLM s function calling a strukturovaným výstupem převádí požadavky v přirozeném jazyce na účetní operace, s <strong>RAG</strong> nad vlastními dokumenty uživatele."
     },
     "vhfesuperiori": {
       "title": "VHF e superiori",
-      "description": "Manažer akcí a sociální síť pro radioamatéry, kterou spravují dobrovolníci. Místo pro sdílení vašich výtvorů, spojení (QSO) a setkání s novými lidmi."
+      "description": "Platforma pro události a sociální síť pro italské sdružení radioamatérů, v produkci a open source. Parsuje nahrané logy spojení <strong>ADIF/EDI</strong>, geolokuje Maidenhead lokátory a generuje mapy QSO na straně serveru řízením headless instance <strong>Chromium</strong>. Vytváří také personalizované eQSL karty ze šablon a sdružuje je do denních souhrnných e-mailů, aby se vešly do kvót poskytovatele. Monorepo v TypeScriptu s Express, MongoDB a frontendem React/Leaflet."
+    },
+    "ezaffitto": {
+      "title": "ezaffitto",
+      "description": "Mikroslužbová pipeline, která scrapuje inzeráty k pronájmu z několika zdrojů a normalizuje nestrukturovaný text do dotazovatelného schématu pomocí extrakce <strong>OpenAI</strong>. Služby v Node.js a Pythonu orchestrované přes Docker."
+    }
+  },
+  "projectMeta": {
+    "status": {
+      "live": "V provozu",
+      "inDevelopment": "Ve vývoji",
+      "archived": "Archivováno"
+    },
+    "solo": "Samostatný projekt",
+    "paper": "Práce",
+    "roles": {
+      "backendDataAi": "Backend, databáze a integrace AI (tým 3 lidí)"
     }
   },
   "visitedCountries": {

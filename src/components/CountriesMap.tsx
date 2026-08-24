@@ -9,7 +9,10 @@ import {
   ZoomableGroup,
 } from 'react-simple-maps';
 import { config } from '@/config';
-import { countriesMapping } from '@/constants/countries-mapping';
+import {
+  type CountryName,
+  countriesMapping,
+} from '@/constants/countries-mapping';
 import { useIsMobile } from '@/hooks/useIsMobile';
 
 const geoUrl =
@@ -50,19 +53,15 @@ const CountriesMap = () => {
     }
   }, [isMobile]);
 
-  // Create a memoized lookup object for visited countries
-  const visitedCountriesLookup = useMemo(() => {
-    const lookup: Record<string, boolean> = {};
-    for (const country of config.visitedCountries) {
-      lookup[country.name] = true;
-    }
-    return lookup;
-  }, []);
+  // Create a memoized lookup set for visited countries
+  const visitedCountriesLookup = useMemo(
+    () => new Set<string>(config.visitedCountries),
+    [],
+  );
 
   const getI18nCountryName = useCallback(
     (worldAtlasName: string) => {
-      const alpha2 =
-        countriesMapping[worldAtlasName as keyof typeof countriesMapping];
+      const alpha2 = countriesMapping[worldAtlasName as CountryName];
       if (!alpha2) return worldAtlasName;
 
       try {
@@ -135,7 +134,7 @@ const CountriesMap = () => {
                 geographies.map((geo) => {
                   // console.log('geo', geo.properties);
                   const countryName = geo.properties.name as string;
-                  const isVisited = visitedCountriesLookup[countryName];
+                  const isVisited = visitedCountriesLookup.has(countryName);
 
                   return (
                     <Geography

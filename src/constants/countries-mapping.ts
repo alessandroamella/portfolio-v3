@@ -2,6 +2,10 @@
  * Mapping of country names to their respective ISO 3166-1 alpha-2 codes.
  * Sadly, this is NEEDED because the world-atlas@2.0.2/countries-110m.json
  * uses non-standard country names that do not directly map to ISO codes.
+ *
+ * A few micro-states missing from the 110m dataset (Liechtenstein, Malta,
+ * San Marino, Vatican City) are included too, so this stays the single list
+ * of country names usable elsewhere (e.g. config.visitedCountries).
  */
 export const countriesMapping = {
   Afghanistan: 'AF',
@@ -95,6 +99,7 @@ export const countriesMapping = {
   Lebanon: 'LB',
   Lesotho: 'LS',
   Liberia: 'LR',
+  Liechtenstein: 'LI',
   Libya: 'LY',
   Lithuania: 'LT',
   Luxembourg: 'LU',
@@ -103,6 +108,7 @@ export const countriesMapping = {
   Malawi: 'MW',
   Malaysia: 'MY',
   Mali: 'ML',
+  Malta: 'MT',
   Mauritania: 'MR',
   Mexico: 'MX',
   Moldova: 'MD',
@@ -137,6 +143,7 @@ export const countriesMapping = {
   Russia: 'RU',
   Rwanda: 'RW',
   'S. Sudan': 'SS',
+  'San Marino': 'SM',
   'Saudi Arabia': 'SA',
   Senegal: 'SN',
   Serbia: 'RS',
@@ -172,6 +179,7 @@ export const countriesMapping = {
   Uruguay: 'UY',
   Uzbekistan: 'UZ',
   Vanuatu: 'VU',
+  'Vatican City': 'VA',
   Venezuela: 'VE',
   Vietnam: 'VN',
   'W. Sahara': 'EH',
@@ -179,3 +187,9 @@ export const countriesMapping = {
   Zambia: 'ZM',
   Zimbabwe: 'ZW',
 };
+
+/**
+ * Names as used by world-atlas (plus a few micro-states it doesn't render).
+ * Single source of truth for every country name we refer to in the app.
+ */
+export type CountryName = keyof typeof countriesMapping;

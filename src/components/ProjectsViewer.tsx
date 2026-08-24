@@ -19,12 +19,13 @@ import {
   FaExternalLinkAlt,
   FaForward,
   FaGithub,
+  FaGraduationCap,
 } from 'react-icons/fa';
 import { Mousewheel } from 'swiper/modules';
 import { Swiper, type SwiperRef, SwiperSlide } from 'swiper/react';
 import Typewriter, { type TypewriterClass } from 'typewriter-effect';
 import iPhoneImg from '@/assets/misc/iphone.webp';
-import { projectsInfo } from '@/config/projects';
+import { type ProjectStatus, projectsInfo } from '@/config/projects';
 import Button from './Button';
 
 interface ProjectsViewerProps {
@@ -32,8 +33,16 @@ interface ProjectsViewerProps {
   openStr: string;
 }
 
+const statusBadgeClass: Record<ProjectStatus, string> = {
+  live: 'bg-green-100 text-green-700 dark:bg-green-900/50 dark:text-green-300',
+  inDevelopment:
+    'bg-amber-100 text-amber-700 dark:bg-amber-900/50 dark:text-amber-300',
+  archived: 'bg-gray-200 text-gray-600 dark:bg-gray-700 dark:text-gray-300',
+};
+
 const ProjectsViewer: FC<ProjectsViewerProps> = ({ builtWithStr, openStr }) => {
   const t = useTranslations('projects');
+  const tMeta = useTranslations('projectMeta');
 
   const projects = useMemo(
     () =>
@@ -157,6 +166,23 @@ const ProjectsViewer: FC<ProjectsViewerProps> = ({ builtWithStr, openStr }) => {
           />
         </h1>
 
+        <div className='mt-3 flex flex-wrap items-center justify-center md:justify-start gap-x-2 gap-y-1 text-sm'>
+          <span
+            className={`rounded-full px-2.5 py-0.5 font-medium ${statusBadgeClass[curProject.status]}`}
+          >
+            {tMeta(`status.${curProject.status}`)}
+          </span>
+          <span className='text-gray-500 dark:text-gray-300'>
+            {curProject.year}
+          </span>
+          <span className='text-gray-400 dark:text-gray-500'>·</span>
+          <span className='text-gray-500 dark:text-gray-300'>
+            {curProject.solo
+              ? tMeta('solo')
+              : tMeta(`roles.${curProject.roleKey}`)}
+          </span>
+        </div>
+
         <Fade>
           <p className='dark:text-gray-400 mt-4 text-lg min-h-[5.5rem]'>
             {curProject.description}
@@ -178,7 +204,7 @@ const ProjectsViewer: FC<ProjectsViewerProps> = ({ builtWithStr, openStr }) => {
           </div>
         </Fade>
 
-        <div className='mt-8 flex items-center justify-center md:justify-start gap-4'>
+        <div className='mt-8 flex flex-wrap items-center justify-center md:justify-start gap-4'>
           <Button
             href={curProject.github}
             disabled={!curProject.github}
@@ -196,6 +222,15 @@ const ProjectsViewer: FC<ProjectsViewerProps> = ({ builtWithStr, openStr }) => {
             <FaExternalLinkAlt />
             <span className='ml-2'>{openStr}</span>
           </Button>
+          {curProject.paperUrl && (
+            <Button
+              href={curProject.paperUrl}
+              className='flex items-center rounded-2xl font-medium tracking-tight px-3'
+            >
+              <FaGraduationCap />
+              <span className='ml-2'>{tMeta('paper')}</span>
+            </Button>
+          )}
         </div>
       </div>
     </div>
