@@ -21,7 +21,7 @@ const Button: FunctionComponent<ButtonProps> = ({
   ...rest
 }) => {
   const _className = classNames(
-    'p-2 border-none outline-none transition-colors duration-75',
+    'p-2 border-none outline-hidden transition-colors duration-75',
     {
       'text-white bg-red-500 hover:bg-red-600 active:bg-red-700 disabled:bg-red-300':
         color === 'red',

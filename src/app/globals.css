@@ -1,6 +1,26 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+@import "flowbite-react/plugin/tailwindcss";
+@source "../../.flowbite-react/class-list.json";
+
+@config "../../tailwind.config.js";
+
+/*
+  The default border color has changed to `currentcolor` in Tailwind CSS v4,
+  so we've added these compatibility styles to make sure everything still
+  looks the same as it did with Tailwind CSS v3.
+
+  If we ever want to remove these styles, we need to add an explicit border
+  color utility to any element that depends on these defaults.
+*/
+@layer base {
+  *,
+  ::after,
+  ::before,
+  ::backdrop,
+  ::file-selector-button {
+    border-color: var(--color-gray-200, currentcolor);
+  }
+}
 
 html,
 body {
@@ -59,7 +79,7 @@ body {
 }
 
 div.react-dropdown {
-  @apply w-fit shadow-none select-text outline-none border transition-colors duration-75 bg-transparent;
+  @apply w-fit shadow-none select-text outline-hidden border transition-colors duration-75 bg-transparent;
 }
 
 div.react-dropdown *:not(:hover, .react-dropdown-item-selected) {
@@ -83,16 +103,16 @@ div.react-dropdown *.react-dropdown-item-selected {
 }
 
 div.react-dropdown-item {
-  @apply dark:!border-t-0 dark:!text-gray-300;
+  @apply dark:border-t-0! dark:text-gray-300!;
 }
 
 ol[data-testid="timeline-component"],
 div[data-testid="timeline-point"] div {
-  @apply dark:!border-gray-400;
+  @apply dark:border-gray-400!;
 }
 
 div[data-testid="flowbite-tooltip-target"]:has(
-    + div.weather-tooltip[data-testid="flowbite-tooltip"]
-  ) {
+  + div.weather-tooltip[data-testid="flowbite-tooltip"]
+) {
   @apply inline;
 }

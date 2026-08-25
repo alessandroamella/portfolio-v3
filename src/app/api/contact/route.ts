@@ -1,6 +1,6 @@
 import { type NextRequest, NextResponse } from 'next/server';
 import { validateTurnstileToken } from 'next-turnstile';
-import TelegramBot from 'node-telegram-bot-api';
+import { Api } from 'node-telegram-bot-api';
 import nodemailer from 'nodemailer';
 import type Mail from 'nodemailer/lib/mailer';
 import { z } from 'zod';
@@ -9,7 +9,7 @@ import { generateContactFormEmail } from '@/lib/emails/contact-form';
 
 const contactSchema = z.object({
   name: z.string().min(3).max(50),
-  email: z.string().email(),
+  email: z.email(),
   message: z.string().min(10).max(1000),
   turnstile: z.string(),
 });
@@ -43,7 +43,7 @@ async function verifyTurnstile(token: string): Promise<boolean> {
 }
 
 let mailTransporter: nodemailer.Transporter | null = null;
-let telegramBot: TelegramBot | null = null;
+let telegramBot: Api | null = null;
 
 async function getMailTransporter() {
   if (!mailTransporter) {
@@ -70,7 +70,7 @@ async function getMailTransporter() {
 
 function getTelegramBot() {
   if (!telegramBot) {
-    telegramBot = new TelegramBot(envs.TELEGRAM_BOT_TOKEN, { polling: false });
+    telegramBot = new Api(envs.TELEGRAM_BOT_TOKEN);
   }
   return telegramBot;
 }
@@ -106,7 +106,10 @@ async function sendTelegramNotification({
   const bot = getTelegramBot();
   const telegramMessage = buildTelegramMessage({ name, email, message });
 
-  await bot.sendMessage(envs.TELEGRAM_CHAT_ID, telegramMessage);
+  await bot.sendMessage({
+    chat_id: envs.TELEGRAM_CHAT_ID,
+    text: telegramMessage,
+  });
 }
 
 export async function POST(request: NextRequest) {
@@ -116,9 +119,9 @@ export async function POST(request: NextRequest) {
     // Validate the input data
     const result = contactSchema.safeParse(body);
     if (!result.success) {
-      console.warn('Validation failed:', result.error.errors);
+      console.warn('Validation failed:', result.error.issues);
       return NextResponse.json(
-        { err: 'validation', details: result.error.errors },
+        { err: 'validation', details: result.error.issues },
         { status: 400 },
       );
     }

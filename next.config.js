@@ -1,3 +1,4 @@
+const withFlowbiteReact = require('flowbite-react/plugin/nextjs');
 const createNextIntlPlugin = require('next-intl/plugin');
 const { createSecureHeaders } = require('next-secure-headers');
 
@@ -99,4 +100,4 @@ const nextConfig = {
   },
 };
 
-module.exports = withNextIntl(nextConfig);
+module.exports = withFlowbiteReact(withNextIntl(nextConfig));

@@ -70,7 +70,8 @@ const BgGraph = () => {
     <div className='falling-items-container'>
       {Array.from({ length: graphNum }).map((_, i) => (
         <div
-          key={`${i}-${_}`}
+          // biome-ignore lint/suspicious/noArrayIndexKey: decorative, fixed-length list whose per-item state is indexed by position
+          key={i}
           className='absolute falling-items z-0'
           style={{
             top: topValues[i],

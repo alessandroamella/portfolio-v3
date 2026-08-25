@@ -48,7 +48,7 @@ const WeatherInfo = () => {
               <img
                 src={`https://openweathermap.org/img/wn/${weather.icon}@2x.png`}
                 alt={weather.description || 'Weather icon'}
-                className='inline h-8 w-8 -mx-1 mb-[1px] -mt-[1px]'
+                className='inline h-8 w-8 -mx-1 mb-px -mt-px'
               />
             </Tooltip>
           )}

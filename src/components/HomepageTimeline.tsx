@@ -1,6 +1,14 @@
 'use client';
 
-import { Timeline } from 'flowbite-react';
+import {
+  Timeline,
+  TimelineBody,
+  TimelineContent,
+  TimelineItem,
+  TimelinePoint,
+  TimelineTime,
+  TimelineTitle,
+} from 'flowbite-react';
 import { useTranslations } from 'next-intl';
 import { config } from '@/config';
 
@@ -31,20 +39,20 @@ const HomepageTimeline = () => {
       {agencies.map((agency) => {
         const { name, date, job, description } = agency;
         return (
-          <Timeline.Item key={name}>
-            <Timeline.Point />
-            <Timeline.Content>
-              <Timeline.Time>
-                <span className='text-gray-400 dark:!text-gray-400'>
+          <TimelineItem key={name}>
+            <TimelinePoint />
+            <TimelineContent>
+              <TimelineTime>
+                <span className='text-gray-400 dark:text-gray-400!'>
                   {date}
                 </span>
-              </Timeline.Time>
-              <Timeline.Title className='text-white'>{job}</Timeline.Title>
-              <Timeline.Body className='text-gray-400'>
+              </TimelineTime>
+              <TimelineTitle className='text-white'>{job}</TimelineTitle>
+              <TimelineBody className='text-gray-400'>
                 {description}
-              </Timeline.Body>
-            </Timeline.Content>
-          </Timeline.Item>
+              </TimelineBody>
+            </TimelineContent>
+          </TimelineItem>
         );
       })}
     </Timeline>

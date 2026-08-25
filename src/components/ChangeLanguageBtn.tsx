@@ -65,7 +65,7 @@ const ChangeLanguageBtn = () => {
       <button
         type='button'
         onClick={() => setIsOpen(!isOpen)}
-        className='flex items-center space-x-1 bg-transparent border border-transparent hover:border-gray-200 dark:hover:border-gray-700 py-1 px-2 rounded text-gray-600 hover:text-gray-700 dark:text-gray-200 dark:hover:text-gray-100 transition-colors duration-75 focus:outline-none'
+        className='flex items-center space-x-1 bg-transparent border border-transparent hover:border-gray-200 dark:hover:border-gray-700 py-1 px-2 rounded-sm text-gray-600 hover:text-gray-700 dark:text-gray-200 dark:hover:text-gray-100 transition-colors duration-75 focus:outline-hidden'
       >
         {/* <span className='hidden md:block'>{currentLanguage.label}</span>
         <span className='md:hidden'>{currentLanguage.label.split(' ')[0]}</span> */}

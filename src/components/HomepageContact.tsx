@@ -106,7 +106,7 @@ const HomepageContact = () => {
 
         <div>
           <div className='mb-2 block'>
-            <Label htmlFor='email' value={t('yourEmail')} />
+            <Label htmlFor='email'>{t('yourEmail')}</Label>
           </div>
           <TextInput
             id='email'
@@ -123,7 +123,7 @@ const HomepageContact = () => {
         </div>
         <div>
           <div className='mb-2 block'>
-            <Label htmlFor='name' value={t('yourName')} />
+            <Label htmlFor='name'>{t('yourName')}</Label>
           </div>
           <TextInput
             id='name'
@@ -139,7 +139,7 @@ const HomepageContact = () => {
         </div>
         <div>
           <div className='mb-2 block'>
-            <Label htmlFor='message' value={t('yourMessage')} />
+            <Label htmlFor='message'>{t('yourMessage')}</Label>
           </div>
           <Textarea
             id='message'

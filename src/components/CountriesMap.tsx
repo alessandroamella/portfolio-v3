@@ -109,7 +109,7 @@ const CountriesMap = () => {
 
   return (
     <div className='relative mx-auto max-w-6xl h-[60vh] md:h-[500px] xl:h-[550px]'>
-      <div className='h-full md:mx-8 md:rounded-full md:shadow-lg border-y shadow-lg dark:shadow-gray-700 dark:md:dark:shadow-gray-800 overflow-hidden md:border md:bg-gradient-to-br md:from-blue-50 md:to-indigo-100 md:dark:from-gray-800 md:dark:to-gray-900 transition-colors duration-300'>
+      <div className='h-full md:mx-8 md:rounded-full md:shadow-lg border-y shadow-lg dark:shadow-gray-700 dark:md:dark:shadow-gray-800 overflow-hidden md:border md:bg-linear-to-br md:from-blue-50 md:to-indigo-100 md:dark:from-gray-800 md:dark:to-gray-900 transition-colors duration-300'>
         <ComposableMap
           projectionConfig={{
             scale: 200,
@@ -217,13 +217,13 @@ const CountriesMap = () => {
       <div className='absolute bottom-4 left-4 md:left-1/2 md:translate-x-[-50%] bg-white dark:bg-gray-800 rounded-lg shadow-lg p-3 text-sm'>
         <div className='flex items-center space-x-4'>
           <div className='flex items-center space-x-2'>
-            <div className='w-4 h-3 rounded bg-gradient-to-r from-blue-500 to-blue-700' />
+            <div className='w-4 h-3 rounded-sm bg-linear-to-r from-blue-500 to-blue-700' />
             <span className='text-gray-700 dark:text-gray-300'>
               {t('legend.visited')}
             </span>
           </div>
           <div className='flex items-center space-x-2'>
-            <div className='w-4 h-3 rounded bg-gray-300 dark:bg-gray-600' />
+            <div className='w-4 h-3 rounded-sm bg-gray-300 dark:bg-gray-600' />
             <span className='text-gray-700 dark:text-gray-300'>
               {t('legend.notVisited')}
             </span>

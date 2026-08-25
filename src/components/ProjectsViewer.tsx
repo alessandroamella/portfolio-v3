@@ -106,7 +106,7 @@ const ProjectsViewer: FC<ProjectsViewerProps> = ({ builtWithStr, openStr }) => {
           <FaBackward />
         </Button>
 
-        <div className='-mx-6 md:-mx-2 my-6 flex justify-center pt-[1.15rem] pb-[2.5rem] px-[2.6rem] w-60 h-96 relative'>
+        <div className='-mx-6 md:-mx-2 my-6 flex justify-center pt-[1.15rem] pb-10 px-[2.6rem] w-60 h-96 relative'>
           <Image
             width={240}
             height={384}
@@ -184,7 +184,7 @@ const ProjectsViewer: FC<ProjectsViewerProps> = ({ builtWithStr, openStr }) => {
         </div>
 
         <Fade>
-          <p className='dark:text-gray-400 mt-4 text-lg min-h-[5.5rem]'>
+          <p className='dark:text-gray-400 mt-4 text-lg min-h-22'>
             {curProject.description}
           </p>
 
@@ -196,7 +196,7 @@ const ProjectsViewer: FC<ProjectsViewerProps> = ({ builtWithStr, openStr }) => {
             {curProject.stack.map((e) => (
               <div
                 key={e}
-                className='bg-gray-100 dark:bg-gray-600 hover:dark:bg-gray-500 hover:bg-gray-200 transition-colors rounded-full px-3 py-2 text-sm text-gray-600 dark:text-gray-200'
+                className='bg-gray-100 dark:bg-gray-600 dark:hover:bg-gray-500 hover:bg-gray-200 transition-colors rounded-full px-3 py-2 text-sm text-gray-600 dark:text-gray-200'
               >
                 {e}
               </div>
