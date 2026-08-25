@@ -171,6 +171,10 @@ function Home(props: { params: Promise<{ locale: string }> }) {
           </h3>
           <div className='space-y-4'>
             <div className='border-l-2 border-blue-500 pl-4'>
+              <h4 className='font-bold text-white'>{t('educationAu')}</h4>
+              <p className='text-gray-400 text-sm'>{t('educationAuSub')}</p>
+            </div>
+            <div className='border-l-2 border-blue-500 pl-4'>
               <h4 className='font-bold text-white'>{t('educationUnibo')}</h4>
               <p className='text-gray-400 text-sm'>{t('educationUniboSub')}</p>
             </div>
@@ -276,6 +280,11 @@ function Home(props: { params: Promise<{ locale: string }> }) {
                 {t('howCanIHelpYou')}
               </h2>
 
+              <HowCanIHelpCard
+                name={t('studentJob')}
+                description={t('studentJobDescription')}
+                hasHr
+              />
               <HowCanIHelpCard
                 name={t('webDevelopment')}
                 description={t('webDevelopmentDescription')}

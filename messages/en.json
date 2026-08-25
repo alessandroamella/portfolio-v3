@@ -1,9 +1,9 @@
 {
   "metadata": {
-    "title": "Alessandro Amella | Freelance Full Stack Developer",
-    "description": "Freelance full-stack developer based in Modena, Italy. Building web applications, backends and APIs mainly with the MERN stack. AI/LLM integrations, cloud and automation.",
+    "title": "Alessandro Amella | Full Stack Developer & CS Student in Aarhus",
+    "description": "Full-stack developer from Modena, Italy, now based in Aarhus, Denmark, where I am studying for my MSc in Computer Science. Building web applications, backends and APIs mainly with the MERN stack. AI/LLM integrations, cloud and automation.",
     "siteName": "Alessandro Amella",
-    "keywords": "full stack developer, freelance Node.js developer, MERN stack, NestJS, backend developer, AI LLM, web developer Italy"
+    "keywords": "full stack developer, student job Aarhus, developer Denmark, freelance Node.js developer, MERN stack, NestJS, backend developer, AI LLM"
   },
   "header": {
     "about": "About",
@@ -18,10 +18,12 @@
     "about": "About Me",
     "projects": "Projects",
     "nowItIs": "now it is",
-    "description": "<p>Freelance full-stack developer, from Modena <weather></weather>.<br></br>I help startups and companies design and develop <strong>web applications, mobile apps and software</strong>, from architecture definition to production deployment.</p><p>I work mainly in the JavaScript ecosystem (<em>MERN</em> stack), but also handle <strong>AI and LLM</strong> integrations, <strong>cloud</strong> infrastructure, process automation and data management. More about me and my projects below!</p>",
+    "description": "<p>Full-stack developer from Modena, now in Aarhus <weather></weather>, where I am studying for my Master's in Computer Science.<br></br>I help startups and companies design and develop <strong>web applications, mobile apps and software</strong>, from architecture definition to production deployment.</p><p>I work mainly in the JavaScript ecosystem (<em>MERN</em> stack), but also handle <strong>AI and LLM</strong> integrations, <strong>cloud</strong> infrastructure, process automation and data management. More about me and my projects below!</p>",
     "educationTitle": "Education",
+    "educationAu": "MSc in Computer Science (AI specialisation)",
+    "educationAuSub": "Aarhus University · 2026 – present",
     "educationUnibo": "BSc in Computer Science",
-    "educationUniboSub": "University of Bologna",
+    "educationUniboSub": "University of Bologna · until March 2026",
     "educationBut": "Erasmus+",
     "educationButSub": "Brno University of Technology",
     "educationItis": "Diploma in Telecommunications",
@@ -51,6 +53,8 @@
     "contactSubtitle": "For quotes, consultations or information, you can contact me through the following form (or via the channels at the bottom right).",
     "otherChannels": "You can also find me on",
     "howCanIHelpYou": "I am open to:",
+    "studentJob": "Student job / part-time",
+    "studentJobDescription": "I am doing my Master's in Aarhus and I am looking for a student job in development, a few days a week.",
     "webDevelopment": "Web, software and app development",
     "webDevelopmentDescription": "Development of websites, web applications and custom software.",
     "consulting": "IT consulting",

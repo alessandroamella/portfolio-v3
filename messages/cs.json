@@ -1,9 +1,9 @@
 {
   "metadata": {
-    "title": "Alessandro Amella | Freelance Full-Stack Vývojář",
-    "description": "Freelance full-stack vývojář z Modeny (Itálie). Vyvíjím webové aplikace, backendy a API převážně v MERN stacku. Integrace AI/LLM, cloud a automatizace.",
+    "title": "Alessandro Amella | Full-Stack Vývojář a student v Aarhusu",
+    "description": "Full-stack vývojář z Modeny (Itálie), nyní v Aarhusu (Dánsko), kde studuji magisterské studium informatiky. Vyvíjím webové aplikace, backendy a API převážně v MERN stacku. Integrace AI/LLM, cloud a automatizace.",
     "siteName": "Alessandro Amella",
-    "keywords": "full stack vývojář, Node.js developer, MERN, NestJS, backend vývojář, AI LLM, webový vývojář"
+    "keywords": "full stack vývojář, studentská práce Aarhus, vývojář Dánsko, Node.js developer, MERN, NestJS, backend vývojář, AI LLM, webový vývojář"
   },
   "header": {
     "about": "O mně",
@@ -18,10 +18,12 @@
     "about": "O mně",
     "projects": "Projekty",
     "nowItIs": "nyní je",
-    "description": "<p>Freelance full-stack vývojář, z Modeny <weather></weather>.<br></br>Pomáhám startupům a firmám navrhovat a vyvíjet <strong>webové aplikace, aplikace a software</strong>, od definice architektury až po nasazení do produkce.</p><p>Pracuji hlavně v JavaScriptovém ekosystému (<em>MERN</em> stack), ale zabývám se také integrací <strong>AI a LLM</strong>, <strong>cloudovou</strong> infrastrukturou, automatizací procesů a správou dat. Více o mně a mých projektech níže!</p>",
+    "description": "<p>Full-stack vývojář z Modeny, nyní v Aarhusu <weather></weather>, kde studuji magisterské studium informatiky.<br></br>Pomáhám startupům a firmám navrhovat a vyvíjet <strong>webové aplikace, aplikace a software</strong>, od definice architektury až po nasazení do produkce.</p><p>Pracuji hlavně v JavaScriptovém ekosystému (<em>MERN</em> stack), ale zabývám se také integrací <strong>AI a LLM</strong>, <strong>cloudovou</strong> infrastrukturou, automatizací procesů a správou dat. Více o mně a mých projektech níže!</p>",
     "educationTitle": "Vzdělání",
+    "educationAu": "Magisterské studium informatiky (specializace AI)",
+    "educationAuSub": "Aarhus University · 2026 – současnost",
     "educationUnibo": "Bakalář v informatice",
-    "educationUniboSub": "Univerzita v Boloni",
+    "educationUniboSub": "Univerzita v Boloni · do března 2026",
     "educationBut": "Erasmus+",
     "educationButSub": "Vysoké učení technické v Brně",
     "educationItis": "Diplom v telekomunikacích",
@@ -51,6 +53,8 @@
     "contactSubtitle": "Pro cenové nabídky, konzultace nebo informace mě můžete kontaktovat prostřednictvím následujícího formuláře (nebo kanálů dole vpravo).",
     "otherChannels": "Můžete mě také najít na",
     "howCanIHelpYou": "Jsem otevřený následujícím:",
+    "studentJob": "Studentská práce / part-time",
+    "studentJobDescription": "Studuji magisterské studium v Aarhusu a hledám studentskou práci ve vývoji, několik dní v týdnu.",
     "webDevelopment": "Vývoj webů, softwaru a aplikací",
     "webDevelopmentDescription": "Vývoj webů, webových aplikací a zakázkového softwaru.",
     "consulting": "IT konzultace",

@@ -91,21 +91,23 @@ const ChangeLanguageBtn = () => {
 
       {isOpen && (
         <div className='absolute min-w-fit right-0 md:right-auto md:left-0 z-10 mt-1 w-max bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-md shadow-lg py-1'>
-          {config.languages.map((language) => (
-            <button
-              type='button'
-              key={language.value}
-              onClick={() => handleLanguageChange(language.value)}
-              className={`block w-full text-left px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-700 ${
-                language.value === lang
-                  ? 'font-medium text-gray-900 dark:text-white'
-                  : 'text-gray-700 dark:text-gray-300'
-              }`}
-            >
-              {/* {language.label} */}
-              <LanguageLabel lang={language} />
-            </button>
-          ))}
+          {config.languages
+            .filter((language) => !language.hidden)
+            .map((language) => (
+              <button
+                type='button'
+                key={language.value}
+                onClick={() => handleLanguageChange(language.value)}
+                className={`block w-full text-left px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-700 ${
+                  language.value === lang
+                    ? 'font-medium text-gray-900 dark:text-white'
+                    : 'text-gray-700 dark:text-gray-300'
+                }`}
+              >
+                {/* {language.label} */}
+                <LanguageLabel lang={language} />
+              </button>
+            ))}
         </div>
       )}
     </div>

@@ -2,8 +2,8 @@ import type { CountryName } from '@/constants/countries-mapping';
 
 export const config = Object.freeze({
   coords: {
-    lat: 44.64783,
-    lon: 10.92539,
+    lat: 56.16287,
+    lon: 10.20392,
   },
   githubUrl: 'https://github.com/alessandroamella',
   githubDisplayUrl: 'github.com/alessandroamella',
@@ -19,16 +19,20 @@ export const config = Object.freeze({
       value: 'it',
       label: 'Italiano',
       flag: 'IT',
+      hidden: false,
     },
     {
       value: 'en',
       label: 'English',
       flag: 'EN',
+      hidden: false,
     },
     {
       value: 'cs',
       label: 'Čeština',
       flag: 'CS',
+      // route still works, just not offered in the language dropdown for now
+      hidden: true,
     },
   ],
   visitedCountries: [
@@ -39,6 +43,7 @@ export const config = Object.freeze({
     'Bulgaria',
     'Croatia',
     'Czechia',
+    'Denmark',
     'Estonia',
     'Finland',
     'France',

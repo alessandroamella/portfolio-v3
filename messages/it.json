@@ -1,9 +1,9 @@
 {
   "metadata": {
-    "title": "Alessandro Amella | Sviluppatore Full Stack Freelance",
-    "description": "Full-stack developer freelance a Modena. Sviluppo web app, backend e API prevalentemente su MERN stack. Integrazioni AI/LLM, cloud e automazione.",
+    "title": "Alessandro Amella | Full Stack Developer, studente ad Aarhus",
+    "description": "Full-stack developer di Modena, ora ad Aarhus (Danimarca), dove studio la magistrale in Informatica. Sviluppo web app, backend e API prevalentemente su MERN stack. Integrazioni AI/LLM, cloud e automazione.",
     "siteName": "Alessandro Amella",
-    "keywords": "full stack developer, sviluppatore web Modena, freelance Node.js, MERN developer, NestJS, backend developer, AI LLM, consulenza informatica"
+    "keywords": "full stack developer, student job Aarhus, sviluppatore in Danimarca, sviluppatore web Modena, freelance Node.js, MERN developer, NestJS, backend developer, AI LLM, consulenza informatica"
   },
   "header": {
     "about": "About",
@@ -18,10 +18,12 @@
     "about": "Chi sono",
     "projects": "Progetti",
     "nowItIs": "dove ora fanno",
-    "description": "<p>Sviluppatore full-stack freelance, di Modena <weather></weather>.<br></br>Aiuto startup e aziende a progettare e sviluppare <strong>applicazioni web, app e software</strong>, dalla definizione dell'architettura fino al deployment in produzione.</p><p>Lavoro principalmente nell'ecosistema JavaScript (<em>MERN</em> stack), mi occupo anche di integrazioni con <strong>AI e LLM</strong>, infrastruttura <strong>cloud</strong>, automazione di processi e gestione dei dati. Più informazioni su di me e sui miei progetti qui sotto!</p>",
+    "description": "<p>Sviluppatore full-stack di Modena, ora ad Aarhus <weather></weather>, dove studio la magistrale in Informatica.<br></br>Aiuto startup e aziende a progettare e sviluppare <strong>applicazioni web, app e software</strong>, dalla definizione dell'architettura fino al deployment in produzione.</p><p>Lavoro principalmente nell'ecosistema JavaScript (<em>MERN</em> stack), mi occupo anche di integrazioni con <strong>AI e LLM</strong>, infrastruttura <strong>cloud</strong>, automazione di processi e gestione dei dati. Più informazioni su di me e sui miei progetti qui sotto!</p>",
     "educationTitle": "Formazione",
+    "educationAu": "Laurea magistrale in Informatica (specializzazione in AI)",
+    "educationAuSub": "Aarhus University · 2026 – oggi",
     "educationUnibo": "Laurea in Informatica",
-    "educationUniboSub": "Università di Bologna",
+    "educationUniboSub": "Università di Bologna · fino a marzo 2026",
     "educationBut": "Erasmus+",
     "educationButSub": "Brno University of Technology",
     "educationItis": "Diploma in Telecomunicazioni",
@@ -51,6 +53,8 @@
     "contactSubtitle": "Per preventivi, consulenze o informazioni, puoi contattarmi tramite il seguente form (o i canali in fondo a destra).",
     "otherChannels": "Mi trovi anche su",
     "howCanIHelpYou": "Sono aperto a:",
+    "studentJob": "Student job / part-time",
+    "studentJobDescription": "Studio la magistrale ad Aarhus e cerco uno student job nello sviluppo, qualche giorno a settimana.",
     "webDevelopment": "Sviluppo web, software e app",
     "webDevelopmentDescription": "Sviluppo di siti web, applicazioni web e software su misura.",
     "consulting": "Consulenza informatica",
