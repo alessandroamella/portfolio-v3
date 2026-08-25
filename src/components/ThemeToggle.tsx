@@ -15,11 +15,11 @@ const ThemeToggle = () => {
         theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode'
       }
     >
-      {theme === 'dark' ? (
-        <FaSun className='text-yellow-400' />
-      ) : (
-        <FaMoon className='text-gray-700' />
-      )}
+      {/* Toggled with CSS rather than state so the correct icon is painted
+          immediately: ThemeScript sets .dark on <html> before first paint,
+          while `theme` only becomes accurate after the mount effect runs. */}
+      <FaSun className='hidden text-yellow-400 dark:block' />
+      <FaMoon className='block text-gray-700 dark:hidden' />
     </button>
   );
 };

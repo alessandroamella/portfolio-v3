@@ -39,7 +39,6 @@
   },
   "devDependencies": {
     "@biomejs/biome": "2.5.10",
-    "@svgr/webpack": "^8.1.0",
     "@tailwindcss/postcss": "^4.3.3",
     "@types/lodash": "^4.17.25",
     "@types/node": "26.2.0",

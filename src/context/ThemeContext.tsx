@@ -18,11 +18,11 @@ interface ThemeContextType {
 const ThemeContext = createContext<ThemeContextType | undefined>(undefined);
 
 export function ThemeProvider({ children }: { children: ReactNode }) {
-  const [mounted, setMounted] = useState(false);
+  // Starts as 'light' on both server and client so the first render matches;
+  // ThemeScript has already set the real class on <html> before paint.
   const [theme, setTheme] = useState<Theme>('light');
 
   useEffect(() => {
-    setMounted(true);
     // Check for theme in localStorage or system preference
     const savedTheme = localStorage.getItem('theme') as Theme | null;
     const systemTheme = window.matchMedia('(prefers-color-scheme: dark)')
@@ -74,11 +74,6 @@ export function ThemeProvider({ children }: { children: ReactNode }) {
     // Update state
     setTheme(newTheme);
   };
-
-  // Avoid hydration mismatch
-  if (!mounted) {
-    return null;
-  }
 
   return (
     <ThemeContext.Provider value={{ theme, toggleTheme }}>
