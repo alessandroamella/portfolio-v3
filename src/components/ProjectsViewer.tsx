@@ -251,13 +251,28 @@ const ProjectsViewer: FC<ProjectsViewerProps> = ({ builtWithStr, openStr }) => {
       {showUnavailableModal && (
         <div
           className='fixed inset-0 z-50 flex items-center justify-center bg-black/50 p-4'
+          role='button'
+          tabIndex={0}
+          aria-label={tMeta('unavailableModal.close')}
           onClick={() => setShowUnavailableModal(false)}
+          onKeyDown={(e) => {
+            if (e.key === 'Enter' || e.key === ' ') {
+              setShowUnavailableModal(false);
+            }
+          }}
         >
+          {/* biome-ignore lint/a11y/useKeyWithClickEvents: click here only stops backdrop propagation, no keyboard action needed */}
           <div
             className='max-w-md rounded-2xl bg-white dark:bg-gray-800 p-6 shadow-xl'
+            role='dialog'
+            aria-modal='true'
+            aria-labelledby='unavailable-modal-title'
             onClick={(e) => e.stopPropagation()}
           >
-            <h2 className='text-xl font-bold text-gray-700 dark:text-gray-50'>
+            <h2
+              id='unavailable-modal-title'
+              className='text-xl font-bold text-gray-700 dark:text-gray-50'
+            >
               {tMeta('unavailableModal.title')}
             </h2>
             <p className='mt-3 text-gray-600 dark:text-gray-300'>

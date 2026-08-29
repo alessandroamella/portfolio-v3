@@ -62,7 +62,7 @@ export const projectsInfo: Project[] = [
   },
   {
     id: 'qrami',
-    status: 'inDevelopment',
+    status: 'live',
     year: '2026',
     solo: true,
     stack: [
@@ -73,6 +73,7 @@ export const projectsInfo: Project[] = [
       'Digital signature',
     ],
     image: qramiImg,
+    url: 'https://www.qrami.it/',
   },
   {
     id: 'iotdashboard',
