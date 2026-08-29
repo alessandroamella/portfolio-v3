@@ -106,7 +106,7 @@
   },
   "projects": {
     "sciopero": {
-      "title": "C'è Sciopero?",
+      "title": "Strike Alerts",
       "description": "Bachelor's thesis and empirical case study on <strong>LLM</strong>-based information extraction. Instead of brittle DOM scrapers, an LLM pipeline reads messy Italian public-transport strike notices (HTML and PDF) and pulls out structured data: dates, scope and guaranteed service windows. I ran 1,400+ benchmarks across GPT, Gemini, Llama and DeepSeek and several preprocessing strategies, including a <em>DOM-chaos</em> resilience test, reaching an <em>F1-score</em> above 0.95 on field extraction. A companion <strong>React Native</strong> app sends real-time strike alerts."
     },
     "bamboosim": {
@@ -144,6 +144,12 @@
     "paper": "Thesis",
     "roles": {
       "backendDataAi": "Backend, database & AI integration (team of 3)"
+    },
+    "unavailable": "Unavailable",
+    "unavailableModal": {
+      "title": "Service temporarily down",
+      "body": "This service is currently offline due to a naming dispute with a third party. It will be back online under a new name as soon as the matter is resolved.",
+      "close": "Close"
     }
   },
   "visitedCountries": {

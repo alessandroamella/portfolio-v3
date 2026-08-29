@@ -106,7 +106,7 @@
   },
   "projects": {
     "sciopero": {
-      "title": "C'è Sciopero?",
+      "title": "Upozornění na stávky",
       "description": "Bakalářská práce a empirická případová studie o extrakci informací pomocí <strong>LLM</strong>. Místo křehkých DOM scraperů čte LLM pipeline nepřehledná oznámení o stávkách italské veřejné dopravy (HTML i PDF) a získává strukturovaná data: termíny, rozsah a garantované časy provozu. Provedl jsem přes 1 400 benchmarků na modelech GPT, Gemini, Llama a DeepSeek a různých strategiích předzpracování včetně testu odolnosti <em>DOM-chaos</em>, s výsledným <em>F1-score</em> nad 0,95 při extrakci polí. Doprovodná <strong>aplikace React Native</strong> posílá upozornění v reálném čase."
     },
     "bamboosim": {
@@ -144,6 +144,12 @@
     "paper": "Práce",
     "roles": {
       "backendDataAi": "Backend, databáze a integrace AI (tým 3 lidí)"
+    },
+    "unavailable": "Nedostupné",
+    "unavailableModal": {
+      "title": "Služba je dočasně nedostupná",
+      "body": "Tato služba je momentálně offline kvůli sporu o název se třetí stranou. Jakmile bude záležitost vyřešena, bude opět dostupná pod novým názvem.",
+      "close": "Zavřít"
     }
   },
   "visitedCountries": {

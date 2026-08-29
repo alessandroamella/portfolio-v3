@@ -82,6 +82,8 @@ const ProjectsViewer: FC<ProjectsViewerProps> = ({ builtWithStr, openStr }) => {
       .start();
   }, [typewriter, curProject]);
 
+  const [showUnavailableModal, setShowUnavailableModal] = useState(false);
+
   const sliderRef = useRef<SwiperRef>(null);
 
   const handlePrev = useCallback(() => {
@@ -213,15 +215,27 @@ const ProjectsViewer: FC<ProjectsViewerProps> = ({ builtWithStr, openStr }) => {
             <FaGithub />
             <span className='ml-2'>GitHub</span>
           </Button>
-          <Button
-            href={curProject.url}
-            disabled={!curProject.url}
-            color='blue'
-            className='flex items-center rounded-2xl font-medium tracking-tight px-3'
-          >
-            <FaExternalLinkAlt />
-            <span className='ml-2'>{openStr}</span>
-          </Button>
+          {curProject.unavailable ? (
+            <Button
+              type='button'
+              onClick={() => setShowUnavailableModal(true)}
+              color='blue'
+              className='flex items-center rounded-2xl font-medium tracking-tight px-3'
+            >
+              <FaExternalLinkAlt />
+              <span className='ml-2'>{tMeta('unavailable')}</span>
+            </Button>
+          ) : (
+            <Button
+              href={curProject.url}
+              disabled={!curProject.url}
+              color='blue'
+              className='flex items-center rounded-2xl font-medium tracking-tight px-3'
+            >
+              <FaExternalLinkAlt />
+              <span className='ml-2'>{openStr}</span>
+            </Button>
+          )}
           {curProject.paperUrl && (
             <Button
               href={curProject.paperUrl}
@@ -233,6 +247,32 @@ const ProjectsViewer: FC<ProjectsViewerProps> = ({ builtWithStr, openStr }) => {
           )}
         </div>
       </div>
+
+      {showUnavailableModal && (
+        <div
+          className='fixed inset-0 z-50 flex items-center justify-center bg-black/50 p-4'
+          onClick={() => setShowUnavailableModal(false)}
+        >
+          <div
+            className='max-w-md rounded-2xl bg-white dark:bg-gray-800 p-6 shadow-xl'
+            onClick={(e) => e.stopPropagation()}
+          >
+            <h2 className='text-xl font-bold text-gray-700 dark:text-gray-50'>
+              {tMeta('unavailableModal.title')}
+            </h2>
+            <p className='mt-3 text-gray-600 dark:text-gray-300'>
+              {tMeta('unavailableModal.body')}
+            </p>
+            <Button
+              type='button'
+              onClick={() => setShowUnavailableModal(false)}
+              className='mt-6 rounded-2xl font-medium tracking-tight px-3'
+            >
+              {tMeta('unavailableModal.close')}
+            </Button>
+          </div>
+        </div>
+      )}
     </div>
   );
 };

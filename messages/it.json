@@ -106,7 +106,7 @@
   },
   "projects": {
     "sciopero": {
-      "title": "C'è Sciopero?",
+      "title": "Avvisi Scioperi",
       "description": "Tesi di laurea e case study empirico sull''estrazione di informazioni tramite <strong>LLM</strong>. Al posto di fragili scraper del DOM, una pipeline LLM legge gli avvisi di sciopero del trasporto pubblico italiano (HTML e PDF) e ne estrae dati strutturati: date, ambito e fasce di garanzia. Ho eseguito oltre 1.400 benchmark su GPT, Gemini, Llama e DeepSeek e diverse strategie di pre-processing, incluso un test di robustezza <em>DOM-chaos</em>, raggiungendo un <em>F1-score</em> superiore a 0,95 sull''estrazione dei campi. Un''<strong>app React Native</strong> associata invia notifiche in tempo reale."
     },
     "bamboosim": {
@@ -144,6 +144,12 @@
     "paper": "Tesi",
     "roles": {
       "backendDataAi": "Backend, database e integrazione AI (team di 3)"
+    },
+    "unavailable": "Non disponibile",
+    "unavailableModal": {
+      "title": "Servizio temporaneamente offline",
+      "body": "Questo servizio è attualmente offline a causa di una controversia sul nome con terzi. Tornerà online con un nuovo nome non appena la questione sarà risolta.",
+      "close": "Chiudi"
     }
   },
   "visitedCountries": {

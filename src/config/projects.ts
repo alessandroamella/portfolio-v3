@@ -23,6 +23,8 @@ export type Project = {
   github?: string;
   // e.g. a thesis / paper PDF
   paperUrl?: string;
+  // set when the live link is intentionally disabled (e.g. legal dispute)
+  unavailable?: boolean;
 };
 
 export const projectsInfo: Project[] = [
@@ -39,7 +41,7 @@ export const projectsInfo: Project[] = [
       'React Native',
     ],
     image: ceScioperoImg,
-    url: 'https://cesciopero.it',
+    unavailable: true,
     paperUrl: 'https://amslaurea.unibo.it/id/eprint/39074/1/tesi.pdf',
   },
   {
