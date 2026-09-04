@@ -5,6 +5,7 @@ import type {
   ButtonHTMLAttributes,
   FunctionComponent,
 } from 'react';
+import { isInternalLink } from '@/utils/url';
 
 type ButtonAndHrefProps = AnchorHTMLAttributes<HTMLAnchorElement> &
   ButtonHTMLAttributes<HTMLButtonElement>;
@@ -39,8 +40,7 @@ const Button: FunctionComponent<ButtonProps> = ({
     className,
   );
 
-  // Check if href is internal (starts with / or relative) or external
-  const isInternal = href && (href.startsWith('/') || href.startsWith('.'));
+  const isInternal = isInternalLink(href);
 
   return href ? (
     isInternal ? (

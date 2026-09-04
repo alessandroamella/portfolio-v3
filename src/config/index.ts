@@ -1,6 +1,7 @@
 import type { CountryName } from '@/constants/countries-mapping';
 
 export const config = Object.freeze({
+  siteUrl: 'https://www.amella.it',
   coords: {
     lat: 56.16287,
     lon: 10.20392,

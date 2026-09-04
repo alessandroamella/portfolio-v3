@@ -28,11 +28,6 @@ import iPhoneImg from '@/assets/misc/iphone.webp';
 import { type ProjectStatus, projectsInfo } from '@/config/projects';
 import Button from './Button';
 
-interface ProjectsViewerProps {
-  builtWithStr: string;
-  openStr: string;
-}
-
 const statusBadgeClass: Record<ProjectStatus, string> = {
   live: 'bg-green-100 text-green-700 dark:bg-green-900/50 dark:text-green-300',
   inDevelopment:
@@ -40,9 +35,10 @@ const statusBadgeClass: Record<ProjectStatus, string> = {
   archived: 'bg-gray-200 text-gray-600 dark:bg-gray-700 dark:text-gray-300',
 };
 
-const ProjectsViewer: FC<ProjectsViewerProps> = ({ builtWithStr, openStr }) => {
+const ProjectsViewer: FC = () => {
   const t = useTranslations('projects');
   const tMeta = useTranslations('projectMeta');
+  const tHomepage = useTranslations('homepage');
 
   const projects = useMemo(
     () =>
@@ -82,8 +78,6 @@ const ProjectsViewer: FC<ProjectsViewerProps> = ({ builtWithStr, openStr }) => {
       .start();
   }, [typewriter, curProject]);
 
-  const [showUnavailableModal, setShowUnavailableModal] = useState(false);
-
   const sliderRef = useRef<SwiperRef>(null);
 
   const handlePrev = useCallback(() => {
@@ -108,7 +102,7 @@ const ProjectsViewer: FC<ProjectsViewerProps> = ({ builtWithStr, openStr }) => {
           <FaBackward />
         </Button>
 
-        <div className='-mx-6 md:-mx-2 my-6 flex justify-center pt-[1.15rem] pb-10 px-[2.6rem] w-60 h-96 relative'>
+        <div className='-mx-6 md:-mx-2 my-6 flex justify-center pt-[1.38rem] md:pt-[1.15rem] pb-12 md:pb-10 px-[3.12rem] md:px-[2.6rem] w-72 md:w-60 h-[28.8rem] md:h-96 relative'>
           <Image
             width={240}
             height={384}
@@ -159,7 +153,7 @@ const ProjectsViewer: FC<ProjectsViewerProps> = ({ builtWithStr, openStr }) => {
       </div>
 
       <div className='flex flex-col justify-center'>
-        <h1 className='text-4xl tracking-tight font-bold text-gray-600 dark:text-gray-50 leading-tight'>
+        <h1 className='text-4xl tracking-tight font-bold text-gray-600 dark:text-gray-50 mt-4 leading-tight'>
           <Typewriter
             onInit={(typewriter) => {
               setTypewriter(typewriter);
@@ -186,12 +180,12 @@ const ProjectsViewer: FC<ProjectsViewerProps> = ({ builtWithStr, openStr }) => {
         </div>
 
         <Fade>
-          <p className='dark:text-gray-400 mt-4 text-lg min-h-22'>
+          <p className='dark:text-gray-400 mt-4 text-lg min-h-[22rem] md:min-h-[13rem]'>
             {curProject.description}
           </p>
 
-          <p className='mt-4 text-gray-500 dark:text-gray-200'>
-            {builtWithStr}
+          <p className='text-gray-500 dark:text-gray-200'>
+            {tHomepage('builtWith')}
           </p>
           <div className='max-w-full flex-wrap overflow-x-hidden flex items-center justify-center md:justify-start gap-2'>
             {/* {curProject.stack.map((e) => ( */}
@@ -207,33 +201,23 @@ const ProjectsViewer: FC<ProjectsViewerProps> = ({ builtWithStr, openStr }) => {
         </Fade>
 
         <div className='mt-8 flex flex-wrap items-center justify-center md:justify-start gap-4'>
-          <Button
-            href={curProject.github}
-            disabled={!curProject.github}
-            className='flex items-center rounded-2xl font-medium tracking-tight px-3'
-          >
-            <FaGithub />
-            <span className='ml-2'>GitHub</span>
-          </Button>
-          {curProject.unavailable ? (
+          {!curProject.unavailable && curProject.github && (
             <Button
-              type='button'
-              onClick={() => setShowUnavailableModal(true)}
-              color='blue'
+              href={curProject.github}
               className='flex items-center rounded-2xl font-medium tracking-tight px-3'
             >
-              <FaExternalLinkAlt />
-              <span className='ml-2'>{tMeta('unavailable')}</span>
+              <FaGithub />
+              <span className='ml-2'>GitHub</span>
             </Button>
-          ) : (
+          )}
+          {!curProject.unavailable && curProject.url && (
             <Button
               href={curProject.url}
-              disabled={!curProject.url}
               color='blue'
               className='flex items-center rounded-2xl font-medium tracking-tight px-3'
             >
               <FaExternalLinkAlt />
-              <span className='ml-2'>{openStr}</span>
+              <span className='ml-2'>{tHomepage('open')}</span>
             </Button>
           )}
           {curProject.paperUrl && (
@@ -247,47 +231,6 @@ const ProjectsViewer: FC<ProjectsViewerProps> = ({ builtWithStr, openStr }) => {
           )}
         </div>
       </div>
-
-      {showUnavailableModal && (
-        <div
-          className='fixed inset-0 z-50 flex items-center justify-center bg-black/50 p-4'
-          role='button'
-          tabIndex={0}
-          aria-label={tMeta('unavailableModal.close')}
-          onClick={() => setShowUnavailableModal(false)}
-          onKeyDown={(e) => {
-            if (e.key === 'Enter' || e.key === ' ') {
-              setShowUnavailableModal(false);
-            }
-          }}
-        >
-          {/* biome-ignore lint/a11y/useKeyWithClickEvents: click here only stops backdrop propagation, no keyboard action needed */}
-          <div
-            className='max-w-md rounded-2xl bg-white dark:bg-gray-800 p-6 shadow-xl'
-            role='dialog'
-            aria-modal='true'
-            aria-labelledby='unavailable-modal-title'
-            onClick={(e) => e.stopPropagation()}
-          >
-            <h2
-              id='unavailable-modal-title'
-              className='text-xl font-bold text-gray-700 dark:text-gray-50'
-            >
-              {tMeta('unavailableModal.title')}
-            </h2>
-            <p className='mt-3 text-gray-600 dark:text-gray-300'>
-              {tMeta('unavailableModal.body')}
-            </p>
-            <Button
-              type='button'
-              onClick={() => setShowUnavailableModal(false)}
-              className='mt-6 rounded-2xl font-medium tracking-tight px-3'
-            >
-              {tMeta('unavailableModal.close')}
-            </Button>
-          </div>
-        </div>
-      )}
     </div>
   );
 };

@@ -33,6 +33,11 @@
       "linkedin": "View my LinkedIn profile",
       "countries": "Visited countries"
     },
+    "languagesTitle": "Languages",
+    "languageItalian": "Italian",
+    "languageItalianSub": "Native",
+    "languageEnglish": "English",
+    "languageEnglishSub": "C1 (proficient)",
     "otherInterests": "Other interests of mine:",
     "otherInterestsList": {
       "radio": "Radio: diploma in telecommunications and <ham>radio amateur</ham>",
@@ -84,17 +89,17 @@
   },
   "curriculum": {
     "infolog": {
-      "date": "July 2021",
+      "date": "July 2021 · School Internship",
       "job": "System Administrator",
-      "description": "<ul><li>System administrator at <em>Infolog S.r.l.</em>, where I worked with the development team to create a web application for <strong>warehouse management</strong>.</li><li>Refactored the <strong>Microsoft SQL Server</strong> database.</li></ul>"
+      "description": "<ul><li>System administrator at <em>Infolog S.r.l.</em>, where I worked with the development team to create a web application for <strong>warehouse management</strong>.</li><li>Refactored the Microsoft SQL Server database.</li></ul>"
     },
     "seta": {
-      "date": "September 2021",
+      "date": "September 2021 · School Internship",
       "job": "Software Developer",
       "description": "<ul><li>Internship at the public transport company <em>SETA S.p.A.</em>, where I developed the software for <strong>generating audio files</strong> for announcements on buses, currently used <strong>across the entire fleet</strong> in Modena, Reggio Emilia and Piacenza.</li><li>Training of a machine learning model for passenger counting using onboard cameras.</li></ul>"
     },
     "fertec": {
-      "date": "March 2023",
+      "date": "March 2023 - July 2023",
       "job": "Web Developer",
       "description": "<ul><li>Design and development of a <strong>microservice system</strong> for an oxygenator production plant, from the general architecture to Raspberry Pi devices on Arch Linux.</li><li>Development of cost analysis software and a <strong>Flutter</strong> app to interface with medical devices.</li></ul>"
     },
@@ -106,8 +111,8 @@
   },
   "projects": {
     "sciopero": {
-      "title": "Strike Alerts",
-      "description": "Bachelor's thesis and empirical case study on <strong>LLM</strong>-based information extraction. Instead of brittle DOM scrapers, an LLM pipeline reads messy Italian public-transport strike notices (HTML and PDF) and pulls out structured data: dates, scope and guaranteed service windows. I ran 1,400+ benchmarks across GPT, Gemini, Llama and DeepSeek and several preprocessing strategies, including a <em>DOM-chaos</em> resilience test, reaching an <em>F1-score</em> above 0.95 on field extraction. A companion <strong>React Native</strong> app sends real-time strike alerts."
+      "title": "Web Scraping & LLMs",
+      "description": "Bachelor's thesis and empirical case study on <strong>LLM</strong>-based information extraction. An LLM pipeline reads unstructured Italian public-transport strike notices and pulls out structured data, such as dates, scope and guaranteed service windows. I ran 1,400+ benchmarks across GPT, Gemini, Llama and DeepSeek with several preprocessing strategies and a resilience test, reaching an <em>F1-score</em> above 0.95 on field extraction."
     },
     "bamboosim": {
       "title": "BambooSIM",
@@ -115,7 +120,7 @@
     },
     "qrami": {
       "title": "Telemedicine Platform",
-      "description": "Booking and clinical-workflow platform for an Italian health-tech startup, run as a <strong>SaaS</strong> on <strong>Stripe Connect</strong>. On sign-up the platform provisions each doctor a <strong>digital signature</strong> (via OpenAPI eSignature) and acts as the intermediary they use to sign clinical reports. <strong>PostGIS</strong> geofenced matching between patients and doctors, multi-stage escalation with timed fallbacks on <strong>BullMQ</strong>, and Redis locks against concurrent accepts. Stripe manual capture is deliberately gated on publication of the signed report, so payment and paperwork settle together."
+      "description": "Booking and clinical-workflow platform for an Italian health-tech startup, run as a <strong>SaaS</strong> on <strong>Stripe Connect</strong>. <strong>PostGIS</strong> geofenced matching between patients and doctors, multi-stage escalation with timed fallbacks on <strong>BullMQ</strong>, and Redis locks against concurrent accepts."
     },
     "iotdashboard": {
       "title": "IoT Dashboard",
@@ -127,7 +132,7 @@
     },
     "vhfesuperiori": {
       "title": "VHF e superiori",
-      "description": "Event platform and social network for an Italian amateur-radio association, in production and open source. It parses uploaded <strong>ADIF/EDI</strong> contact logs, geolocates Maidenhead grid squares and renders QSO maps server-side by driving a headless <strong>Chromium</strong> instance. It also generates personalised eQSL cards from templates and batches them into daily digest emails to stay within provider quotas. TypeScript monorepo with Express, MongoDB and a React/Leaflet front end."
+      "description": "Event platform and social network for an Italian amateur-radio association, in production and open source. It parses uploaded <strong>ADIF/EDI</strong> contact logs, geolocates Maidenhead grid squares and renders QSO maps server-side using Puppeteer. It also generates personalised eQSL cards from templates and batches them into daily digest emails to stay within provider quotas. TypeScript monorepo with Express, MongoDB and a React front end."
     },
     "ezaffitto": {
       "title": "ezaffitto",
@@ -144,12 +149,6 @@
     "paper": "Thesis",
     "roles": {
       "backendDataAi": "Backend, database & AI integration (team of 3)"
-    },
-    "unavailable": "Unavailable",
-    "unavailableModal": {
-      "title": "Service temporarily down",
-      "body": "This service is currently offline due to a naming dispute with a third party. It will be back online under a new name as soon as the matter is resolved.",
-      "close": "Close"
     }
   },
   "visitedCountries": {

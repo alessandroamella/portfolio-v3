@@ -13,8 +13,8 @@ export default function Footer() {
     <footer className='bg-gray-700 border-gray-200 border-t-4 text-white px-8 md:px-24 py-6 z-50 flex flex-col items-center md:flex-row justify-start gap-4 md:justify-around'>
       <div className='flex flex-col items-center md:items-start'>
         <h3 className='select-none tracking-tighter lowercase font-bold text-2xl'>
-          Bitrey
-          <span className='text-gray-400'>.dev</span>
+          Amella
+          <span className='text-gray-400'>.it</span>
         </h3>
         <a
           href='https://github.com/alessandroamella/portfolio-v3'

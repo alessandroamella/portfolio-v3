@@ -23,7 +23,7 @@ export async function generateMetadata({
       title: t('title'),
     },
     alternates: {
-      canonical: `https://www.bitrey.dev/${locale}/countries`,
+      canonical: `${config.siteUrl}/${locale}/countries`,
       languages: Object.fromEntries(
         config.languages.map((lang) => [lang.value, `/${lang.value}`]),
       ),

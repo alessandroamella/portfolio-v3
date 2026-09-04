@@ -33,6 +33,11 @@
       "linkedin": "Zobrazit můj profil na LinkedInu",
       "countries": "Navštívené země"
     },
+    "languagesTitle": "Jazyky",
+    "languageItalian": "Italština",
+    "languageItalianSub": "Rodilý mluvčí",
+    "languageEnglish": "Angličtina",
+    "languageEnglishSub": "C1 (pokročilá)",
     "otherInterests": "Moje další zájmy:",
     "otherInterestsList": {
       "radio": "Radio: diplom v telekomunikacích a <ham>radioamatér</ham>",
@@ -84,17 +89,17 @@
   },
   "curriculum": {
     "infolog": {
-      "date": "Červenec 2021",
+      "date": "Červenec 2021 · Školní stáž",
       "job": "Správce systému",
-      "description": "<ul><li>Správce systému u <em>Infolog S.r.l.</em>, kde jsem spolupracoval s vývojovým týmem na vytvoření webové aplikace pro <strong>správu skladu</strong>.</li><li>Refaktoring databáze <strong>Microsoft SQL Server</strong>.</li></ul>"
+      "description": "<ul><li>Správce systému u <em>Infolog S.r.l.</em>, kde jsem spolupracoval s vývojovým týmem na vytvoření webové aplikace pro <strong>správu skladu</strong>.</li><li>Refaktoring databáze Microsoft SQL Server.</li></ul>"
     },
     "seta": {
-      "date": "Září 2021",
+      "date": "Září 2021 · Školní stáž",
       "job": "Vývojář softwaru",
       "description": "<ul><li>Stáž v dopravní společnosti <em>SETA S.p.A.</em>, kde jsem vyvíjel software pro <strong>generování zvukových souborů</strong> pro hlášení v autobusech, který je nyní používán <strong>v celé flotile</strong> v Modeně, Reggio Emilia a Piacenze.</li><li>Trénink modelu strojového učení pro počítání cestujících pomocí palubních kamer.</li></ul>"
     },
     "fertec": {
-      "date": "Březen 2023",
+      "date": "Březen 2023 - Červenec 2023",
       "job": "Webový vývojář",
       "description": "<ul><li>Návrh a vývoj <strong>systému mikroslužeb</strong> pro výrobní linku oxygenátorů, od celkové architektury až po zařízení Raspberry Pi na Arch Linux.</li><li>Vývoj softwaru pro analýzu nákladů a aplikace <strong>Flutter</strong> pro propojení s lékařskými přístroji.</li></ul>"
     },
@@ -106,8 +111,8 @@
   },
   "projects": {
     "sciopero": {
-      "title": "Upozornění na stávky",
-      "description": "Bakalářská práce a empirická případová studie o extrakci informací pomocí <strong>LLM</strong>. Místo křehkých DOM scraperů čte LLM pipeline nepřehledná oznámení o stávkách italské veřejné dopravy (HTML i PDF) a získává strukturovaná data: termíny, rozsah a garantované časy provozu. Provedl jsem přes 1 400 benchmarků na modelech GPT, Gemini, Llama a DeepSeek a různých strategiích předzpracování včetně testu odolnosti <em>DOM-chaos</em>, s výsledným <em>F1-score</em> nad 0,95 při extrakci polí. Doprovodná <strong>aplikace React Native</strong> posílá upozornění v reálném čase."
+      "title": "Web Scraping a LLM",
+      "description": "Bakalářská práce a empirická případová studie o extrakci informací pomocí <strong>LLM</strong>. Místo křehkých DOM scraperů čte LLM pipeline nepřehledná oznámení o stávkách italské veřejné dopravy (HTML i PDF) a získává strukturovaná data: termíny, rozsah a garantované časy provozu. Provedl jsem přes 1 400 benchmarků na modelech GPT, Gemini, Llama a DeepSeek a různých strategiích předzpracování včetně testu odolnosti <em>DOM-chaos</em>, s výsledným <em>F1-score</em> nad 0,95 při extrakci polí."
     },
     "bamboosim": {
       "title": "BambooSIM",
@@ -127,7 +132,7 @@
     },
     "vhfesuperiori": {
       "title": "VHF e superiori",
-      "description": "Platforma pro události a sociální síť pro italské sdružení radioamatérů, v produkci a open source. Parsuje nahrané logy spojení <strong>ADIF/EDI</strong>, geolokuje Maidenhead lokátory a generuje mapy QSO na straně serveru řízením headless instance <strong>Chromium</strong>. Vytváří také personalizované eQSL karty ze šablon a sdružuje je do denních souhrnných e-mailů, aby se vešly do kvót poskytovatele. Monorepo v TypeScriptu s Express, MongoDB a frontendem React/Leaflet."
+      "description": "Platforma pro události a sociální síť pro italské sdružení radioamatérů, v produkci a open source. Parsuje nahrané logy spojení <strong>ADIF/EDI</strong>, geolokuje Maidenhead lokátory a generuje mapy QSO na straně serveru řízením headless instance <strong>Chromium</strong>. Vytváří také personalizované eQSL karty ze šablon a sdružuje je do denních souhrnných e-mailů, aby se vešly do kvót poskytovatele. Monorepo v TypeScriptu s Express, MongoDB a frontendem React."
     },
     "ezaffitto": {
       "title": "ezaffitto",
@@ -144,12 +149,6 @@
     "paper": "Práce",
     "roles": {
       "backendDataAi": "Backend, databáze a integrace AI (tým 3 lidí)"
-    },
-    "unavailable": "Nedostupné",
-    "unavailableModal": {
-      "title": "Služba je dočasně nedostupná",
-      "body": "Tato služba je momentálně offline kvůli sporu o název se třetí stranou. Jakmile bude záležitost vyřešena, bude opět dostupná pod novým názvem.",
-      "close": "Zavřít"
     }
   },
   "visitedCountries": {

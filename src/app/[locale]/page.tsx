@@ -1,3 +1,5 @@
+import EN from 'country-flag-icons/react/3x2/GB';
+import IT from 'country-flag-icons/react/3x2/IT';
 import { differenceInYears } from 'date-fns';
 import { Tooltip } from 'flowbite-react';
 import type { Metadata } from 'next';
@@ -24,9 +26,9 @@ import MainLayout from './MainLayout';
 const dancingScript = Dancing_Script({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  title: 'Alessandro Amella - Sviluppo e Soluzioni Informatiche - bitrey.dev',
+  title: 'Alessandro Amella - Sviluppo e Soluzioni Informatiche',
   description:
-    'bitrey.dev di Alessandro Amella - Sviluppo software, applicazioni web e software su misura per privati e aziende.',
+    'Alessandro Amella - Sviluppo software, applicazioni web e software su misura per privati e aziende.',
 };
 
 function Home(props: { params: Promise<{ locale: string }> }) {
@@ -46,7 +48,7 @@ function Home(props: { params: Promise<{ locale: string }> }) {
             <div className='relative text-center'>
               <div className='font-light text-lg text-gray-500 dark:text-gray-400 text-center md:text-left -mb-3 md:mb-0 w-full'>
                 <span className='text-gray-950/95 dark:text-gray-100/95'>
-                  bitrey.dev
+                  amella.it
                 </span>{' '}
                 {t('by')}
               </div>
@@ -226,17 +228,40 @@ function Home(props: { params: Promise<{ locale: string }> }) {
         </div>
         <hr className='md:hidden w-full bg-gray-300 dark:bg-gray-700 my-4' />
 
-        <div className='flex flex-col items-center'>
+        <div className='flex flex-col items-center md:items-start'>
           <HomepageTimeline />
-          <div className='flex mb-2 justify-center md:justify-start'>
-            <Button
-              color='blue'
-              href={config.linkedinUrl}
-              className='flex items-center gap-2 rounded-lg font-medium tracking-tight text-xl px-4 py-3'
-            >
-              <FaLinkedin />
-              LinkedIn
-            </Button>
+          <div className='w-full max-w-md mt-6 md:mt-10 mb-2'>
+            <h3 className='text-2xl text-gray-100 font-semibold tracking-tighter mb-2 text-center md:text-left'>
+              {t('languagesTitle')}
+            </h3>
+            <div className='flex flex-wrap justify-center md:justify-start gap-3'>
+              <div className='flex items-center gap-3 bg-gray-700/50 hover:bg-gray-700 transition-colors rounded-full pl-4 pr-6 py-3'>
+                <span className='w-7 inline-block'>
+                  <IT />
+                </span>
+                <span className='flex flex-col leading-tight'>
+                  <span className='font-bold text-white text-base'>
+                    {t('languageItalian')}
+                  </span>
+                  <span className='text-gray-400 text-sm'>
+                    {t('languageItalianSub')}
+                  </span>
+                </span>
+              </div>
+              <div className='flex items-center gap-3 bg-gray-700/50 hover:bg-gray-700 transition-colors rounded-full pl-4 pr-6 py-3'>
+                <span className='w-7 inline-block'>
+                  <EN />
+                </span>
+                <span className='flex flex-col leading-tight'>
+                  <span className='font-bold text-white text-base'>
+                    {t('languageEnglish')}
+                  </span>
+                  <span className='text-gray-400 text-sm'>
+                    {t('languageEnglishSub')}
+                  </span>
+                </span>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -251,7 +276,7 @@ function Home(props: { params: Promise<{ locale: string }> }) {
         <p className='my-2 text-lg dark:text-gray-400 text-center'>
           {t('someProjectsDescription')}
         </p>
-        <ProjectsViewer builtWithStr={t('builtWith')} openStr={t('open')} />
+        <ProjectsViewer />
 
         <div className='text-right mt-4 md:-mt-16 hover:text-gray-600 transition-colors duration-75'>
           <a

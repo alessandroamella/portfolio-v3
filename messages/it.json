@@ -33,6 +33,11 @@
       "linkedin": "Visualizza il mio profilo LinkedIn",
       "countries": "Paesi visitati"
     },
+    "languagesTitle": "Lingue",
+    "languageItalian": "Italiano",
+    "languageItalianSub": "Madrelingua",
+    "languageEnglish": "Inglese",
+    "languageEnglishSub": "C1 (avanzato)",
     "otherInterests": "Altri miei interessi:",
     "otherInterestsList": {
       "radio": "Radio: diploma in telecomunicazioni e <ham>radioamatore</ham>",
@@ -84,17 +89,17 @@
   },
   "curriculum": {
     "infolog": {
-      "date": "Luglio 2021",
+      "date": "Luglio 2021 · Tirocinio scolastico",
       "job": "Sistemista",
-      "description": "<ul><li>Sistemista presso l'azienda <em>Infolog S.r.l.</em>, dove ho lavorato con il team di sviluppo per la realizzazione di un'applicazione web per la <strong>gestione di magazzini</strong>.</li><li>Refactor del database <strong>Microsoft SQL Server</strong>.</li></ul>"
+      "description": "<ul><li>Sistemista presso l'azienda <em>Infolog S.r.l.</em>, dove ho lavorato con il team di sviluppo per la realizzazione di un'applicazione web per la <strong>gestione di magazzini</strong>.</li><li>Refactor del database Microsoft SQL Server.</li></ul>"
     },
     "seta": {
-      "date": "Settembre 2021",
+      "date": "Settembre 2021 · Tirocinio scolastico",
       "job": "Programmatore software",
       "description": "<ul><li>Stage presso l'azienda di trasporto pubblico <em>SETA S.p.A.</em>, dove ho sviluppato il software per la <strong>generazione dei file audio</strong> per gli annunci a bordo dei bus, attualmente utilizzato <strong>su tutta la flotta</strong> a Modena, Reggio Emilia e Piacenza.</li><li>Addestramento di un modello di machine learning per il conteggio passeggeri tramite le telecamere a bordo.</li></ul>"
     },
     "fertec": {
-      "date": "Marzo 2023",
+      "date": "Marzo 2023 - Luglio 2023",
       "job": "Programmatore web",
       "description": "<ul><li>Progettazione e sviluppo di un <strong>sistema a microservizi</strong> per un impianto produttore di ossigenatori, dall'architettura generale ai dispositivi Raspberry su Arch Linux.</li><li>Sviluppo di un software di analisi dei costi e di un'app <strong>Flutter</strong> per interfacciarsi con dispositivi medici.</li></ul>"
     },
@@ -106,8 +111,8 @@
   },
   "projects": {
     "sciopero": {
-      "title": "Avvisi Scioperi",
-      "description": "Tesi di laurea e case study empirico sull''estrazione di informazioni tramite <strong>LLM</strong>. Al posto di fragili scraper del DOM, una pipeline LLM legge gli avvisi di sciopero del trasporto pubblico italiano (HTML e PDF) e ne estrae dati strutturati: date, ambito e fasce di garanzia. Ho eseguito oltre 1.400 benchmark su GPT, Gemini, Llama e DeepSeek e diverse strategie di pre-processing, incluso un test di robustezza <em>DOM-chaos</em>, raggiungendo un <em>F1-score</em> superiore a 0,95 sull''estrazione dei campi. Un''<strong>app React Native</strong> associata invia notifiche in tempo reale."
+      "title": "Web Scraping e LLM",
+      "description": "Tesi di laurea e case study empirico sull''estrazione di informazioni tramite <strong>LLM</strong>. Al posto di fragili scraper del DOM, una pipeline LLM legge gli avvisi di sciopero del trasporto pubblico italiano (HTML e PDF) e ne estrae dati strutturati: date, ambito e fasce di garanzia. Ho eseguito oltre 1.400 benchmark su GPT, Gemini, Llama e DeepSeek e diverse strategie di pre-processing, incluso un test di robustezza <em>DOM-chaos</em>, raggiungendo un <em>F1-score</em> superiore a 0,95 sull''estrazione dei campi."
     },
     "bamboosim": {
       "title": "BambooSIM",
@@ -115,7 +120,7 @@
     },
     "qrami": {
       "title": "Piattaforma di telemedicina",
-      "description": "Piattaforma di prenotazione e gestione del flusso clinico per una startup italiana di health-tech, erogata come <strong>SaaS</strong> su <strong>Stripe Connect</strong>. Alla registrazione la piattaforma fornisce a ogni medico una <strong>firma digitale</strong> (tramite OpenAPI eSignature) e fa da tramite per firmare i referti. Matching geolocalizzato con <strong>PostGIS</strong>, escalation multi-stadio con fallback temporizzati su <strong>BullMQ</strong> e lock su Redis contro le accettazioni concorrenti. La capture manuale su Stripe è vincolata alla pubblicazione del referto firmato, così pagamento e documentazione si chiudono insieme."
+      "description": "Piattaforma di prenotazione e gestione del flusso clinico per una startup italiana di health-tech, erogata come <strong>SaaS</strong> su <strong>Stripe Connect</strong>. Matching geolocalizzato con <strong>PostGIS</strong>, escalation multi-stadio con fallback temporizzati su <strong>BullMQ</strong> e lock su Redis contro le accettazioni concorrenti."
     },
     "iotdashboard": {
       "title": "IoT dashboard",
@@ -127,7 +132,7 @@
     },
     "vhfesuperiori": {
       "title": "VHF e superiori",
-      "description": "Piattaforma di eventi e social network per un''associazione di radioamatori, in produzione e open source. Analizza i log di collegamento <strong>ADIF/EDI</strong> caricati dagli utenti, geolocalizza i locator Maidenhead e genera le mappe dei QSO lato server pilotando un''istanza headless di <strong>Chromium</strong>. Produce inoltre eQSL personalizzate a partire dai template e le raggruppa in email giornaliere per rientrare nelle quote del provider. Monorepo TypeScript con Express, MongoDB e front end React/Leaflet."
+      "description": "Piattaforma di eventi e social network per un''associazione di radioamatori, in produzione e open source. Analizza i log di collegamento <strong>ADIF/EDI</strong> caricati dagli utenti, geolocalizza i locator Maidenhead e genera le mappe dei QSO lato server usando Puppeteer. Produce inoltre eQSL personalizzate a partire dai template e le raggruppa in email giornaliere per rientrare nelle quote del provider. Monorepo TypeScript con Express, MongoDB e front end React."
     },
     "ezaffitto": {
       "title": "ezaffitto",
@@ -144,12 +149,6 @@
     "paper": "Tesi",
     "roles": {
       "backendDataAi": "Backend, database e integrazione AI (team di 3)"
-    },
-    "unavailable": "Non disponibile",
-    "unavailableModal": {
-      "title": "Servizio temporaneamente offline",
-      "body": "Questo servizio è attualmente offline a causa di una controversia sul nome con terzi. Tornerà online con un nuovo nome non appena la questione sarà risolta.",
-      "close": "Chiudi"
     }
   },
   "visitedCountries": {

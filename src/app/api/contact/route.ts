@@ -1,11 +1,11 @@
 import { type NextRequest, NextResponse } from 'next/server';
-import { validateTurnstileToken } from 'next-turnstile';
-import { Api } from 'node-telegram-bot-api';
-import nodemailer from 'nodemailer';
 import type Mail from 'nodemailer/lib/mailer';
 import { z } from 'zod';
 import { envs } from '@/config/envs';
 import { generateContactFormEmail } from '@/lib/emails/contact-form';
+import { getMailTransporter } from '@/lib/mailer';
+import { sendTelegramNotification } from '@/lib/telegram';
+import { verifyTurnstile } from '@/lib/turnstile';
 
 const contactSchema = z.object({
   name: z.string().min(3).max(50),
@@ -13,104 +13,6 @@ const contactSchema = z.object({
   message: z.string().min(10).max(1000),
   turnstile: z.string(),
 });
-
-async function verifyTurnstile(token: string): Promise<boolean> {
-  try {
-    // Allow dummy token in development
-    if (
-      process.env.NODE_ENV === 'development' &&
-      token === 'XXXX.DUMMY.TOKEN.XXXX'
-    ) {
-      console.warn('Using dummy Turnstile token in development mode');
-      return true;
-    }
-
-    const result = await validateTurnstileToken({
-      token,
-      secretKey: envs.TURNSTILE_SECRET_KEY,
-    });
-
-    if (result.success) {
-      console.debug('Turnstile verification passed');
-      return true;
-    }
-    console.error('Turnstile verification failed:', result);
-    return false;
-  } catch (error) {
-    console.error('Error verifying Turnstile:', error);
-    throw new Error('Failed to verify Turnstile');
-  }
-}
-
-let mailTransporter: nodemailer.Transporter | null = null;
-let telegramBot: Api | null = null;
-
-async function getMailTransporter() {
-  if (!mailTransporter) {
-    mailTransporter = nodemailer.createTransport({
-      host: envs.MAIL_SERVER,
-      port: 587,
-      secure: false,
-      auth: {
-        user: envs.MAIL_USERNAME,
-        pass: envs.MAIL_PASSWORD,
-      },
-    });
-    try {
-      await mailTransporter.verify();
-      console.log('Nodemailer transporter verified and ready.');
-    } catch (err) {
-      console.error('Nodemailer transporter verification failed:', err);
-      mailTransporter = null;
-      throw new Error('Failed to initialize mail service.');
-    }
-  }
-  return mailTransporter;
-}
-
-function getTelegramBot() {
-  if (!telegramBot) {
-    telegramBot = new Api(envs.TELEGRAM_BOT_TOKEN);
-  }
-  return telegramBot;
-}
-
-function buildTelegramMessage({
-  name,
-  email,
-  message,
-}: {
-  name: string;
-  email: string;
-  message: string;
-}) {
-  return [
-    'Nuova richiesta di contatto da bitrey.dev',
-    `Nome: ${name}`,
-    `Email: ${email}`,
-    '',
-    'Messaggio:',
-    message,
-  ].join('\n');
-}
-
-async function sendTelegramNotification({
-  name,
-  email,
-  message,
-}: {
-  name: string;
-  email: string;
-  message: string;
-}) {
-  const bot = getTelegramBot();
-  const telegramMessage = buildTelegramMessage({ name, email, message });
-
-  await bot.sendMessage({
-    chat_id: envs.TELEGRAM_CHAT_ID,
-    text: telegramMessage,
-  });
-}
 
 export async function POST(request: NextRequest) {
   try {
@@ -140,11 +42,11 @@ export async function POST(request: NextRequest) {
 
     const transporter = await getMailTransporter();
     const mailOptions: Mail.Options = {
-      from: `"${envs.SEND_EMAIL_FROM_NAME || 'Bitrey Contact'}" <${envs.SEND_EMAIL_FROM}>`,
+      from: `"${envs.SEND_EMAIL_FROM_NAME || 'Amella Contact'}" <${envs.SEND_EMAIL_FROM}>`,
       to: envs.SEND_EMAIL_TO,
       replyTo: email,
       text: generateContactFormEmail({ name, email, message }),
-      subject: 'BITREY.DEV - NUOVA RICHIESTA DI CONTATTO',
+      subject: 'AMELLA.IT - NUOVA RICHIESTA DI CONTATTO',
       html: generateContactFormEmail({ name, email, message }),
     };
 

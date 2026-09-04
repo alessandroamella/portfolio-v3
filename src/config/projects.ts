@@ -42,7 +42,7 @@ export const projectsInfo: Project[] = [
     ],
     image: ceScioperoImg,
     unavailable: true,
-    paperUrl: 'https://amslaurea.unibo.it/id/eprint/39074/1/tesi.pdf',
+    paperUrl: 'https://amslaurea.unibo.it/id/eprint/39074',
   },
   {
     id: 'bamboosim',

@@ -1,7 +1,6 @@
 'use client';
-import { sum, zip } from 'lodash';
 import { useLocale, useTranslations } from 'next-intl';
-import { useCallback, useEffect, useMemo, useState } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 import {
   ComposableMap,
   Geographies,
@@ -9,11 +8,9 @@ import {
   ZoomableGroup,
 } from 'react-simple-maps';
 import { config } from '@/config';
-import {
-  type CountryName,
-  countriesMapping,
-} from '@/constants/countries-mapping';
 import { useIsMobile } from '@/hooks/useIsMobile';
+import { getI18nCountryName } from '@/utils/countries';
+import { sumArrays } from '@/utils/geo';
 
 const geoUrl =
   'https://cdn.jsdelivr.net/npm/world-atlas@2.0.2/countries-110m.json';
@@ -26,11 +23,6 @@ interface TooltipData {
   x: number;
   y: number;
 }
-
-const sumArrays = (...arrays: [number, number][]): [number, number] => {
-  const result = zip(...arrays).map((group) => sum(group));
-  return [result[0] || 0, result[1] || 0];
-};
 
 const CountriesMap = () => {
   const t = useTranslations('countriesMap');
@@ -59,31 +51,13 @@ const CountriesMap = () => {
     [],
   );
 
-  const getI18nCountryName = useCallback(
-    (worldAtlasName: string) => {
-      const alpha2 = countriesMapping[worldAtlasName as CountryName];
-      if (!alpha2) return worldAtlasName;
-
-      try {
-        const displayNames = new Intl.DisplayNames([locale], {
-          type: 'region',
-        });
-        return displayNames.of(alpha2) || worldAtlasName;
-      } catch (error) {
-        console.debug('Error getting localized country name:', error);
-        return worldAtlasName;
-      }
-    },
-    [locale],
-  );
-
   const handleMouseEnter = (
     geo: { properties: { name: string } },
     event: React.MouseEvent,
   ) => {
     const { clientX, clientY } = event;
     setTooltip({
-      name: getI18nCountryName(geo.properties.name),
+      name: getI18nCountryName(geo.properties.name, locale),
       x: clientX,
       y: clientY,
     });

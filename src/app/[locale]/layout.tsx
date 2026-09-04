@@ -21,7 +21,7 @@ export async function generateMetadata({
   const t = await getTranslations({ locale, namespace: 'metadata' });
 
   return {
-    metadataBase: new URL('https://www.bitrey.dev'),
+    metadataBase: new URL(config.siteUrl),
     title: t('title'),
     description: t('description'),
     robots: {
@@ -63,7 +63,7 @@ export async function generateMetadata({
       images: ['banner.jpg'],
     },
     alternates: {
-      canonical: `https://www.bitrey.dev/${locale}`,
+      canonical: `${config.siteUrl}/${locale}`,
       languages: Object.fromEntries(
         config.languages.map((lang) => [lang.value, `/${lang.value}`]),
       ),
@@ -118,7 +118,7 @@ async function RootLayout({ children, params }: RootLayoutProps) {
           sizes='180x180'
           href='/apple-touch-icon.png'
         />
-        <meta name='apple-mobile-web-app-title' content='bitrey.dev' />
+        <meta name='apple-mobile-web-app-title' content='Alessandro Amella' />
         <meta name='color-scheme' content='light dark' />
         <link rel='manifest' href='/site.webmanifest' />
       </head>
