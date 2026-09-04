@@ -1,7 +1,7 @@
 {
   "metadata": {
     "title": "Alessandro Amella | Full-Stack Vývojář a student v Aarhusu",
-    "description": "Full-stack vývojář z Modeny (Itálie), nyní v Aarhusu (Dánsko), kde studuji magisterské studium informatiky. Vyvíjím webové aplikace, backendy a API převážně v MERN stacku. Integrace AI/LLM, cloud a automatizace.",
+    "description": "Full-stack vývojář z Modeny (Itálie), nyní v Aarhusu (Dánsko), kde studuji informatiku (specializace AI) na Aarhus University. Vyvíjím webové aplikace, backendy a API převážně v MERN stacku. Integrace AI/LLM, cloud a automatizace.",
     "siteName": "Alessandro Amella",
     "keywords": "full stack vývojář, studentská práce Aarhus, vývojář Dánsko, Node.js developer, MERN, NestJS, backend vývojář, AI LLM, webový vývojář"
   },
@@ -18,10 +18,10 @@
     "about": "O mně",
     "projects": "Projekty",
     "nowItIs": "nyní je",
-    "description": "<p>Full-stack vývojář z Modeny, nyní v Aarhusu <weather></weather>, kde studuji magisterské studium informatiky.<br></br>Pomáhám startupům a firmám navrhovat a vyvíjet <strong>webové aplikace, aplikace a software</strong>, od definice architektury až po nasazení do produkce.</p><p>Pracuji hlavně v JavaScriptovém ekosystému (<em>MERN</em> stack), ale zabývám se také integrací <strong>AI a LLM</strong>, <strong>cloudovou</strong> infrastrukturou, automatizací procesů a správou dat. Více o mně a mých projektech níže!</p>",
+    "description": "<p>Full-stack vývojář z Modeny, nyní v Aarhusu <weather></weather>, kde studuji informatiku (specializace AI) na Aarhus University.<br></br>Pomáhal jsem startupům a firmám, jako freelancer, navrhovat a vyvíjet <strong>webové aplikace, aplikace a software</strong>, od definice architektury až po nasazení do produkce.</p><p>Pracuji hlavně v JavaScriptovém ekosystému (<em>MERN</em> stack), ale zabývám se také integrací <strong>AI a LLM</strong>, <strong>cloudovou</strong> infrastrukturou, automatizací procesů a správou dat. Více o mně a mých projektech níže!</p>",
     "educationTitle": "Vzdělání",
     "educationAu": "Magisterské studium informatiky (specializace AI)",
-    "educationAuSub": "Aarhus University · 2026 – současnost",
+    "educationAuSub": "Aarhus University · 2026 - současnost",
     "educationUnibo": "Bakalář v informatice",
     "educationUniboSub": "Univerzita v Boloni · do března 2026",
     "educationBut": "Erasmus+",

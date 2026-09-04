@@ -73,6 +73,16 @@ body {
   }
 }
 
+.graph-node {
+  transition:
+    background-color 150ms,
+    border-color 150ms;
+}
+
+.graph-node[data-hovered] {
+  @apply bg-gray-100 border-gray-400;
+}
+
 .falling-items-container {
   white-space: nowrap;
   font-size: 0;

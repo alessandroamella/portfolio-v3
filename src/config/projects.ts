@@ -31,7 +31,7 @@ export const projectsInfo: Project[] = [
   {
     id: 'sciopero',
     status: 'live',
-    year: '2025–2026',
+    year: '2025-2026',
     solo: true,
     stack: [
       'NestJS',
@@ -78,7 +78,7 @@ export const projectsInfo: Project[] = [
   {
     id: 'iotdashboard',
     status: 'live',
-    year: '2024–2026',
+    year: '2024-2026',
     solo: false,
     roleKey: 'backendDataAi',
     stack: ['NestJS', 'TimescaleDB', 'Eclipse Kapua', 'Docker', 'Redis'],
@@ -87,7 +87,7 @@ export const projectsInfo: Project[] = [
   {
     id: 'ianus',
     status: 'inDevelopment',
-    year: '2025–2026',
+    year: '2025-2026',
     solo: false,
     roleKey: 'backendDataAi',
     stack: ['NestJS', 'PostgreSQL', 'LLM / RAG', 'React'],
@@ -96,7 +96,7 @@ export const projectsInfo: Project[] = [
   {
     id: 'vhfesuperiori',
     status: 'live',
-    year: '2022–2026',
+    year: '2022-2026',
     solo: true,
     stack: ['AWS S3', 'MongoDB', 'Express', 'OpenAPI', 'React'],
     image: vhfesuperioriImg,

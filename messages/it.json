@@ -1,7 +1,7 @@
 {
   "metadata": {
     "title": "Alessandro Amella | Full Stack Developer, studente ad Aarhus",
-    "description": "Full-stack developer di Modena, ora ad Aarhus (Danimarca), dove studio la magistrale in Informatica. Sviluppo web app, backend e API prevalentemente su MERN stack. Integrazioni AI/LLM, cloud e automazione.",
+    "description": "Full-stack developer di Modena, ora ad Aarhus (Danimarca), dove studio Computer Science (specializzazione in AI) alla Aarhus University. Sviluppo web app, backend e API prevalentemente su MERN stack. Integrazioni AI/LLM, cloud e automazione.",
     "siteName": "Alessandro Amella",
     "keywords": "full stack developer, student job Aarhus, sviluppatore in Danimarca, sviluppatore web Modena, freelance Node.js, MERN developer, NestJS, backend developer, AI LLM, consulenza informatica"
   },
@@ -18,10 +18,10 @@
     "about": "Chi sono",
     "projects": "Progetti",
     "nowItIs": "dove ora fanno",
-    "description": "<p>Sviluppatore full-stack di Modena, ora ad Aarhus <weather></weather>, dove studio la magistrale in Informatica.<br></br>Aiuto startup e aziende a progettare e sviluppare <strong>applicazioni web, app e software</strong>, dalla definizione dell'architettura fino al deployment in produzione.</p><p>Lavoro principalmente nell'ecosistema JavaScript (<em>MERN</em> stack), mi occupo anche di integrazioni con <strong>AI e LLM</strong>, infrastruttura <strong>cloud</strong>, automazione di processi e gestione dei dati. Più informazioni su di me e sui miei progetti qui sotto!</p>",
+    "description": "<p>Sviluppatore full-stack di Modena, ora ad Aarhus <weather></weather>, dove studio Computer Science (specializzazione in AI) alla Aarhus University.<br></br>Ho aiutato startup e aziende, come freelance, a progettare e sviluppare <strong>applicazioni web, app e software</strong>, dalla definizione dell'architettura fino al deployment in produzione.</p><p>Lavoro principalmente nell'ecosistema JavaScript (<em>MERN</em> stack), mi occupo anche di integrazioni con <strong>AI e LLM</strong>, infrastruttura <strong>cloud</strong>, automazione di processi e gestione dei dati. Più informazioni su di me e sui miei progetti qui sotto!</p>",
     "educationTitle": "Formazione",
     "educationAu": "Laurea magistrale in Informatica (specializzazione in AI)",
-    "educationAuSub": "Aarhus University · 2026 – oggi",
+    "educationAuSub": "Aarhus University · 2026 - oggi",
     "educationUnibo": "Laurea in Informatica",
     "educationUniboSub": "Università di Bologna · fino a marzo 2026",
     "educationBut": "Erasmus+",

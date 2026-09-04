@@ -52,7 +52,7 @@ function Home(props: { params: Promise<{ locale: string }> }) {
                 </span>{' '}
                 {t('by')}
               </div>
-              <h1 className='text-6xl font-bold leading-none z-20'>
+              <h1 className='text-6xl font-bold leading-none relative z-20'>
                 {t('splash')}
               </h1>
             </div>
