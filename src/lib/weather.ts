@@ -1,4 +1,3 @@
-import axios, { isAxiosError } from 'axios';
 import { config as appConfig } from '@/config';
 import { envs } from '@/config/envs';
 import type { WeatherData, WeatherResponse } from '@/interfaces/Weather';
@@ -24,7 +23,14 @@ export async function fetchWeatherFromAPI(
 ): Promise<WeatherData> {
   try {
     const url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&units=metric&lang=${mapLngToOWALng(language)}&appid=${envs.WEATHER_API_KEY}`;
-    const { data } = await axios.get<WeatherResponse>(url);
+    const res = await fetch(url, { next: { revalidate: 300 } });
+    const data: WeatherResponse = await res.json();
+    if (!res.ok) {
+      throw new Error(
+        (data as unknown as { message?: string })?.message ||
+          `Weather API responded with status ${res.status}`,
+      );
+    }
     console.debug(`Weather data received from API: ${JSON.stringify(data)}`);
     const weatherData: WeatherData = {
       temp: data.main.temp,
@@ -36,10 +42,7 @@ export async function fetchWeatherFromAPI(
     );
     return weatherData;
   } catch (err) {
-    const errStr =
-      (isAxiosError(err) && err?.response?.data?.message) ||
-      (err as Error).message ||
-      String(err);
+    const errStr = (err as Error).message || String(err);
     console.error('Error while getting weather:', errStr);
     throw new Error(errStr);
   }

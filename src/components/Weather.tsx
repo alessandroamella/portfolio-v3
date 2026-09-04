@@ -1,6 +1,5 @@
 'use client';
 
-import axios, { AxiosError } from 'axios';
 import { Spinner, Tooltip } from 'flowbite-react';
 import { useLocale, useTranslations } from 'next-intl';
 import { useEffect, useRef, useState } from 'react';
@@ -19,16 +18,12 @@ const WeatherInfo = () => {
       if (isFetchingWeather.current) return;
       isFetchingWeather.current = true;
       try {
-        const { data } = await axios.get('/api/weather', {
-          params: {
-            lang,
-          },
-        });
+        const res = await fetch(`/api/weather?lang=${lang}`);
+        const data = await res.json();
+        if (!res.ok) throw data;
         setWeather(data);
       } catch (err) {
-        console.error(
-          (err instanceof AxiosError && err?.response?.data) || err,
-        );
+        console.error(err);
       }
     }
     getWeather();

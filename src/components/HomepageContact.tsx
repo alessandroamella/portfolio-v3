@@ -1,6 +1,5 @@
 'use client';
 
-import axios from 'axios';
 import { Alert, Label, Textarea, TextInput } from 'flowbite-react';
 import { useTranslations } from 'next-intl';
 import { Turnstile } from 'next-turnstile';
@@ -47,19 +46,26 @@ const HomepageContact = () => {
     const { name, email, message } = data;
 
     try {
-      await axios.post('/api/contact', {
-        name,
-        email,
-        message,
-        turnstile: captchaVal,
+      const res = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          name,
+          email,
+          message,
+          turnstile: captchaVal,
+        }),
       });
+      if (!res.ok) {
+        const body = await res.json().catch(() => null);
+        throw body;
+      }
     } catch (err) {
       console.log(err);
 
       setDisabled(false);
 
-      const error = (err as { response?: { data?: { err?: string } } })
-        ?.response?.data?.err;
+      const error = (err as { err?: string })?.err;
       if (error && typeof error === 'string') {
         setAlert({
           type: 'failure',
