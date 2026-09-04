@@ -4,7 +4,7 @@
 const NODE =
   'graph-node w-16 h-16 border-2 border-gray-300 opacity-80 rounded-full z-10';
 const EDGE =
-  'absolute bottom-[3.9rem] bg-gray-900 dark:bg-white border border-gray-200 transform -rotate-45';
+  'absolute bottom-[3.9rem] bg-gray-900 dark:bg-gray-300 border border-gray-200 transform -rotate-45';
 
 function GraphElem() {
   return (

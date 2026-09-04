@@ -1,6 +1,6 @@
-# bitrey.dev portfolio
+# amella.it portfolio
 
-Source code for my personal portfolio website, online at [bitrey.dev](https://www.bitrey.dev).
+Source code for my personal portfolio website, online at [amella.it](https://www.amella.it).
 
 It uses Next.js with the App Router, TypeScript, Tailwind CSS, form validation with `zod`, and some APIs:
 
