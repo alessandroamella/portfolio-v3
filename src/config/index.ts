@@ -1,5 +1,15 @@
 import type { CountryName } from '@/constants/countries-mapping';
 
+export type CvAgency = {
+  // i18n key under `curriculum`
+  id: string;
+  start: Date;
+  // omitted when the entry spans a single month, 'ongoing' when still ongoing
+  end?: Date | 'ongoing';
+  // i18n key under `curriculum.notes` (appended after the date)
+  noteKey?: string;
+};
+
 export const config = Object.freeze({
   siteUrl: 'https://www.amella.it',
   coords: {
@@ -14,7 +24,12 @@ export const config = Object.freeze({
   linkedinUrl: 'https://www.linkedin.com/in/alessandro-amella',
   qrzUrl: 'https://www.qrz.com/db/IU4QSG',
   birthday: new Date(2003, 6, 13),
-  cvAgencies: ['infolog', 'seta', 'fertec', 'freelance'],
+  cvAgencies: [
+    { id: 'infolog', start: new Date(2021, 6, 1), noteKey: 'schoolInternship' },
+    { id: 'seta', start: new Date(2021, 8, 1), noteKey: 'schoolInternship' },
+    { id: 'fertec', start: new Date(2023, 2, 1), end: new Date(2023, 6, 1) },
+    { id: 'freelance', start: new Date(2024, 2, 1), end: 'ongoing' },
+  ] satisfies CvAgency[],
   languages: [
     {
       value: 'it',

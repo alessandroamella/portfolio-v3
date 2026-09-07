@@ -88,23 +88,22 @@
     "emailPlaceholder": "name@example.com"
   },
   "curriculum": {
+    "notes": {
+      "schoolInternship": "School Internship"
+    },
     "infolog": {
-      "date": "July 2021 · School Internship",
       "job": "System Administrator",
       "description": "<ul><li>System administrator at <em>Infolog S.r.l.</em>, where I worked with the development team to create a web application for <strong>warehouse management</strong>.</li><li>Refactored the Microsoft SQL Server database.</li></ul>"
     },
     "seta": {
-      "date": "September 2021 · School Internship",
       "job": "Software Developer",
       "description": "<ul><li>Internship at the public transport company <em>SETA S.p.A.</em>, where I developed the software for <strong>generating audio files</strong> for announcements on buses, currently used <strong>across the entire fleet</strong> in Modena, Reggio Emilia and Piacenza.</li><li>Training of a machine learning model for passenger counting using onboard cameras.</li></ul>"
     },
     "fertec": {
-      "date": "March 2023 - July 2023",
       "job": "Web Developer",
       "description": "<ul><li>Design and development of a <strong>microservice system</strong> for an oxygenator production plant, from the general architecture to Raspberry Pi devices on Arch Linux.</li><li>Development of cost analysis software and a <strong>Flutter</strong> app to interface with medical devices.</li></ul>"
     },
     "freelance": {
-      "date": "Since March 2024",
       "job": "Freelance Developer",
       "description": "Working with startups on various web projects. Mostly <em>MERN</em> stack (or often PostgreSQL and NestJS). I've worked on microservices architectures with automated CI/CD pipelines, cloud infrastructure deployment, and plenty of AI / LLM service integration."
     }
@@ -119,7 +118,7 @@
       "description": "Live commercial travel-eSIM store. After checkout the backend provisions the data plan automatically against the carrier's <strong>eSIM API</strong> and returns a working profile and QR code in seconds, handling top-ups and plan extensions on the same flow. Multi-gateway payments (card, PayPal, Apple Pay, Google Pay) in local currencies, plus a custom CMS for catalogue, orders and customers."
     },
     "qrami": {
-      "title": "Telemedicine Platform",
+      "title": "Qrami",
       "description": "Booking and clinical-workflow platform for an Italian health-tech startup, run as a <strong>SaaS</strong> on <strong>Stripe Connect</strong>. <strong>PostGIS</strong> geofenced matching between patients and doctors, multi-stage escalation with timed fallbacks on <strong>BullMQ</strong>, and Redis locks against concurrent accepts."
     },
     "iotdashboard": {

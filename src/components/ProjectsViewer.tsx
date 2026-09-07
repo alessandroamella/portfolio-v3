@@ -102,7 +102,8 @@ const ProjectsViewer: FC = () => {
           <FaBackward />
         </Button>
 
-        <div className='-mx-6 md:-mx-2 my-6 flex justify-center pt-[1.38rem] md:pt-[1.15rem] pb-12 md:pb-10 px-[3.12rem] md:px-[2.6rem] w-72 md:w-60 h-[28.8rem] md:h-96 relative'>
+        {/* Adapted to the iPhone frame size */}
+        <div className='-mx-6 md:-mx-2 my-6 w-72 md:w-60 max-w-full relative'>
           <Image
             width={240}
             height={384}
@@ -110,7 +111,7 @@ const ProjectsViewer: FC = () => {
             placeholder='blur'
             src={iPhoneImg}
             alt='iPhone overlay'
-            className='z-20 absolute top-0 bottom-0 right-0 left-0'
+            className='z-20 relative pointer-events-none w-full h-auto'
           />
 
           <Swiper
@@ -123,12 +124,12 @@ const ProjectsViewer: FC = () => {
               delay: 2500,
               disableOnInteraction: false,
             }}
-            className='h-full w-full z-40 rounded-2xl overflow-hidden'
+            className='absolute z-10 top-[5.9%] bottom-[6%] left-[18.65%] right-[18.65%] rounded-[9%/4.2%] overflow-hidden'
             ref={sliderRef}
             onSlideChange={(s) => setCurProject(projects[s.activeIndex])}
           >
             {Object.entries(projectsInfo).map(([name, { image }]) => (
-              <SwiperSlide key={name} className='h-full w-full z-10'>
+              <SwiperSlide key={name} className='h-full w-full'>
                 <Image
                   width={240}
                   height={384}
@@ -136,7 +137,7 @@ const ProjectsViewer: FC = () => {
                   placeholder='blur'
                   src={image}
                   alt={name}
-                  className='z-10 w-full h-full object-cover object-top'
+                  className='w-full h-full object-cover object-top'
                 />
               </SwiperSlide>
             ))}
@@ -180,7 +181,7 @@ const ProjectsViewer: FC = () => {
         </div>
 
         <Fade>
-          <p className='dark:text-gray-400 mt-4 text-lg min-h-[22rem] md:min-h-[13rem]'>
+          <p className='dark:text-gray-400 mt-4 text-lg md:min-h-52'>
             {curProject.description}
           </p>
 

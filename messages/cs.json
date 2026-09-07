@@ -88,23 +88,22 @@
     "emailPlaceholder": "jméno@příklad.com"
   },
   "curriculum": {
+    "notes": {
+      "schoolInternship": "Školní stáž"
+    },
     "infolog": {
-      "date": "Červenec 2021 · Školní stáž",
       "job": "Správce systému",
       "description": "<ul><li>Správce systému u <em>Infolog S.r.l.</em>, kde jsem spolupracoval s vývojovým týmem na vytvoření webové aplikace pro <strong>správu skladu</strong>.</li><li>Refaktoring databáze Microsoft SQL Server.</li></ul>"
     },
     "seta": {
-      "date": "Září 2021 · Školní stáž",
       "job": "Vývojář softwaru",
       "description": "<ul><li>Stáž v dopravní společnosti <em>SETA S.p.A.</em>, kde jsem vyvíjel software pro <strong>generování zvukových souborů</strong> pro hlášení v autobusech, který je nyní používán <strong>v celé flotile</strong> v Modeně, Reggio Emilia a Piacenze.</li><li>Trénink modelu strojového učení pro počítání cestujících pomocí palubních kamer.</li></ul>"
     },
     "fertec": {
-      "date": "Březen 2023 - Červenec 2023",
       "job": "Webový vývojář",
       "description": "<ul><li>Návrh a vývoj <strong>systému mikroslužeb</strong> pro výrobní linku oxygenátorů, od celkové architektury až po zařízení Raspberry Pi na Arch Linux.</li><li>Vývoj softwaru pro analýzu nákladů a aplikace <strong>Flutter</strong> pro propojení s lékařskými přístroji.</li></ul>"
     },
     "freelance": {
-      "date": "Od března 2024",
       "job": "Freelance vývojář",
       "description": "Spolupráce se startupy na různých webových projektech. Většinou <em>MERN</em> stack (nebo často PostgreSQL a NestJS). Pracoval jsem na architekturách mikroslužeb s automatizovanými CI/CD pipeline, nasazení na cloudovou infrastrukturu a hodně integrace AI / LLM služeb."
     }
@@ -119,7 +118,7 @@
       "description": "Komerční online obchod s cestovními eSIM. Po objednávce backend automaticky provisionuje datový tarif přes <strong>eSIM API</strong> operátora a během několika sekund vrací funkční profil a QR kód, přičemž na stejném toku řeší dobití a prodloužení. Platby přes více bran (karta, PayPal, Apple Pay, Google Pay) v místních měnách a vlastní CMS pro katalog, objednávky a zákazníky."
     },
     "qrami": {
-      "title": "Platforma pro telemedicínu",
+      "title": "Qrami",
       "description": "Platforma pro rezervace a klinické workflow pro italský health-tech startup, provozovaná jako <strong>SaaS</strong> na <strong>Stripe Connect</strong>. Při registraci platforma každému lékaři zřídí <strong>digitální podpis</strong> (přes OpenAPI eSignature) a funguje jako prostředník pro podepisování lékařských zpráv. Geolokační párování pacientů a lékařů pomocí <strong>PostGIS</strong>, vícefázová eskalace s časovanými zálohami na <strong>BullMQ</strong> a zámky v Redis proti souběžnému přijetí. Manuální capture na Stripe je vázaný na publikaci podepsané zprávy, takže platba a dokumentace se uzavřou společně."
     },
     "iotdashboard": {

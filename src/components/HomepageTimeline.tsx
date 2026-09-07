@@ -11,35 +11,40 @@ import {
 } from 'flowbite-react';
 import { useLocale, useTranslations } from 'next-intl';
 import { config } from '@/config';
-import { formatMonthYear } from '@/utils/date';
+import { formatMonthYearRange } from '@/utils/date';
 
 const HomepageTimeline = () => {
   const t = useTranslations('curriculum');
   const locale = useLocale();
 
-  const freelanceDateRange = `${formatMonthYear(
-    locale,
-    new Date(2024, 2, 1),
-  )} - ${formatMonthYear(locale, new Date())}`;
+  const agencies = [...config.cvAgencies]
+    .reverse()
+    .map(({ id, start, end, noteKey }) => {
+      const range = formatMonthYearRange(
+        locale,
+        start,
+        end === 'ongoing' ? new Date() : (end ?? start),
+      );
 
-  const agencies = [...config.cvAgencies].reverse().map((name) => ({
-    name,
-    date: name === 'freelance' ? freelanceDateRange : t(`${name}.date`),
-    job: t(`${name}.job`),
-    description: t.rich(`${name}.description`, {
-      ul: (children) => (
-        <ul className='list-disc list-inside mb-2'>{children}</ul>
-      ),
-      innerul: (children) => (
-        <ul className='list-[circle] list-inside ml-4 mt-1 text-[15px]'>
-          {children}
-        </ul>
-      ),
-      li: (children) => <li className='mb-2'>{children}</li>,
-      strong: (children) => <strong>{children}</strong>,
-      em: (children) => <em>{children}</em>,
-    }),
-  }));
+      return {
+        id,
+        date: noteKey ? `${range} · ${t(`notes.${noteKey}`)}` : range,
+        job: t(`${id}.job`),
+        description: t.rich(`${id}.description`, {
+          ul: (children) => (
+            <ul className='list-disc list-inside mb-2'>{children}</ul>
+          ),
+          innerul: (children) => (
+            <ul className='list-[circle] list-inside ml-4 mt-1 text-[15px]'>
+              {children}
+            </ul>
+          ),
+          li: (children) => <li className='mb-2'>{children}</li>,
+          strong: (children) => <strong>{children}</strong>,
+          em: (children) => <em>{children}</em>,
+        }),
+      };
+    });
 
   return (
     <Timeline
@@ -52,9 +57,9 @@ const HomepageTimeline = () => {
       }}
     >
       {agencies.map((agency) => {
-        const { name, date, job, description } = agency;
+        const { id, date, job, description } = agency;
         return (
-          <TimelineItem key={name}>
+          <TimelineItem key={id}>
             <TimelinePoint
               theme={{
                 marker: {

@@ -88,23 +88,22 @@
     "emailPlaceholder": "nome@esempio.com"
   },
   "curriculum": {
+    "notes": {
+      "schoolInternship": "Tirocinio scolastico"
+    },
     "infolog": {
-      "date": "Luglio 2021 · Tirocinio scolastico",
       "job": "Sistemista",
       "description": "<ul><li>Sistemista presso l'azienda <em>Infolog S.r.l.</em>, dove ho lavorato con il team di sviluppo per la realizzazione di un'applicazione web per la <strong>gestione di magazzini</strong>.</li><li>Refactor del database Microsoft SQL Server.</li></ul>"
     },
     "seta": {
-      "date": "Settembre 2021 · Tirocinio scolastico",
       "job": "Programmatore software",
       "description": "<ul><li>Stage presso l'azienda di trasporto pubblico <em>SETA S.p.A.</em>, dove ho sviluppato il software per la <strong>generazione dei file audio</strong> per gli annunci a bordo dei bus, attualmente utilizzato <strong>su tutta la flotta</strong> a Modena, Reggio Emilia e Piacenza.</li><li>Addestramento di un modello di machine learning per il conteggio passeggeri tramite le telecamere a bordo.</li></ul>"
     },
     "fertec": {
-      "date": "Marzo 2023 - Luglio 2023",
       "job": "Programmatore web",
       "description": "<ul><li>Progettazione e sviluppo di un <strong>sistema a microservizi</strong> per un impianto produttore di ossigenatori, dall'architettura generale ai dispositivi Raspberry su Arch Linux.</li><li>Sviluppo di un software di analisi dei costi e di un'app <strong>Flutter</strong> per interfacciarsi con dispositivi medici.</li></ul>"
     },
     "freelance": {
-      "date": "Da Marzo 2024",
       "job": "Sviluppatore freelance",
       "description": "Collaborazione con varie startup su svariati progetti web. Principalmente <em>MERN</em> stack (o spesso PostgreSQL e NestJS). Ho lavorato su architetture a microservizi con pipeline CI/CD automatizzate, deployment su infrastrutture cloud, tanta integrazione di servizi AI / LLM."
     }
@@ -119,7 +118,7 @@
       "description": "Negozio online di eSIM da viaggio, commerciale e attivo. Dopo il checkout il backend effettua il provisioning automatico del piano dati sulle <strong>API eSIM</strong> dell''operatore e restituisce profilo e QR code in pochi secondi, gestendo sullo stesso flusso ricariche ed estensioni. Pagamenti multi-gateway (carta, PayPal, Apple Pay, Google Pay) in valuta locale e un CMS su misura per catalogo, ordini e clienti."
     },
     "qrami": {
-      "title": "Piattaforma di telemedicina",
+      "title": "Qrami",
       "description": "Piattaforma di prenotazione e gestione del flusso clinico per una startup italiana di health-tech, erogata come <strong>SaaS</strong> su <strong>Stripe Connect</strong>. Matching geolocalizzato con <strong>PostGIS</strong>, escalation multi-stadio con fallback temporizzati su <strong>BullMQ</strong> e lock su Redis contro le accettazioni concorrenti."
     },
     "iotdashboard": {
