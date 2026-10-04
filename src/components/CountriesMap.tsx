@@ -1,4 +1,5 @@
 'use client';
+import classNames from 'classnames';
 import { useLocale, useTranslations } from 'next-intl';
 import { useEffect, useMemo, useState } from 'react';
 import {
@@ -51,13 +52,10 @@ const CountriesMap = () => {
     [],
   );
 
-  const handleMouseEnter = (
-    geo: { properties: { name: string } },
-    event: React.MouseEvent,
-  ) => {
+  const handleMouseEnter = (countryName: string, event: React.MouseEvent) => {
     const { clientX, clientY } = event;
     setTooltip({
-      name: getI18nCountryName(geo.properties.name, locale),
+      name: getI18nCountryName(countryName, locale),
       x: clientX,
       y: clientY,
     });
@@ -107,37 +105,24 @@ const CountriesMap = () => {
               {({ geographies }) =>
                 geographies.map((geo) => {
                   // console.log('geo', geo.properties);
-                  const countryName = geo.properties.name as string;
+                  const countryName = geo.properties?.name as string;
                   const isVisited = visitedCountriesLookup.has(countryName);
 
                   return (
                     <Geography
                       geography={geo}
                       key={geo.rsmKey}
-                      onMouseEnter={(event) => handleMouseEnter(geo, event)}
+                      onMouseEnter={(event) =>
+                        handleMouseEnter(countryName, event)
+                      }
                       onMouseMove={handleMouseMove}
                       onMouseLeave={handleMouseLeave}
-                      style={{
-                        default: {
-                          fill: isVisited ? 'url(#visitedGradient)' : '#E5E7EB',
-                          stroke: '#FFFFFF',
-                          strokeWidth: 0.5,
-                          outline: 'none',
-                        },
-                        hover: {
-                          fill: isVisited
-                            ? 'url(#visitedHoverGradient)'
-                            : '#D1D5DB',
-                          stroke: isVisited ? '#1E40AF' : '#6B7280',
-                          strokeWidth: 1,
-                          outline: 'none',
-                          cursor: 'pointer',
-                        },
-                        pressed: {
-                          fill: isVisited ? '#1E40AF' : '#9CA3AF',
-                          outline: 'none',
-                        },
-                      }}
+                      className={classNames(
+                        'outline-none stroke-white stroke-[0.5] hover:stroke-1 hover:cursor-pointer',
+                        isVisited
+                          ? 'fill-[url(#visitedGradient)] hover:fill-[url(#visitedHoverGradient)] hover:stroke-[#1E40AF] active:fill-[#1E40AF]'
+                          : 'fill-[#E5E7EB] hover:fill-[#D1D5DB] hover:stroke-[#6B7280] active:fill-[#9CA3AF]',
+                      )}
                     />
                   );
                 })

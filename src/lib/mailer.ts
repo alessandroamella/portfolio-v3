@@ -1,7 +1,7 @@
-import nodemailer from 'nodemailer';
+import nodemailer, { type Transporter } from 'nodemailer';
 import { envs } from '@/config/envs';
 
-let mailTransporter: nodemailer.Transporter | null = null;
+let mailTransporter: Transporter | null = null;
 
 export async function getMailTransporter() {
   if (!mailTransporter) {
