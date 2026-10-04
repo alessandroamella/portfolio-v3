@@ -18,6 +18,7 @@ import Button from '@/components/Button';
 import HomepageContact from '@/components/HomepageContact';
 import HomepageTimeline from '@/components/HomepageTimeline';
 import HowCanIHelpCard from '@/components/HowCanIHelpCard';
+import MarkdownPointer from '@/components/MarkdownPointer';
 import ProjectsViewer from '@/components/ProjectsViewer';
 import WeatherInfo from '@/components/Weather';
 import { config } from '@/config';
@@ -41,6 +42,7 @@ function Home(props: { params: Promise<{ locale: string }> }) {
 
   return (
     <MainLayout>
+      <MarkdownPointer locale={locale} page='home' />
       <section className='py-12 dark:text-white relative flex mt-0 flex-col items-center justify-center z-0'>
         <div className='flex items-center md:gap-8 px-8 md:px-16 mb-6'>
           <div className='mx-auto'>

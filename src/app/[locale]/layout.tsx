@@ -11,6 +11,7 @@ import { ThemeProvider } from '@/context/ThemeContext';
 import { routing } from '@/i18n/routing';
 import '../globals.css';
 import { config } from '@/config';
+import { markdownPath } from '@/lib/markdown-paths';
 
 export async function generateMetadata({
   params,
@@ -67,6 +68,7 @@ export async function generateMetadata({
       languages: Object.fromEntries(
         config.languages.map((lang) => [lang.value, `/${lang.value}`]),
       ),
+      types: { 'text/markdown': markdownPath(locale, 'home') },
     },
     keywords: t('keywords'),
     authors: [{ name: t('siteName') }],

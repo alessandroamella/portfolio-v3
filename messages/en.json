@@ -160,5 +160,19 @@
       "visited": "Visited",
       "notVisited": "Not Visited"
     }
+  },
+  "markdown": {
+    "experienceTitle": "Experience",
+    "linksTitle": "Links",
+    "contactForm": "Contact form",
+    "status": "Status",
+    "years": "Years",
+    "website": "Website",
+    "sourceCode": "Source code",
+    "linkUnavailable": "Live link temporarily unavailable",
+    "htmlVersion": "HTML version",
+    "otherLanguages": "Other languages",
+    "visitedCountriesList": "Visited countries",
+    "pointer": "A Markdown version of this page is available at {url}"
   }
 }

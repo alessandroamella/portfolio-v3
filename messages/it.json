@@ -160,5 +160,19 @@
       "visited": "Visitati",
       "notVisited": "Non visitati"
     }
+  },
+  "markdown": {
+    "experienceTitle": "Esperienze lavorative",
+    "linksTitle": "Link",
+    "contactForm": "Modulo di contatto",
+    "status": "Stato",
+    "years": "Anni",
+    "website": "Sito web",
+    "sourceCode": "Codice sorgente",
+    "linkUnavailable": "Link temporaneamente non disponibile",
+    "htmlVersion": "Versione HTML",
+    "otherLanguages": "Altre lingue",
+    "visitedCountriesList": "Paesi visitati",
+    "pointer": "Una versione Markdown di questa pagina è disponibile su {url}"
   }
 }

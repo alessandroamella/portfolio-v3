@@ -160,5 +160,19 @@
       "visited": "Navštívené",
       "notVisited": "Nenavštívené"
     }
+  },
+  "markdown": {
+    "experienceTitle": "Pracovní zkušenosti",
+    "linksTitle": "Odkazy",
+    "contactForm": "Kontaktní formulář",
+    "status": "Stav",
+    "years": "Roky",
+    "website": "Web",
+    "sourceCode": "Zdrojový kód",
+    "linkUnavailable": "Odkaz je dočasně nedostupný",
+    "htmlVersion": "HTML verze",
+    "otherLanguages": "Další jazyky",
+    "visitedCountriesList": "Navštívené země",
+    "pointer": "Markdown verze této stránky je k dispozici na {url}"
   }
 }

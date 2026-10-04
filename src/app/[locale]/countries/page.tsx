@@ -3,7 +3,9 @@ import { useTranslations } from 'next-intl';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { use } from 'react';
 import CountriesClient from '@/components/CountriesClient';
+import MarkdownPointer from '@/components/MarkdownPointer';
 import { config } from '@/config';
+import { markdownPath } from '@/lib/markdown-paths';
 import MainLayout from '../MainLayout';
 
 export async function generateMetadata({
@@ -25,8 +27,12 @@ export async function generateMetadata({
     alternates: {
       canonical: `${config.siteUrl}/${locale}/countries`,
       languages: Object.fromEntries(
-        config.languages.map((lang) => [lang.value, `/${lang.value}`]),
+        config.languages.map((lang) => [
+          lang.value,
+          `/${lang.value}/countries`,
+        ]),
       ),
+      types: { 'text/markdown': markdownPath(locale, 'countries') },
     },
   };
 }
@@ -43,6 +49,7 @@ export default function CountriesPage(props: {
 
   return (
     <MainLayout>
+      <MarkdownPointer locale={locale} page='countries' />
       <div className='max-w-6xl mx-auto pt-8 md:pt-12 px-8'>
         <h1 className='text-4xl font-bold text-gray-800 dark:text-white mb-2'>
           {t('title')}
