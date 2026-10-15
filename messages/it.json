@@ -133,6 +133,10 @@
       "title": "VHF e superiori",
       "description": "Piattaforma di eventi e social network per un''associazione di radioamatori, in produzione e open source. Analizza i log di collegamento <strong>ADIF/EDI</strong> caricati dagli utenti, geolocalizza i locator Maidenhead e genera le mappe dei QSO lato server usando Puppeteer. Produce inoltre eQSL personalizzate a partire dai template e le raggruppa in email giornaliere per rientrare nelle quote del provider. Monorepo TypeScript con Express, MongoDB e front end React."
     },
+    "kinocafe": {
+      "title": "Kinó Café",
+      "description": "Gestionale del Kinó Café, un bar gestito da volontari a San Cesario sul Panaro che ho anche gestito di persona. I soci si iscrivono online con firma digitale e registrano l''ingresso con un QR code. La cassa su tablet pilota un display <strong>ESP32</strong> per i clienti tramite Web Serial e invia gli scontrini via Socket.IO a un client Python che li stampa su una stampante termica <strong>ESC/POS</strong>. NestJS, Prisma e PostgreSQL con front end React."
+    },
     "ezaffitto": {
       "title": "ezaffitto",
       "description": "Pipeline a microservizi che raccoglie annunci di affitto da più fonti e normalizza il testo non strutturato in uno schema interrogabile tramite estrazione con <strong>OpenAI</strong>. Servizi Node.js e Python orchestrati con Docker."

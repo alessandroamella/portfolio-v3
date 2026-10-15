@@ -4,6 +4,7 @@ import ceScioperoImg from '@/assets/projects/cesciopero.webp';
 import ezaffittoImg from '@/assets/projects/ezaffitto.webp';
 import ianusImg from '@/assets/projects/ianus.webp';
 import iotImg from '@/assets/projects/iot.webp';
+import kinocafeImg from '@/assets/projects/kinocafe.webp';
 import qramiImg from '@/assets/projects/qrami.webp';
 import vhfesuperioriImg from '@/assets/projects/vhfesuperiori.webp';
 
@@ -102,6 +103,21 @@ export const projectsInfo: Project[] = [
     image: vhfesuperioriImg,
     url: 'https://www.vhfesuperiori.eu/',
     github: 'https://github.com/alessandroamella/vhf-e-superiori',
+  },
+  {
+    id: 'kinocafe',
+    status: 'archived',
+    year: '2024-2025',
+    solo: true,
+    stack: [
+      'NestJS',
+      'React',
+      'ESP32 + Web Serial',
+      'Python + ESC/POS',
+      'Socket.IO',
+    ],
+    image: kinocafeImg,
+    github: 'https://github.com/alessandroamella/kino-manager',
   },
   {
     id: 'ezaffitto',

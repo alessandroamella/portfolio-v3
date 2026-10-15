@@ -133,6 +133,10 @@
       "title": "VHF e superiori",
       "description": "Event platform and social network for an Italian amateur-radio association, in production and open source. It parses uploaded <strong>ADIF/EDI</strong> contact logs, geolocates Maidenhead grid squares and renders QSO maps server-side using Puppeteer. It also generates personalised eQSL cards from templates and batches them into daily digest emails to stay within provider quotas. TypeScript monorepo with Express, MongoDB and a React front end."
     },
+    "kinocafe": {
+      "title": "Kinó Café",
+      "description": "Management system for Kinó Café, a volunteer-run café in San Cesario sul Panaro that I also ran in person. Members sign up online with a digital signature and check in with a QR code. The tablet POS drives an <strong>ESP32</strong> customer display over Web Serial and sends receipts via Socket.IO to a Python client that prints them on an <strong>ESC/POS</strong> thermal printer. NestJS, Prisma and PostgreSQL behind a React front end."
+    },
     "ezaffitto": {
       "title": "ezaffitto",
       "description": "Microservice pipeline that scrapes rental listings from several sources and normalises unstructured ad text into a queryable schema with <strong>OpenAI</strong> extraction. Node.js and Python services orchestrated with Docker."

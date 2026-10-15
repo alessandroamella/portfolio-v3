@@ -133,6 +133,10 @@
       "title": "VHF e superiori",
       "description": "Platforma pro události a sociální síť pro italské sdružení radioamatérů, v produkci a open source. Parsuje nahrané logy spojení <strong>ADIF/EDI</strong>, geolokuje Maidenhead lokátory a generuje mapy QSO na straně serveru řízením headless instance <strong>Chromium</strong>. Vytváří také personalizované eQSL karty ze šablon a sdružuje je do denních souhrnných e-mailů, aby se vešly do kvót poskytovatele. Monorepo v TypeScriptu s Express, MongoDB a frontendem React."
     },
+    "kinocafe": {
+      "title": "Kinó Café",
+      "description": "Systém pro správu Kinó Café, kavárny provozované dobrovolníky v San Cesario sul Panaro, kterou jsem také sám vedl. Členové se registrují online s digitálním podpisem a příchod zaznamenávají QR kódem. Pokladna na tabletu ovládá zákaznický displej s <strong>ESP32</strong> přes Web Serial a účtenky posílá přes Socket.IO klientovi v Pythonu, který je tiskne na termální tiskárně <strong>ESC/POS</strong>. NestJS, Prisma a PostgreSQL s front endem v Reactu."
+    },
     "ezaffitto": {
       "title": "ezaffitto",
       "description": "Mikroslužbová pipeline, která scrapuje inzeráty k pronájmu z několika zdrojů a normalizuje nestrukturovaný text do dotazovatelného schématu pomocí extrakce <strong>OpenAI</strong>. Služby v Node.js a Pythonu orchestrované přes Docker."
