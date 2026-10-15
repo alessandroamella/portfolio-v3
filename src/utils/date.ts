@@ -19,5 +19,11 @@ export function formatMonthYearRange(
   start: Date,
   end: Date,
 ): string {
-  return capitalize(monthYearFormat(locale).formatRange(start, end));
+  // Node's ICU puts thin spaces around the dash while browsers may not, which
+  // breaks hydration: normalise them to plain spaces
+  return capitalize(
+    monthYearFormat(locale)
+      .formatRange(start, end)
+      .replace(/[\u2009\u202f]/g, ' '),
+  );
 }
