@@ -6,7 +6,7 @@ import { createTranslator } from 'next-intl';
 import { config } from '@/config';
 import { projectsInfo } from '@/config/projects';
 import { getI18nCountryName } from '@/utils/countries';
-import { formatMonthYearRange } from '@/utils/date';
+import { formatCvRange } from '@/utils/date';
 import {
   htmlPath,
   type MarkdownPage,
@@ -97,11 +97,7 @@ function experienceSection(t: Translator, locale: string) {
   const entries = [...config.cvAgencies]
     .reverse()
     .map(({ id, start, end, noteKey }) => {
-      const range = formatMonthYearRange(
-        locale,
-        start,
-        end === 'ongoing' ? new Date() : (end ?? start),
-      );
+      const range = formatCvRange(locale, start, end, t('curriculum.present'));
       const date = noteKey
         ? `${range} · ${t(`curriculum.notes.${noteKey}`)}`
         : range;

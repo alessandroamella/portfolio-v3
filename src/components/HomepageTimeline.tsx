@@ -11,7 +11,7 @@ import {
 } from 'flowbite-react';
 import { useLocale, useTranslations } from 'next-intl';
 import { config } from '@/config';
-import { formatMonthYearRange } from '@/utils/date';
+import { formatCvRange } from '@/utils/date';
 
 const HomepageTimeline = () => {
   const t = useTranslations('curriculum');
@@ -20,11 +20,7 @@ const HomepageTimeline = () => {
   const agencies = [...config.cvAgencies]
     .reverse()
     .map(({ id, start, end, noteKey }) => {
-      const range = formatMonthYearRange(
-        locale,
-        start,
-        end === 'ongoing' ? new Date() : (end ?? start),
-      );
+      const range = formatCvRange(locale, start, end, t('present'));
 
       return {
         id,

@@ -27,3 +27,17 @@ export function formatMonthYearRange(
       .replace(/[\u2009\u202f]/g, ' '),
   );
 }
+
+// Range for a CV entry: "March 2024 - Present" when ongoing, otherwise the
+// Intl range (collapsed to a single month when there is no end date)
+export function formatCvRange(
+  locale: string,
+  start: Date,
+  end: Date | 'ongoing' | undefined,
+  presentLabel: string,
+): string {
+  if (end === 'ongoing') {
+    return `${formatMonthYear(locale, start)} - ${presentLabel}`;
+  }
+  return formatMonthYearRange(locale, start, end ?? start);
+}

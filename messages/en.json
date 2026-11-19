@@ -88,6 +88,7 @@
     "emailPlaceholder": "name@example.com"
   },
   "curriculum": {
+    "present": "Present",
     "notes": {
       "schoolInternship": "School Internship"
     },
