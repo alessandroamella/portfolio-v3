@@ -1,9 +1,9 @@
 {
   "metadata": {
-    "title": "Alessandro Amella | Full-Stack Vývojář a student v Aarhusu",
-    "description": "Full-stack vývojář z Modeny (Itálie), nyní v Aarhusu (Dánsko), kde studuji informatiku (specializace AI) na Aarhus University. Vyvíjím webové aplikace, backendy a API převážně v MERN stacku. Integrace AI/LLM, cloud a automatizace.",
+    "title": "Alessandro Amella | Softwarový inženýr (LLM systémy), student v Aarhusu",
+    "description": "Softwarový inženýr a student magisterské informatiky (AI) na Aarhus University. Vyvíjím produkční software v TypeScriptu a Pythonu, stále častěji s LLM uvnitř, a měřím, jak dobře funguje. Hledám studentskou práci v Aarhusu.",
     "siteName": "Alessandro Amella",
-    "keywords": "full stack vývojář, studentská práce Aarhus, vývojář Dánsko, Node.js developer, MERN, NestJS, backend vývojář, AI LLM, webový vývojář"
+    "keywords": "softwarový inženýr, studentská práce Aarhus, studentermedhjælper, LLM, hodnocení LLM, AI, TypeScript, Python, NestJS, vývojář Dánsko"
   },
   "header": {
     "about": "O mně",
@@ -18,7 +18,7 @@
     "about": "O mně",
     "projects": "Projekty",
     "nowItIs": "nyní je",
-    "description": "<p>Full-stack vývojář z Modeny, nyní v Aarhusu <weather></weather>, kde studuji informatiku (specializace AI) na Aarhus University.<br></br>Pomáhal jsem startupům a firmám, jako freelancer, navrhovat a vyvíjet <strong>webové aplikace, aplikace a software</strong>, od definice architektury až po nasazení do produkce.</p><p>Pracuji hlavně v JavaScriptovém ekosystému (<em>MERN</em> stack), ale zabývám se také integrací <strong>AI a LLM</strong>, <strong>cloudovou</strong> infrastrukturou, automatizací procesů a správou dat. Více o mně a mých projektech níže!</p>",
+    "description": "<p>Softwarový inženýr z Modeny, nyní v Aarhusu <weather></weather>, kde studuji magisterskou informatiku (specializace AI) na Aarhus University.<br></br>Od roku 2024 pracuji jako freelancer a vedu projekty klientů od prvního hovoru až do produkce: požadavky, cenové nabídky, vývoj, nasazení na <strong>Google Cloud a AWS</strong> a údržba.</p><p>Stále častěji má to, co stavím, uvnitř <strong>LLM</strong>, a zajímá mě měřit, jak dobře to funguje: v bakalářské práci jsem porovnal LLM s klasickými scrapery pro extrakci dat. Píšu hlavně v TypeScriptu a Pythonu a část mého softwaru běží blízko hardwaru, od hlášení v autobusech po zákaznický displej s ESP32. Hledám <strong>studentskou práci</strong> v Aarhusu, 15-20 hodin týdně.</p>",
     "educationTitle": "Vzdělání",
     "educationAu": "Magisterské studium informatiky (specializace AI)",
     "educationAuSub": "Aarhus University · 2026 - současnost",
@@ -55,7 +55,7 @@
     "builtWith": "Vytvořeno s",
     "andManyOthers": "a mnoha dalšími",
     "letsKeepInTouch": "Zůstaňme v kontaktu",
-    "contactSubtitle": "Pro cenové nabídky, konzultace nebo informace mě můžete kontaktovat prostřednictvím následujícího formuláře (nebo kanálů dole vpravo).",
+    "contactSubtitle": "Kvůli studentské práci, projektu nebo dotazu mi můžete napsat přes následující formulář (nebo kanály dole vpravo).",
     "otherChannels": "Můžete mě také najít na",
     "howCanIHelpYou": "Jsem otevřený následujícím:",
     "studentJob": "Studentská práce / part-time",
@@ -68,7 +68,13 @@
     "otherDescription": "Jakékoli další informace nebo požadavky.",
     "i18n": {
       "profilePictureAlt": "Profilová fotka Alessandra Amelly"
-    }
+    },
+    "awardsTitle": "Ocenění",
+    "awardImc": "1. místo, IMCity Aarhus Hackathon",
+    "awardImcSub": "IMC Trading · listopad 2026 · tým 2 lidí, z 9 týmů",
+    "awardImcDescription": "Obchodní bot v Javě, napsaný během akce, který obchodoval pět produktů vázaných na živá data dánské elektrické sítě.",
+    "languageDanish": "Dánština",
+    "languageDanishSub": "A1 (učím se)"
   },
   "footer": {
     "vatNumber": "DIČ (IT)",
@@ -93,26 +99,26 @@
       "schoolInternship": "Školní stáž"
     },
     "infolog": {
-      "job": "Správce systému",
-      "description": "<ul><li>Správce systému u <em>Infolog S.r.l.</em>, kde jsem spolupracoval s vývojovým týmem na vytvoření webové aplikace pro <strong>správu skladu</strong>.</li><li>Refaktoring databáze Microsoft SQL Server.</li></ul>"
+      "job": "Systémový inženýr",
+      "description": "<ul><li>Stáž ve společnosti <em>Infolog S.r.l.</em>, kde jsem nastavil dvoufaktorové ověřování na systémech Linux.</li><li>S vývojovým týmem jsem vytvořil webovou aplikaci pro <strong>správu skladu</strong> v Javě (WildFly) a refaktoroval její databázi Microsoft SQL Server.</li></ul>"
     },
     "seta": {
       "job": "Vývojář softwaru",
       "description": "<ul><li>Stáž v dopravní společnosti <em>SETA S.p.A.</em>, kde jsem vyvíjel software pro <strong>generování zvukových souborů</strong> pro hlášení v autobusech, který je nyní používán <strong>v celé flotile</strong> v Modeně, Reggio Emilia a Piacenze.</li><li>Trénink modelu strojového učení pro počítání cestujících pomocí palubních kamer.</li></ul>"
     },
     "fertec": {
-      "job": "Webový vývojář",
+      "job": "Softwarový inženýr",
       "description": "<ul><li>Návrh a vývoj <strong>systému mikroslužeb</strong> pro výrobní linku oxygenátorů, od celkové architektury až po zařízení Raspberry Pi na Arch Linux.</li><li>Vývoj softwaru pro analýzu nákladů a aplikace <strong>Flutter</strong> pro propojení s lékařskými přístroji.</li></ul>"
     },
     "freelance": {
-      "job": "Freelance vývojář",
-      "description": "Spolupráce se startupy na různých webových projektech. Většinou <em>MERN</em> stack (nebo často PostgreSQL a NestJS). Pracoval jsem na architekturách mikroslužeb s automatizovanými CI/CD pipeline, nasazení na cloudovou infrastrukturu a hodně integrace AI / LLM služeb."
+      "job": "Freelance softwarový inženýr",
+      "description": "Projekty pro klienty od prvního hovoru až do produkce: požadavky, cenové nabídky, vývoj, nasazení do cloudu (Google Cloud, AWS, VPS) a údržba. Software pro telemedicínu, e-commerce, průmyslové IoT a účetnictví, hlavně v TypeScriptu s NestJS a PostgreSQL, s funkcemi založenými na <strong>LLM</strong> tam, kde dávají smysl."
     }
   },
   "projects": {
     "sciopero": {
       "title": "Web Scraping a LLM",
-      "description": "Bakalářská práce a empirická případová studie o extrakci informací pomocí <strong>LLM</strong>. Místo křehkých DOM scraperů čte LLM pipeline nepřehledná oznámení o stávkách italské veřejné dopravy (HTML i PDF) a získává strukturovaná data: termíny, rozsah a garantované časy provozu. Provedl jsem přes 1 400 benchmarků na modelech GPT, Gemini, Llama a DeepSeek a různých strategiích předzpracování včetně testu odolnosti <em>DOM-chaos</em>, s výsledným <em>F1-score</em> nad 0,95 při extrakci polí."
+      "description": "Bakalářská práce a empirická případová studie o extrakci informací pomocí <strong>LLM</strong>. Místo křehkých DOM scraperů čte LLM pipeline nepřehledná oznámení o stávkách italské veřejné dopravy (HTML i PDF) a získává strukturovaná data: termíny, rozsah a garantované časy provozu. Porovnal jsem modely GPT, Gemini, Llama a DeepSeek a různé strategie předzpracování včetně testu odolnosti <em>DOM-chaos</em>, v zhruba 16 000 voláních LLM v 61 bězích benchmarku, s výsledným <em>F1-score</em> nad 0,95 při extrakci polí."
     },
     "bamboosim": {
       "title": "BambooSIM",

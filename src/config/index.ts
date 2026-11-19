@@ -25,8 +25,18 @@ export const config = Object.freeze({
   qrzUrl: 'https://www.qrz.com/db/IU4QSG',
   birthday: new Date(2003, 6, 13),
   cvAgencies: [
-    { id: 'infolog', start: new Date(2021, 6, 1), noteKey: 'schoolInternship' },
-    { id: 'seta', start: new Date(2021, 8, 1), noteKey: 'schoolInternship' },
+    {
+      id: 'infolog',
+      start: new Date(2021, 6, 1),
+      end: new Date(2021, 7, 1),
+      noteKey: 'schoolInternship',
+    },
+    {
+      id: 'seta',
+      start: new Date(2021, 8, 1),
+      end: new Date(2021, 9, 1),
+      noteKey: 'schoolInternship',
+    },
     { id: 'fertec', start: new Date(2023, 2, 1), end: new Date(2023, 6, 1) },
     { id: 'freelance', start: new Date(2024, 2, 1), end: 'ongoing' },
   ] satisfies CvAgency[],

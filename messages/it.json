@@ -1,9 +1,9 @@
 {
   "metadata": {
-    "title": "Alessandro Amella | Full Stack Developer, studente ad Aarhus",
-    "description": "Full-stack developer di Modena, ora ad Aarhus (Danimarca), dove studio Computer Science (specializzazione in AI) alla Aarhus University. Sviluppo web app, backend e API prevalentemente su MERN stack. Integrazioni AI/LLM, cloud e automazione.",
+    "title": "Alessandro Amella | Software Engineer (sistemi LLM), studente ad Aarhus",
+    "description": "Software engineer e studente magistrale di Computer Science (AI) alla Aarhus University. Sviluppo software in produzione in TypeScript e Python, sempre più spesso con LLM al suo interno, e ne misuro i risultati. Cerco uno student job ad Aarhus.",
     "siteName": "Alessandro Amella",
-    "keywords": "full stack developer, student job Aarhus, sviluppatore in Danimarca, sviluppatore web Modena, freelance Node.js, MERN developer, NestJS, backend developer, AI LLM, consulenza informatica"
+    "keywords": "software engineer, student job Aarhus, studentermedhjælper, LLM engineer, valutazione LLM, AI, TypeScript, Python, NestJS, sviluppatore in Danimarca"
   },
   "header": {
     "about": "About",
@@ -18,7 +18,7 @@
     "about": "Chi sono",
     "projects": "Progetti",
     "nowItIs": "dove ora fanno",
-    "description": "<p>Sviluppatore full-stack di Modena, ora ad Aarhus <weather></weather>, dove studio Computer Science (specializzazione in AI) alla Aarhus University.<br></br>Ho aiutato startup e aziende, come freelance, a progettare e sviluppare <strong>applicazioni web, app e software</strong>, dalla definizione dell'architettura fino al deployment in produzione.</p><p>Lavoro principalmente nell'ecosistema JavaScript (<em>MERN</em> stack), mi occupo anche di integrazioni con <strong>AI e LLM</strong>, infrastruttura <strong>cloud</strong>, automazione di processi e gestione dei dati. Più informazioni su di me e sui miei progetti qui sotto!</p>",
+    "description": "<p>Software engineer di Modena, ora ad Aarhus <weather></weather>, dove studio per la magistrale in Computer Science (specializzazione in AI) alla Aarhus University.<br></br>Dal 2024 lavoro come freelance e seguo i progetti dei clienti dalla prima chiamata alla produzione: requisiti, preventivi, sviluppo, deployment su <strong>Google Cloud e AWS</strong> e manutenzione.</p><p>Sempre più spesso ciò che sviluppo ha un <strong>LLM</strong> al suo interno, e mi interessa misurare quanto funziona davvero: nella tesi triennale ho confrontato gli LLM con gli scraper classici per l'estrazione di dati. Scrivo soprattutto in TypeScript e Python, e parte del mio software gira vicino all'hardware, dagli annunci sugli autobus a un display per clienti con ESP32. Cerco uno <strong>student job</strong> ad Aarhus, 15-20 ore a settimana.</p>",
     "educationTitle": "Formazione",
     "educationAu": "Laurea magistrale in Informatica (specializzazione in AI)",
     "educationAuSub": "Aarhus University · 2026 - oggi",
@@ -55,7 +55,7 @@
     "builtWith": "Realizzato con",
     "andManyOthers": "e molti altri",
     "letsKeepInTouch": "Contatti",
-    "contactSubtitle": "Per preventivi, consulenze o informazioni, puoi contattarmi tramite il seguente form (o i canali in fondo a destra).",
+    "contactSubtitle": "Per uno student job, un progetto o una domanda, puoi scrivermi tramite il seguente form (o i canali in fondo a destra).",
     "otherChannels": "Mi trovi anche su",
     "howCanIHelpYou": "Sono aperto a:",
     "studentJob": "Student job / part-time",
@@ -68,7 +68,13 @@
     "otherDescription": "Qualsiasi altra informazione o richiesta.",
     "i18n": {
       "profilePictureAlt": "Foto profilo di Alessandro Amella"
-    }
+    },
+    "awardsTitle": "Premi",
+    "awardImc": "1° posto, IMCity Aarhus Hackathon",
+    "awardImcSub": "IMC Trading · novembre 2026 · squadra di 2, su 9 squadre",
+    "awardImcDescription": "Un bot di trading in Java, scritto durante l'evento, che operava su cinque prodotti legati ai dati in tempo reale della rete elettrica danese.",
+    "languageDanish": "Danese",
+    "languageDanishSub": "A1 (in corso)"
   },
   "footer": {
     "vatNumber": "Partita IVA",
@@ -93,26 +99,26 @@
       "schoolInternship": "Tirocinio scolastico"
     },
     "infolog": {
-      "job": "Sistemista",
-      "description": "<ul><li>Sistemista presso l'azienda <em>Infolog S.r.l.</em>, dove ho lavorato con il team di sviluppo per la realizzazione di un'applicazione web per la <strong>gestione di magazzini</strong>.</li><li>Refactor del database Microsoft SQL Server.</li></ul>"
+      "job": "Systems engineer",
+      "description": "<ul><li>Tirocinio presso <em>Infolog S.r.l.</em>, dove ho configurato l'autenticazione a due fattori su sistemi Linux.</li><li>Sviluppo con il team di una web app per la <strong>gestione del magazzino</strong> in Java (WildFly) e refactoring del suo database Microsoft SQL Server.</li></ul>"
     },
     "seta": {
       "job": "Programmatore software",
       "description": "<ul><li>Stage presso l'azienda di trasporto pubblico <em>SETA S.p.A.</em>, dove ho sviluppato il software per la <strong>generazione dei file audio</strong> per gli annunci a bordo dei bus, attualmente utilizzato <strong>su tutta la flotta</strong> a Modena, Reggio Emilia e Piacenza.</li><li>Addestramento di un modello di machine learning per il conteggio passeggeri tramite le telecamere a bordo.</li></ul>"
     },
     "fertec": {
-      "job": "Programmatore web",
+      "job": "Software engineer",
       "description": "<ul><li>Progettazione e sviluppo di un <strong>sistema a microservizi</strong> per un impianto produttore di ossigenatori, dall'architettura generale ai dispositivi Raspberry su Arch Linux.</li><li>Sviluppo di un software di analisi dei costi e di un'app <strong>Flutter</strong> per interfacciarsi con dispositivi medici.</li></ul>"
     },
     "freelance": {
-      "job": "Sviluppatore freelance",
-      "description": "Collaborazione con varie startup su svariati progetti web. Principalmente <em>MERN</em> stack (o spesso PostgreSQL e NestJS). Ho lavorato su architetture a microservizi con pipeline CI/CD automatizzate, deployment su infrastrutture cloud, tanta integrazione di servizi AI / LLM."
+      "job": "Software engineer freelance",
+      "description": "Progetti per clienti dalla prima chiamata alla produzione: requisiti, preventivi, sviluppo, deployment in cloud (Google Cloud, AWS, VPS) e manutenzione. Software per telemedicina, e-commerce, IoT industriale e contabilità, principalmente in TypeScript con NestJS e PostgreSQL, con funzionalità basate su <strong>LLM</strong> dove servono."
     }
   },
   "projects": {
     "sciopero": {
       "title": "Web Scraping e LLM",
-      "description": "Tesi di laurea e case study empirico sull''estrazione di informazioni tramite <strong>LLM</strong>. Al posto di fragili scraper del DOM, una pipeline LLM legge gli avvisi di sciopero del trasporto pubblico italiano (HTML e PDF) e ne estrae dati strutturati: date, ambito e fasce di garanzia. Ho eseguito oltre 1.400 benchmark su GPT, Gemini, Llama e DeepSeek e diverse strategie di pre-processing, incluso un test di robustezza <em>DOM-chaos</em>, raggiungendo un <em>F1-score</em> superiore a 0,95 sull''estrazione dei campi."
+      "description": "Tesi di laurea e case study empirico sull''estrazione di informazioni tramite <strong>LLM</strong>. Al posto di fragili scraper del DOM, una pipeline LLM legge gli avvisi di sciopero del trasporto pubblico italiano (HTML e PDF) e ne estrae dati strutturati: date, ambito e fasce di garanzia. Ho confrontato GPT, Gemini, Llama e DeepSeek e diverse strategie di pre-processing, incluso un test di robustezza <em>DOM-chaos</em>, in circa 16.000 chiamate LLM su 61 benchmark, raggiungendo un <em>F1-score</em> superiore a 0,95 sull''estrazione dei campi."
     },
     "bamboosim": {
       "title": "BambooSIM",

@@ -1,9 +1,9 @@
 {
   "metadata": {
-    "title": "Alessandro Amella | Full Stack Developer & CS Student in Aarhus",
-    "description": "Full-stack developer from Modena, Italy, now based in Aarhus, Denmark, where I am studying for my MSc in Computer Science. Building web applications, backends and APIs mainly with the MERN stack. AI/LLM integrations, cloud and automation.",
+    "title": "Alessandro Amella | Software Engineer (LLM systems), MSc student in Aarhus",
+    "description": "Software engineer and MSc Computer Science (AI) student at Aarhus University. I build production software in TypeScript and Python, more and more of it with LLMs inside, and I measure how well it works. Looking for a student job in Aarhus.",
     "siteName": "Alessandro Amella",
-    "keywords": "full stack developer, student job Aarhus, developer Denmark, freelance Node.js developer, MERN stack, NestJS, backend developer, AI LLM"
+    "keywords": "software engineer, student job Aarhus, studentermedhjælper, LLM engineer, LLM evaluation, AI, TypeScript, Python, NestJS, backend developer Denmark"
   },
   "header": {
     "about": "About",
@@ -18,7 +18,7 @@
     "about": "About Me",
     "projects": "Projects",
     "nowItIs": "now it is",
-    "description": "<p>Full-stack developer from Modena, now in Aarhus <weather></weather>, where I am studying for my MSc in Computer Science (AI specialisation) at Aarhus University.<br></br>I've helped startups and companies, as a freelancer, design and develop <strong>web applications, mobile apps and software</strong>, from architecture definition to production deployment.</p><p>I work mainly in the JavaScript ecosystem (<em>MERN</em> stack), but also handle <strong>AI and LLM</strong> integrations, <strong>cloud</strong> infrastructure, process automation and data management. More about me and my projects below!</p>",
+    "description": "<p>Software engineer from Modena, now in Aarhus <weather></weather>, where I'm doing an MSc in Computer Science (AI specialisation) at Aarhus University.<br></br>Since 2024 I've worked as a freelancer, taking client projects from the first call to production: requirements, quotes, development, deployment on <strong>Google Cloud and AWS</strong>, and maintenance.</p><p>More and more of what I build has an <strong>LLM</strong> inside, and I care about measuring how well it works: my BSc thesis benchmarked LLMs against classic scrapers for data extraction. I mostly write TypeScript and Python, and some of my software runs close to hardware, from bus announcements to an ESP32 customer display. I'm looking for a <strong>student job</strong> in Aarhus, 15-20 hours a week.</p>",
     "educationTitle": "Education",
     "educationAu": "MSc in Computer Science (AI specialisation)",
     "educationAuSub": "Aarhus University · 2026 - present",
@@ -55,7 +55,7 @@
     "builtWith": "Built with",
     "andManyOthers": "and many others",
     "letsKeepInTouch": "Let's keep in touch",
-    "contactSubtitle": "For quotes, consultations or information, you can contact me through the following form (or via the channels at the bottom right).",
+    "contactSubtitle": "For a student job, a project or a question, you can write to me through this form (or via the channels at the bottom right).",
     "otherChannels": "You can also find me on",
     "howCanIHelpYou": "I am open to:",
     "studentJob": "Student job / part-time",
@@ -68,7 +68,13 @@
     "otherDescription": "Any other information or request.",
     "i18n": {
       "profilePictureAlt": "Profile picture of Alessandro Amella"
-    }
+    },
+    "awardsTitle": "Awards",
+    "awardImc": "1st place, IMCity Aarhus Hackathon",
+    "awardImcSub": "IMC Trading · November 2026 · team of 2, out of 9 teams",
+    "awardImcDescription": "A Java trading bot, built during the event, that traded five products settled on live Danish power-grid data.",
+    "languageDanish": "Danish",
+    "languageDanishSub": "A1 (learning)"
   },
   "footer": {
     "vatNumber": "VAT Number (IT)",
@@ -93,26 +99,26 @@
       "schoolInternship": "School Internship"
     },
     "infolog": {
-      "job": "System Administrator",
-      "description": "<ul><li>System administrator at <em>Infolog S.r.l.</em>, where I worked with the development team to create a web application for <strong>warehouse management</strong>.</li><li>Refactored the Microsoft SQL Server database.</li></ul>"
+      "job": "Systems Engineer",
+      "description": "<ul><li>Internship at <em>Infolog S.r.l.</em>, where I set up two-factor authentication on Linux systems.</li><li>Built a <strong>warehouse management</strong> web application in Java (WildFly) with the development team, and refactored its Microsoft SQL Server database.</li></ul>"
     },
     "seta": {
       "job": "Software Developer",
       "description": "<ul><li>Internship at the public transport company <em>SETA S.p.A.</em>, where I developed the software for <strong>generating audio files</strong> for announcements on buses, currently used <strong>across the entire fleet</strong> in Modena, Reggio Emilia and Piacenza.</li><li>Training of a machine learning model for passenger counting using onboard cameras.</li></ul>"
     },
     "fertec": {
-      "job": "Web Developer",
+      "job": "Software Engineer",
       "description": "<ul><li>Design and development of a <strong>microservice system</strong> for an oxygenator production plant, from the general architecture to Raspberry Pi devices on Arch Linux.</li><li>Development of cost analysis software and a <strong>Flutter</strong> app to interface with medical devices.</li></ul>"
     },
     "freelance": {
-      "job": "Freelance Developer",
-      "description": "Working with startups on various web projects. Mostly <em>MERN</em> stack (or often PostgreSQL and NestJS). I've worked on microservices architectures with automated CI/CD pipelines, cloud infrastructure deployment, and plenty of AI / LLM service integration."
+      "job": "Freelance Software Engineer",
+      "description": "Client projects from the first call to production: requirements, quotes, development, cloud deployment (Google Cloud, AWS, VPS) and maintenance. Telemedicine, e-commerce, industrial IoT and accounting software, mostly in TypeScript with NestJS and PostgreSQL, with <strong>LLM</strong> features where they help."
     }
   },
   "projects": {
     "sciopero": {
       "title": "Web Scraping & LLMs",
-      "description": "Bachelor's thesis and empirical case study on <strong>LLM</strong>-based information extraction. An LLM pipeline reads unstructured Italian public-transport strike notices and pulls out structured data, such as dates, scope and guaranteed service windows. I ran 1,400+ benchmarks across GPT, Gemini, Llama and DeepSeek with several preprocessing strategies and a resilience test, reaching an <em>F1-score</em> above 0.95 on field extraction."
+      "description": "Bachelor's thesis and empirical case study on <strong>LLM</strong>-based information extraction. An LLM pipeline reads unstructured Italian public-transport strike notices and pulls out structured data, such as dates, scope and guaranteed service windows. I compared GPT, Gemini, Llama and DeepSeek with several preprocessing strategies and a resilience test, in about 16,000 LLM calls over 61 benchmark runs, reaching an <em>F1-score</em> above 0.95 on field extraction."
     },
     "bamboosim": {
       "title": "BambooSIM",

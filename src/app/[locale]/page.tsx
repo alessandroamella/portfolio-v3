@@ -1,3 +1,4 @@
+import DK from 'country-flag-icons/react/3x2/DK';
 import EN from 'country-flag-icons/react/3x2/GB';
 import IT from 'country-flag-icons/react/3x2/IT';
 import { differenceInYears } from 'date-fns';
@@ -193,6 +194,17 @@ function Home(props: { params: Promise<{ locale: string }> }) {
           </div>
           {/* FINE NUOVA SEZIONE */}
 
+          <h3 className='text-2xl text-gray-100 font-semibold tracking-tighter mt-8 mb-4'>
+            {t('awardsTitle')}
+          </h3>
+          <div className='border-l-2 border-blue-500 pl-4'>
+            <h4 className='font-bold text-white'>{t('awardImc')}</h4>
+            <p className='text-gray-400 text-sm'>{t('awardImcSub')}</p>
+            <p className='text-gray-300 text-sm mt-1'>
+              {t('awardImcDescription')}
+            </p>
+          </div>
+
           <h3 className='text-2xl text-gray-100 font-semibold tracking-tighter mt-8'>
             {t('otherInterests')}
           </h3>
@@ -260,6 +272,19 @@ function Home(props: { params: Promise<{ locale: string }> }) {
                   </span>
                   <span className='text-gray-400 text-sm'>
                     {t('languageEnglishSub')}
+                  </span>
+                </span>
+              </div>
+              <div className='flex items-center gap-3 bg-gray-700/50 hover:bg-gray-700 transition-colors rounded-full pl-4 pr-6 py-3'>
+                <span className='w-7 inline-block'>
+                  <DK />
+                </span>
+                <span className='flex flex-col leading-tight'>
+                  <span className='font-bold text-white text-base'>
+                    {t('languageDanish')}
+                  </span>
+                  <span className='text-gray-400 text-sm'>
+                    {t('languageDanishSub')}
                   </span>
                 </span>
               </div>

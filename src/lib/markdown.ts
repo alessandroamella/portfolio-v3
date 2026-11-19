@@ -83,10 +83,13 @@ function aboutSection(t: Translator, locale: string) {
     description,
     `### ${t('homepage.educationTitle')}`,
     education.join('\n'),
+    `### ${t('homepage.awardsTitle')}`,
+    `- **${t('homepage.awardImc')}**, ${t('homepage.awardImcSub')}. ${t('homepage.awardImcDescription')}`,
     `### ${t('homepage.languagesTitle')}`,
     [
       `- ${t('homepage.languageItalian')}: ${t('homepage.languageItalianSub')}`,
       `- ${t('homepage.languageEnglish')}: ${t('homepage.languageEnglishSub')}`,
+      `- ${t('homepage.languageDanish')}: ${t('homepage.languageDanishSub')}`,
     ].join('\n'),
     `### ${t('homepage.otherInterests')}`,
     interests.join('\n'),
