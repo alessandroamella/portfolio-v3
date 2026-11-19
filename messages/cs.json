@@ -18,7 +18,7 @@
     "about": "O mně",
     "projects": "Projekty",
     "nowItIs": "nyní je",
-    "description": "<p>Softwarový inženýr z Modeny, nyní v Aarhusu <weather></weather>, kde studuji magisterskou informatiku (specializace AI) na Aarhus University.<br></br>Od roku 2024 pracuji jako freelancer a vedu projekty klientů od prvního hovoru až do produkce: požadavky, cenové nabídky, vývoj, nasazení na <strong>Google Cloud a AWS</strong> a údržba.</p><p>Stále častěji má to, co stavím, uvnitř <strong>LLM</strong>, a zajímá mě měřit, jak dobře to funguje: v bakalářské práci jsem porovnal LLM s klasickými scrapery pro extrakci dat. Píšu hlavně v TypeScriptu a Pythonu a část mého softwaru běží blízko hardwaru, od hlášení v autobusech po zákaznický displej s ESP32. Hledám <strong>studentskou práci</strong> v Aarhusu, 15-20 hodin týdně.</p>",
+    "description": "<p>Softwarový inženýr z Modeny, nyní v Aarhusu <weather></weather>, kde studuji magisterskou informatiku (specializace AI) na Aarhus University.<br></br>Od roku 2024 pracuji jako freelancer a vedu projekty klientů od prvního hovoru až do produkce: požadavky, cenové nabídky, návrh databáze a architektury, vývoj, nasazení na <strong>Google Cloud a AWS</strong> a údržba.</p><p>Protože stále více projektů klientů stojí na integraci AI, velká část mé práce se týká systémů s <strong>LLM</strong> a zajímá mě měřit, jak dobře fungují: v bakalářské práci jsem porovnal LLM s klasickými scrapery pro extrakci dat. Píšu hlavně v TypeScriptu a Pythonu a část mého softwaru běží blízko hardwaru, od hlášení v autobusech po zákaznický displej s ESP32. Hledám <strong>studentskou práci</strong> v Aarhusu, 15-20 hodin týdně.</p>",
     "educationTitle": "Vzdělání",
     "educationAu": "Magisterské studium informatiky (specializace AI)",
     "educationAuSub": "Aarhus University · 2026 - současnost",
@@ -112,7 +112,7 @@
     },
     "freelance": {
       "job": "Freelance softwarový inženýr",
-      "description": "Projekty pro klienty od prvního hovoru až do produkce: požadavky, cenové nabídky, vývoj, nasazení do cloudu (Google Cloud, AWS, VPS) a údržba. Software pro telemedicínu, e-commerce, průmyslové IoT a účetnictví, hlavně v TypeScriptu s NestJS a PostgreSQL, s funkcemi založenými na <strong>LLM</strong> tam, kde dávají smysl."
+      "description": "Projekty pro klienty od prvního hovoru až do produkce: požadavky, cenové nabídky, návrh databáze a architektury, vývoj, nasazení do cloudu (Google Cloud, AWS, VPS) a údržba. Software pro telemedicínu, e-commerce, průmyslové IoT a účetnictví, hlavně v TypeScriptu s NestJS a PostgreSQL, s funkcemi založenými na <strong>LLM</strong> tam, kde dávají smysl."
     }
   },
   "projects": {
@@ -138,7 +138,7 @@
     },
     "vhfesuperiori": {
       "title": "VHF e superiori",
-      "description": "Platforma pro události a sociální síť pro italské sdružení radioamatérů, v produkci a open source. Parsuje nahrané logy spojení <strong>ADIF/EDI</strong>, geolokuje Maidenhead lokátory a generuje mapy QSO na straně serveru řízením headless instance <strong>Chromium</strong>. Vytváří také personalizované eQSL karty ze šablon a sdružuje je do denních souhrnných e-mailů, aby se vešly do kvót poskytovatele. Monorepo v TypeScriptu s Express, MongoDB a frontendem React."
+      "description": "Platforma pro události a sociální síť pro italské sdružení radioamatérů, v produkci a open source, s více než 400 uživateli a 62 akcemi. Parsuje nahrané logy spojení <strong>ADIF/EDI</strong>, geolokuje Maidenhead lokátory a generuje mapy QSO na straně serveru řízením headless instance <strong>Chromium</strong>. Vytváří také personalizované eQSL karty ze šablon a sdružuje je do denních souhrnných e-mailů, aby se vešly do kvót poskytovatele. Monorepo v TypeScriptu s Express, MongoDB a frontendem React."
     },
     "kinocafe": {
       "title": "Kinó Café",

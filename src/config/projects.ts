@@ -31,7 +31,7 @@ export type Project = {
 export const projectsInfo: Project[] = [
   {
     id: 'sciopero',
-    status: 'live',
+    status: 'archived',
     year: '2025-2026',
     solo: true,
     stack: [

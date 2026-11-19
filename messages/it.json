@@ -18,7 +18,7 @@
     "about": "Chi sono",
     "projects": "Progetti",
     "nowItIs": "dove ora fanno",
-    "description": "<p>Software engineer di Modena, ora ad Aarhus <weather></weather>, dove studio per la magistrale in Computer Science (specializzazione in AI) alla Aarhus University.<br></br>Dal 2024 lavoro come freelance e seguo i progetti dei clienti dalla prima chiamata alla produzione: requisiti, preventivi, sviluppo, deployment su <strong>Google Cloud e AWS</strong> e manutenzione.</p><p>Sempre più spesso ciò che sviluppo ha un <strong>LLM</strong> al suo interno, e mi interessa misurare quanto funziona davvero: nella tesi triennale ho confrontato gli LLM con gli scraper classici per l'estrazione di dati. Scrivo soprattutto in TypeScript e Python, e parte del mio software gira vicino all'hardware, dagli annunci sugli autobus a un display per clienti con ESP32. Cerco uno <strong>student job</strong> ad Aarhus, 15-20 ore a settimana.</p>",
+    "description": "<p>Software engineer di Modena, ora ad Aarhus <weather></weather>, dove studio per la magistrale in Computer Science (specializzazione in AI) alla Aarhus University.<br></br>Dal 2024 lavoro come freelance e seguo i progetti dei clienti dalla prima chiamata alla produzione: requisiti, preventivi, progettazione del database e dell'architettura, sviluppo, deployment su <strong>Google Cloud e AWS</strong> e manutenzione.</p><p>Con sempre più progetti costruiti attorno all'integrazione con l'AI, buona parte del mio lavoro riguarda sistemi basati su <strong>LLM</strong>, e mi interessa misurare quanto funzionano davvero: nella tesi triennale ho confrontato gli LLM con gli scraper classici per l'estrazione di dati. Scrivo soprattutto in TypeScript e Python, e parte del mio software gira vicino all'hardware, dagli annunci sugli autobus a un display per clienti con ESP32. Cerco uno <strong>student job</strong> ad Aarhus, 15-20 ore a settimana.</p>",
     "educationTitle": "Formazione",
     "educationAu": "Laurea magistrale in Informatica (specializzazione in AI)",
     "educationAuSub": "Aarhus University · 2026 - oggi",
@@ -112,7 +112,7 @@
     },
     "freelance": {
       "job": "Software engineer freelance",
-      "description": "Progetti per clienti dalla prima chiamata alla produzione: requisiti, preventivi, sviluppo, deployment in cloud (Google Cloud, AWS, VPS) e manutenzione. Software per telemedicina, e-commerce, IoT industriale e contabilità, principalmente in TypeScript con NestJS e PostgreSQL, con funzionalità basate su <strong>LLM</strong> dove servono."
+      "description": "Progetti per clienti dalla prima chiamata alla produzione: requisiti, preventivi, progettazione del database e dell''architettura, sviluppo, deployment in cloud (Google Cloud, AWS, VPS) e manutenzione. Software per telemedicina, e-commerce, IoT industriale e contabilità, principalmente in TypeScript con NestJS e PostgreSQL, con funzionalità basate su <strong>LLM</strong> dove servono."
     }
   },
   "projects": {
@@ -138,7 +138,7 @@
     },
     "vhfesuperiori": {
       "title": "VHF e superiori",
-      "description": "Piattaforma di eventi e social network per un''associazione di radioamatori, in produzione e open source. Analizza i log di collegamento <strong>ADIF/EDI</strong> caricati dagli utenti, geolocalizza i locator Maidenhead e genera le mappe dei QSO lato server usando Puppeteer. Produce inoltre eQSL personalizzate a partire dai template e le raggruppa in email giornaliere per rientrare nelle quote del provider. Monorepo TypeScript con Express, MongoDB e front end React."
+      "description": "Piattaforma di eventi e social network per un''associazione di radioamatori, in produzione e open source, con oltre 400 utenti e 62 eventi finora. Analizza i log di collegamento <strong>ADIF/EDI</strong> caricati dagli utenti, geolocalizza i locator Maidenhead e genera le mappe dei QSO lato server usando Puppeteer. Produce inoltre eQSL personalizzate a partire dai template e le raggruppa in email giornaliere per rientrare nelle quote del provider. Monorepo TypeScript con Express, MongoDB e front end React."
     },
     "kinocafe": {
       "title": "Kinó Café",

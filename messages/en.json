@@ -18,7 +18,7 @@
     "about": "About Me",
     "projects": "Projects",
     "nowItIs": "now it is",
-    "description": "<p>Software engineer from Modena, now in Aarhus <weather></weather>, where I'm doing an MSc in Computer Science (AI specialisation) at Aarhus University.<br></br>Since 2024 I've worked as a freelancer, taking client projects from the first call to production: requirements, quotes, development, deployment on <strong>Google Cloud and AWS</strong>, and maintenance.</p><p>More and more of what I build has an <strong>LLM</strong> inside, and I care about measuring how well it works: my BSc thesis benchmarked LLMs against classic scrapers for data extraction. I mostly write TypeScript and Python, and some of my software runs close to hardware, from bus announcements to an ESP32 customer display. I'm looking for a <strong>student job</strong> in Aarhus, 15-20 hours a week.</p>",
+    "description": "<p>Software engineer from Modena, now in Aarhus <weather></weather>, where I'm doing an MSc in Computer Science (AI specialisation) at Aarhus University.<br></br>Since 2024 I've worked as a freelancer, taking client projects from the first call to production: requirements, quotes, database and architecture design, development, deployment on <strong>Google Cloud and AWS</strong>, and maintenance.</p><p>As more client projects are built around AI integration, much of my work is on <strong>LLM</strong> systems, and I care about measuring how well they work: my BSc thesis benchmarked LLMs against classic scrapers for data extraction. I mostly write TypeScript and Python, and some of my software runs close to hardware, from bus announcements to an ESP32 customer display. I'm looking for a <strong>student job</strong> in Aarhus, 15-20 hours a week.</p>",
     "educationTitle": "Education",
     "educationAu": "MSc in Computer Science (AI specialisation)",
     "educationAuSub": "Aarhus University · 2026 - present",
@@ -112,7 +112,7 @@
     },
     "freelance": {
       "job": "Freelance Software Engineer",
-      "description": "Client projects from the first call to production: requirements, quotes, development, cloud deployment (Google Cloud, AWS, VPS) and maintenance. Telemedicine, e-commerce, industrial IoT and accounting software, mostly in TypeScript with NestJS and PostgreSQL, with <strong>LLM</strong> features where they help."
+      "description": "Client projects from the first call to production: requirements, quotes, database and architecture design, development, cloud deployment (Google Cloud, AWS, VPS) and maintenance. Telemedicine, e-commerce, industrial IoT and accounting software, mostly in TypeScript with NestJS and PostgreSQL, with <strong>LLM</strong> features where they help."
     }
   },
   "projects": {
@@ -138,7 +138,7 @@
     },
     "vhfesuperiori": {
       "title": "VHF e superiori",
-      "description": "Event platform and social network for an Italian amateur-radio association, in production and open source. It parses uploaded <strong>ADIF/EDI</strong> contact logs, geolocates Maidenhead grid squares and renders QSO maps server-side using Puppeteer. It also generates personalised eQSL cards from templates and batches them into daily digest emails to stay within provider quotas. TypeScript monorepo with Express, MongoDB and a React front end."
+      "description": "Event platform and social network for an Italian amateur-radio association, in production and open source, with 400+ users and 62 events so far. It parses uploaded <strong>ADIF/EDI</strong> contact logs, geolocates Maidenhead grid squares and renders QSO maps server-side using Puppeteer. It also generates personalised eQSL cards from templates and batches them into daily digest emails to stay within provider quotas. TypeScript monorepo with Express, MongoDB and a React front end."
     },
     "kinocafe": {
       "title": "Kinó Café",
