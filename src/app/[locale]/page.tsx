@@ -198,7 +198,16 @@ function Home(props: { params: Promise<{ locale: string }> }) {
             {t('awardsTitle')}
           </h3>
           <div className='border-l-2 border-blue-500 pl-4'>
-            <h4 className='font-bold text-white'>{t('awardImc')}</h4>
+            <h4 className='font-bold text-white'>
+              <a
+                href={config.imcHackathonUrl}
+                target='_blank'
+                rel='noopener noreferrer'
+                className='hover:text-blue-300 transition-colors duration-75'
+              >
+                {t('awardImc')}
+              </a>
+            </h4>
             <p className='text-gray-400 text-sm'>{t('awardImcSub')}</p>
             <p className='text-gray-300 text-sm mt-1'>
               {t('awardImcDescription')}

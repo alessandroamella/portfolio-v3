@@ -23,6 +23,8 @@ export const config = Object.freeze({
   instagramUsername: 'alessandro_amella',
   linkedinUrl: 'https://www.linkedin.com/in/alessandro-amella',
   qrzUrl: 'https://www.qrz.com/db/IU4QSG',
+  imcHackathonUrl:
+    'https://cs.au.dk/news-events/events/show-event/artikel/eu-campus-aarhus-hackahton-imcity',
   birthday: new Date(2003, 6, 13),
   cvAgencies: [
     {

@@ -84,7 +84,7 @@ function aboutSection(t: Translator, locale: string) {
     `### ${t('homepage.educationTitle')}`,
     education.join('\n'),
     `### ${t('homepage.awardsTitle')}`,
-    `- **${t('homepage.awardImc')}**, ${t('homepage.awardImcSub')}. ${t('homepage.awardImcDescription')}`,
+    `- **[${t('homepage.awardImc')}](${config.imcHackathonUrl})**, ${t('homepage.awardImcSub')}. ${t('homepage.awardImcDescription')}`,
     `### ${t('homepage.languagesTitle')}`,
     [
       `- ${t('homepage.languageItalian')}: ${t('homepage.languageItalianSub')}`,
