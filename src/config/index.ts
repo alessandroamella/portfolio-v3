@@ -24,7 +24,7 @@ export const config = Object.freeze({
   linkedinUrl: 'https://www.linkedin.com/in/alessandro-amella',
   qrzUrl: 'https://www.qrz.com/db/IU4QSG',
   imcHackathonUrl:
-    'https://cs.au.dk/news-events/events/show-event/artikel/eu-campus-aarhus-hackahton-imcity',
+    'https://www.linkedin.com/jobs/view/eu-campus-aarhus-hackahton-imcity-at-imc-trading-4457961147/',
   birthday: new Date(2003, 6, 13),
   cvAgencies: [
     {
